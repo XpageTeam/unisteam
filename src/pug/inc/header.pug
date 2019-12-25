@@ -1,241 +1,71 @@
-.notificator
-	.wrapper
-		.notificator__text Товар добавлен в 
-			a(href="#") список 
-			| - 6 товаров
 include ../inc/mobile-menu.pug
 header.head
 	.head-top-cont
 		.wrapper
 			.head-top
 				.head-cities
-					.city Челябинск
-					.dropdown
-						.dropdown-content
-							.cities__list
-								a(href="#").cities__link Москва
-								a(href="#").cities__link Санкт-Петербург
-								a(href="#").cities__link Владивосток
-								a(href="#").cities__link Екатеринбург
-								a(href="#").cities__link Иркутск
-								a(href="#").cities__link Казань
-								a(href="#").cities__link Калининград
-								a(href="#").cities__link Краснодар
-								a(href="#").cities__link Нижний Новгород
-								a(href="#").cities__link Новосибирск
-								a(href="#").cities__link Пермь
-								a(href="#").cities__link Ростов-На-Дону
-								a(href="#").cities__link Хабаровск
-								a(href="#").cities__link Чита
-								a(href="#").cities__link Воронеж
-								a(href="#").cities__link Красноярск
-								a(href="#").cities__link Самара
-								a(href="#").cities__link Уфа
-								a(href="#").cities__link Челябинск
-
-							.cities__search-cont
-								form(action="")
-									.cities__search
-										.cities__search-label Другой город
-										.cities__search-input
-											input(type="text" placeholder="Введите название города")
-											input(type="submit" value="Найти")
-
-				.head-shops
-					.shop Магазины
-					.submenu
-						ul
-							li
-								a(href="") В Москве
-							li
-								a(href="") В Санкт-Петербурге
-							li
-								a(href="") Постаматы в России
-				.head-phone
-					a(href="tel:88003331946") 8-800-333-19-46
+					.city__label Наши адреса и график работы
+					.city 
+						select.my-select
+							option(value="") Челябинск
+							option(value="") Москва
+							option(value="") Cанкт-Петербург
+				.head-callback
+					a(href="#" class="fancybox") Напишите нам
+				.head-soc
+					.soc__label Свяжитесь с нами:
+					.soc
+						a(href="").soc__link
+							img(src="img/ico-ws.svg", alt="")
+						a(href="").soc__link
+							img(src="img/ico-sk.svg", alt="")
+						a(href="").soc__link
+							img(src="img/ico-ws.svg", alt="")
+						a(href="").soc__link
+							img(src="img/ico-tg.svg", alt="")
 				.head-email
-					a(href="").fancybox Написать нам
-				.head-menu
-					ul.menu__list
-						li.menu__item
-							a(href="").menu__item-link Доставка
-						li.menu__item
-							a(href="").menu__item-link Оплата
-						li.menu__item.js__has-submenu
-							a(href="").menu__item-link Самовывоз
-							.submenu
-								ul
-									li
-										a(href="") В Москве
-									li
-										a(href="") В Санкт-Петербурге
-									li
-										a(href="") Постаматы в России
-						li.menu__item.js__has-submenu
-							a(href="").menu__item-link Инфо
-							.submenu
-								ul
-									li
-										a(href="") Оферта
-									li
-										a(href="") Доставка
-									li
-										a(href="") Оплата
-									li
-										a(href="") Бонусы
-									li
-										a(href="") Сертификаты
-									li
-										a(href="") Карта друга
-									li
-										a(href="") Новости
-									li
-										a(href="") Опт и B2B
-									li
-										a(href="") Мастер-классы
-									li
-										a(href="") Возврат и обмен
-									li
-										a(href="") Обратная связь
+					a(href="mailto: info@unisteam.com") info@unisteam.com
+				.head-phone
+					a(href="tel:8 800-555-49-07") 8 800-555-49-07
 				.head-lang
-					select
+					select.my-select
 						option(value="1") En
 						option(value="2") Ru
 
-	.head-middle-cont
+	.head-bot-cont
 		.wrapper
-			.head-middle
+			.head-bot
 				.head-logo
 					a(href="")
 						include ../../img/index-logo.svg
 				nav.main-nav
 					ul.main-nav__list
 						li.main-nav__item
-							a(href="").main-nav__link Школьникам
+							a(href="").main-nav__link Каталог продукции
 						li.main-nav__item
-							a(href="").main-nav__link Студентам
+							a(href="").main-nav__link Спецтехника в наличии
+						li.main-nav__item.has__submenu
+							a(href="").main-nav__link Оплата и доставка
+							.main-nav__submenu
+								ul.main-nav__submenu-list
+									li.main-nav__submenu-item
+										a(href="#").main-nav__submenu-link Оплата
+									li.main-nav__submenu-item
+										a(href="#").main-nav__submenu-link Доставка
+									li.main-nav__submenu-item
+										a(href="#").main-nav__submenu-link Лизинг
+									li.main-nav__submenu-item
+										a(href="#").main-nav__submenu-link Trade-in
 						li.main-nav__item
-							a(href="").main-nav__link Дизайнерам
+							a(href="").main-nav__link Сервис и ремонт
 						li.main-nav__item
-							a(href="").main-nav__link Хобби
+							a(href="").main-nav__link Услуги
+						li.main-nav__item
+							a(href="").main-nav__link О заводе
+						li.main-nav__item
+							a(href="").main-nav__link Полезная информация
+						li.main-nav__item
+							a(href="").main-nav__link Контакты
 				
-				a(href="#").head-lc
-					.head-lc__img
-						include ../../img/ico-lc.svg
-					.head-lc__text Личный<br> кабинет
-				.head-compare
-					a(href="#" data-count="")
-						include ../../img/ico-compare.svg
-				.head-favorite
-					a(href="#" data-count="4")
-						include ../../img/ico-favorite.svg
-				.head-cart
-					a(href="#" data-count="4")
-						include ../../img/ico-cart.svg
-
-					.cart-small-cont
-						.cart-small
-							.cart-small__head В корзине 6 товаров
-							.cart-small__list
-								- for (let t = 0; t < 10; t++)
-									.cart-small__item
-										a(href="#").cart-small__img
-											img(src="img/cart-small-img.jpg", alt="")
-										a(href="#").cart-small__info
-											.cart-small__title Бумага рисовальная А4, плотность 200 г/м2
-											.cart-small__bot
-												.cart-small__price 455 руб.
-												.cart-small__count 1 шт.
-										a(href="" title="Удалить").del
-							.cart-small__footer
-								.cart-small__price-total
-									div Стоимость товаров:
-									div 1 365 руб.
-								a(href="").cart-small__btn перейти в корзину
 				.burger
 					span
-
-
-
-
-	.head-bot-cont
-		.wrapper
-			.head-bot
-				.head-search
-					form(action="")
-						.search
-							input(type="text" placeholder="Поиск по товарам")
-							input(type="submit" value="Найти") 
-
-				nav.main-nav
-					ul.main-nav__list
-						li.main-nav__item
-							a(href="").main-nav__link Акварель
-						li.main-nav__item
-							a(href="").main-nav__link Бумага
-							.main-nav__submenu-cont
-								.wrapper
-									.main-nav__submenu
-										.main-nav__submenu-title Категории
-										ul.main-nav__submenu-list
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Бумага для акварели
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Бумага для графики
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Бумага для маркеров
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Бумага для масла и акрила
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Бумага для пастели и угля
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Бумага цветная
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Калька
-											li.main-nav__submenu-item.js__has-submenu
-												a(href="a").main-nav__submenu-link Картон
-												.main-nav__sub-submenu
-													.wrapper
-														ul.main-nav__sub-submenu-list
-															li.main-nav__sub-submenu-item
-																a(href="").main-nav__sub-submenu-link Картон переплётный
-															li.main-nav__sub-submenu-item
-																a(href="").main-nav__sub-submenu-link Картон пивной
-															li.main-nav__sub-submenu-item
-																a(href="").main-nav__sub-submenu-link Картон художественный
-															li.main-nav__sub-submenu-item
-																a(href="").main-nav__sub-submenu-link Пенокартон
-
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Открытки
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Скетчбуки
-											li.main-nav__submenu-item
-												a(href="a").main-nav__submenu-link Тетради
-						li.main-nav__item
-							a(href="#").main-nav__link Графика
-						li.main-nav__item
-							a(href="#").main-nav__link Магазины
-						li.main-nav__item
-							a(href="#").main-nav__link Акции
-						li.main-nav__item
-							a(href="#").main-nav__link Бренды
-						li.main-nav__item
-							a(href="#").main-nav__link Товары сентября
-						li.main-nav__item
-							a(href="#").main-nav__link Sale
-	
-	.head-menu--mobile
-		.wrapper
-			nav.main-nav
-				.main-nav-button.main-nav-button--prev
-				ul.main-nav__list
-					li.main-nav__item
-						a(href="#").main-nav__link Школьникам
-					li.main-nav__item
-						a(href="#").main-nav__link.active Студентам
-					li.main-nav__item
-						a(href="#").main-nav__link Дизайнерам
-					li.main-nav__item
-						a(href="#").main-nav__link Хобби
-				.main-nav-button.main-nav-button--next
