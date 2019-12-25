@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		#app
+			include inc/header.pug
+			main#content
+				.main-top-cont
+					.wrapper
+						.main-top
+
+							.category-menu
+								.category-menu-arrow.category-menu-arrow--prev
+								ul.category-menu__list
+									li.category-menu__item.js__has-submenu
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-1.svg", alt="")
+										a(href="").category-menu__link Краски
+										.category-submenu
+											.category-submenu__title Краски художественные
+											ul.category-submenu__list
+												li.category-submenu__item.js__has-sub-submenu
+													a(href="").category-submenu__link Краски акварельные
+													.category-sub-submenu
+														ul.category-sub-submenu__list
+															li.category-sub-submenu__item
+																a(href="").category-sub-submenu__link Кистемойки
+															li.category-sub-submenu__item
+																a(href="").category-sub-submenu__link Маслёнки
+															li.category-sub-submenu__item
+																a(href="").category-sub-submenu__link Мастихины
+															li.category-sub-submenu__item
+																a(href="").category-sub-submenu__link Мыло
+															li.category-sub-submenu__item
+																a(href="").category-sub-submenu__link Палитры
+															li.category-sub-submenu__item
+																a(href="").category-sub-submenu__link Стаканчики
+															li.category-sub-submenu__item
+																a(href="").category-sub-submenu__link Фартуки
+
+
+												li.category-submenu__item
+													a(href="").category-submenu__link Краски акриловые
+												li.category-submenu__item
+													a(href="").category-submenu__link Краски аэрозольные
+												li.category-submenu__item
+													a(href="").category-submenu__link Краски гуашевые
+												li.category-submenu__item
+													a(href="").category-submenu__link Краски масляные
+												li.category-submenu__item
+													a(href="").category-submenu__link Краски темперные
+
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-2.svg", alt="")
+										a(href="").category-menu__link Кисти
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-3.svg", alt="")
+										a(href="").category-menu__link Бумага
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-4.svg", alt="")
+										a(href="").category-menu__link Мольберты
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-5.svg", alt="")
+										a(href="").category-menu__link Графика
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-6.svg", alt="")
+										a(href="").category-menu__link Жидкости
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-7.svg", alt="")
+										a(href="").category-menu__link Холсты
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-8.svg", alt="")
+										a(href="").category-menu__link Лепка
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-9.svg", alt="")
+										a(href="").category-menu__link Скрапбукинг
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-10.svg", alt="")
+										a(href="").category-menu__link Декор
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-11.svg", alt="")
+										a(href="").category-menu__link Канцелярия
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-12.svg", alt="")
+										a(href="").category-menu__link Хранение
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-13.svg", alt="")
+										a(href="").category-menu__link Книги
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-14.svg", alt="")
+										a(href="").category-menu__link Каллиграфия
+									li.category-menu__item
+										.category-menu__item-img
+											img(src="img/ico-category-menu__item-15.svg", alt="")
+										a(href="").category-menu__link Детям
+								.category-menu-arrow.category-menu-arrow--next
+
+							.main-slider
+								.slider
+									.swiper-list
+										.swiper-wrapper
+											.swiper-slide
+												picture.slider-img
+													source(srcset="img/photos/slider-main.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+													source(srcset="img/photos/slider-main-m.jpg" media="screen and (max-width: 700px)") 
+													img
+											.swiper-slide
+												picture.slider-img
+													source(srcset="img/photos/slide_427.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+													source(srcset="img/photos/slider-main-m.jpg" media="screen and (max-width: 700px)") 
+													img
+
+											.swiper-slide
+												picture.slider-img
+													source(srcset="img/photos/slide_443.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+													source(srcset="img/photos/slider-main-m.jpg" media="screen and (max-width: 700px)") 
+													img
+
+											.swiper-slide
+												picture.slider-img
+													source(srcset="img/photos/slide_446.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+													source(srcset="img/photos/slider-main-m.jpg" media="screen and (max-width: 700px)") 
+													img
+
+									
+									.slider-arrow
+										.swiper-bullets
+											.swiper-pagination
+										.swiper-nav
+											.swiper-button.swiper-button-prev
+											.swiper-button.swiper-button-next
+								.banners
+									.banners__list
+										a(href="").banners__item
+											picture.banners__item-img
+												source(srcset="img/photos/banners-1.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+												source(srcset="img/photos/banners-m-1.jpg" media="screen and (max-width: 700px)") 
+												img
+										a(href="").banners__item
+											picture.banners__item-img
+												source(srcset="img/photos/banners-2.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+												source(srcset="img/photos/banners-m-2.jpg" media="screen and (max-width: 700px)") 
+												img
+										a(href="").banners__item
+											picture.banners__item-img
+												source(srcset="img/photos/banners-3.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+												source(srcset="img/photos/banners-m-3.jpg" media="screen and (max-width: 700px)") 
+												img
+				
+				.main-catalog-cont
+					.wrapper
+						.main-catalog.tabs
+							.tabs__top
+								.tabs__tab(data-id="1").active Популярное
+								.tabs__tab(data-id="2") Новинки
+								.tabs__tab(data-id="3") Акция
+								a(href="#").default-btn Перейти в каталог
+							.tabs__content(data-id="1").active
+								.main-catalog__list
+									.item-cont
+										.item
+											a(href="").item__img
+												figure
+													img(src="img/photos/catalog-img-0.png")
+												.item__label.item__label--left
+													.item__label-info Новинка
+													.item__label-info(style="color: var(--second-color)") Акция
+												.item__label.item__label--right
+													.item__label-info
+														.percente - 20%
+													.item__label-info
+														.favorite
+													.item__label-info
+														.compare
+											a(href="").item__info
+												.item__title Краска акриловая для тканей 'Olki'
+												.item__prices
+													.item__price--old 584 руб.
+													.item__price 142 руб.
+											.item__btns
+												a(href="#").default-btn.default-btn--cart Добавить в корзину
+												a(href="#fast-view").default-btn.default-btn--white.default-btn--view.fancybox Быстрый просмотр
+
+									.item-cont
+										.item
+											a(href="").item__img
+												figure
+													img(src="img/photos/catalog-img-0.png")
+												.item__label.item__label--left
+													.item__label-info Новинка
+													.item__label-info(style="color: var(--second-color)") Акция
+												.item__label.item__label--right
+													.item__label-info
+														.percente - 20%
+													.item__label-info
+														.favorite
+													.item__label-info
+														.compare
+											a(href="").item__info
+												.item__title Краска акриловая для тканей 'Olki'
+												.item__prices
+													.item__price--old 584 руб.
+													.item__price 142 руб.
+											.item__btns
+												a(href="#").default-btn.default-btn--cart Добавить в корзину
+												a(href="#fast-view").default-btn.default-btn--white.default-btn--view.fancybox Быстрый просмотр
+									- for (let j = 0; j < 2; j++)
+
+										each tovar, i in [{title: "Краска акриловая для тканей 'Olki'", price: "455"}, {title: "Краска акриловая для тканей 'Olki'", price: "142"}, {title: "Набор масляных красок 12 тюбиков по 20 мл Classico Maimeri", price: "3 355"}, {title: "Малевичъ Краска акриловая Желтая средняя 60 мл", price: "455"}]
+											.item-cont
+												.item
+													a(href="").item__img
+														figure
+															img(src="img/photos/catalog-img-"+i+".png")
+														.item__label.item__label--left
+															.item__label-info Новинка
+															.item__label-info(style="color: var(--second-color)") Акция
+														.item__label.item__label--right
+															.item__label-info
+																.percente - 20%
+															.item__label-info
+																.favorite
+															.item__label-info
+																.compare
+													a(href="").item__info
+														.item__title=tovar.title
+														.item__prices
+															.item__price--old 584 руб.
+															.item__price=tovar.price 
+																|  руб.
+													.item__btns
+														a(href="#").default-btn.default-btn--cart Добавить в корзину
+														a(href="#fast-view").default-btn.default-btn--white.default-btn--view.fancybox Быстрый просмотр
+
+
+							.tabs__content(data-id="2")
+							.tabs__content(data-id="3")
+				
+				.main-brands-cont
+					.wrapper
+						.main-brands
+							.main-brands__list
+								.swiper-list
+									.swiper-wrapper
+										- for (let t = 0; t < 2; t++)
+											.swiper-slide
+												a.main-brands__item(href="#")
+													img(src="img/photos/brand-1.png")
+											.swiper-slide
+												a.main-brands__item(href="#")
+													img(src="img/photos/brand-2.png")
+											.swiper-slide
+												a.main-brands__item(href="#")
+													img(src="img/photos/brand-3.png")
+											.swiper-slide
+												a.main-brands__item(href="#")
+													img(src="img/photos/brand-4.png")
+											.swiper-slide
+												a.main-brands__item(href="#")
+													img(src="img/photos/brand-5.png")
+											.swiper-slide
+												a.main-brands__item(href="#")
+													img(src="img/photos/brand-6.png")
+											.swiper-slide
+												a.main-brands__item(href="#")
+													img(src="img/photos/brand-7.png")
+								.swiper-button.swiper-button-prev
+								.swiper-button.swiper-button-next
+
+				.instagram-cont
+					.wrapper
+						.instagram
+							.instagram__title Присоединяйтесь к нам 
+								a(href="#") @artkvartal
+							.instagram__list
+								.swiper-list
+									.swiper-wrapper
+										- for (let y = 0; y < 2; y++)
+											.swiper-slide
+												a(href="#").instagram__item
+													img(src="img/photos/inst-1.jpg")
+											.swiper-slide
+												a(href="#").instagram__item
+													img(src="img/photos/inst-2.jpg")
+											.swiper-slide
+												a(href="#").instagram__item
+													img(src="img/photos/inst-3.jpg")
+											.swiper-slide
+												a(href="#").instagram__item
+													img(src="img/photos/inst-4.jpg")
+								.swiper-button.swiper-button-prev
+								.swiper-button.swiper-button-next
+				.main-news-cont
+					.wrapper
+						.main-news
+							.main-news__info.tabs
+								.tabs__top
+									.tabs__tab.active(data-id="1") мастер-классы
+									.tabs__tab(data-id="2") новости
+									a(href="#").default-btn смотреть
+								.tabs__content.active(data-id="1")
+									.main-news__list
+										a(href="#").main-news__item
+											.main-news__item-title Чернильные карандаши Derwent Inktense
+											.main-news__item-date 11 . 09 . 2019
+										a(href="#").main-news__item
+											.main-news__item-title Новинка: оригинальная канцелярия
+											.main-news__item-date 11 . 09 . 2019
+								.tabs__content(data-id="2")
+							a(href="#").main-news__banner
+								.main-news__banner-info
+									.main-news__banner-title Подарочный сертификат
+									.default-btn--arrow
+								img(src="img/photos/main-news-banner.png")
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

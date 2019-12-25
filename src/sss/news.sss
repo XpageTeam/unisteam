@@ -1,0 +1,168 @@
+.news
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -30px -30px
+
+	&__item
+		position: relative
+		margin: 0 0 30px 30px
+		display: flex
+
+		&:hover
+			.news__item-title
+				color: var(--second-color) !important
+
+
+
+	
+		&-img
+			position: relative
+			border-radius: 6px
+			overflow: hidden
+			// flex: 1 1 auto
+			// max-height: 250px
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 49.83%)
+				transform: rotate(-180deg)
+
+		img
+			display: block
+			border-radius: 6px
+			object-fit: cover
+			object-position: center
+			width: 100%
+			height: 100%
+
+		&-title
+			transition: color .3s ease
+
+		.news__item-label
+			position: absolute
+			top: 0
+			right: 55px
+			background: #FDCA38
+			border-radius: 0px 0px 5px 5px
+			padding: 13px 18px
+			color: #fff
+			line-height: 1
+
+
+		&.news__item--main
+			width: calc((100% -30px * 2) / 2)
+
+			.news__item
+				&-info
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					z-index: 10
+					display: flex
+					z-index: 1
+					padding: 55px
+					color: #fff
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					justify-content: flex-end
+
+				&-title
+					font-weight: 600
+					font-size: em(20)
+					letter-spacing: 0.02em
+
+					color: #FFFFFF
+
+				&-date
+					font-size: em(14)
+					letter-spacing: 0.02em
+
+
+		&:not(.news__item--main)
+			width: calc((100% -30px * 4) / 4)
+			display: flex
+			flex-direction: column
+
+
+			.default-btn--arrow
+				margin-top: auto
+
+			.news__item
+
+				&-info
+					flex: 1 1 auto
+					display: flex
+					flex-direction: column
+
+				&-img
+					margin-bottom: 33px
+					height: 250px
+
+				&-date
+					font-size: em(12)
+					letter-spacing: 0.02em
+					color: #999999
+
+				&-title
+					font-weight: 600
+					font-size: em(18)
+					letter-spacing: 0.02em
+
+					color: #393939
+				&-text
+					letter-spacing: 0.02em
+					margin-top: 13px
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					// -webkit-line-clamp: 4
+					-webkit-line-clamp: 2
+					/* autoprefixer: ignore next */
+					-webkit-box-orient: vertical
+					margin-bottom: 15px
+
+		
+					&:empty
+						display: none
+
+
+@media (max-width: 1200px)
+	
+	.news__item:not(.news__item--main) .news__item-img
+		margin-bottom: 15px
+
+	.news__item.news__item--main .news__item-info
+		padding: 20px
+
+	.news__item .news__item-label
+		right: 20px
+		padding: 10px 15px
+
+@media (max-width: 1000px)
+	
+	.news__item
+		&.news__item--main
+			width: 100%
+
+
+		&:not(.news__item--main)
+			width: calc((100% - 90px)/3)
+
+@media (max-width: 667px)
+	
+	.news__item
+
+
+		&:not(.news__item--main)
+			width: 100%
+

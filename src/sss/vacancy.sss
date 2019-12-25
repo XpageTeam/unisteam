@@ -1,0 +1,152 @@
+.vacancy
+	&__item
+		&:not(:last-child)
+			margin-bottom: 85px
+
+		&-top
+			display: flex
+			justify-content: space-between
+			padding: 25px 30px
+			border-radius: 5px
+			background-color: var(--thrid-color)
+
+		&-title
+			font-weight: 600
+			font-size: em(20)
+
+			color: #393939
+
+		&-city
+			border-radius: 5px
+			border: 1px solid var(--border-color)
+			display: flex
+			align-items: center
+			padding: 10px 17px
+
+			&:before
+				content: ''
+				display: block
+				size: 11px 15px
+				background-image: url('../img/ico-location.svg')
+				background-repeat: no-repeat
+				background-size: contain
+				margin-right: 15px
+
+		&-bot
+			display: flex
+			margin-top: 40px
+
+		&--left
+			display: flex
+			flex-direction: column
+			width: 225px
+			margin-right: 80px
+			flex: none
+
+		.label
+			font-weight: 500
+			font-size: em(10)
+			text-transform: uppercase
+
+			color: rgba(0, 0, 0, 0.4)
+
+		.salary
+			font-weight: 500
+			font-size: em(20)
+			letter-spacing: 0.02em
+
+		&-salary
+			margin-bottom: auto
+
+		&-name
+			padding-bottom: 30px
+			margin-bottom: 30px
+			border-bottom: 1px solid var(--border-color)
+
+		&-btn
+			margin-top: 50px
+			display: flex
+
+		&-contacts
+			a[href^="tel"]
+				color: #000
+
+			a[href^="mailto"]
+				color: var(--second-color)
+
+			&:not(:last-child)
+				margin-bottom: 30px
+
+@media (max-width: 1200px)
+	
+	.vacancy__item-top
+		padding: 20px
+		align-items: center
+
+
+@media (max-width: 1000px)
+	
+	.vacancy__item
+
+		&:not(:last-child)
+			margin-bottom: 40px
+
+		&--left
+			width: 160px
+			margin-right: 35px
+
+		&-btn
+			margin-top: 25px
+
+
+@media (max-width: 667px)
+	
+	.vacancy__item
+		border-top: 1px solid var(--border-color)
+		// border-bottom: 1px solid var(--border-color)
+
+		&-top
+			position: relative
+			align-items: flex-start
+			flex-direction: column-reverse
+			background-color: #fff
+			padding: 15px 0
+
+			&.js__open
+				&:after
+					transform: rotate(225deg)
+
+			&:after
+				content: ''
+				display: block
+				size: 6px
+				position: absolute
+				right: 10px
+				top: 67px
+				border-right: 1px solid #000
+				border-bottom: 1px solid #000
+				transform: rotate(45deg)
+				transition: transform .3s ease
+
+		&-bot
+			display: none
+			margin-top: 0
+			padding-bottom: 20px
+
+		&-city
+			padding: 6px 12px 5px 0
+			margin-bottom: 5px
+			border: 0
+
+
+
+		&-name
+			padding-bottom: 10px
+			margin-bottom: 10px
+
+		&-contacts:not(:last-child)
+			margin-bottom: 10px
+
+
+		&:not(:last-child)
+			margin-bottom: 0

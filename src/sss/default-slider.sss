@@ -1,0 +1,85 @@
+.default-slider
+	position: relative
+	// margin: -15px
+
+
+	&-cont
+		padding: 85px 0 95px
+		border-top: 1px solid var(--border-color)
+
+		.swiper-scrollbar
+			margin-top: -80px
+
+
+	&__title
+		font-weight: 600
+		font-size: em(20)
+		text-align: center
+		margin-bottom: 80px
+
+	.swiper-button
+		position: absolute
+		top: calc(50% - 25px)
+		background-color: var(--thrid-color) !important
+
+		&-prev
+			left: -100px
+
+		&-next
+			right: -100px
+
+
+
+	.item__btns
+		opacity: 0
+		pointer-events: none
+		> a
+			padding: 16px 18px
+
+			&:not(:first-child)
+				margin-top: 15px
+
+
+@media (max-width: 1200px)
+	
+	.default-slider
+		&-cont
+			padding: 40px 0
+
+		&__title
+			margin-bottom: 40px
+
+	.default-slider-cont .swiper-scrollbar
+		margin-top: 10px
+
+
+@media (max-width: 667px)
+	
+	.default-slider
+		.item-cont
+			width: auto !important
+
+		&-cont 
+			.swiper-scrollbar
+				display: none
+
+	.default-slider 
+		&__list
+			position: relative
+
+		.swiper-list
+			padding-bottom: 40px
+
+
+		.swiper-button
+			top: calc(100% - 50px)
+
+			&-next
+				right: calc(50% - 60px)
+
+			&-prev
+				left: calc(50% - 60px)
+
+		&-cont
+			padding: 40px 0 60px
+

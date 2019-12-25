@@ -1,0 +1,319 @@
+.compare
+	&-cont
+		position: relative
+
+	&-page
+
+		.swiper
+			&-list
+				overflow: visible !important
+
+			&-slide
+				width: auto
+
+				&:not(.swiper-slide-active)
+					.compare__item-label
+						opacity: 0
+				&.swiper-slide-active
+
+					.compare__item-top
+						&:before
+							content: ''
+							display: block
+							position: absolute
+							top: 0
+							left: 50%
+							height: 100%
+							bottom: 0
+							background-color: #fff
+							z-index: 0
+							width: 3000vw
+							transform: translate3d(-50%,0,0)
+							opacity: 1
+							transition: background .3s ease, box-shadow .3s ease
+							pointer-events: none
+
+
+						&.js__sticked
+							
+
+							&:before
+								box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.10)
+
+				&.swiper-slide-prev
+					z-index: 20
+
+
+			&-button
+				background-color: var(--thrid-color) !important
+				position: absolute
+				top: 0
+
+				&-prev
+					left: 35px
+
+				&-next
+					right: 35px
+
+
+	&__top
+		display: flex
+		padding-bottom: 50px
+
+
+		.default-btn
+			font-weight: bold
+			font-size: 10px
+			letter-spacing: 0.08em
+			text-transform: uppercase
+			padding: 16px 24px
+
+
+			&.active
+				background-color: var(--second-color)
+				color: #fff
+
+			&:not(:last-of-type)
+				margin-right: 14px
+
+			&:nth-of-type(2)
+				margin-right: auto
+
+	&__list
+		position: relative
+		padding-top: 20px
+
+		&:before
+			content: ''
+			display: block
+			width: 100vw
+			height: 1px
+			background-color: var(--border-color)
+			left: 50%
+			position: absolute
+			top: 0
+			transform: translate3d(-50%,0,0)
+
+
+	&__item
+		display: flex
+		flex-direction: column
+		// align-items: flex-start
+
+		&-top
+			position: relative
+			padding-right: 50px
+			position: sticky
+			top: 0
+			background-color: #fff
+			z-index: 10
+			transition: padding .3s ease
+
+			> *
+				position: relative
+				z-index: 2
+
+			&.js__sticked
+				padding-bottom: 20px
+
+
+
+
+		&-info
+			margin-top: 40px
+
+		&-close
+			display: block
+			position: absolute
+			top: 10px
+			right: 50px
+			size: 20px
+			background-image: url('../img/ico-close.svg')
+			background-size: 13px
+			background-repeat: no-repeat
+			background-position: 50%
+			z-index: 10
+
+		&-img
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 185px
+
+			img
+				max-height: 100%
+
+		&-title
+			margin-top: 20px
+			display: block
+			font-size: em(14)
+
+		&-price
+			justify-content: flex-start !important
+
+			.item
+				&-price
+					font-weight: bold
+					font-size: em(16)
+
+					&--old
+						font-weight: 500
+						font-size: em(16)
+						text-decoration-line: line-through
+						margin-right: 18px
+						color: #D5D5D5
+
+		&-cart
+			align-self: flex-start
+			justify-content: flex-start
+			align-items: flex-start
+			display: flex
+			margin-bottom: 45px
+
+		&-el
+			position: relative
+			padding-top: 20px
+			padding-bottom: 23px
+			padding-right: 50px
+			border-top: 1px solid var(--border-color)
+
+			> *
+				position: relative
+				z-index: 1
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 50%
+				height: 100%
+				background-color: var(--thrid-color)
+				z-index: 0
+				width: 3000vw
+				transform: translate3d(-50%,0,0)
+				opacity: -1
+				transition: background .3s ease
+				pointer-events: none
+
+			&:hover
+				border-top-color: var(--thrid-color)
+
+				&:before
+					opacity: 1
+
+			+ .compare__item-el
+				border-top-color: var(--thrid-color)
+
+		&-label
+			transition: color .3s ease
+			font-weight: 500
+			font-size: em(12)
+			text-transform: uppercase
+			color: rgba(0, 0, 0, 0.4)
+			margin-bottom: 5px
+
+
+.colors
+	display: flex
+	flex-wrap: wrap
+	margin-top: 10px
+
+
+.ico-color
+	size: 10px
+	border-radius: 50%
+	margin-right: 5px
+	flex: none
+
+
+
+@media (max-width: 1500px)
+	
+	.compare
+		&-page
+			.swiper-button
+				position: static
+
+				&-prev
+					margin-right: 20px
+				&-next
+					margin-left: 20px
+
+
+@media (max-width: 667px)
+
+	.compare-page
+
+		.swiper-slide.swiper-slide-active .compare__item-top:before
+			display: none
+	
+	.compare__item-top
+		position: relative
+		padding-right: 0
+
+	.default-btn--cart
+		padding: 16px 20px
+
+	.compare__item-el
+		padding-top: 10px
+		padding-bottom: 10px
+		padding-right: 0
+
+	.compare__item
+		&-close
+			top: 0
+			right: 0
+
+		&-cart
+			margin-bottom: 20px
+
+			.default-btn
+				font-size: 0
+
+				&:before
+					margin: 0
+
+		&-info 
+			margin-top: 20px
+
+		&-price 
+			.item-price--old
+				margin-right: 0
+
+		&-top.js__sticked
+			padding-bottom: 0
+
+	.compare__top
+
+		position: relative
+		overflow-x: auto
+		margin: 0 -20px
+		padding-left: 20px
+		padding-left: 20px
+
+		&:after
+			content: ''
+			display: block
+			width: 1px
+			height: 20px
+			flex: none
+
+		.default-btn
+			flex: none
+			margin-right: 20px !important
+			padding: 10px
+
+		.swiper-button 
+			position: sticky
+			display: none
+			bottom: 20px
+			top: auto
+
+			&-prev
+				left: 0
+
+			&-next
+				right: 0
+
+

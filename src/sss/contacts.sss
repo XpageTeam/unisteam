@@ -1,0 +1,140 @@
+.shops
+	display: flex
+
+	&-map
+		width: calc(100% - 530px)
+		flex: none
+
+	&__address
+		width: 100%
+		margin-right: 30px
+
+	&__top
+		display: flex
+		margin-bottom: 45px
+
+
+	&__city
+		text-decoration: none
+		display: inline-block
+		line-height: 1
+		padding: 20px 26px
+		background-color: var(--thrid-color)
+		border-radius: 5px
+		font-weight: bold
+		font-size: em(10)
+		letter-spacing: 0.02em
+		text-transform: uppercase
+
+		&.active
+			background-color: var(--second-color)
+			color: #fff
+
+		&:not(:first-child)
+			margin-left: 22px
+
+	&__item
+		padding-left: 30px
+
+		&:not(:last-child)
+			padding-bottom: 50px
+			margin-bottom: 50px
+			border-bottom: 1px solid var(--border-color)
+
+		&-info
+			margin-top: 35px
+			display: flex
+
+			a
+				&[href^="tel"]
+					color: #000
+
+		.default-btn--arrow
+			position: relative
+			margin-left: auto
+			margin-top: -10px
+	&__info
+		&-el
+			&:not(:first-child)
+				margin-left: 40px
+
+			&:last-child
+				margin-right: 20px
+				
+	.metro
+		position: relative
+		display: flex
+
+
+		&:before
+			content: ''
+			size: 17px 13px
+			display: block
+			background-image: url('../img/ico-metro.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			background-size: contain
+			position: absolute
+			left: -30px
+			top: 4px
+
+
+	.label
+		font-weight: 500
+		font-size: em(10)
+		text-transform: uppercase
+		margin-bottom: 5px
+
+		color: rgba(0, 0, 0, 0.4)
+
+
+.ico-metro
+	size: 8px
+	border-radius: 50%
+	margin-left: 12px
+
+
+@media (max-width: 1200px)
+	
+	#mapShops
+		height: 500px !important
+
+
+@media (max-width: 1000px)
+	
+	.shops
+		flex-direction: column
+
+	.shops-map
+		width: 100%
+		margin-top: 30px
+
+
+	.shops__item
+		&:not(:last-child)
+			padding-bottom: 25px
+			margin-bottom: 25px
+
+		&-info
+			margin-top: 15px
+
+	#mapShops
+		height: 445px!important
+
+
+@media (max-width: 667px)
+	
+	.shops__item
+		&-info
+			flex-direction: column
+			align-items: flex-start
+
+	.shops__info-el:not(:first-child)
+		margin: 15px 0 0 0
+
+	.shops__item .default-btn--arrow
+		margin-left: 0
+		margin-top: 10px
+
+	#mapShops
+		height: 250px!important

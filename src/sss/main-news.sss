@@ -1,0 +1,158 @@
+.main-news
+	display: flex
+
+	&__info
+		position: relative
+		width: calc(100% - 665px)
+		margin-right: 30px
+		flex: none
+
+
+	.tabs
+
+		&__top
+			margin-bottom: 23px
+
+		&__content
+			&:not(.active)
+				pointer-events: none
+				
+			.default-btn
+				&:first-child
+					position: absolute
+					top: 0
+					right: 0
+
+
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		padding: 40px 0
+		border-bottom: 1px solid var(--border-color)
+		font-size: em(15)
+
+		&:after
+			content: ''
+			display: block
+			size: 50px
+			border-radius: 5px
+			background-image: url('../img/ico-arrow-red.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			transform: rotate(180deg)
+
+		&-title
+			margin-right: 20px
+
+		&-date
+			margin-left: auto
+			line-height: 1
+			padding: 12px 13px
+			border-radius: 5px
+			border: 1px solid var(--border-color)
+			font-size: em(12)
+			white-space: nowrap
+
+	&__banner
+		background-color: var(--second-color)
+		border-radius: 5px
+		flex: 1 1 auto
+		padding: 20px 60px
+		display: flex
+		align-items: center
+
+		&-title
+			font-weight: 500
+			font-size: em(20)
+			margin-bottom: 50px
+			color: #fff
+
+
+@media (max-width: 1200px)
+	
+	.main-news
+		&__info
+			width: calc(100% - 500px)
+
+		&__banner
+			padding: 20px 30px
+			overflow: hidden
+		
+
+			&-title
+				margin-bottom: 30px
+
+		&__item
+			padding: 20px 0
+
+@media (max-width: 1000px)
+	
+	.main-news
+		flex-direction: column
+
+		&__info
+			width: 100%
+			margin-right: 0
+
+@media (max-width: 667px)
+	
+	.main-news
+
+		.default-btn
+			padding: 9px 15px
+
+
+		.tabs__content .default-btn:first-child
+			position: static
+			justify-content: center
+
+
+		&__info
+			.tabs__top
+				.default-btn
+					font-size: 0
+
+					&:after
+						margin-left: 0
+
+			.tabs__tab
+				margin-bottom: 0
+
+		&__item
+			&:after
+				display: none
+
+		&__banner
+			position: relative
+			flex-direction: column
+			padding: 55px 50px 155px 50px
+
+			> img
+				position: absolute
+				bottom: 38px
+				right: -30px
+
+
+			&-title
+				font-size: em(20)
+				font-weight: 500
+				max-width: 50%
+				line-height: 1.4
+
+			.default-btn--arrow
+				size: 40px
+				background-color: transparent
+				filter: invert(1)
+				box-shadow: 0 0 1px 1px #000
+
+
+@media (max-width: 370px)
+	
+	.main-news
+		&__info
+			.tabs__top
+				flex-wrap: nowrap 
+				
+			.tabs__tab
+				padding: 9px

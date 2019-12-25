@@ -1,0 +1,178 @@
+.testemonials
+	display: flex
+	align-items: flex-start
+	
+	.form__submit
+		flex-direction: column
+		
+	&-cont
+		background-color: var(--thrid-color)
+		padding: 115px 0
+
+	&--left
+		width: calc(100% - 504px - 61px)
+
+	&--right
+		background-color: #fff
+		padding: 50px
+		border-radius: 5px
+		margin-left: 60px
+		flex: 1 1 auto
+		position: sticky
+		top: 20px
+
+
+	.rating
+		display: flex
+		align-items: center
+		margin-bottom: 35px
+
+		&-text
+			color: rgba(0, 0, 0, 0.4)
+			line-height: 1
+			margin-left: 22px
+
+
+	.form
+
+		&__title
+			margin-bottom: 45px
+
+
+		&__inputs
+			grid-gap: 17px 0 !important
+
+
+		&__submit
+			margin-top: 35px
+
+			&-btn
+				margin-top: 45px
+
+
+	&__title
+		font-weight: 600
+		font-size: em(20)
+		margin-bottom: 65px
+
+	&__item
+
+		&:not(:first-child)
+			border-top: 1px solid #CFD7E4
+			padding-top: 50px
+
+		&:not(:last-child)
+			padding-bottom: 35px
+
+
+		.testemonials
+			&__item
+				padding-top: 50px
+				margin-top: 35px
+				padding-left: 25px
+
+				.testemonials__name
+					color: var(--second-color)
+
+
+
+
+		&-top
+			display: flex
+			align-items: center
+			margin-bottom: 25px
+
+	&__name
+		font-weight: bold
+		font-size: em(16)
+		margin-right: 22px
+
+	&__date
+		font-weight: 500
+		font-size: em(14)
+		color: #D5D5D5
+
+
+
+@media (max-width: 1200px)
+	
+	.testemonials
+		&-cont
+			padding: 40px 0
+
+		&--right
+			padding: 40px
+			margin-left: 40px
+
+		&--left
+			width: calc(100% - 400px)
+
+		.form__title
+			margin-bottom: 20px
+
+		.rating
+			margin-bottom: 10px
+
+		.form__submit
+			margin-top: 15px
+
+			&-text
+				margin-right: 20px
+
+			&-btn
+				margin: 0 0 0 auto !important
+
+
+		&__title
+			margin-bottom: 20px
+
+		&__item
+			&-top
+				margin-bottom: 15px
+
+
+			.testemonials__item
+				padding-top: 30px
+				margin-top: 20px
+				padding-left: 20px
+
+
+			&:not(:first-child)
+				padding-top: 20px
+				padding-bottom: 20px
+
+@media (max-width: 1000px)
+	
+	.testemonials
+		flex-direction: column
+
+		&--left
+			width: 100%
+
+
+		&--right
+			margin-left: 0
+			width: 100%
+
+@media (max-width: 667px)
+	
+	.testemonials
+		&-cont
+			padding: 55px 0
+
+		&--right
+			width: 100vw
+			margin-left: -20px
+			padding: 20px
+
+		.form__submit
+			flex-direction: column
+
+			&-text
+				margin: 0
+
+			&-btn
+				margin: 20px 0 0 0 !important
+
+		&--left
+			padding-bottom: 20px

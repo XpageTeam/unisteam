@@ -1,0 +1,98 @@
+.head-search
+	z-index: 1000
+
+.title-search-result
+	width: 100% !important
+	background-color: #fff
+	z-index: 100
+	max-width: var(--base-width)
+	margin-top: -30px
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05)
+
+.search-title-result
+	max-height: 60vh
+	overflow-y: auto
+	max-height: calc(60vh - 50px)
+	overflow-y: auto
+	padding-bottom: 50px
+	padding-top: 30px
+
+	
+
+.item-search
+	&-block
+		display: flex
+		padding: 30px 0 30px 0
+		margin: 0 35px 0 30px
+
+		&:not(:first-child)
+			border-top: 1px solid var(--border-color)
+
+	&-img
+		flex: none
+		width: 53px
+		margin-right: 35px
+
+.all-search-result
+	background-color: var(--main-color)
+	color: #000
+	border-radius: 0 0 5px 5px
+	border: 0
+	text-align: center
+	font-size: em(14)
+	padding: 13px !important
+	position: sticky
+	bottom: 0
+	position: absolute
+	bottom: 0
+	right: 0
+	left: 0
+	text-align: center
+	margin: 0 !important
+
+	.item-search-img
+		display: none
+
+	.item-search-content
+		width: 100%
+
+
+	a
+		display: block
+		text-align: center
+	
+.others-search-result
+	display: none
+
+.item-search-content
+	a
+		color: #000
+
+		b
+			color: var(--second-color)
+
+
+@media (max-width: 1000px)
+	
+	.title-search-result
+		width: calc(100% - 40px) !important
+
+
+@media (max-width: 667px)
+	
+	.title-search-result
+		// width: calc(100% - 30px) !important 
+		right: 15px
+
+	.item-search-block
+		padding: 10px 0
+		margin: 0 10px 0 10px
+
+	.item-search-img
+		width: 40px
+		margin-right: 10px
+
+@media (max-width: 370px)
+	
+	.title-search-result
+		width: calc(100% - 30px) !important 

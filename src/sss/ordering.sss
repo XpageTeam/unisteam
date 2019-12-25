@@ -1,0 +1,225 @@
+.ordering
+	display: flex
+
+	&__stages-cont
+		width: calc(100% - 530px)
+
+
+	// &__stages
+	// 	counter-reset: i
+
+	// 	.form__inputs-radio
+	// 		display: block
+
+	// 		.form__input-title
+	// 			float: left
+
+	// 			+ div
+	// 				float: right
+
+	// 	.default-input--radio
+	// 		&:not(:last-child)
+	// 			margin-bottom: 30px
+
+
+	// 	.form__inputs-input
+	// 		&:not(.form__inputs-radio)
+	// 			max-width: 520px
+	// 			width: 100%
+
+	// 		&:not(:first-child)
+	// 			margin-top: 25px
+
+
+	// 		.default-input
+	// 			&:not(.default-input--radio)
+	// 				border: 1px solid var(--border-color)
+	// 				padding: 0 0 0 20px
+
+	// 				.default-input__label
+	// 					flex: 1 1 auto
+	// 					border-right: 1px solid var(--border-color)
+
+
+	// 	.default-input
+	// 		flex-direction: row-reverse
+	// 		align-items: center
+	// 		border-radius: 5px
+
+
+
+	// 		&__input
+	// 			position: relative
+	// 			border-color: transparent
+	// 			margin-left: auto
+	// 			max-width: 360px
+
+
+
+	&__stage
+		counter-increment: i
+
+
+		.default-input__label
+			&:after
+				display: none
+
+
+		&-head
+			display: flex
+			align-items: center
+			line-height: 1
+			padding: 19px 25px
+			border-radius: 5px
+			background-color: var(--thrid-color)
+			margin-bottom: 25px
+
+			font-weight: 600
+			font-size: em(20)
+			color: #C5CCD6
+			cursor: pointer
+
+			&:not(.ordering__stage--success)
+
+				&:before
+					content: counter(i) "."
+					margin-right: 20px
+
+		&--success
+			color: #000
+
+			&:before
+				content: ''
+				display: inline-block
+				size: 26px
+				border-radius: 50%
+				background-color: #B8C800
+				margin-right: 18px
+				background-image: url('../img/ico-check.svg')
+				background-repeat: no-repeat
+				background-position: 50%
+
+		&-body
+			margin: 0 0 35px 0
+
+
+		&-footer
+			display: flex
+			align-items: center
+			margin: 0 0 35px 0
+
+			.default-btn
+				font-weight: bold
+				font-size: (12)
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				margin-right: 30px
+
+			span
+				color: var(--second-color)
+
+
+.ordering__data
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -20px -15px
+
+	&-item
+		width: calc((100% - 15px * 3) / 3)
+		margin: 0 0 20px 15px
+
+		&:nth-child(2)
+			max-width: 140px
+
+		.label
+			font-weight: 500
+			font-size: em(10)
+			text-transform: uppercase
+
+			color: rgba(0, 0, 0, 0.4)
+		.text
+			word-break: break-word
+
+
+@media (min-width: 667px)
+	.ordering
+		&__stages
+			counter-reset: i
+
+			.form__inputs-radio
+				display: block
+
+				.form__input-title
+					float: left
+
+					+ div
+						float: right
+
+			.default-input--radio
+				&:not(:last-child)
+					margin-bottom: 30px
+
+
+			.form__inputs-input
+				&:not(.form__inputs-radio)
+					max-width: 520px
+					width: 100%
+
+				&:not(:first-child)
+					margin-top: 25px
+
+
+				.default-input
+					&:not(.default-input--radio)
+						border: 1px solid var(--border-color)
+						padding: 0 0 0 20px
+
+						.default-input__label
+							flex: 1 1 auto
+							border-right: 1px solid var(--border-color)
+							margin-bottom: 0
+
+
+			.default-input
+				flex-direction: row-reverse
+				align-items: center
+				border-radius: 5px
+
+
+
+				&__input
+					position: relative
+					border-color: transparent
+					margin-left: auto
+					max-width: 360px
+
+
+
+@media (max-width: 1200px)
+	
+	.ordering
+		flex-direction: column
+
+		&__stages
+			&-cont
+				width: 100%
+
+			.form__inputs-radio
+				display: flex
+				
+@media (max-width: 667px)
+	
+	.ordering
+		&__stages
+
+			.form__inputs-radio
+				.form__input-title
+					margin-bottom: 30px
+
+	.ordering__data
+		flex-direction: column
+
+		&-item
+			width: 100%
+			max-width: 100%
+

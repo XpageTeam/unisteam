@@ -1,0 +1,1167 @@
+.catalog
+	display: flex
+
+
+	&-cat2
+		flex: 1 1 auto
+
+		&__list
+			display: flex
+			flex-wrap: wrap
+
+			&-sort
+				margin-bottom: 50px
+
+.aside
+	width: 240px
+	flex: none
+	margin-right: 27px
+
+.ui-slider 
+
+	&-horizontal
+		position: relative
+		height: 5px
+	
+	.ui-slider
+
+		&-range
+			background: var(--main-color)
+			position: absolute
+			height: 100%
+
+		&-handle
+			border: 1px solid #DEE0E3
+			background: #fff
+			size: 15px
+			top: calc(50% - 8px)
+			transform: translateX(-8px)
+			cursor: pointer
+			position: absolute
+			z-index: 2
+			border-radius: 50%
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1)
+
+.ui-widget-content
+	background: #F6F8FB
+	border-radius: 5px
+
+.price-filter
+	display: flex
+	flex-direction: column-reverse
+
+	&__inputs
+		position: relative
+		z-index: 1
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin: 33px 0 0
+
+		&:before
+			content: "-"
+			display: inline-block
+			order: 1
+
+		input[type="tel"]
+			size: calc((100% - 25px) / 2) 39px
+			border: none
+			padding: 5px 14px
+			border-radius: 5px
+			background: #F6F8FB
+
+			&:last-child
+				order: 2
+
+
+
+.filter
+
+	&__item
+
+
+		&:not(&--price):not(.aside-category):not(.filter__item-sale)
+			background-color: var(--thrid-color)
+			border-radius: 5px
+			padding: 30px
+			position: relative
+
+		&.aside-category
+			background-color: var(--thrid-color)
+			border-radius: 5px
+
+		&:not(.js__open)
+
+			.aside-category__list
+				display: none
+
+		&:not(:last-child)
+			margin-bottom: 27px
+
+		&:last-child
+			padding: 0 !important
+
+			.default-btn
+				justify-content: center
+
+
+		&-title
+			font-weight: 600
+			font-size: em(14)
+			margin-bottom: 30px
+			position: relative
+			z-index: 1
+
+		&-color
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -10px -10px
+
+			.default-input--checkbox
+				width: calc((100% - 10px * 6) / 6)
+				margin: 0 0 10px 10px
+
+			label
+				&:before
+					background-color: currentColor
+
+				&:after
+					border-color: #fff
+
+		&-sale
+			padding: 0
+			background-color: transparent
+
+			.default-input
+				display: flex
+				align-items: center
+
+			label
+				padding-right: 12px
+
+			span
+				display: block
+
+		&-content
+
+			&:not(.js__checkbox--open) 
+				
+				.filter-item, .default-input--checkbox
+					
+					&:nth-child(n + 10)
+						display: none !important
+
+
+	&-search
+		position: relative
+		margin-bottom: 25px
+
+		input
+			&[type="text"]
+				width: 100%
+
+			&[type="submit"]
+				position: absolute
+				top: 0
+				right: 0
+				size: 38px
+				font-size: 0
+				background-color: transparent
+				border: 0
+				background-image: url('../img/ico-zoom.svg')
+				background-repeat: no-repeat
+				background-position: 50%
+
+				/** Не нужон */
+				pointer-events: none
+
+	&-list
+		display: flex
+		flex-wrap: wrap
+
+		.default-input--checkbox
+			width: 100%
+
+	&-item
+		margin: 0 0 10px 0 
+		display: block
+
+		&:not(:last-child)
+			margin-right: 10px
+
+
+		&--tag
+
+			&:not(:last-child)
+				margin-bottom: 10px
+
+			.default-input__input
+				&:checked
+					~ .default-input__label
+						border-color: var(--second-color)
+
+			.default-input__label
+				padding: 8px 10px
+				border: 1px solid var(--border-color)
+				border-radius: 5px
+				display: inline-block
+				cursor: pointer
+				line-height: 1
+
+
+
+
+
+
+	&-link
+		display: block
+		padding: 10px
+		border: 1px solid var(--border-color)
+		border-radius: 5px
+		font-size: em(13)
+
+
+	&__item
+		&-btn
+			margin-top: 20px 
+
+.more-filter
+	position: relative
+	color: var(--second-color)
+	display: flex
+	align-items: center
+	line-height: 1
+	
+	&:after
+		content: ''
+		display: inline-block
+		size: 6px
+		margin-left: 10px
+		border-right: 1px solid currentColor
+		border-bottom: 1px solid currentColor
+		transform: rotate(45deg)
+
+.js__checkbox--open
+	.more-filter
+		&:after
+			transform: rotate(225deg)
+			transition: transform .3s ease
+
+
+.search-form__input
+	height: 38px
+	padding: 0 40px 0 15px
+	border: 0
+	border-radius: 5px
+
+
+
+.aside__head
+	display: none
+
+.aside-category
+	padding: 0
+
+	&.js__open
+
+		.aside-category__top
+
+			&:after
+				transform: rotate(225deg)
+
+	&__top
+		position: relative
+		background-color: var(--second-color)
+		color: #fff
+		border-radius: 5px
+		padding: 10px 25px
+		cursor: pointer
+		user-select: none
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			right: 20px
+			top: calc(50% - 3px)
+			size: 6px
+			border-right: 1px solid #fff
+			border-bottom: 1px solid #fff
+			transform: rotate(45deg)
+			transition: transform .3s ease
+
+	&__list
+		padding: 10px 0
+
+	&__item
+		position: relative
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			right: 20px
+			top: calc(50% - 3px)
+			size: 6px
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(-45deg)
+			transition: transform .3s ease
+	&__link
+		display: block
+		padding: 10px 35px 10px 25px
+
+
+.sort
+	display: flex
+	align-items: center
+	flex: 1 1 auto
+
+	&__view
+		margin-left: auto
+
+	&__select
+		position: relative
+		background-color: var(--thrid-color)
+		padding: 13px 16px
+		border-radius: 5px
+		display: flex
+		align-items: center
+		font-size: em(13)
+		margin-right: 15px
+
+		&-label
+			margin-right: 5px
+			line-height: 1
+
+			&--selectized
+
+				&:before
+					content: ""
+					position: absolute 0
+					cursor: pointer
+
+		&-select
+			border: 0
+			color: #B1B1B0
+			background-color: var(--thrid-color)
+			padding: 0 20px 0 0
+			background-image: url('../img/ico-arrow.svg')
+			background-repeat: no-repeat
+			background-position: right center
+		
+	&__filter
+		margin-left: auto
+		display: none
+
+.filter-btn
+	position: relative
+	display: flex
+	align-items: center
+	background-color: var(--thrid-color)
+	border-radius: 5px
+	padding: 8px 19px
+	cursor: pointer
+
+	&:after
+		content: ''
+		display: block
+		size: 20px
+		background-image: url('../img/ico-filter.svg')
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: contain
+
+
+
+
+
+.view
+	display: flex
+	align-items: center
+
+	&-item
+		cursor: pointer
+
+		&:not(:last-child)
+			margin-right: 15px
+
+	&-list, &-plates
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: contain
+
+	&-plates
+		size: 19px
+		background-image: url('../img/ico-plate.svg')
+
+		&.active
+			background-image: url('../img/ico-plate-active.svg')
+
+	&-list
+		size: 25px 20px
+		background-image: url('../img/ico-list.svg')
+
+		&.active
+			background-image: url('../img/ico-list-active.svg')
+
+.catalog-cat2__list
+	.item
+		&-cont
+			width: calc(100% / 4)
+			margin-bottom: -85px
+			transition: box-shadow .3s ease, outline .2s ease, background-color .3s ease-in-out
+			outline: 13px solid rgba(255, 255, 255, 0)
+
+			&:hover
+				box-shadow: 0 0px 8px 12px rgba(14, 14, 14, 0.08)
+				outline: 13px solid #fff
+
+	&-row
+		.item-cont
+			position: relative
+			width: 100%
+			margin: 0
+			// border-bottom: 1px solid var(--border-color)
+			box-shadow: 0px 14px 0 0 #EBEDF1
+			outline: 13px solid #fff
+			outline: 0
+			box-shadow: none
+			border-bottom: 1px solid #EBEDF1
+			padding: 15px
+			border-radius: 5px
+
+			&:hover
+				z-index: 10
+				background-color: #fff
+				outline: 0
+				box-shadow: none
+				box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.05)
+
+			&:not(:first-child)
+				padding-top: 20px
+
+		.item
+			display: flex
+			align-items: center
+			flex-direction: row
+
+			&__img
+				position: relative
+				margin-right: 60px
+				max-width: 190px
+				width: 100%
+				z-index: 1
+
+				figure
+					display: flex
+					justify-content: center
+					align-items: center
+
+				.item__label--left, .percente
+					display: none
+
+				.item__label--right
+					right: auto
+					left: 0
+
+			&__info
+				&-top
+					display: flex
+
+					> *
+						&:first-child
+							margin-left: 0
+
+
+			&__btns
+				margin: 0 0 0 auto
+				opacity: 1
+				pointer-events: all
+
+			.default-btn--view
+				margin-top: 15px
+
+
+.catalog-cat2__list:not(.catalog-cat2__list-row), .swiper-slide
+
+	.item
+		&-cont
+
+			position: relative
+			pointer-events: none
+
+			&:hover
+				background-color: #fff
+				z-index: 10
+
+				.item
+					&__img, &__title, &__prices, &__btns
+						pointer-events: all
+
+				.item__btns
+					opacity: 1
+					pointer-events: all
+
+		&__info
+			display: flex
+			flex-direction: column
+			pointer-events: auto
+
+			&-top
+				display: none 
+
+
+
+		&__img
+			position: relative
+			display: flex
+			justify-content: center
+			margin: 0 10px
+			pointer-events: auto
+
+			a
+				border: 0 !important
+
+
+
+			img
+				display: block
+
+
+		&__title
+			font-size: em(14)
+			line-height: 150%
+			text-align: center
+			max-width: 196px
+			margin: 0 auto
+			padding-top: 24px
+
+		&__prices
+			justify-content: center
+			align-items: center
+
+
+		&__btns
+			padding-top: 30px
+			opacity: 0
+			transition: opacity .3s ease-in-out
+			pointer-events: none
+
+			a
+				width: 100%
+				text-align: center
+
+				&:not(:first-child)
+					margin-top: 15px
+
+	
+.item__label
+	&--left
+		position: absolute
+		left: 0
+		top: 0
+		transform: rotate(180deg)
+
+		.item__label-info
+			writing-mode: vertical-lr
+			margin-top: 25px
+
+
+	&--right
+		position: absolute
+		top: 0
+		right: 0
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+
+		.item__label-info
+			margin-bottom: 15px
+
+
+.item__label-info
+	font-weight: bold
+	font-size: em(10)
+	letter-spacing: 0.07em
+	text-transform: uppercase
+
+.percente
+	padding: 8px 13px
+	border-radius: 5px
+	background-color: var(--second-color)
+	color: #fff
+	line-height: 1
+	text-align: center
+	font-weight: bold
+	font-size: em(12)
+	letter-spacing: 0.02em
+
+
+.item
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+
+	&-cont
+		display: flex
+		flex-direction: column
+
+	&__title
+		flex: 1 1 auto
+
+
+	&__prices
+		display: flex
+		padding-top: 30px
+
+		> *
+			white-space: nowrap
+
+	&__price
+		font-weight: bold
+		font-size: em(16)
+
+
+		&--old
+			font-weight: 500
+			font-size: em(16)
+			text-decoration-line: line-through
+			margin-right: 18px
+			color: #D5D5D5
+
+			+ .item__price
+				color: var(--second-color)
+
+	&__img
+		// height: 180px
+		flex: none
+
+		img
+			max-height: 100%
+
+	&__info
+		flex: 1 1 auto
+		justify-content: space-between
+
+		&-top
+			display: flex
+			align-items: center
+			margin-bottom: 18px
+
+			.percente
+				margin-left: 15px
+
+
+			.item__label-info
+				&:not(:first-child)
+					margin-left: 25px
+
+	&__btns
+		margin-top: auto
+
+
+.favorite
+	size: 17px 15px
+	background-image: url('../img/ico-favorite.svg')
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: 50%
+	cursor: pointer
+
+	&:hover, &.active, &.added
+		background-image: url('../img/ico-favorite-active.svg')
+
+
+.compare
+	size: 20px 16px
+	background-image: url('../img/ico-compare.svg')
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: 50%
+	cursor: pointer
+
+	&:hover, &.active, &.added
+		background-image: url('../img/ico-compare-active.svg')
+
+.catalog-cat1
+	a
+		color: #000
+		display: inline-block
+
+		&:not(:first-child)
+			color: #A8A8A8
+
+
+	&__top
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -30px -30px
+
+		.catalog-cat1__item
+			width: calc((100% - 30px * 2) / 2)
+			margin: 0 0 30px 30px
+
+			&:last-child:nth-child(odd)
+				flex: 1 1 auto
+				display: flex
+				flex-wrap: wrap
+
+				.catalog-cat1__item-top
+					width: 100%
+
+
+				.catalog-cat1__elements
+					// width: 100%
+					column-count: 2
+					column-gap: 30px
+
+					&:not(:nth-child(2))
+						width: calc((100% - 50px * 2) / 2)
+						margin: 0 0 0 50px
+
+
+.catalog-cat1
+	&__list
+		column-count: 2
+		column-gap: 30px
+		margin-top: 29px
+
+	&__item
+		border: 1px solid var(--border-color)
+		border-radius: 5px
+		padding: 50px 70px
+		margin-bottom: 30px
+		margin-top: 1px
+		break-inside: avoid
+
+
+
+
+		&-top
+			display: flex
+			margin-bottom: 40px
+			font-weight: 500
+			font-size: em(20)
+			letter-spacing: 0.02em
+
+			figure
+				flex: none
+				margin-right: 18px
+
+	&__el
+		display: flex
+		flex-direction: column
+		break-inside: avoid
+		align-items: flex-start
+
+		a
+			border: 0 !important
+
+			&:hover
+				color: var(--second-color)
+				text-decoration: underline
+
+		&:not(:last-child)
+			margin-bottom: 20px
+
+	&__elements
+		column-count: 2
+		column-gap: 30px
+
+
+@media (max-width: 1500px)
+	.catalog-cat2__list-row 
+		.item__img
+			margin-right: 30px
+
+@media (max-width: 1400px)
+	
+	.catalog-cat1__item-top
+		margin-bottom: 20px
+
+	.catalog-cat1__item
+		padding: 35px
+
+
+@media (max-width: 1200px)
+	
+	.catalog-cat2__list
+		.item
+			&-cont
+				width: calc(100% / 3)
+
+		&-row 
+			.item-cont
+				width: 100%
+
+			.item__img
+				max-width: 135px
+
+	.sort
+		&__select
+			margin-right: 10px
+
+
+			&-select
+				padding: 0 10px 0 0
+
+		&__filter
+			display: block
+
+		&__view
+			display: none
+
+
+	.aside
+		width: 210px
+		margin-right: 15px
+
+		&-category__link
+			padding: 10px 25px 10px 15px
+
+
+	.filter__item:not(.filter__item--price):not(.aside-category):not(.filter__item-sale)
+		padding: 15px
+
+	.filter__item-title
+		margin-bottom: 15px
+
+	.aside-category__top
+		padding: 8px 15px
+
+	
+	.sort__select
+		overflow: hidden
+		
+	.bx-touch
+		.sort__select-select
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			bottom: 0
+			right: 0
+
+	.item__btns
+		opacity: 1 !important
+		pointer-events: all !important
+
+	.item-cont
+		margin-bottom: 30px !important
+
+	.item__btns
+		display: flex
+		padding-left: 20px 
+		padding-right: 20px 
+
+		.default-btn
+			font-size: 0
+			flex: 1 1 auto
+			justify-content: center
+			padding: 10px 16px !important
+
+			&:before
+				margin: 0 !important
+
+			&:not(:first-child)
+				margin: 0 0 0 15px !important
+
+	.sort__select
+		&:nth-child(1), &:nth-child(3)
+			display: none
+
+	.catalog-cat2__list:not(.catalog-cat2__list-row) .item-cont, .swiper-slide .item-cont
+		pointer-events: all
+
+
+
+
+	
+	.catalog-cat1
+
+
+		&__top
+
+			.catalog-cat1__item
+
+				&:last-child:nth-child(odd)
+
+					.catalog-cat1__elements
+						column-gap: 10px
+
+						&:not(:nth-child(2))
+							width: calc((100% - 30px * 2) / 2)
+							margin: 0 0 0 30px
+
+
+@media (max-width: 1000px)
+
+	.aside
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		pointer-events: none
+		width: 100%
+		z-index: 99999
+		background-color: var(--thrid-color)
+		padding: 25px
+		overflow-y: auto
+		display: flex
+		flex-direction: column
+		transition: opacity .3s ease
+
+		&__head
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background-color: #fff
+			padding: 20px 25px
+			border-radius: 5px 5px 0 0
+			order: -2
+
+		&__title
+			font-size: em(18)
+			font-weight: 600
+
+		&-category
+			&__top
+				padding: 15px 25px
+				font-size: em(14)
+				font-weight: bold
+				border-radius: 0
+
+			&__list
+				display: none
+
+			&__link
+				padding: 15px 25px
+
+
+
+
+	.js__open-filter
+		.aside
+			opacity: 1
+			pointer-events: all
+
+
+	.filter__item
+		background-color: #fff !important
+		margin: 0 !important
+		border-bottom: 1px solid var(--border-color)
+		
+		&:not(.filter__item-sale):not(.aside-category)
+			padding: 0 !important
+
+
+		&.aside-category
+			background-color: #fff
+
+		&.filter__item-sale
+			order: -1
+			margin: 0
+			padding: 15px 25px
+
+		&-color 
+
+			&[style*="block"]
+				display: flex !important
+
+			.default-input--checkbox
+				width: calc((100% - 60px) / 25)
+
+		&-title
+			position: relative
+			padding: 15px 25px
+			margin: 0
+			transition: background .3s ease
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				right: 20px
+				top: calc(50% - 3px)
+				size: 6px
+				border-right: 1px solid #000
+				border-bottom: 1px solid #000
+				transform: rotate(45deg)
+				transition: transform .3s ease
+
+			~ div
+				margin: 30px 25px 15px
+
+				&:not(.js__open)
+					display: none
+
+			&.js__open
+				background-color: var(--second-color)
+				color: #fff
+
+				&:after
+					border-color: #fff
+					transform: rotate(225deg)
+
+	.filter-search 
+		input[type=text]
+			background-color: var(--thrid-color)
+
+	.catalog-cat1__top .catalog-cat1__item
+		width: 100%
+
+	.catalog-cat1__list
+		column-count: 1
+
+	.catalog-cat1__top .catalog-cat1__item:last-child:nth-child(odd) .catalog-cat1__elements:not(:nth-child(2))
+		width: 100%
+		margin: 30px 0 0 0
+
+	.catalog-cat1__elements
+		width: 100%
+
+
+
+@media (max-width: 667px)
+
+	.sort__select
+		padding: 7px 15px
+
+	.catalog-cat2__list
+		.item
+			&-cont
+				width: calc(100%  / 2) 
+
+		&-row 
+			.item
+				flex-wrap: wrap
+				align-items: flex-start
+
+				&-cont
+					width: 100% 
+					padding: 10px 0 !important
+					margin: 10px 0 !important
+					border-radius: 0
+
+					&:not(:first-child)
+						padding-top: 0 !important
+						margin-top: 0 !important
+
+				&__img
+					max-width: 100px
+					margin-right: 15px
+
+				&__info
+					width: calc(100% - 100px - 15px)
+
+				&__prices
+					flex-direction: row
+
+				&__btns
+					margin: 10px 0 0 auto
+					flex: none
+					padding: 0
+					width: calc(100% - 100px - 15px)
+
+
+
+
+	.catalog-cat2__list:not(.catalog-cat2__list-row) .item__btns, .swiper-slide .item__btns
+		padding-top: 15px
+	
+	.catalog-cat1__top .catalog-cat1__item:last-child:nth-child(odd) .catalog-cat1__elements
+		column-count: auto
+
+	.catalog-cat1__elements
+		column-count: auto
+		column-gap: 0
+
+	.catalog-cat1__item
+		border: 0
+		padding: 0
+		margin-bottom: 0 !important
+
+	.catalog-cat1
+		width: 100%
+
+	.catalog-cat1__elements
+		display: none
+		padding: 20px 0
+
+
+	.catalog-cat1__item-top
+		position: relative
+		margin-bottom: 0
+		border-top: 1px solid var(--border-color)
+		padding: 15px 0
+		align-items: center
+		font-size: 14px
+
+		&.js__open
+			&:after
+				transform: rotate(225deg)
+		&:after
+			content: ''
+			display: block
+			size: 6px
+			position: absolute
+			right: 10px
+			top: calc(50% - 3px)
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(45deg)
+			transition: transform .3s ease
+
+		figure
+			display: flex
+
+	.filter__item-color .default-input--checkbox
+		width: calc((100% - 60px)/9)
+
+	.filter__item-color
+		margin: 30px 25px 15px 15px
+
+
+
+
+@media (max-width: 400px)
+	
+	.item__prices
+		flex-direction: column
+		align-items: center
+		padding-top: 15px
+
+	.item__price--old
+		margin-right: 0
+
+
+@media (max-width: 370px)
+
+	.item-cont
+		width: 100% !important
+
+	.catalog 
+		.item__prices
+			flex-direction: column
+
+		.item__price--old
+			margin-right: 0
+
+	.aside
+		padding: 0
+
+		&__head
+			padding: 20px 15px
+
+	.aside-category__top, .filter__item-title, .filter__item.filter__item-sale, .aside-category__link
+		padding: 15px
+
+
+	.filter__item-title~div
+		margin: 20px 15px 15px
+
+	.filter__item-color
+		margin: 30px 25px 15px 5px !important

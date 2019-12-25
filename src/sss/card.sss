@@ -1,0 +1,1041 @@
+.fancybox[href="#wantPresent"]
+	display: flex
+	align-items: center
+	line-height: 1
+
+	&:before
+		content: ''
+		size: 20px
+		background-image: url('../img/ico-bonus.svg')
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: contain
+		margin-right: 15px
+		top: -4px
+		position: relative
+
+
+	
+.card
+	display: flex
+
+	.tabs
+		margin-top: 35px
+
+		&__top
+			margin-bottom: 35px
+
+			.btn
+				padding: 13px 24px
+				border-radius: 5px
+				transition: background-color .3s ease,color .3s ease
+				cursor: pointer
+				font-weight: 700
+				user-select: none
+				background-color: var(--thrid-color)
+
+				span
+					color: var(--second-color)
+
+
+		&__tab
+			border: 1px solid var(--border-color)
+			background-color: transparent
+
+
+	&-cont
+		margin-bottom: 80px
+
+	&--left
+		width: calc(100% - 768px - 65px)
+		margin-right: 65px
+		flex: none
+
+		.card-title, .rating
+			display: none
+
+	&--right
+		display: block
+		width: 100%
+
+		> .card-links
+			display: none
+
+	&-slider
+		&__thumbs
+			display: flex
+			align-items: center
+
+			.swiper-list
+				margin: 0 30px !important
+
+		&__top
+			margin-bottom: 25px
+
+	&-thumb
+		padding: 5px
+		border: 1px solid var(--border-color)
+		border-radius: 5px
+		display: flex
+		justify-content: center
+		align-items: center
+
+		img
+			display: block
+			max-height: 90px
+
+
+
+	.swiper-slide-thumb-active
+		.card-thumb
+			border-color: var(--second-color)
+
+
+
+
+	.swiper-button
+		flex: none
+
+	&-slide
+		position: relative
+		display: block
+
+		&__img
+			display: flex
+			justify-content: center
+			align-items: center
+			min-height: 470px
+
+
+			&:after
+				content: ''
+				position: absolute
+				right: 20px
+				bottom: 20px
+				size: 50px
+				background-image: url('../img/ico-zoom-black.svg')
+				background-repeat: no-repeat
+				background-position: 50%
+	
+	&-title
+		font-weight: 600
+		font-size: em(26)
+		letter-spacing: 0.02em
+		margin-bottom: 25px
+
+	&-row
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		.rating
+			pointer-events: none
+
+
+		.card-prices
+			margin-bottom: 0
+
+			+ .rating
+				margin-left: auto
+
+
+
+	&-favorite, &-compare
+		margin-left: em(40)
+		display: flex
+		align-items: center
+
+		span
+			&:nth-child(1)
+				flex: none
+				margin-right: 15px
+
+		&.added
+			svg
+				path
+					fill: var(--second-color)
+					stroke: var(--second-color)
+
+	&-favorite
+		svg
+			overflow: visible !important
+
+			path
+				fill: transparent
+				stroke: #000
+
+	&-property
+		flex: 1 1 auto
+
+		&-cont
+			display: flex
+			justify-content: space-between
+			border-top: 1px solid var(--border-color)
+			padding-top: 30px
+			margin-top: 20px
+
+			.card-bonus
+				display: none
+
+
+
+		&__el
+			position: relative
+			display: flex
+			justify-content: space-between
+			font-size: em(13)
+
+			&:not(:last-child)
+				margin-bottom: 5px
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 5px
+				left: 0
+				width: 100%
+				height: 1px
+				background-color: var(--border-color)
+
+
+
+			span
+				background-color: #fff
+				line-height: 1
+				position: relative
+				z-index: 1
+
+				&:nth-child(1)
+					padding: 2px 8px 2px 0
+
+				&:nth-child(2)
+					padding: 2px 0 2px 8px
+					margin-left: 68px
+
+	&-btns
+		display: flex
+
+
+		&-cont
+			border: 1px solid var(--border-color)
+			border-radius: 5px
+			padding: 25px
+			max-width: 386px
+			width: 100%
+			margin-left: 45px
+
+		&.tovar--added
+
+			.default-btn--cart
+				position: relative
+				font-size: 0
+
+				&:before
+					margin-right: 10px
+
+				&:after
+					content: '+'
+					display: block
+					color: #fff
+					size: 10px
+					font-size: 20px !important
+					line-height: 12px
+					font-weight: 300
+
+
+	&-prices
+		display: flex
+		align-items: flex-end
+		margin-bottom: 35px
+
+
+	.price
+		font-weight: 600
+		font-size: em(24)
+		line-height: 1
+
+		&--old
+			font-size: em(18)
+			text-decoration-line: line-through
+			color: #C4C4C4
+			line-height: 1
+			margin-left: 21px
+
+	&-counter
+		display: flex
+		align-items: center
+		padding: 13px 23px
+		border: 1px solid var(--border-color)
+		border-radius: 5px
+
+		&__info
+			display: none
+
+
+		+ .default-btn
+			margin-left: 25px
+
+
+		&__input
+			border: 0
+			width: 50px
+			padding: 0 10px
+			text-align: center
+
+		&__btn
+			position: relative
+			size: 24px
+			border-radius: 50%
+			border: 1px solid var(--border-color)
+			background-color: transparent
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				left: calc(50% - 4px)
+				width: 9px
+				height: 1px
+				background-color: #000
+
+
+			&--plus
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					top: calc(50% - 4px)
+					left: 50%
+					width: 1px
+					height: 9px
+					background-color: #000
+
+
+	&-links
+		margin-top: 25px
+		border-radius: 5px
+
+		a
+			background-color: var(--thrid-color)
+			padding: 17px 40px 17px 20px
+			position: relative
+			color: var(--second-color)
+			font-weight: bold
+			font-size: em(10)
+			text-transform: uppercase
+			display: flex
+
+			&:after
+				content: ''
+				display: block
+				size: 6px
+				border-top: 1px solid var(--second-color)
+				border-right: 1px solid var(--second-color)
+				transform: rotate(45deg)
+				position: absolute calc(50% - 3px) 20px * *
+
+
+			span
+				font-weight: 600
+				font-size: em(14)
+				text-transform: none
+				margin-right: 10px
+
+	.default-btn--cart
+		padding: 18px 21px
+
+	&-bonus
+		font-weight: bold
+		font-size: em(13)
+		color: var(--second-color)
+		margin-top: 30px
+
+
+	&-info
+		padding-top: 40px
+		margin-top: 25px
+		border-top: 1px solid var(--border-color)
+
+		
+
+	&__btn
+		margin-top: 50px
+		display: flex
+
+		.default-btn
+			&:not(:first-child)
+				margin-left: 25px
+
+
+.tovar--added		
+	.default-btn--cart
+		&:hover
+			.btn-info-cont
+				opacity: 1
+
+		&.disabled
+			background-color: var(--thrid-color)
+			pointer-events: none
+
+			&:before
+				filter: invert(1)
+
+			&:after
+				color: #000
+
+	.card-counter
+		display: none
+
+	.card-counter__info
+		padding: 19px 21px
+		border: 1px solid var(--border-color)
+		border-radius: 5px
+		line-height: 1
+		display: block
+
+.btn-info
+	position: relative
+	padding: 30px
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05)
+	border-radius: 5px
+
+	&:after
+		content: ''
+		size: 16px
+		display: block
+		position: absolute
+		bottom: -8px
+		right: calc(50% - 8px)
+		transform: rotate(45deg)
+		background-color: #fff
+
+	&-cont
+		font-size: 14px
+		position: absolute
+		bottom: 100%
+		right: 50%
+		transform: translate3d(50%,0,0)
+		color: #000
+		text-transform: none
+		z-index: 10
+		background-color: #fff
+		padding-bottom: 20px
+		opacity: 0
+		pointer-events: none
+
+		div
+			&:nth-child(1)
+				font-weight: 600
+			&:nth-child(2)
+				font-weight: 400
+				margin-top: 10px
+
+
+.card__label
+	&--left
+		position: absolute
+		left: 0
+		top: 0
+		transform: rotate(180deg)
+
+		.item__label-info
+			writing-mode: vertical-lr
+			font-weight: 700
+			font-size: .71em
+			letter-spacing: .07em
+			text-transform: uppercase
+			margin-top: 25px
+			border: 1px solid var(--border-color)
+			padding: 5px
+			border-radius: 5px
+			background-color: #fff
+
+
+	&--right
+		position: absolute
+		right: 0
+		top: 0
+
+
+.card__label-info
+
+	.percente
+		padding: 8px 13px
+		border-radius: 5px
+		background-color: var(--second-color)
+		color: #fff
+		line-height: 1
+		text-align: center
+		font-size: em(12)
+		letter-spacing: 0.02em
+
+
+.presence
+	margin-top: 30px
+
+
+
+	&__not(.js__open) &__bot
+		display: none
+
+	&:not(:last-child)
+		margin-bottom: 20px
+
+	&__top
+		position: relative
+		background-color: var(--thrid-color)
+		padding: 15px 55px
+		border-radius: 5px
+		font-weight: bold
+		font-size: em(10)
+		text-transform: uppercase
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			right: 20px
+			top: 17px
+			size: 6px
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(45deg)
+			transition: transform .3s ease
+
+		&--on
+			color: #7D9200
+
+			&:before
+				content: ''
+				position: absolute
+				left: 22px
+				top: 13px
+				display: inline-block
+				size: 8px 10px
+				border-right: 1px solid currentColor
+				border-bottom: 1px solid currentColor
+				transform: rotate(45deg)
+				margin-right: 20px
+
+	&__list
+		padding-top: 34px
+
+	&__item
+		display: flex
+		align-items: center
+
+		.count
+			margin-right: 27px
+			white-space: nowrap
+
+		&:not(:last-child)
+			margin-bottom: 14px
+
+	&.js__open
+		.presence__top
+			&:after
+				transform: rotate(225deg)
+
+
+
+.count
+	border: 1px solid var(--border-color)
+	border-radius: 5px
+	padding: 7px 9px
+	line-height: 1
+
+
+
+.info-product
+	display: flex
+	align-items: center
+
+	&-cont
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: #fff
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05)
+		padding: 25px 0
+		z-index: 10
+		transition: opacity .3s ease
+
+		&:not(.js__visible)
+			opacity: 0
+			pointer-events: none
+
+	&__img
+		width: 45px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 20px
+
+	&__title
+		font-weight: 500
+		font-size: em(15)
+		letter-spacing: 0.02em
+
+		&:hover
+			color: var(--second-color)
+
+	&__price
+		margin-left: 85px
+		font-weight: 600
+		font-size: em(18)
+		white-space: nowrap
+		display: flex
+		align-items: center
+
+		.price--old
+			font-size: em(12)
+			font-weight: 300
+			text-decoration-line: line-through
+			color: #c4c4c4
+			line-height: 1
+			margin-left: 21px
+			margin-left: 15px
+
+
+	&__count
+		background-color: var(--main-color)
+		border-radius: 5px
+		line-height: 1
+		padding: 18px
+		font-size: em(12)
+		text-transform: uppercase
+		margin-left: auto
+		font-weight: bold
+		white-space: nowrap
+		margin-left: 15px
+
+
+		&.disabled
+			background-color: var(--thrid-color)
+			pointer-events: none
+
+
+		&-current
+			color: rgba(0, 0, 0, 0.4)
+			margin-left: 55px
+			white-space: nowrap
+
+	&__btn
+		margin-left: 20px
+		border: 1px solid var(--border-color)
+		border-radius: 5px
+		padding: 18px
+		line-height: 1
+		font-size: em(12)
+		text-transform: uppercase
+		font-weight: bold
+		transition: border-color .3s ease
+		white-space: nowrap
+
+		&:hover
+			border-color: var(--second-color)
+
+
+
+.slider--itemsets
+
+	.swiper-scrollbar
+		display: none
+
+.category
+	&__list
+		border-top: 1px solid var(--border-color)
+		margin-top: 100px
+
+		&:empty
+			display: none
+
+	&__item
+		display: flex
+		align-items: center
+		color: #393939
+		border-bottom: 1px solid var(--border-color)
+		padding: 40px 0
+
+		&-favorite
+			width: 47px
+			margin-right: 10px
+			flex: none
+
+
+
+			span
+				display: block
+				width: 17px
+
+		&-img
+			width: 65px
+			text-align: center
+			margin-right: 20px
+			flex: none
+
+		&-title
+			margin-right: 40px
+			max-width: 360px
+			width: 100%
+
+		&-art
+			font-size: em(16)
+			color: #393939
+
+		&-price
+			font-weight: 500
+			font-size: em(18)
+			line-height: 133%
+			letter-spacing: 0.02em
+			color: #393939
+			margin: 0 auto
+
+		&-btn
+			margin-left: 20px
+
+
+@media (max-width: 1200px)
+	
+	.card--left
+		width: calc(100% - 590px)
+		margin-right: 35px
+
+	.card-property-cont
+		padding-top: 0
+		margin: 20px 0
+		flex-direction: column-reverse
+
+	.card-btns-cont
+		max-width: 100%
+		margin-left: 0
+		margin-bottom: 20px
+
+	.card-title
+		font-size: em(20)
+		line-height: 1.4
+		margin-bottom: 20px
+
+	.card-cont
+		margin-bottom: 40px
+
+	.info-product
+		&__price
+			margin-left: 20px
+			flex-direction: column
+			align-items: flex-start
+
+			.price--old
+				margin-left: 0
+
+
+		&__count-current
+			margin-left: 30px
+
+		&__title
+			max-width: 480px
+
+	.category__item
+		&-btn
+			.default-btn
+				font-size: 0 !important
+
+				&:before
+					margin: 0
+
+		&-favorite
+			width: 25px
+	
+
+@media (max-width: 1000px)
+	
+	.card
+		flex-direction: column
+
+		&--left
+			width: 100%
+			margin: 0 0 30px 0
+
+			.card-title
+				display: block
+
+		&--right
+			.card-title
+				display: none
+
+		&-btns
+			&-cont
+				flex-wrap: wrap
+
+
+		.tabs__top
+			margin-bottom: 10px
+
+	.info-product
+		flex-wrap: wrap
+		align-items: flex-end
+
+
+		&__title
+			width: calc(100% - 365px)
+
+		&__count
+			margin: 20px 20px 0 auto
+
+	.category
+		&__list
+			margin-top: 40px
+
+
+	@supports (display: grid)
+		.category
+
+			&__item
+				position: relative
+				display: grid
+				grid-template-columns: repeat(4,1fr)
+				padding: 20px 0
+
+
+				> *:not(.category__item-img, .category__item-price, .category__item-counter, .category__item-btn, .category__item-favorite)
+					grid-column: 2/5
+
+				&-favorite
+					position: absolute
+					top: 20px
+					left: 0
+
+				&-price
+					grid-column: 2/3
+					margin: 0
+
+				&-counter
+					grid-column: 3/4
+
+				&-btn
+					grid-column: 4/5
+					margin-left: auto
+
+				&-title
+					margin: 0
+
+
+				&-img
+					grid-row: span 3
+					width: 100%
+					margin: 0
+
+
+@media (max-width: 667px)
+
+	.fancybox[href="#wantPresent"]
+		font-size: 0
+		size: 40px
+		border: 1px solid var(--border-color)
+		border-radius: 5px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-left: 12px
+
+		&:before
+			margin: 0
+			position: static
+
+
+	.info-product-cont
+		display: none
+
+	.card
+		&--left
+			.rating
+				display: flex
+
+		&--right
+			position: relative
+
+
+			.card-title
+				+ .card-row
+					position: absolute
+					right: 0
+					top: 0
+
+			.rating
+				display: none
+
+
+			> .card-links
+				display: block
+
+
+
+		&-slider
+			&__thumbs
+				display: none
+
+			&__top
+				margin-top: 30px
+
+		&-slide
+			&__img
+				min-height: auto
+
+				&:after
+					border: 1px solid var(--border-color)
+					border-radius: 5px
+
+		&-btns
+			&-cont
+				border: 0
+				padding: 0
+
+				.card-links
+					display: none
+
+
+		&-favorite, &-compare
+			font-size: 0
+			size: 40px
+			border: 1px solid var(--border-color)
+			border-radius: 5px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-left: 12px
+
+			span
+				margin: 0 !important
+
+		&-prices
+			flex-direction: column
+			align-items: flex-start
+
+			.price
+				&--old
+					margin: 10px 0 0 0
+
+		&-property-cont
+			border: 0
+			margin-top: 0
+
+			+ .card-bonus
+				display: none
+
+			.card-bonus
+				display: block
+
+		.default-btn--cart
+			flex: 1 1 auto
+			justify-content: center
+
+
+		&-bonus
+			margin-top: 0px
+			margin-bottom: 10px
+
+		&-links
+			margin-top: 0
+			border-bottom: 1px solid var(--border-color)
+
+
+			a
+				background-color: transparent
+				padding: 17px 0 17px 0
+
+				&:after
+					right: 12px
+
+		.tabs__tab
+			padding: 13px 15px 12px 15px
+
+	.presence
+		border-top: 1px solid var(--border-color)
+		border-bottom: 1px solid var(--border-color)
+		margin-bottom: 0 !important
+
+		&__top
+			background-color: transparent
+			padding: 15px 30px
+
+			&--on:before
+				left: 0
+
+			&:after
+				right: 10px
+
+		&__list
+			padding: 20px 0
+
+		&__item 
+			align-items: flex-start
+
+			.count
+				margin-right: 15px
+
+	@supports (display: grid)
+		.category
+
+			&__item
+				grid-template-columns: repeat(3,1fr)
+				grid-template-areas: "img title title" "img art art" "price count cart"
+				padding: 20px 0
+
+				&-art
+					grid-area: art
+
+				&-price
+					grid-area: price
+					margin: 0
+
+				&-counter
+					grid-area: count
+
+				&-btn
+					grid-area: cart
+
+				&-title
+					grid-area: title
+
+				&-img
+					grid-area: img
+
+@media (max-width: 370px)
+	
+	.card 
+		.tabs__tab
+			padding: 9px
+
+			&:not(:last-child)
+				margin-right: 10px
+
+	.card .default-btn--cart
+		padding: 13px
+
+	.card__label--left
+		left: 20px
+
+	.card-slide__img:after
+		right: 0
+		bottom: 0
+
+	.card-counter
+		padding: 10px 16px
+
+	@supports (display: grid)
+		.category
+			&__item
+				.card-counter
+					padding: 13px 6px
+					border: 0
+
+				&-price
+					font-size: em(14)
+
+
+
+
+

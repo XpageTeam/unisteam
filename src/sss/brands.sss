@@ -1,0 +1,155 @@
+.brands
+	&__logotypes
+		display: flex
+		justify-content: space-between
+		padding: 35px 0
+		border-bottom: 1px solid var(--border-color)
+		margin-bottom: 60px
+
+.brands-informer
+	text-align: center
+
+
+	span
+		color: var(--second-color)
+	&-cont
+		background-color: var(--thrid-color)
+		padding: 20px 0
+
+.main-brands
+	&-cont
+		padding: 40px 0	
+		border-top: 1px solid var(--border-color)
+		border-bottom: 1px solid var(--border-color)
+		margin: 50px 0
+
+	&__list
+		position: relative
+
+		.swiper-button
+			position: absolute
+			top: calc(50% - 25px)
+
+			&:hover
+				background-color: var(--thrid-color)
+
+
+
+			&-prev
+				left: -75px
+
+			&-next
+				right: -75px
+
+	&__item
+		display: flex
+		justify-content: center
+
+
+
+.brands
+
+	&__list
+
+		column-count: 5
+		column-gap: 80px
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		break-inside: avoid
+		margin-bottom: 40px
+
+		&-letter
+			font-weight: 600
+			font-size: em(20)
+			letter-spacing: 0.02em
+
+			color: #393939
+			border: 1px solid var(--border-color)
+			border-radius: 5px
+			padding: 10px 15px
+			margin-bottom: 16px
+
+		a
+			letter-spacing: 0.02em
+			margin-bottom: 12px
+			line-height: 1.4
+
+			&:hover
+				color: var(--second-color)
+
+
+@media (min-width: 667px)
+	
+	.main
+		.banners-cont
+			display: none
+			
+@media (max-width: 1200px)
+	
+	.main-brands-cont
+		padding: 30px 0
+		margin: 35px 0
+
+	.brands__item
+		margin-bottom: 30px
+
+	.brands__item-letter
+		padding: 10px
+		margin-bottom: 10px
+		line-height: 1
+
+	.brands__list
+		column-gap: 35px
+
+	.brands__logotypes
+		padding: 20px 0
+		margin-bottom: 40px
+
+@media (max-width: 1000px)
+	
+	.main-top-cont
+		.banners
+			display: none
+
+	.main-brands__list 
+		.swiper-button
+			display: none
+
+			&:hover
+				background-color: #fff
+
+			&-prev
+				left: -25px
+			
+			&-next
+				right: -25px
+
+	.main-brands-cont
+		padding: 25px 0
+		margin: 25px 0
+
+	.brands__list
+		column-count: 4
+
+
+	.brands
+		&__logotypes
+			overflow-x: auto
+
+		&__logo
+			width: calc(100vw / 4)
+			flex: none
+
+@media (max-width: 667px)
+	
+	.brands
+		&__logo
+			width: calc(100vw / 2)
+
+		&__list
+			column-count: auto
+
+			

@@ -1,0 +1,94 @@
+.mobile-menu
+	.mobile-menu__header
+		.mobile-menu__logo
+			a(href="")
+				include ../../img/index-logo.svg
+		.mobile-menu__city Челябинск
+		.burger
+			span
+	//- .mobile-menu__body
+	ul.mobile-menu__list
+		li.mobile-menu__item.mobile-menu__item--submenu
+			.mobile-menu-title Каталог товаров
+			.mobile-menu__submenu
+				.mobile-menu__back Назад
+				a(href="#").mobile-menu__link Каталог товаров
+				ul.mobile-menu__submenu-list
+					each title, l in ["Краски", "Кисти", "Бумага", "Мольберты", "Графика", "Жидкости", "Холсты", "Лепка", "Скрапбукинг", "Декор", "Канцелярия", "Хранение", "Книги", "Каллиграфия", "Детям"]
+						li.mobile-menu__submenu-item.mobile-menu__submenu-item--submenu
+							.mobile-menu__submenu-title(style="background-image: url('../img/ico-category-menu__item-"+(l+1)+".svg')")=title
+							.main-nav__sub-submenu
+								a(href="#").mobile-menu__submenu-link=title
+								ul.mobile-menu__sub-submenu-list
+									li.mobile-menu__sub-submenu-item
+										a(href="").mobile-menu__sub-submenu-link Краски акварельные
+									li.mobile-menu__sub-submenu-item
+										a(href="").mobile-menu__sub-submenu-link Краски акриловые
+									li.mobile-menu__sub-submenu-item
+										a(href="").mobile-menu__sub-submenu-link Краски аэрозольные
+									li.mobile-menu__sub-submenu-item
+										a(href="").mobile-menu__sub-submenu-link Краски гуашевые
+
+
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Акварель
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Бумага
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Графика
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Магазины
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Акции
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Бренды
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Товары сентября
+		li.mobile-menu__item
+			a(href="#").mobile-menu__link Sale
+
+	.mobile-menu__footer
+		.mobile-menu__footer-links
+			a(href="").mobile-menu__enter Вход
+			a(href="").mobile-menu__reg Регистрация
+		.mobile-menu__footer-phone
+			.mobile-menu__lang
+				select
+					option(value="12") Русский
+					option(value="22") English
+					
+			a(href="tel: +78003331946") 8-800-333-19-46
+
+	.mobile-menu__cities
+		.cities__search-cont
+			form(action="")
+				.cities__search
+					.cities__search-input
+						input(type="text" placeholder="Введите название города")
+						input(type="submit" value="Найти")
+		.cities__list
+			a(href="#").cities__link Москва
+			a(href="#").cities__link Санкт-Петербург
+			a(href="#").cities__link Владивосток
+			a(href="#").cities__link Екатеринбург
+			a(href="#").cities__link Иркутск
+			a(href="#").cities__link Казань
+			a(href="#").cities__link Калининград
+			a(href="#").cities__link Краснодар
+			a(href="#").cities__link Нижний Новгород
+			a(href="#").cities__link Новосибирск
+			a(href="#").cities__link Пермь
+			a(href="#").cities__link Ростов-На-Дону
+			a(href="#").cities__link Хабаровск
+			a(href="#").cities__link Чита
+			a(href="#").cities__link Воронеж
+			a(href="#").cities__link Красноярск
+			a(href="#").cities__link Самара
+			a(href="#").cities__link Уфа
+			a(href="#").cities__link Челябинск
+		.back Назад
+
+
+
+
+

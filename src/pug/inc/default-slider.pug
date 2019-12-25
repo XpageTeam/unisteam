@@ -1,0 +1,48 @@
+.default-slider-cont
+	.wrapper
+		.default-slider
+			.default-slider__title С этим товаром покупают
+			.default-slider__list
+				.swiper-button.swiper-button-prev
+				.swiper-list
+					.swiper-wrapper
+						.swiper-slide
+							.item-cont
+								.item
+									a(href="#").item__img
+										figure
+											img(src="img/no-image.jpg")
+										.item__label.item__label--left
+											.item__label-info Новинка
+									a(href="#").item__info
+										.item__title Набор масляных красок 12 тюбиков по 20 мл Classico Maimeri
+									.item__prices
+										.item__price 142 руб.
+									.item__btns
+										a(href="#").default-btn.default-btn--cart Добавить в корзину
+										a(href="#").default-btn.default-btn--white.default-btn--view быстрый просмотр
+						- for (let y = 0; y < 4; y++)
+							- for (let q = 0; q < 4; q++)
+								.swiper-slide
+									.item-cont
+										.item
+											a(href="").item__img
+												figure
+													img(src="img/photos/catalog-img-"+q+".png")
+												.item__label.item__label--left
+													.item__label-info Новинка
+													.item__label-info(style="color: var(--second-color)") Акция
+												.item__label.item__label--right
+													.item__label-info
+														.percente - 20%
+													
+											a(href="").item__info
+												.item__title Набор масляных красок 12 тюбиков по 20 мл Classico Maimeri
+											.item__prices
+												.item__price--old 584 руб.
+												.item__price 142 руб.
+											.item__btns
+												a(href="#").default-btn.default-btn--cart Добавить в корзину
+												a(href="#").default-btn.default-btn--white.default-btn--view быстрый просмотр
+				.swiper-button.swiper-button-next
+		.swiper-scrollbar

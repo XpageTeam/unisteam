@@ -1,0 +1,251 @@
+.workshops-filter
+	display: flex
+	margin-bottom: 45px
+
+.filter-calendar
+	&.filter-cities
+		margin-left: 0
+
+	span
+		border-radius: 5px
+		padding: 17px 20px
+		display: flex
+		align-items: center
+		background-color: var(--thrid-color)
+		line-height: 1
+		cursor: pointer
+
+		&:before
+			content: ''
+			display: block
+			margin-right: 18px
+			size: 16px
+			background-image: url('../img/ico-calendar-red.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			background-size: contain
+			position: relative
+			top: -2px
+
+		&:after
+			content: ''
+			display: block
+			size: 6px
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(45deg)
+			margin-left: 15px
+			margin-top: -2px
+
+
+
+
+.filter-cities
+	border-radius: 5px
+	position: relative
+	margin-left: 20px
+
+	select
+		height: 50px
+		padding: 0 35px 0 20px
+		border: 0
+		border-radius: 5px
+		background-color: var(--thrid-color)
+		background-image: url('../img/ico-arrow.svg')
+		background-repeat: no-repeat
+		background-position: right 15px center
+
+
+.workshops
+
+	&__item
+		display: flex
+
+		&:not(:last-child)
+			margin-bottom: 70px
+
+		&:not(.js__open)
+			.workshops__item-text
+				p
+					&:not(:first-child)
+						display: none	
+
+
+		&-img
+			flex: none
+			margin-right: 45px
+
+			img
+				display: block
+
+
+		&-top
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			margin-bottom: 20px
+
+		&-info
+			flex: 1 1 auto
+
+		&-title
+			margin-right: auto
+			font-weight: 600
+			font-size: em(20)
+			line-height: 24px
+			letter-spacing: 0.02em
+			color: #393939
+			padding-bottom: 15px
+			border-bottom: 1px solid var(--border-color)
+			margin-bottom: 15px
+			width: 100%
+
+		&-date
+			position: relative
+			display: flex
+			align-items: center
+
+			&:before
+				content: ''
+				display: block
+				size: 15px
+				margin-right: 15px
+				background-image: url('../img/ico-calendar.svg')
+				background-repeat: no-repeat
+				background-position: 50%
+				background-size: contain
+		&-time
+			position: relative
+			display: flex
+			align-items: center
+			margin-left: 33px
+
+			&:before
+				content: ''
+				display: block
+				size: 16px
+				margin-right: 15px
+				background-image: url('../img/ico-time.svg')
+				background-repeat: no-repeat
+				background-position: 50%
+				background-size: contain
+
+		&-desk
+			display: flex
+
+			.label
+				font-weight: 500
+				font-size: em(10)
+				text-transform: uppercase
+
+				color: rgba(0, 0, 0, 0.4)
+				margin-bottom: 5px
+
+			.text
+				letter-spacing: 0.02em
+
+		&-footer
+			margin-top: 29px
+
+		&-text
+			overflow: hidden
+			text-overflow: ellipsis
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			/* autoprefixer: ignore next */
+			-webkit-box-orient: vertical
+			max-width: 510px
+			width: 100%
+
+
+
+		&.js__open
+
+			.workshops__item-text
+				overflow: none
+				text-overflow: none
+				display: block
+				-webkit-line-clamp: none
+				/* autoprefixer: ignore next */
+				-webkit-box-orient: none
+
+			.workshops__item-more span:after
+				transform: rotate(225deg)
+
+		&-footer
+			display: flex
+
+		&-btn
+			margin-left: auto
+
+		&-more
+			margin-top: 10px
+
+			span
+				position: relative
+				color: var(--second-color)
+				cursor: pointer
+
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					right: -20px
+					top: 2px
+					size: 6px
+					transform: rotate(45deg)
+					border-right: 1px solid var(--second-color)
+					border-bottom: 1px solid var(--second-color)
+
+
+
+
+.desk-el
+
+	&:nth-child(1)
+		flex: 0 1 50%
+
+	&:nth-child(2)
+		flex: 0 1 25%
+
+	&:nth-child(3)
+		flex: 0 1 25%
+
+
+@media (max-width: 1200px)
+	
+	.workshops__item-img
+		margin-right: 30px
+		max-width: 270px
+
+
+@media (max-width: 667px)
+	
+	.workshops__item
+		flex-direction: column
+
+		&-img
+			margin: 0 0 30px 0
+			max-width: 100%
+
+			img
+				width: 100%
+
+		&-desk
+			flex-direction: column
+
+			.label
+				margin-bottom: 2px
+
+		&-footer
+			flex-direction: column-reverse
+			align-items: flex-start
+
+		&-btn
+			margin: 0 0 20px 0
+
+		&-more span:after
+			top: 4px
+
+	.desk-el:not(first-child)
+		margin-top: 10px

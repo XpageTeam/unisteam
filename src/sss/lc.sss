@@ -1,0 +1,718 @@
+.page-personal
+	.lc-nav-cont
+		+ .wrapper
+			a
+
+				border-bottom: 1px solid currentColor
+.lc-exit
+	display: flex
+	align-items: center
+	position: relative
+	margin-left: auto
+	display: inline-block
+	border: 1px solid var(--border-color)
+	padding: 16px 18px
+	border-radius: 5px
+	line-height: 1
+
+	&:before
+		content: ''
+		position: relative
+		display: inline-block
+		size: 14px 13px
+		background-image: url('../img/ico-exit.svg')
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: contain
+		margin-right: 13px
+		margin-bottom: -1px
+
+.lc-nav
+
+	&-cont
+		background-color: var(--thrid-color)
+		margin-bottom: 50px
+
+	&__list
+		display: flex
+
+	&__link
+		flex: 1 1 auto
+		text-align: center
+		line-height: 1
+		padding: 30px 20px
+		transition: background .3s ease, color .3s ease, box-shadow .3s ease
+		border-radius: 5px
+
+		font-weight: bold
+		font-size: em(12)
+		letter-spacing: 0.08em
+		text-transform: uppercase
+
+		&.active, &:hover
+			background-color: var(--main-color)
+			border-radius: 5px
+
+
+
+.lc-data
+
+	.form__inputs
+		margin-bottom: 25px !important
+
+	&__title
+		position: relative
+		padding: 50px 0 25px
+		font-size: rem(20)
+
+	&-cont
+		+ .lc-data-cont
+			border-top: 1px solid var(--border-color)
+			margin-top: 50px
+
+
+
+
+
+.lc-order
+
+	&__nav
+		display: inline-block
+
+		&-cont
+			display: flex
+			margin: 50px 0
+
+			.wrapper
+				width: 100%
+
+		&-link
+			position: relative
+			display: inline-block
+			border-radius: 5px
+			padding: 20px 29px
+			line-height: 1
+			transition: background .3s ease
+			background-color: var(--thrid-color)
+			margin-right: 15px
+
+			font-weight: bold
+			font-size: em(10)
+			letter-spacing: 0.08em
+			text-transform: uppercase
+
+
+
+			&.active, &:hover
+				background-color: var(--second-color)
+				color: #fff
+
+	
+
+	&__item
+
+		&-top
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			&-cont
+				background-color: var(--thrid-color)
+				padding: 25px 0
+
+		&-bot
+
+			&-cont
+				display: none
+
+		&-title
+			font-size: rem(18)
+			font-weight: 500
+
+		&-date
+			border-radius: 5px
+			padding: 11px 25px
+			margin-left: 33px
+			border: 1px solid #CDD5E0
+			line-height: 1
+			font-size: em(14)
+			letter-spacing: 0.02em
+			color: #B7BFCA
+
+		&-status
+			margin: 0 auto
+			font-weight: 500
+
+
+		&-repeat
+			border-radius: 5px
+			border: 1px solid #CDD5E0
+			line-height: 1
+			padding: 11px 25px
+			margin-left: 20px
+			letter-spacing: 0.02em
+			cursor: pointer
+			text-align: center
+			user-select: none
+			min-width: 140px
+
+		&-cancel
+			size: 39px
+			border-radius: 5px
+			background-image: url('../img/ico-close.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-repeat: no-repeat
+			margin-left: 25px
+
+		&-info
+			padding: 30px 0 55px
+			max-width: 620px
+
+
+.lc-order__info-table
+	width: 100%
+
+	td
+		vertical-align: middle
+
+	tr
+
+		position: relative
+		background-image: url('../img/ico-line-fade.svg')
+		background-repeat: no-repeat
+		background-position: center bottom
+
+		&:last-child
+			background-image: none
+
+		&:first-child
+			td
+				padding: 20px 0
+
+		&:not(:first-child)
+			td
+				padding: 30px 0
+
+		&:not(:last-child)
+			.lc-order__info-info
+
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					bottom: -30px
+					left: 50%
+					width: 300vw
+					transform: translate3d(-50%,0,0)
+					height: 1px
+					background-color: var(--border-color)
+.lc-order
+
+	&__empty
+		font-size: rem(18)
+
+
+	&__info
+
+		&-info
+			position: relative
+			display: flex
+			max-width: 400px
+			align-items: center
+
+
+
+
+		&-subtitle
+
+			td
+				font-size: rem(14)
+
+				letter-spacing: 0.02em
+				color: rgba(0, 0, 0, 0.4)
+
+		&-img
+			width: 55px
+			display: inline-block
+			text-align: center
+			margin-right: 27px
+			flex: none
+
+		&-name
+			font-size: rem(16)
+			font-weight: 500
+
+		&-price
+			display: flex
+			align-items: center
+
+
+		&-count
+			border-radius: 5px
+			border: 1px solid var(--border-color)
+			padding: 10px 23px
+			display: inline-block
+			line-height: 1
+
+
+
+	&__price
+		display: flex
+		align-items: flex-end
+
+		&-current
+			font-weight: 500
+			font-size: em(18)
+			letter-spacing: 0.02em
+
+			color: #393939
+
+		.price
+			font-weight: 500
+			font-size: em(18)
+			letter-spacing: 0.02em
+
+			color: #393939
+			line-height: 1
+
+
+			&--old
+				font-size: em(16)
+				letter-spacing: 0.02em
+				text-decoration-line: line-through
+
+				color: #A3A0A0
+				line-height: 1
+				margin-left: 10px
+
+
+
+
+.status
+	position: relative
+	display: flex
+	align-items: center
+
+	&:before
+		content: ''
+		display: inline-block
+		size: 31px 22px
+		background-repeat: no-repeat
+		background-position: center
+		background-repeat: no-repeat
+		margin-right: 15px
+
+	&--take
+		&:before
+			background-image: url('../img/ico-take.svg')
+	&--сonfirmed
+		&:before
+			background-image: url('../img/ico-confirmed.svg')
+	&--delivered
+		&:before
+			background-image: url('../img/ico-delivered.svg')
+	&--by-order
+		&:before
+			background-image: url('../img/ico-by-order.svg')
+	&--cancel
+		&:before
+			background-image: url('../img/ico-order-cancel.svg')
+	&--prepaid
+		&:before
+			background-image: url('../img/ico-prepaid.svg')
+
+
+.lc-favorite
+	&-cont
+		.cart-btns-cont
+			margin-top: 80px
+
+		.cart-count
+			display: flex
+
+	.cart-table
+		tr
+			&:last-child
+				border: 0
+
+
+.lc-registration
+	display: flex
+
+	&__soc
+		display: flex
+		align-items: center
+		margin-bottom: 35px
+
+
+	.soc
+		margin-right: 22px
+
+		&__link
+			background-color: var(--thrid-color)
+
+	&--left
+		width: 100%
+
+
+	&__news
+		width: calc(100% - 370px - 160px)
+		margin-left: 160px
+		flex: none
+
+	.form__submit
+		margin-top: 35px
+		flex-direction: column
+
+		&-text
+			margin-top: 35px
+
+
+@media screen and (max-width: 1500px)
+	
+	.lc-nav
+		&__link
+			padding: 20px 15px
+
+	.lc-data__title
+		padding: 30px 0 25px
+		margin-top: 30px
+
+
+@media screen and (max-width: 1400px)
+	
+	.bonus-stage
+		margin-top: 45px
+
+		&__list
+			margin: 0 0 -25px -25px
+
+		&__item
+			width: calc((100% - 25px * 3)/3)
+			margin: 0 0 25px 25px
+
+		&__title
+			font-size: 1.5rem
+			margin-bottom: 25px
+
+
+
+
+
+@media screen and (max-width: 1200px)
+	
+	.lc-data 
+		.forms__input-cont
+			&:empty
+				display: none
+
+		.forms__input-cont
+			margin: 0 0 25px 40px
+			width: calc((100% - 160px)/2)
+
+		.forms-bot
+			margin-top: 30px
+
+	.bonus-stage__item
+		padding: 20px
+
+		&-title
+			font-size: 1rem
+			margin-bottom: 15px
+
+		&-text
+			margin-bottom: 30px
+
+	
+	.bonus-input__cont
+		input[type=text]
+			padding: 0 40px 0 15px
+
+		input[type=submit]
+			width: 40px
+
+	.lc-registration__news
+		width: calc(100% - 450px)
+		margin-left: 30px
+
+
+
+@media screen and (max-width: 1000px)
+
+	
+	.lc-data
+		margin-top: 45px
+
+
+		.forms__input-cont
+			margin: 0 0 25px 40px
+			width: calc((100% - 40px * 2)/2)
+
+
+
+	.lc-order__item-top
+		flex-wrap: wrap
+
+		.lc-order__item
+			&-title
+				width: 100%
+				margin-bottom: 15px
+
+			&-date
+				margin-left: 0
+				padding: 10px
+				line-height: 1
+
+			&-address
+				margin-right: 0
+				margin-bottom: 15px
+
+
+			&-repeat
+				padding: 10px 15px
+
+			&-status
+				margin-left: 0
+				width: calc(100% - 300px)
+
+			&-cancel
+				width: 36px
+				height: 36px
+
+	.lc-order__item-info
+		padding: 20px 0 30px
+
+	.bonus-stage__item
+		width: calc((100% - 25px * 2)/2)
+		margin: 0 0 25px 25px
+
+	.lc-order__item
+		&-top
+			position: relative
+
+		&-cancel
+			position: absolute
+			top: 0
+			right: 0
+
+		&-repeat
+			margin: 20px 0 0 0
+
+	// .lc-order__info-price
+	.lc-order__price
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		.price--old
+			margin: 5px 0 0 0
+
+	.lc-order__info-info
+		max-width: 255px
+
+	.lc-registration__news
+		width: calc(100% - 300px)
+
+
+@media screen and (max-width: 667px)
+
+
+
+
+	.bonus-stage__item
+		width: 100%
+		margin: 0 0 25px 25px
+
+
+	
+	.lc-data
+		margin-top: 25px
+
+
+		.forms__input-cont
+			margin: 0 0 25px 40px
+			width: 100%
+
+		&-cont+.lc-data-cont
+			margin-top: 25px
+
+			.lc-data
+				margin-top: 0 !important
+
+				&__title
+					padding: 30px 0 25px
+					margin-top: 0
+
+
+	.lc-nav
+
+
+		&-cont
+
+			background-color: #fff
+
+			.wrapper
+				padding: 0
+
+		&__list
+			overflow-x: auto
+			padding-bottom: 15px
+			background-color: #fff
+			padding-left: 20px
+
+			scroll-snap-type: mandatory
+			// scroll-snap-points-x: repeat(100%)
+			// scroll-padding: 50%
+			-webkit-overflow-scrolling: touch
+
+			// &::-webkit-scrollbar 
+			// 	height: 30px
+
+
+			// &::-webkit-scrollbar-track
+			// 	border-radius: 0
+			// 	background: var(--background-color)
+			// 	border-top: 20px solid #fff
+			// 	border-left: 20px solid #fff
+			// 	border-right: 20px solid #fff
+
+
+
+
+			// &::-webkit-scrollbar-thumb 
+			// 	border-radius: 0
+			// 	background: var(--main-color)
+			// 	border-top: 20px solid #fff
+
+		&__link
+			white-space: nowrap
+			background-color: var(--background-color)
+			border-radius: 5px
+			flex: none
+			padding: 10px 20px
+			scroll-snap-align: start
+			scroll-snap-points-x: repeat(50%)
+			border: 1px solid var(--border-color)
+
+			&:not(.active)
+				&:hover
+					background-color: var(--background-color)
+					color: #000
+					box-shadow: none
+
+
+			&:not(:last-child)
+				margin-right: 15px
+
+			&.active
+				box-shadow: none
+
+
+	.lc-order__nav
+		display: flex
+		flex-direction: column
+
+		&-link
+			padding: 14px 10px
+			flex: 1 1 auto
+			justify-content: center
+			text-align: center
+			border: 0
+			margin-right: 0
+
+			&:after
+				display: none
+
+
+	.lc-order__item-top 
+		.lc-order__item
+			&-title
+				width: 50%
+				margin-bottom: 0
+				font-size: 14px
+
+			&-address
+				margin: 15px 0 15px 0
+				width: 100%
+
+			&-repeat
+				margin-left: 0
+
+			&-status
+				width: 100%
+				margin-bottom: 15px
+
+
+	.lc-order__info
+		&-table
+			tbody, tr, td
+				display: block
+
+
+
+			tr
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				align-items: center
+
+				&:not(:first-child) td
+					padding: 10px 0
+
+			.lc-order__price
+				flex-direction: column
+
+				&-last
+					margin-left: 0
+
+					.price
+						font-size: 15px
+
+
+			.price
+				font-size: 17px
+
+		&-count
+			padding: 10px
+
+		&-subtitle
+			display: none !important
+
+	.lc-order__nav-cont
+		margin: 0 0 20px
+
+	.lc-nav-cont
+		margin-bottom: 10px
+
+	.lc-order__item-cancel
+		top: -30px
+		right: -10px
+
+	.status:before
+		height: 23px
+
+	.lc-order__info-info
+		max-width: 100%
+
+	.lc-order__info-table tr:not(:last-child) .lc-order__info-info:after
+		display: none
+
+	.lc-registration
+		flex-direction: column
+
+		&__news
+			width: 100%
+			margin: 20px 0 0 0
+
+	.lc-registration .form__submit-text
+		margin-top: 10px
+
+	.lc-exit
+		padding: 10px 15px
+
+
+@media (max-width: 370px)
+	
+	.lc-order__item-repeat
+		min-width: 100px

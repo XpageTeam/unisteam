@@ -1,0 +1,120 @@
+.title-block
+	position: relative
+	padding: 20px 0 0
+
+	&__crumbs
+		display: flex
+		justify-content: space-between
+		padding-bottom: 17px
+		border-bottom: 1px solid var(--border-color)
+
+	&__title
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 12px 0
+
+		h1
+			font-weight: 600
+			font-size: em(30)
+			letter-spacing: 0.02em
+
+
+.bread-crumbs
+	a, &__this
+		color: #999
+
+	li
+		&:nth-last-child(1)
+			&:after
+				display: none
+
+		&:nth-child(1)
+
+			a
+				border-color: transparent !important
+
+				span
+					border-bottom: 1px solid transparent	
+
+			&:hover
+				span
+					border-bottom-color: #000
+	&__this
+		&:after
+			display: none !important
+
+		&:empty
+			display: none
+
+
+
+	&__back
+		display: flex
+		align-items: center
+		line-height: 1
+
+		&:before
+			content: ''
+			display: block
+			size: 10px 8px
+			background-image: url('../img/ico-arrow-red.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			margin-right: 18px
+
+	li
+		display: inline
+		position: relative
+		padding-right: 40px
+
+		a
+			line-height: 1.2
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 5px
+			right: 19px
+			size: 6px
+			border-top: 1px solid #999
+			border-right: 1px solid #999
+			transform: rotate(45deg)
+
+
+
+
+		&:first-child
+
+			a
+				display: inline-block
+
+				&:before
+					content: ''
+					size: 10px 10px
+					display: inline-block
+					background-image: url('../img/ico-breadcrambs.svg')
+					background-repeat: no-repeat
+					background-size: contain
+					background-position: center
+					margin-right: 15px
+
+@media (max-width: 667px)
+
+	.title-block
+		padding-top: 0
+		
+		&__crumbs
+			display: none
+	
+	.bread-crumbs
+		display: none
+
+	.title-block__crumbs
+		justify-content: center
+
+	.title-block__title h1
+		line-height: 1.4
+		font-size: em(20)

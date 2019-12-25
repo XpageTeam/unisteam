@@ -1,0 +1,377 @@
+.bonus
+	&-cont
+		background-color: var(--thrid-color)
+		padding: 40px 0
+		margin-bottom: 40px
+
+	&__title
+		font-weight: 500
+		font-size: em(20)
+
+		color: #393939
+		margin-bottom: 25px
+
+	&__inputs
+		display: flex
+
+		select, input
+			height: 50px
+			border: 1px solid transparent
+			border-radius: 5px
+
+		select
+			background-color: #fff
+			border: 1px solid var(--border-color)
+			padding: 0 45px 0 20px
+			background-image: url('../img/ico-arrow.svg')
+			background-repeat: no-repeat
+			background-position: right 20px center
+
+	&__bot
+		margin-top: 25px
+
+		a
+			color: var(--second-color)
+
+	&__input
+		&-input
+			position: relative
+			margin-left: 20px
+			max-width: 354px
+			width: 100%
+			flex: 1 1 auto
+
+
+			input[type="text"]
+				width: 100%
+				padding: 0 140px 0 20px
+
+			input[type="submit"]
+				position: absolute
+				top: 0
+				right: 0
+				font-weight: bold
+				font-size: em(12)
+				text-transform: uppercase
+
+		&-text
+			margin-left: 90px
+			max-width: 358px
+
+			a
+				position: relative
+				color: var(--second-color)
+
+				&:after
+					content: ''
+					position: relative
+					display: inline-block
+					size: 6px
+					border-right: 1px solid var(--second-color)
+					border-bottom: 1px solid var(--second-color)
+					transform: rotate(45deg)
+					margin-left: 10px
+					top: -2px
+
+
+
+.cart
+	display: flex
+	margin-bottom: 30px
+
+	&__list
+		width: calc(100% - 530px)
+		flex: none
+
+	&-aside
+
+		border-radius: 5px
+		position: sticky
+		top: 20px
+
+		&-cont
+			flex: 1 1 auto
+			margin-left: 30px
+
+
+	&__item
+		display: flex
+		padding: 35px 0
+		border-top: 1px solid var(--border-color)
+
+		&-img
+			width: 54px
+			flex: none
+			margin-right: 20px
+
+		&-info
+			max-width: 340px
+			width: 100%
+			margin-right: 30px
+
+		&-price
+			margin-top: 20px
+			display: flex
+			align-items: flex-end
+
+			.price
+				font-weight: 500
+				font-size: em(18)
+				letter-spacing: 0.02em
+
+				color: #393939
+				line-height: 1
+
+				&--old
+					font-size: em(16)
+					letter-spacing: 0.02em
+					text-decoration-line: line-through
+
+					color: #A3A0A0
+					line-height: 1
+					margin-left: 24px
+
+		&-favorite
+			margin-right: 25px
+
+		.favorite
+			size: 50px
+			border-radius: 5px
+			border: 1px solid var(--border-color)
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			background-size: 17px
+
+		&-close
+			margin-left: 35px
+		
+		.close
+			display: block
+			size: 50px
+			border-radius: 5px
+			background-color: var(--thrid-color)
+
+			background-image: url('../img/ico-close.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+
+
+
+	&-aside
+		&__head
+			background: #FDCA38
+			border-radius: 5px
+			padding: 25px 30px
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			span
+				&:nth-child(1)
+					font-weight: 600
+					font-size: em(20)
+
+				&:nth-child(2)
+					color: #CB9C14
+
+
+		&__body
+			padding: 25px 26px 25px 25px
+			border: 1px solid var(--border-color)
+			border-top: 0
+
+		&__list
+			overflow-y: auto
+			max-height: 360px
+
+			&::-webkit-scrollbar
+				width: 30px
+
+				&-thumb, &-track
+					border-left: 26px solid #fff
+
+				&-thumb
+					background: var(--main-color)
+
+				&-track
+					background: #EBEDF1
+
+		&__footer
+			border: 1px solid var(--border-color)
+			border-top: 0
+
+			&-info
+				padding: 30px
+
+			&-total
+				padding: 25px 30px
+				border-top: 1px solid var(--border-color)
+				display: flex
+				justify-content: space-between
+				font-weight: 500
+				font-size: em(18)
+
+		&__row
+			display: flex
+			justify-content: space-between
+
+			&:not(:last-child)
+				margin-bottom: 5px
+
+
+			&--sale
+				color: var(--second-color)
+				font-weight: 500
+
+		&__btn
+			display: flex
+			justify-content: flex-end
+			margin-top: 35px
+
+			a
+				font-weight: bold
+				font-size: em(12)
+				text-transform: uppercase
+
+
+	&-aside
+		&__item
+			display: flex
+			padding: 30px 0 
+
+			&:not(:last-child)
+				border-bottom: 1px solid var(--border-color)
+
+			&-img
+				width: 62px
+				flex: none
+				margin-right: 33px
+
+			&-info
+				display: flex
+				flex-direction: column
+
+
+@media (max-width: 1200px)
+	
+	.cart
+		flex-direction: column
+
+		&__list
+			width: 100%
+
+		&__item-info
+			max-width: 100%
+
+		&-aside-cont
+			margin: 30px 0 0 0
+
+@media (max-width: 1000px)
+	
+	.bonus
+		display: flex
+		flex-direction: column
+
+		&__title
+			font-size: em(14)
+			order: 1
+			margin-bottom: 0
+
+		&__inputs
+			order: 3
+			margin-top: 20px
+			display: flex
+			flex-direction: column
+
+			select
+				width: 100%
+
+		&__input
+			&-selects
+				width: 100%
+
+			&-input
+				margin: 15px 0 0 0
+				max-width: 100%
+
+			&-text
+				margin: 15px 0 0 0
+
+
+
+		&__bot
+			order: 2
+			margin-top: 10px
+
+	.cart
+		&-aside
+			&__head, &__body
+				display: none
+
+			&__footer
+				border: 0
+
+				&-info
+					border-top: 1px solid var(--border-color)
+					padding: 30px 0
+
+				&-total
+					background-color: var(--thrid-color)
+					border: 0
+					margin: 0 -20px
+
+@media (max-width: 667px)
+	
+	.cart__item
+		position: relative
+		display: grid
+		grid-template-columns: repeat(3,1fr)
+		grid-template-areas: "img title title" "price count favorite" 
+		padding: 30px 0
+		grid-gap: 10px
+
+		&-img
+			// grid-row: span 2
+			margin: 0
+			text-align: center
+			grid-area: img
+			width: auto
+
+		&-price
+			grid-area: price
+
+		&-info
+			padding-right: 15px
+			grid-area: title
+
+		&-counter
+			grid-area: count
+
+			.card-counter
+				border: 0
+				padding: 13px 0
+
+
+		&-favorite
+			grid-area: favorite
+
+			.favorite
+				border: 0
+
+		&-close
+			position: absolute
+			top: 15px
+			right: -20px
+			margin: 0
+
+			.close
+				background-color: transparent
+
+	.cart-aside__footer-total
+		padding: 19px 30px
+
+	.cart-aside__btn
+		justify-content: center
+

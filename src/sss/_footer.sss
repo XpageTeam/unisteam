@@ -1,0 +1,332 @@
+.footer
+	background-color: var(--thrid-color)
+	overflow: hidden
+
+	&-top
+		position: relative
+		display: flex
+		padding: 65px 0
+		justify-content: space-between
+
+		&-cont
+			border-top: 1px solid #DFE0E2
+			border-bottom: 1px solid #DFE0E2
+
+
+	&-bot
+		display: flex
+		align-items: center
+		padding: 34px 0
+
+	&-soc
+		display: flex
+		align-items: center
+		margin: 0 auto
+
+
+.copy
+	&-text, &-link
+		font-size: em(12)
+
+
+
+.f-menu
+	&__title
+		font-weight: 600
+		font-size: em(12)
+		text-transform: uppercase
+		margin-bottom: 15px
+
+		a
+			color: #000
+
+	&__item
+		margin-bottom: 10px
+
+	&__link.active
+		color: var(--second-color)
+
+	
+
+.footer-phone
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	margin-top: 55px
+
+
+	a
+		&[href^="tel:"]
+
+			font-weight: 500
+			font-size: em(16)
+			margin-bottom: 10px
+			color: #000
+
+		&.fancybox
+			color: var(--second-color)
+			display: flex
+			align-items: center
+
+			&:before
+				content: ''
+				display: block
+				size: 13px 9px
+				background-image: url('../img/ico-mail-red.svg')
+				background-position: center
+				background-repeat: no-repeat
+				background-size: contain
+				margin-top: -2px
+				margin-right: 10px
+
+.subscribe
+
+	&-cont
+		flex: none
+
+	&-title
+		margin-bottom: 20px
+
+	&-form
+		position: relative
+
+	input
+		&[type="email"]
+			min-width: 300px
+			width: 100%
+			height: 50px
+			border-radius: 5px
+			border: 1px solid var(--border-color)
+			padding: 0 60px 0 20px
+
+		&[type="submit"]
+			font-size: 0
+			size: 50px
+			background-color: var(--second-color)
+			background-image: url('../img/ico-mail.svg')
+			background-position: center
+			border-radius: 5px
+			background-repeat: no-repeat
+			border: 0
+			position: absolute
+			top: 0
+			right: 0
+
+
+.copy
+	&-link
+		color: var(--second-color)
+
+.dev
+	display: flex
+	align-items: center
+
+	&-text
+		font-size: em(12)
+
+	&-img
+		margin-left: 17px
+
+	img
+		display: block
+		
+.footer-lang--mobile
+	display: none
+
+@media (max-width: 1200px)
+	
+
+	.footer-top
+		flex-wrap: wrap
+		padding: 50px 0
+
+	.subscribe
+		&-cont
+			display: flex
+			width: 100%
+			margin-top: 20px
+
+		&-title
+			margin-bottom: 10px
+
+
+	.footer-phone
+		margin-top: auto
+		margin-left: 30px
+
+		a[href^="tel:"]
+			margin-bottom: 0px
+	
+	.footer-bot
+		padding: 25px 0
+
+
+@media (min-width: 1000px) and (max-width: 1200px)
+	.subscribe
+		display: flex
+
+		&-title
+			margin-right: 20px
+
+@media (max-width: 1000px)
+	
+	.f-menu__list
+		display: none
+
+	.f-menu
+		width: calc(100% - 300px)
+
+
+	.subscribe-cont
+		width: 300px
+		margin-top: 0
+	
+	.footer-soc
+		flex-direction: column-reverse
+		align-items: flex-start
+
+		.soc-text
+			margin: 0 0 20px 0
+			display: none
+
+			br
+				display: none
+
+@media (max-width: 667px)
+	
+	.footer-top
+		flex-direction: column
+		padding: 40px 0 0
+
+	.subscribe
+		&-cont
+			position: relative
+			order: -1
+			flex-direction: column
+			width: 100%
+			padding-bottom: 45px
+			margin-bottom: 45px
+
+			&:after
+				content: ''
+				display: block
+				width: 100vw
+				height: 1px
+				background-color: var(--border-color)
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translate3d(-50%,0,0)
+
+		&-title
+			font-size: em(12)
+
+			br
+				display: none
+
+	.footer-phone
+		flex-direction: row
+		margin: 35px 0 0 0
+
+		a.fancybox
+			margin-left: 30px
+
+	.f-menu
+		width: 100%
+
+		&__title a
+			font-size: em(12)
+			font-weight: 600
+
+	.footer-top-cont
+		border-bottom: 0
+
+	.footer-bot
+		position: relative
+		flex-wrap: wrap
+
+
+
+
+
+	.footer-soc
+		position: relative
+		order: -1
+		width: 100%
+		flex-wrap: wrap
+
+		padding-bottom: 45px
+		margin-bottom: 30px
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 50%
+			width: 100vw
+			height: 1px
+			background-color: var(--border-color)
+			transform: translate3d(-50%,0,0)
+
+		.soc
+			order: 2
+			margin-right: 70px
+
+			&-text
+				display: block
+				width: 100%
+				order: 2
+
+	.footer-lang--mobile
+		display: none
+		order: 3
+		position: absolute
+		bottom: 45px
+		right: 0
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			size: 6px
+			right: 15px
+			top: calc(50% - 3px)
+			background-image: url('../img/ico-arrow.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			filter: invert(1)
+
+
+		select
+			background-color: var(--second-color)
+			height: 42px
+			width: 60px
+			border-radius: 5px
+			padding: 0 30px 0 13px
+			color: #fff
+			font-size: em(13)
+			font-weight: 500
+			border: 0
+
+	.dev
+		margin-left: auto
+
+		&-text
+			display: none
+
+@media (max-width: 370px)
+	
+	.footer-phone
+		flex-direction: column
+
+		a.fancybox
+			margin-left: 0
+
+	.subscribe-cont
+		padding-bottom: 25px
+		margin-bottom: 25px
+
+
+			
+

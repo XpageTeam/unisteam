@@ -1,0 +1,80 @@
+.shops-one
+	display: flex
+
+	&__address
+		margin-right: 45px
+		display: flex
+		flex: 1 1 auto
+
+	&__item
+		box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05)
+		border-radius: 8px
+		padding: 80px
+		flex: 1 1 auto
+
+		&-address
+			margin-bottom: 35px
+			&:before
+				content: ''
+				display: block
+				size: 17px 13px
+				margin-bottom: 10px
+				background-image: url('../img/ico-metro.svg')
+				background-position: 50%
+				background-size: conatin
+				background-repeat: no-repeat
+
+			.metro 
+				display: flex
+				margin-right: 12px
+
+	&__info
+		display: flex
+		flex-direction: column
+		margin-top: 65px
+
+		&-el
+
+			.label
+				font-weight: 500
+				font-size: em(10)
+				text-transform: uppercase
+
+				color: rgba(0, 0, 0, 0.4)
+
+			&:not(:first-child)
+				margin-top: 20px
+
+
+@media (max-width: 1300px)
+	
+	.shops-one__item
+		padding: 50px
+
+@media (max-width: 1200px)
+	
+	.shops-one
+
+		&__item
+			padding: 25px
+
+		.shops-map
+			width: calc(100% - 400px)
+
+@media (max-width: 1000px)
+	
+	.shops-one
+		flex-direction: column
+
+		&__address
+			margin-right: 0
+
+
+		.shops-map
+			width: 100%
+
+		&__info
+			margin-top: 35px
+
+
+

@@ -1,0 +1,32 @@
+.rating
+	display: flex
+	align-items: center
+
+	&__list
+		display: flex
+		flex-direction: row-reverse
+
+	&__radio
+		opacity: 0
+		size: 0
+
+		&:checked
+			~ label
+				svg
+					path
+						fill: var(--main-color)
+
+
+	&__label
+		cursor: pointer
+		display: flex
+
+	svg
+		path
+			fill: #E3E3E3
+
+
+		
+
+	&-text
+		margin-left: 10px

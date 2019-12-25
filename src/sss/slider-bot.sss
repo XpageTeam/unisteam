@@ -1,0 +1,59 @@
+.slider-bot
+	margin-top: 65px
+
+	&__title
+		font-weight: 600
+		font-size: em(20)
+		text-align: center
+		margin-bottom: 50px
+
+	&__list
+		position: relative
+
+		.swiper-button
+			position: absolute
+			top: calc(50% - 25px)
+
+			&:hover
+				background-color: var(--thrid-color)
+
+
+
+			&-prev
+				left: -75px
+
+			&-next
+				right: -75px
+	&__item
+		position: relative
+		display: block
+
+
+		img
+			display: block
+			border-radius: 6px
+			width: 100%
+
+
+@media (max-width: 1200px)
+	
+	.slider-bot
+		&-cont
+			margin: 50px 0 60px
+
+		&__title
+			margin-bottom: 30px
+
+		&__item:after 
+			bottom: 15px
+			right: 15px
+
+
+@media (max-width: 667px)
+	
+	.slider-bot__list 
+		.swiper-button
+			display: none
+
+	.slider-bot
+		margin-top: 25px
