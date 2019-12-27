@@ -1,5 +1,8 @@
 module.exports = [
     ".ts",
     ".tsx",
-    ".js"
+    ".js",
+    '*', 
+    '.vue', 
+    '.json'
 ]

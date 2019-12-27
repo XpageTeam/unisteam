@@ -3,6 +3,7 @@ import is from "is_js"
 
 import "./filter.js"
 import "./mobile-menu.js"
+import "./main-cat.js"
 
 
 window.$ = $;

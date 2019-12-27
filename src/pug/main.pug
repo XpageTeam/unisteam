@@ -23,10 +23,30 @@ html(lang="ru")
 									a(href="#")
 										img(src="img/slider-1.jpg", alt="")
 				.search-cont
-					form(action="")
-						.search
-							input(type="search" placeholder="Найти спецтехнику")
-							input(type="submit" value="Найти")
+					.wrapper
+						form(action="")
+							.search
+								input(type="search" placeholder="Найти спецтехнику")
+								input(type="submit" value="Найти")
+				.catalog-main__cont
+					.wrapper
+						.catalog-main#main-cat
+							.catalog-main__title Каталог автомобилей
+							.catalog-main__wrap(v-cloak)
+								include inc/cat-script.html
+								.catalog-main__col(v-for="btn in btn_list")
+									input.catalog-main__col-radio(:id="btn.id" v-model="view" name="view" v-bind:value="btn.id" type="radio")
+									label.catalog-main-top-btn.btn.btn--reverse(:for="btn.id") {{ btn.title }}
+							.catalog-main__wrap
+								.catalog-main__col(v-for="cat in catalog_chunked")
+									.catalog-main__list(v-for="item in cat" v-if="animate")
+										h2.catalog-main__list-title(:style="'background-image: url('+item.imgSrc+')'") 
+											a.catalog-main__list-title-link(:href="item.link") {{ item.title }}
+										ul.catalog-main__list-list(v-if="item.list.length")
+											li.catalog-main__list-el(v-for="el in item.list")
+												a.catalog-main__list-link(:href="el.link") {{ el.title }}
+
+
 
 
 

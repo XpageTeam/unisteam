@@ -1,0 +1,256 @@
+<script>
+	window.btns = [
+		{
+			title: "Все автомобили",
+			id: 0
+		},
+		{
+			title: "Автомобили на шасси Камаз",
+			id: 1
+		},
+		{
+			title: "Автомобили на шасси Урал",
+			id: 2
+		}
+	];
+
+	window.catalog = [
+		{
+			title: "Самосвалы",
+			id: [1,2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-1-1.png",
+			list: [
+				{
+					title: "С задней разгрузкой",
+					link: "#"
+				},
+				{
+					title: "С боковой и 3-сторонней разгрузкой",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Коммунальная техника",
+			id: [1,2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-1-2.png",
+			list: [
+				{
+					title: "Мусоровозы",
+					link: "#"
+				},
+				{
+					title: "Дорожно-уборочная техника",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Бортовые автомобили",
+			id: [1,2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-1-3.png",
+			list: [
+				{
+					title: "С КМУ",
+					link: "#"
+				},
+				{
+					title: "Без КМУ",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Нефтепромысловая техника",
+			id: [1,2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-1-4.png",
+			list: [
+				{
+					title: "ППУА",
+					link: "#"
+				},
+				{
+					title: "АДПМ",
+					link: "#"
+				},
+				{
+					title: "Цементировочные агрегаты",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Фургоны специальные",
+			id: [1,2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-1-5.png",
+			list: []
+		},
+		{
+			title: "Вахтовые автобусы",
+			id: [1],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-2-1.png",
+			list: [
+				{
+					title: "Вахтовые автобусы",
+					link: "#"
+				},
+				{
+					title: "Грузопассажирские автобусы",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Седельные тягачи",
+			id: [1],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-2-2.png",
+			list: [
+				{
+					title: "С КМУ",
+					link: "#"
+				},
+				{
+					title: "Без КМУ",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Полуприцепы, прицепы",
+			id: [1],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-2-3.png",
+			list: [
+				{
+					title: "Тралы",
+					link: "#"
+				},
+				{
+					title: "Бортовые и тентованные полуприцепы",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Дорожно-строительная техника",
+			id: [1],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-2-4.png",
+			list: [
+				{
+					title: "Бульдозеры",
+					link: "#"
+				},
+				{
+					title: "Автогрейдеры",
+					link: "#"
+				},
+				{
+					title: "Гусеничные тракторы",
+					link: "#"
+				},
+				{
+					title: "Автобетоносмесители",
+					link: "#"
+				},
+				{
+					title: "Автогидроподъемники",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Автокраны",
+			id: [1],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-2-5.png",
+			list: []
+		},
+		{
+			title: "Пожарные автомобили",
+			id: [2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-3-1.png",
+			list: [
+				{
+					title: "Автоцистерны пожарные",
+					link: "#"
+				},
+				{
+					title: "Специальные пожарные автомобили",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Специальная техника",
+			id: [2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-3-2.png",
+			list: [
+				{
+					title: "Контейнеровозы",
+					link: "#"
+				},
+				{
+					title: "Металловозы",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "автоцистерны и топливозаправщики",
+			id: [2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-3-3.png",
+			list: [
+				{
+					title: "Для нефти и ГСМ",
+					link: "#"
+				},
+				{
+					title: "Пищевые",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Лесовозы, сортиментовозы,  трубоплетевозы",
+			id: [2],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-3-4.png",
+			list: [
+				{
+					title: "Лесовозные тягачи и прицепы-роспуски",
+					link: "#"
+				},
+				{
+					title: "Лесовозные автопоезда",
+					link: "#"
+				},
+				{
+					title: "Трубоплетевозные тягачи и прицепы-роспуски",
+					link: "#"
+				},
+				{
+					title: "Трубоплетевозные автопоезда",
+					link: "#"
+				}
+			]
+		},
+		{
+			title: "Шасси",
+			id: [2,1],
+			link: "#",
+			imgSrc: "img/photos/catalog-img-3-5.png",
+			list: []
+		},
+	]
+</script>
