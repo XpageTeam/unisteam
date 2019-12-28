@@ -14,7 +14,7 @@ $(function(){
 	if ($("#main-cat").length)
 		
 		mainCat = new Vue({
-			el: "#main-cat",
+			el: "#app",
 			data: {
 				btn_list: window.btns,
 				catalog: window.catalog,

@@ -22,6 +22,9 @@ html(lang="ru")
 								.main-slider__img
 									a(href="#")
 										img(src="img/slider-1.jpg", alt="")
+							.swiper-pagination
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
 				.search-cont
 					.wrapper
 						form(action="")
@@ -45,6 +48,56 @@ html(lang="ru")
 										ul.catalog-main__list-list(v-if="item.list.length")
 											li.catalog-main__list-el(v-for="el in item.list")
 												a.catalog-main__list-link(:href="el.link") {{ el.title }}
+				.partners-cont
+					.wrapper
+						.partners
+							.partners__title.title
+							.swiper-list
+								.swiper-wrapper
+									- for (let i = 0; i < 5; i++)
+										.swiper-slide
+											a(href="").partners__item
+												img(src="img/photos/partners-"+i+".png", alt="")
+
+								.swiper-pagination
+								.swiper-button.swiper-button-prev
+								.swiper-button.swiper-button-next
+				.statistic-cont
+					.wrapper
+						.statistic
+							.statistic__title.title
+							.statistic__list
+								.statistic__item
+									.statistic__item-num
+									.statistic__item-text
+									.statistic__item-info
+				.news-cont
+					.wrapper
+						.news
+							.news__title.title
+							.swiper-list
+								.swiper-wrapper
+									.swiper-slide
+										.news__item
+											.news__item-img
+												img(src="img/photos/news-1.jpg", alt="")
+											.news__item-info
+												.news__item-text
+												.news__item-date
+								.swiper-pagination
+								.swiper-button.swiper-button-prev
+								.swiper-button.swiper-button-next
+				.stage-cont
+					.wrapper
+						.stage
+							.stage__title.title
+							.stage__img
+								include ../img/stage.svg
+
+
+
+
+
 
 
 
