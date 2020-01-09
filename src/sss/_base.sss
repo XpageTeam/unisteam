@@ -5,19 +5,19 @@ input, a, button, textarea, select
 	outline: none
 
 *::-webkit-input-placeholder
-	color: #CDCDCD
+	color: #A5AEB9
 	opacity: 1
 
 *:-moz-placeholder
-	color: #CDCDCD
+	color: #A5AEB9
 	opacity: 1
 
 *::-moz-placeholder
-	color: #CDCDCD
+	color: #A5AEB9
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #CDCDCD
+	color: #A5AEB9
 	opacity: 1
 
 .swiper-button-disabled
@@ -70,11 +70,7 @@ body
 	background: var(--body-bg-color)
 	overflow-x: hidden
 	
-#app
-	display: flex
-	flex-direction: column
-	flex: 1 1 auto
-	min-height: 100vh
+
 
 @media (min-width: 660px)
 	body
@@ -113,7 +109,6 @@ select
 
 #content
 	flex: 1 1 auto
-	margin-bottom: 85px
 
 
 a
@@ -211,43 +206,32 @@ li
 		background-color: var(--second-color)
 
 .swiper-button
+	border-radius: 5px
+	size: 50px
+	position: absolute
+	top: calc(50% - 25px)
+	left: auto
+	right: auto
+	margin: 0
+	flex: none
+	background-color: transparent
+	background-image: url('../img/ico-arrow-button.svg')
+	background-color: transparent
+	background-repeat: no-repeat
+	background-position: 50%
+	background-size: auto
+	transition: color .3s ease, background-color .3s ease
 
-	&-prev, &-next
-		border-radius: 5px
-		size: 50px
-		position: relative
-		top: auto
-		left: auto
-		right: auto
-		margin: 0
-		flex: none
-		background-color: transparent
-		background-image: url('../img/ico-arrow-button.svg')
-		background-repeat: no-repeat
-		background-position: 50%
-		background-size: auto
-		transition: color .3s ease, background-color .3s ease
-
-
-		// &:after
-		// 	content: ""
-		// 	position: absolute calc(50% - 4px) calc(50% - 4px) * *
-		// 	size: 8px
-		// 	border-top: 1px solid currentColor
-		// 	border-right: 1px solid currentColor
-		// 	transform: rotateZ(45deg)
-
-		&:not(:hover, :focus)
-			color: #000 #fff
-
-		&:hover, &:focus
-			color: #fff var(--main-color)
 	
 	&-prev
-		transform: rotateZ(180deg) 
+		transform: rotateZ(180deg)
+		right: calc(100% + 60px) 
 
 		&:after
 			right: calc(50% - 2px)
+
+	&-next
+		left: calc(100% + 60px)
 
 
 input.default-btn
@@ -360,11 +344,6 @@ input.default-btn
 
 
 
-
-@media (max-width: 1200px)
-	
-	#content
-		margin-bottom: 50px
 
 @media (max-width: 370px)
 	

@@ -1,4 +1,16 @@
 .my-select
+	border: 1px solid var(--thrid-color)
+	border-radius: 3px
+	padding: 0 35px 0 20px
+	text-align: center
+	height: 40px
+	background-color: var(--main-color)
+	color: #fff
+	background-image: url('../img/ico-select.svg')
+	background-repeat: no-repeat
+	background-position: right 15px center
+	cursor: pointer
+	text-align-last: center
 
 	&__list
 		overflow-y: auto
@@ -9,12 +21,12 @@
 
 		&-cont
 			user-select: none
-			position: absolute calc(100% - 1px) 0 *
+			position: absolute 100% * * 0
 			z-index: 2
-			background: #fff
+			background: var(--main-color)
 			display: none
-			padding: 4px 0
-			border: 1px solid var(--border-color)
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+			min-width: 100%
 
 		&::-webkit-scrollbar
 			width: 11px
@@ -30,7 +42,10 @@
 				background: #fff
 		
 		&-option
-			padding: 10px 16px
+			padding: 6px 16px
+			text-align: center
+			white-space: nowrap
+			font-size: em(14)
 			transition: color .3s ease, background-color .3s ease
 
 			&:not(.selected)

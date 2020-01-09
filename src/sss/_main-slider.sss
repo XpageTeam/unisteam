@@ -1,0 +1,62 @@
+.main-slider
+	position: relative
+
+	.swiper-button
+		display: none
+
+	&__info
+		background: rgba(36, 36, 36, 0.6)
+		color: #fff
+		text-align: center
+		width: 100%
+		align-self: center
+		display: flex
+		align-items: center
+		flex-direction: column
+		padding: 70px 20px 190px
+
+		&-cont
+			position: absolute 0
+			
+			img
+				display: block
+
+			.wrapper
+				height: 100%
+				display: flex
+		.swiper-pagination
+			position: static
+			display: flex
+			margin-top: 50px
+
+	&__title
+		font-size: em(32, 16)
+		line-height: calc(45 / 32)
+		max-width: 880px
+
+	&__btn
+		margin-top: 30px
+
+
+.sold-info
+	position: absolute
+	left: 0
+	top: 50%
+	transform: translate3d(0,-50%,0)
+	background-color: var(--main-color)
+	z-index: 2
+	color: #fff
+	padding: 30px 20px 30px 30px
+	width: 145px
+	border-radius: 0px 6px 6px 0px
+
+	&__num
+		font-size: em(22)
+
+		span
+			font-size: em(14, 16)
+			margin-left: 5px
+
+	&__text
+		font-size: em(14, 16)
+		line-height: calc(17 / 14)

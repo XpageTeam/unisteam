@@ -2,73 +2,76 @@
 <g id="stage">
 <path id="Vector 1" d="M79 18.5H622M622 18.5V380.5H80L622 18.5Z" stroke="#193153" stroke-width="3"/>
 <g id="stage-1">
-<text id="text" fill="black" xml:space="preserve" style="white-space: pre" font-family="Acme" font-size="16" letter-spacing="0em"><tspan x="29.5391" y="77.344">&#x41e;&#x431;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x438;&#x435;&#x2028;</tspan><tspan x="33.25" y="96.544">&#x432; &#x42e;&#x43d;&#x438;&#x441;&#x442;&#x438;&#x43c;</tspan></text>
+<foreignObject id="text" fill="black" xml:space="preserve" font-family="Europe" font-size="16" letter-spacing="0em" x="29.5391" y="55.344" width="100px" height="100px">Обращение в Юнистим</foreignObject>
+<!-- <text id="text" fill="black" xml:space="preserve" font-family="Europe" font-size="16" letter-spacing="0em">
+	<tspan x="29.5391" y="77.344">Обращение в Юнистим</tspan>
+</text> -->
 <g id="circle">
 <circle id="ellipse" cx="80" cy="20" r="20" fill="#4C87FF"/>
-<text id="num" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="74" y="26.525">1</tspan></text>
+<text id="num" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="74" y="26.525">1</tspan></text>
 </g>
 </g>
 <g id="stage-2">
-<text id="text_2" fill="#E32D33" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="16" letter-spacing="0em"><tspan x="209.188" y="74.1445">&#x412;&#x44b;&#x441;&#x442;&#x430;&#x432;&#x43b;&#x435;&#x43d;&#x438;&#x435; </tspan><tspan x="200.648" y="93.3445">&#x43a;&#x43e;&#x43c;&#x43c;&#x435;&#x440;&#x447;&#x435;&#x441;&#x43a;&#x43e;&#x433;&#x43e; </tspan><tspan x="209.227" y="112.545">&#x43f;&#x440;&#x435;&#x434;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x44f;</tspan></text>
+<text id="text_2" fill="#E32D33" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="16" letter-spacing="0em"><tspan x="209.188" y="74.1445">Выставление</tspan><tspan x="200.648" y="93.3445">коммерческого </tspan><tspan x="209.227" y="112.545">предложения</tspan></text>
 <g id="circle_2">
 <circle id="ellipse_2" cx="260" cy="20" r="20" fill="#E32D33"/>
-<text id="num_2" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="254" y="26.525">2</tspan></text>
+<text id="num_2" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="254" y="26.525">2</tspan></text>
 </g>
 </g>
 <g id="stage-3">
 <text id="text_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="16" letter-spacing="0em"><tspan x="385.766" y="74.1445">&#x421;&#x43e;&#x433;&#x43b;&#x430;&#x441;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;&#x2028;</tspan><tspan x="387.672" y="93.3445">&#x438; &#x43f;&#x43e;&#x434;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435; </tspan><tspan x="404.375" y="112.545">&#x434;&#x43e;&#x433;&#x43e;&#x432;&#x43e;&#x440;&#x430;</tspan></text>
 <g id="circle_3">
 <circle id="ellipse_3" cx="440" cy="20" r="20" fill="#4C87FF"/>
-<text id="num_3" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="434" y="26.525">3</tspan></text>
+<text id="num_3" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="434" y="26.525">3</tspan></text>
 </g>
 </g>
 <g id="stage-4">
 <text id="text_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="16" letter-spacing="0em"><tspan x="653" y="24.1445">&#x41e;&#x43f;&#x43b;&#x430;&#x442;&#x430;</tspan></text>
 <g id="circle_4">
 <circle id="ellipse_4" cx="620" cy="20" r="20" fill="#4C87FF"/>
-<text id="num_4" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="614" y="26.525">4</tspan></text>
+<text id="num_4" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="614" y="26.525">4</tspan></text>
 </g>
 </g>
 <g id="stage-5">
 <text id="text_5" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="16" letter-spacing="0em"><tspan x="660.812" y="206.145">&#x41f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x434;&#x441;&#x442;&#x432;&#x43e;</tspan></text>
 <g id="circle_5">
 <circle id="ellipse_5" cx="620" cy="202" r="20" fill="#4C87FF"/>
-<text id="num_5" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="614" y="208.525">5</tspan></text>
+<text id="num_5" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="614" y="208.525">5</tspan></text>
 </g>
 </g>
 <g id="stage-6">
 <text id="text_6" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0em"><tspan x="660.25" y="390.663">&#x413;&#x43e;&#x442;&#x43e;&#x432;&#x43d;&#x43e;&#x441;&#x442;&#x44c;</tspan></text>
 <g id="circle_6">
 <circle id="ellipse_6" cx="620" cy="381" r="20" fill="#4C87FF"/>
-<text id="num_6" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="614" y="387.525">6</tspan></text>
+<text id="num_6" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="614" y="387.525">6</tspan></text>
 </g>
 </g>
 <g id="stage-7">
 <text id="text_7" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0em"><tspan x="406.93" y="435.663">&#x414;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x430;</tspan></text>
 <g id="circle_7">
 <circle id="ellipse_7" cx="440" cy="381" r="20" fill="#4C87FF"/>
-<text id="num_7" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="434" y="387.525">7</tspan></text>
+<text id="num_7" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="434" y="387.525">7</tspan></text>
 </g>
 </g>
 <g id="stage-8">
 <text id="text_8" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="218.562" y="435.663">&#x41e;&#x442;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x430;</tspan></text>
 <g id="circle_8">
 <circle id="ellipse_8" cx="260" cy="381" r="20" fill="#4C87FF"/>
-<text id="num_8" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="254" y="387.525">8</tspan></text>
+<text id="num_8" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="254" y="387.525">8</tspan></text>
 </g>
 </g>
 <g id="stage-9">
 <text id="text_9" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0em"><tspan x="6.11035" y="435.663">&#x41f;&#x43e;&#x441;&#x43b;&#x435;&#x43f;&#x440;&#x43e;&#x434;&#x430;&#x436;&#x43d;&#x430;&#x44f; </tspan><tspan x="32.9873" y="457.263">&#x43f;&#x43e;&#x434;&#x434;&#x435;&#x440;&#x436;&#x43a;&#x430;</tspan></text>
 <g id="circle_9">
 <circle id="ellipse_9" cx="80" cy="381" r="20" fill="#4C87FF"/>
-<text id="num_9" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="74" y="387.525">9</tspan></text>
+<text id="num_9" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="74" y="387.525">9</tspan></text>
 </g>
 </g>
 <g id="stage-5-5">
 <text id="text_10" fill="black" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="16" letter-spacing="0em"><tspan x="386" y="206.145">&#x41e;&#x442;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x430;</tspan></text>
 <g id="circle_10">
 <circle id="ellipse_10" cx="350" cy="202" r="20" fill="#4C87FF"/>
-<text id="num_10" fill="white" xml:space="preserve" style="white-space: pre" font-family="EuropeDemi" font-size="18" letter-spacing="0.04em"><tspan x="344" y="208.525">5</tspan></text>
+<text id="num_10" fill="white" xml:space="preserve" style="white-space: pre" font-family="Europe" font-size="18" letter-spacing="0.04em"><tspan x="344" y="208.525">5</tspan></text>
 </g>
 </g>
 </g>

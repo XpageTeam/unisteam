@@ -3,50 +3,17 @@ footer.footer
 		.wrapper
 			.footer-top
 				.f-menu
-					.f-menu__title
-						a(href="") О нас
 					ul.f-menu__list
-						each title in ["Наши магазины", "Юридическим лицам", "Акции и скидки", "Новости", "Статьи", "Вакансии",]
+						each title in ["Каталог продукции", "Спецтехника в наличии", "Сервис и ремонт", "Услуги", "О заводе", "Полезная информация", "Контакты ", "Карта сайта"]
 							li.f-menu__item
 								a(href="").f-menu__link=title
-				.f-menu
-					.f-menu__title
-						a(href="") Помощь
 					ul.f-menu__list
-						each title in [ "Как заказать?", "Оплата", "Доставка", "Возврат и обмен", "Бонусная программа", "Обратная связь"]
+						each title in ["Правила использования материалов", "Согласие на обработку данных"]
 							li.f-menu__item
 								a(href="").f-menu__link=title
-				.f-menu
-					.f-menu__title
-						a(href="") Услуги
-					ul.f-menu__list
-						each title in ["Багетная мастерская", "Карта друга", "Подарочные сертификаты"]
-							li.f-menu__item
-								a(href="").f-menu__link=title
-
-				.f-menu
-					each title in ["Бренды", "Магазины", "Мастер классы"]
-						.f-menu__title
-							a(href="")=title
-
-				.subscribe-cont
-					form(action="")
-						.subscribe
-							.subscribe-title Получайте акции и<br> специальные предложения
-							.subscribe-form
-								input(type="email" placeholder="Введите e-mail")
-								input(type="submit" value="Подписаться")
-					.footer-phone
-						a(href="tel:88003331946") 8-800-333-19-46
-						a(href="").fancybox Написать нам
-	.footer-bot-cont
-		.wrapper
-			.footer-bot
-				.footer-copy
-					.copy-text © 2006-2019 Арт-Квартал 
-					a(href="").copy-link Все права защищены
-
+				
 				.footer-soc
+					.soc-text Мы в социальных сетях:
 					.soc
 						a(href="").soc__link
 							img(src="img/ico-inst.svg", alt="")
@@ -56,13 +23,17 @@ footer.footer
 							img(src="img/ico-fb.svg", alt="")
 						a(href="").soc__link
 							img(src="img/ico-youtube.svg", alt="")
-					.soc-text Наши аккаунты<br> в соц сетях
-					.footer-lang--mobile
-						select
-							option(value="1") En
-							option(value="2") Ru
+
+				
+	.footer-bot-cont
+		.wrapper
+			.footer-bot
+				.footer-copy
+					.copy-text © 2019, Группа компаний UNISTEAM™
+					a(href="").copy-link Политика конфиденциальности
+
+					
 				a(href="").dev
-					.dev-text Сделано в
 					.dev-img
 						img(src="img/ico-dev.svg ", alt="")
 

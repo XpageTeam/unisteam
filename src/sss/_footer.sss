@@ -1,6 +1,5 @@
 .footer
-	background-color: var(--thrid-color)
-	overflow: hidden
+	background-color: var(--main-color)
 
 	&-top
 		position: relative
@@ -8,15 +7,16 @@
 		padding: 65px 0
 		justify-content: space-between
 
+
 		&-cont
-			border-top: 1px solid #DFE0E2
-			border-bottom: 1px solid #DFE0E2
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1)
 
 
 	&-bot
 		display: flex
 		align-items: center
 		padding: 34px 0
+		justify-content: space-between
 
 	&-soc
 		display: flex
@@ -31,101 +31,48 @@
 
 
 .f-menu
-	&__title
-		font-weight: 600
-		font-size: em(12)
-		text-transform: uppercase
-		margin-bottom: 15px
+	display: flex
 
-		a
-			color: #000
+	&__list
+
+		&:nth-child(1)
+			column-count: 3
+			column-gap: 50px
+
 
 	&__item
 		margin-bottom: 10px
 
-	&__link.active
-		color: var(--second-color)
+	&__link
+		color: #fff
+
+		&.active
+			color: var(--second-color)
 
 	
-
-.footer-phone
+.footer-soc
 	display: flex
 	flex-direction: column
-	align-items: flex-start
-	margin-top: 55px
+	margin-left: auto
+	align-items: flex-end
+
+	.soc-text
+		color: #fff
+		margin-bottom: 15px
 
 
-	a
-		&[href^="tel:"]
-
-			font-weight: 500
-			font-size: em(16)
-			margin-bottom: 10px
-			color: #000
-
-		&.fancybox
-			color: var(--second-color)
-			display: flex
-			align-items: center
-
-			&:before
-				content: ''
-				display: block
-				size: 13px 9px
-				background-image: url('../img/ico-mail-red.svg')
-				background-position: center
-				background-repeat: no-repeat
-				background-size: contain
-				margin-top: -2px
-				margin-right: 10px
-
-.subscribe
-
-	&-cont
-		flex: none
-
-	&-title
-		margin-bottom: 20px
-
-	&-form
-		position: relative
-
-	input
-		&[type="email"]
-			min-width: 300px
-			width: 100%
-			height: 50px
-			border-radius: 5px
-			border: 1px solid var(--border-color)
-			padding: 0 60px 0 20px
-
-		&[type="submit"]
-			font-size: 0
-			size: 50px
-			background-color: var(--second-color)
-			background-image: url('../img/ico-mail.svg')
-			background-position: center
-			border-radius: 5px
-			background-repeat: no-repeat
-			border: 0
-			position: absolute
-			top: 0
-			right: 0
 
 
 .copy
+	&-text
+		color: #fff
+
 	&-link
-		color: var(--second-color)
+		color: var(--thrid-color)
 
 .dev
 	display: flex
 	align-items: center
-
-	&-text
-		font-size: em(12)
-
-	&-img
-		margin-left: 17px
 
 	img
 		display: block

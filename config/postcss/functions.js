@@ -31,7 +31,7 @@ module.exports = {
 		// return color([r,g,b]).toHexString();
 	},
 
-	persent(value, base = 1396){
+	persent(value, base = 1300){
 		return (value / base * 100).toFixed(2) + "%"
 	},
 	vw(value, base = 1903){
@@ -43,7 +43,7 @@ module.exports = {
 	lh(pxLh, pxFs){
 		return (pxLh / pxFs).toFixed(2)
 	},
-	em(value, base = 14){
+	em(value, base = 16){
 		return (parseInt(value) / base).toFixed(2) + "em"
 	},
 	rem(value){

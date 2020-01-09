@@ -1,0 +1,139 @@
+.catalog-main
+	margin: 120px 0
+
+	&-top-btn
+		width: 100%
+		font-size: em(16)
+		margin-bottom: 80px
+		padding: 11px 15px
+		cursor: pointer
+		display: flex
+		justify-content: center
+		text-align: center
+		background-color: #A5AEB9
+		border-radius: 3px
+		color: #fff
+		transition: background-color .3s ease
+
+		&:hover
+			background-color: var(--second-color)
+	
+	&__cont
+		background: #fff
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin: 0 0 0 -30px
+
+	&__title
+		text-transform: uppercase
+		text-align: center
+		font-weight: 400
+		color: #000
+		font-size: em(30)
+		margin-bottom: 60px
+
+		a
+			font-weight: inherit
+			color: inherit
+			text-decoration: none
+
+	&__col
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 0 30px
+
+		&:not(:first-child)
+			margin-left: 15px
+
+		&-radio
+			display: none
+
+			&:checked
+
+				+ .catalog-main-top-btn
+					background: var(--second-color)
+					color: #fff
+
+.catalog-main__list
+	color: #fff
+	width: 100%
+	margin-bottom: 65px
+
+
+	&--hilight
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		border: 1px solid #00837b
+
+		.test-hilight
+			padding: 0 15px 15px
+
+		&:before
+			content: "Собственное производство"
+			height: 37px
+			z-index: 1
+			background: #00837b
+			font-size: em(14)
+			width: auto
+			padding: 0 14px 0
+			line-height: 37px
+			color: #fff
+			order: -1
+			margin: 0 0 15px
+			width: 100%
+
+		.catalog-main__list
+
+			&-title
+				order: -2
+
+	+ .catalog-main__list
+		margin-top: 25px
+	
+	&-title
+		min-height: 38px
+		font-size: em(20, 16)
+		padding-left: 75px
+		margin-bottom: 30px
+		display: flex
+		align-items: center
+		background-position: left center
+		background-repeat: no-repeat
+		color: var(--main-color)
+
+		&:hover
+			color: var(--second-color)
+
+		&-link
+			text-decoration: none
+			font-weight: 500
+			color: currentColor
+
+			
+
+	&-el
+		position: relative
+		line-height: em(22)
+		color: #A5AEB9
+		transition: color .3s ease
+
+		&:hover
+			color: var(--second-color)
+
+			
+
+		&:before
+			content: ""
+			size: 6px
+			display: block
+			background-color: currentColor
+			position: absolute 7px * * 0
+
+
+	&-link
+		color: currentColor
+		text-decoration: none
+		padding-left: 20px

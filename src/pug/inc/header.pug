@@ -1,4 +1,4 @@
-include ../inc/mobile-menu.pug
+//- include ../inc/mobile-menu.pug
 header.head
 	.head-top-cont
 		.wrapper
@@ -7,26 +7,26 @@ header.head
 					.city__label Наши адреса и график работы
 					.city 
 						select.my-select
-							option(value="") Челябинск
-							option(value="") Москва
-							option(value="") Cанкт-Петербург
+							option(value="1") Челябинск
+							option(value="2") Москва
+							option(value="3") Cанкт-Петербург
 				.head-callback
 					a(href="#" class="fancybox") Напишите нам
 				.head-soc
 					.soc__label Свяжитесь с нами:
 					.soc
 						a(href="").soc__link
-							img(src="img/ico-ws.svg", alt="")
+							img(src="img/ico-viber.svg", alt="")
 						a(href="").soc__link
-							img(src="img/ico-sk.svg", alt="")
+							img(src="img/ico-skype.svg", alt="")
 						a(href="").soc__link
-							img(src="img/ico-ws.svg", alt="")
+							img(src="img/ico-viber.svg", alt="")
 						a(href="").soc__link
 							img(src="img/ico-tg.svg", alt="")
 				.head-email
-					a(href="mailto: info@unisteam.com") info@unisteam.com
+					a(href="mailto: info@unisteam.com").mail info@unisteam.com
 				.head-phone
-					a(href="tel:8 800-555-49-07") 8 800-555-49-07
+					a(href="tel:8 800-555-49-07").phone 8 800-555-49-07
 				.head-lang
 					select.my-select
 						option(value="1") En

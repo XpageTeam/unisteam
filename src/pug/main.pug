@@ -6,93 +6,220 @@ html(lang="ru")
 		include inc/head.pug
 		include inc/css.pug
 	body.main.loading
-		#app
-			include inc/header.pug
-			main#content
-				.main-slider
-					.swiper-list
-						.swiper-wrapper
-							.swiper-slide
-								.main-slider__info-cont
-									.wrapper
-										.main-slider__info
-											.main-slider__title Серия ППУА на газу. Использование пропана или метана экономит на топливе до 263 тыс. в месяц
-											.main-slider__btn 
-												a(href="#").btn Смотреть в каталоге
-								.main-slider__img
-									a(href="#")
-										img(src="img/slider-1.jpg", alt="")
-							.swiper-pagination
-							.swiper-button.swiper-button-prev
-							.swiper-button.swiper-button-next
-				.search-cont
-					.wrapper
-						form(action="")
-							.search
-								input(type="search" placeholder="Найти спецтехнику")
-								input(type="submit" value="Найти")
-				.catalog-main__cont
-					.wrapper
-						.catalog-main#main-cat
-							.catalog-main__title Каталог автомобилей
-							.catalog-main__wrap(v-cloak)
-								include inc/cat-script.html
-								.catalog-main__col(v-for="btn in btn_list")
-									input.catalog-main__col-radio(:id="btn.id" v-model="view" name="view" v-bind:value="btn.id" type="radio")
-									label.catalog-main-top-btn.btn.btn--reverse(:for="btn.id") {{ btn.title }}
-							.catalog-main__wrap
-								.catalog-main__col(v-for="cat in catalog_chunked")
-									.catalog-main__list(v-for="item in cat" v-if="animate")
-										h2.catalog-main__list-title(:style="'background-image: url('+item.imgSrc+')'") 
-											a.catalog-main__list-title-link(:href="item.link") {{ item.title }}
-										ul.catalog-main__list-list(v-if="item.list.length")
-											li.catalog-main__list-el(v-for="el in item.list")
-												a.catalog-main__list-link(:href="el.link") {{ el.title }}
-				.partners-cont
-					.wrapper
-						.partners
-							.partners__title.title
+		include inc/header.pug
+		main#content
+			.main-slider
+				.sold-info
+					.sold-info__img
+						include ../img/ico-car.svg
+					.sold-info__num 5420
+						span ед.
+					.sold-info__text продано на сегодняшний день
+
+
+
+				.swiper-list
+					.swiper-wrapper
+						.swiper-slide
+							.main-slider__info-cont
+								.wrapper
+									.main-slider__info
+										.main-slider__title Серия ППУА на газу. Использование пропана или метана экономит на топливе до 263 тыс. в месяц
+										.main-slider__btn 
+											a(href="#").btn Смотреть в каталоге
+										.swiper-pagination
+							.main-slider__img
+								img(src="img/photos/banner.jpg", alt="")
+						.swiper-slide
+							.main-slider__info-cont
+								.wrapper
+									.main-slider__info
+										.main-slider__title Серия ППУА на газу. Использование пропана или метана экономит на топливе до 263 тыс. в месяц. Серия ППУА на газу. Использование пропана или метана экономит на топливе до 263 тыс. в месяц
+										.main-slider__btn 
+											a(href="#").btn Смотреть в каталоге
+										.swiper-pagination
+							.main-slider__img
+								img(src="img/photos/banner.jpg", alt="")
+						.swiper-slide
+							.main-slider__info-cont
+								.wrapper
+									.main-slider__info
+										.main-slider__title Серия ППУА на газу. Использование пропана или метана экономит на топливе до 263 тыс. в месяц
+										.main-slider__btn 
+											a(href="#").btn Смотреть в каталоге
+										.swiper-pagination
+							.main-slider__img
+								img(src="img/photos/banner.jpg", alt="")
+						
+						.swiper-button.swiper-button-prev
+						.swiper-button.swiper-button-next
+			.search-cont
+				.wrapper
+					form(action="")
+						.search
+							input(type="search" placeholder="Найти спецтехнику")
+							input(type="submit" value="Найти").btn
+			.catalog-main__cont
+				.wrapper
+					include inc/cat-script.html
+					.catalog-main#main-cat
+						.catalog-main__title Каталог автомобилей
+						.catalog-main__wrap(v-cloak)
+							.catalog-main__col(v-for="btn in btn_list")
+								input.catalog-main__col-radio(:id="btn.id" v-model="view" name="view" v-bind:value="btn.id" type="radio")
+								label.catalog-main-top-btn.btn--reverse(:for="btn.id") {{ btn.title }}
+						.catalog-main__wrap
+							.catalog-main__col(v-for="cat in catalog_chunked")
+								.catalog-main__list(v-for="item in cat" v-if="animate")
+									h2.catalog-main__list-title(:style="'background-image: url('+item.imgSrc+')'") 
+										a.catalog-main__list-title-link(:href="item.link") {{ item.title }}
+									ul.catalog-main__list-list(v-if="item.list.length")
+										li.catalog-main__list-el(v-for="el in item.list")
+											a.catalog-main__list-link(:href="el.link") {{ el.title }}
+			.partners-cont
+				.wrapper
+					.partners
+						.partners__title.title Нам доверяют
+						.partners__list
 							.swiper-list
 								.swiper-wrapper
-									- for (let i = 0; i < 5; i++)
+									- for (let i = 1; i < 7; i++)
 										.swiper-slide
 											a(href="").partners__item
-												img(src="img/photos/partners-"+i+".png", alt="")
+												img(src="img/partners-"+i+".png", alt="")
 
-								.swiper-pagination
-								.swiper-button.swiper-button-prev
-								.swiper-button.swiper-button-next
-				.statistic-cont
-					.wrapper
-						.statistic
-							.statistic__title.title
-							.statistic__list
-								.statistic__item
-									.statistic__item-num
-									.statistic__item-text
-									.statistic__item-info
-				.news-cont
-					.wrapper
-						.news
-							.news__title.title
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+						.swiper-pagination
+			.statistic-cont
+				.wrapper
+					.statistic
+						.statistic__title.title Юнистим™ в цифрах
+						.statistic__list
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="10") 0
+								.statistic__item-text лет
+								.statistic__item-info на рынке спецтехники
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="150") 0
+								.statistic__item-text человек
+								.statistic__item-info в штате предприятия
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="4000") 0
+								.statistic__item-text кв.м
+								.statistic__item-info доля рынка по продаже ППУА
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="30") 0
+								.statistic__item-text процентов
+								.statistic__item-info доля рынка по продаже ППУА
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="1500") 0
+								.statistic__item-text ППУА
+								.statistic__item-info произведено всего
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="20") 0
+								.statistic__item-text рабочих дней
+								.statistic__item-info срок производства одной ППУА
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="1") 0
+								.statistic__item-text неделя
+								.statistic__item-info срок выезда бригады для дефектовкии ремонта
+							.statistic__item
+								.statistic__item-num(data-from="0" data-to="3225600") 0
+								.statistic__item-text тонн пара в год
+								.statistic__item-info производят уже выпущенные нами ППУА, что по объёму равно 1/4 оз. Байкал
+							
+							
+							
+			.news-cont
+				.wrapper
+					.news
+						.news__title.title Новости
+						.news__list
 							.swiper-list
 								.swiper-wrapper
 									.swiper-slide
-										.news__item
+										a(href="#").news__item
 											.news__item-img
 												img(src="img/photos/news-1.jpg", alt="")
 											.news__item-info
-												.news__item-text
-												.news__item-date
+												.news__item-text 15-летний Юбилей у группы компаний Юнистим™  
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-2.jpg", alt="")
+											.news__item-info
+												.news__item-text Завод Юнистим™ внесен в список аккредитованных поставщиков Роснефти
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-3.jpg", alt="")
+											.news__item-info
+												.news__item-text Результаты розыгрыша сертификата Ozon
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-1.jpg", alt="")
+											.news__item-info
+												.news__item-text 15-летний Юбилей у группы компаний Юнистим™  
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-2.jpg", alt="")
+											.news__item-info
+												.news__item-text Завод Юнистим™ внесен в список аккредитованных поставщиков Роснефти
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-3.jpg", alt="")
+											.news__item-info
+												.news__item-text Результаты розыгрыша сертификата Ozon
+												.news__item-date 4 ноября 2019
 								.swiper-pagination
-								.swiper-button.swiper-button-prev
-								.swiper-button.swiper-button-next
-				.stage-cont
-					.wrapper
-						.stage
-							.stage__title.title
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+			.stage-cont
+				.wrapper
+					.stage
+						.stage__title.title Этапы работы в юНИСТИМ™
+						.stage__interactive
 							.stage__img
 								include ../img/stage.svg
+							.stage__info
+								.stage__info-title Выставление коммерческого предложения
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+			.review-cont
+				.wrapper
+					.review
+						.review__title.title Отзывы
+						.review__list
+							.swiper-list
+								.swiper-wrapper
+									.swiper-slide
+										.review__item
+											.review__item-img
+												img(src="img/photos/review-1.jpg", alt="")
+											.review__item-info
+												.review__item-text Компания ООО «Рубикон-СТ» благодарит ООО «Завод паровых установок Юнистим» за многолетнее и плодотворное сотрудничество и отмечает как стабильного и надежного партнера. Желаем Процветания вашей компании и надеемся на дальнейшее развитие наших отношений!
+												.review__item-name Э.Р. Загидулин
+												.review__item-post Директор ООО «Рубикон-СТ»
+									.swiper-slide
+										.review__item
+											.review__item-img
+												img(src="img/photos/review-1.jpg", alt="")
+											.review__item-info
+												.review__item-text Компания ООО «Рубикон-СТ» благодарит ООО «Завод паровых установок Юнистим» за многолетнее и плодотворное сотрудничество и отмечает как стабильного и надежного партнера. Желаем Процветания вашей компании и надеемся на дальнейшее развитие наших отношений!
+												.review__item-name Э.Р. Загидулин
+												.review__item-post Директор ООО «Рубикон-СТ»
+								.swiper-pagination
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+
 
 
 

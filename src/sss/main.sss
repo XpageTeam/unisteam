@@ -17,275 +17,102 @@
 @import "_standart-page.sss"
 @import "_header.sss"
 @import "_footer.sss"
-@import "catalog.sss"
-@import "card.sss"
-@import "default-slider.sss"
-@import "testemonials.sss"
-@import "rating.sss"
-@import "paginator.sss"
-@import "news.sss"
-@import "articls.sss"
-@import "workshop.sss"
-@import "vacancy.sss"
-@import "contacts.sss"
-@import "brands.sss"
-@import "services.sss"
-@import "services-detail.sss"
-@import "cart.sss"
-@import "ordering.sss"
-@import "lc.sss"
-@import "favorites.sss"
-@import "slider.sss"
-@import "main-top.sss"
-@import "instagram.sss"
-@import "tabs.sss"
-@import "main-news.sss"
-@import "mobile-menu.sss"
-@import "compare-page.sss"
+@import "_main-slider.sss"
+@import "_catalog-main.sss"
+@import "_partners.sss"
+@import "_statistic.sss"
+@import "_news.sss"
+@import "_stage.sss"
+@import "_review.sss"
 @import "search.sss"
-@import "shops-one.sss"
-@import "slider-bot.sss"
+// @import "catalog.sss"
+// @import "card.sss"
+// @import "default-slider.sss"
+// @import "testemonials.sss"
+// @import "rating.sss"
+// @import "paginator.sss"
+// @import "news.sss"
+// @import "articls.sss"
+// @import "workshop.sss"
+// @import "vacancy.sss"
+// @import "contacts.sss"
+// @import "brands.sss"
+// @import "services.sss"
+// @import "services-detail.sss"
+// @import "cart.sss"
+// @import "ordering.sss"
+// @import "lc.sss"
+// @import "favorites.sss"
+// @import "slider.sss"
+// @import "main-top.sss"
+// @import "instagram.sss"
+// @import "tabs.sss"
+// @import "main-news.sss"
+// @import "mobile-menu.sss"
+// @import "compare-page.sss"
+// @import "shops-one.sss"
+// @import "slider-bot.sss"
 
+.btn
+	background-color: var(--second-color)
+	color: #fff
+	padding: 12px 25px
+	border-radius: 3px
+	letter-spacing: 0.04em
+	display: inline-block
+	transition: background-color .3s ease
+	cursor: pointer
 
-#selectorCity
-	&.fancybox-content
-		overflow: visible !important
-
-.main
-
-	#content
-		> .wrapper
-			padding: 0
-			max-width: 100%
-
+	&:hover
+		background-color: #ce1a20
 
 .soc
 	display: flex
 	align-items: center
 
 	&__link
-		size: 42px
+		size: 30px
 		border-radius: 50%
-		background-color: #fff
+		background-color: var(--thrid-color)
 		display: flex
 		flex-direction: column
 		align-items: center
 		justify-content: center
 
 		&:not(:last-child)
-			margin-right: 17px
+			margin-right: 10px
 
 	&-text
 		margin-left: 32px
 		font-size: em(12)
 
 
-.tabs__top
-	.default-btn
-		margin-left: auto
+.title
+	font-size: em(26)
+	line-height: calc(31 / 26)
+	text-align: center
+	letter-spacing: 0.02em
+	text-transform: uppercase
+	font-weight: 500
 
-.main-catalog
-
-	&__btn--mobile
-		display: none
-
-
-	.tabs__top
-		margin-bottom: 30px
-
-	&__list
-		display: flex
-		flex-wrap: wrap
-		margin: 0
-
-		.item
-			&-cont
-				z-index: 10
-				position: relative
-				width: calc(100%  / 5)
-				margin: 0 0 -100px 0
-				padding: 10px
-
-
-				box-shadow: 0px 14px 0 0 #EBEDF1
-				outline: 13px solid #fff
-				outline: 0
-				box-shadow: none
-				padding: 15px
-				border-radius: 5px
-
-				.item__btns
-
-					a
-						&:not(:first-child)
-							margin-top: 14px
-
-
-				&:hover
-					z-index: 100
-					background-color: #fff
-					outline: 0
-					box-shadow: none
-					box-shadow: 4px 4px 20px rgba(0, 0, 0, .05)
-
-					.item__btns
-						opacity: 1
-						pointer-events: all
-						z-index: 100
-						background-color: #fff
-
-						a
-							&:not(:first-child)
-								margin-top: 14px
-
-
-			&__img
-				display: block
-				position: relative
-
-				figure
-					text-align: center
-
-			&__info
-				display: flex
-				flex-direction: column
-				align-items: center
-				text-align: center
-
-
-		.item__btns
-			opacity: 0
-			pointer-events: none
-			padding-top: 30px
-
-			.default-btn
-				&--cart
-					padding: 16px
-
-				&--view
-					padding: 16px
-
+.swiper-pagination
+	position: static
+	display: flex
+	justify-content: center
 
 
 .swiper-pagination-bullet
-	size: 8px
-	background-color: #000
-	margin-right: 15px
+	size: 10px
+	background-color: transparent
 	opacity: 1
-
+	border: 1px solid #fff
+	
 
 	&-active
 		background-color: #fff
-		border: 1px solid #000
+		border: 1px solid #fff
 
 
-
-
-@media (max-width: 1200px)
-	
-	.main-catalog
-
-		&__list
-
-			.item
-				&-cont
-					width: calc(100%  / 3)
-
-@media (max-width: 667px)
-
-	// body, html
-	// 	overflow-x: hidden
-	
-	.main-catalog__list .item-cont
-		width: 50%
-		
-	#selectorCity.fancybox-content
-		height: 100%
-	
-	.main-catalog.tabs
-		.tabs__top
-			.default-btn
-				display: none
-
-	.main-catalog__btn--mobile
-		display: flex
-		justify-content: center
-		margin-top: 50px
-
-
-	.banners-cont
-		margin-top: 50px
-
-		img
-			display: block
-			width: 100%
-	.main 
-		.banners
-
-			&__list
-				flex-wrap: wrap
-
-			&__item
-				width: 100%
-
-	.main-catalog
-		.tabs
-			&__top
-				height: 50px
-				flex-direction: column
-				width: 100%
-				flex-wrap: nowrap
-				z-index: 100
-				position: relative
-				background-color: #fff
-
-				&:after
-					content: ''
-					display: block
-					size: 6px
-					position: absolute
-					right: 15px
-					top: calc(50% - 3px)
-					background-image: url('../img/ico-arrow.svg')
-					background-repeat: no-repeat
-					background-position: 50%
-					filter: invert(1)
-
-
-				&.js__opened
-					.tabs__tab
-						opacity: 1
-						pointer-events: all
-
-			&__tab
-				width: 100%
-				margin: 0
-				border-radius: 0
-				transition: opacity .3s ease
-				height: 50px
-				flex: none
-				display: flex
-				align-items: center
-				pointer-events: none
-
-				&:not(:first-child)
-					border-top: 1px solid var(--border-color)
-
-				&:not(.active)
-					opacity: 0
-
-
-				&.active
-					pointer-events: none
-					order: -1
-
-
-@media (max-width: 370px)
-	
-	.soc__link:not(:last-child)
-		margin-right: 10px
-
-	.main-catalog__list .item-cont
-		width: 100%
-
-
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+	&:not(:last-child)
+		margin-right: 20px
