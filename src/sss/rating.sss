@@ -2,9 +2,17 @@
 	display: flex
 	align-items: center
 
+	span
+		margin-right: 10px
+		font-weight: 500
+
 	&__list
 		display: flex
 		flex-direction: row-reverse
+
+	&__info
+		color: #A5AEB9
+		margin-top: 5px
 
 	&__radio
 		opacity: 0
@@ -14,12 +22,15 @@
 			~ label
 				svg
 					path
-						fill: var(--main-color)
+						fill: #FFC85E
+						stroke: #FFC85E
+
 
 
 	&__label
 		cursor: pointer
 		display: flex
+		margin-left: 3px
 
 	svg
 		path
@@ -28,5 +39,4 @@
 
 		
 
-	&-text
-		margin-left: 10px
+

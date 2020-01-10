@@ -4,44 +4,22 @@
 	&-cont
 		display: flex
 		align-items: center
-		justify-content: space-between
+		justify-content: center
 		margin-top: 60px
 
-		.default-btn
-			background-color: #FDCA38
-			color: #000
-			font-size: em(12)
-			text-transform: uppercase
-			font-weight: bold
-			padding: 15px 32px
-			display: flex
-			align-items: center
-
-			&:after
-				content: ''
-				display: inline-block
-				margin-left: 20px
-				size: 14px
-				background-image: url('../img/ico-load.svg')
-				background-repeat: no-repeat
-				background-position: 50%
-
-			// &.loading
-			// 	&:after
-			// 		animation: loading  2s infinite ease
-
-
-
+		
 	a
 		size: 30px
-		border-radius: 5px
+		border-radius: 50%
 		display: flex
 		justify-content: center
 		align-items: center
 		line-height: 1
+		font-size: em(14)
 
-		&:hover
-			background-color: var(--thrid-color)
+		&:hover, &.active
+			background-color: var(--main-color)
+			color: #fff
 
 
 	&__arrow

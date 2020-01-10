@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["Главная",  "Каталог продукции", "Каталог автомобилей", "Автобусы"])
+		main#content
+			.wrapper
+				.catalog-one
+					.catalog-one__list
+						a(href="#").catalog-one__item
+							.catalog-one__item-img
+								img(src="img/catalog-1-1.png", alt="")
+							.catalog-one__item-title Вахтовые автобусы УРАЛ
+							.catalog-one__item-text Используются для оперативной доставки рабочих бригад в салоне кузова-фургона на объект проведения работ
+						a(href="#").catalog-one__item
+							.catalog-one__item-img
+								img(src="img/catalog-1-2.png", alt="")
+							.catalog-one__item-title Грузопассажирские автобусы
+							.catalog-one__item-text Тралы, прицепы и полуприцепы предназначены для перевозки грузов различной тяжести. Передней частью при помощи опорно-сцепного устройства техника опирается на тягач, а задней — на колесные пары
+						a(href="#").catalog-one__item
+							.catalog-one__item-img
+								img(src="img/catalog-1-3.png", alt="")
+							.catalog-one__item-title Вахтовые автобусы КАМАЗ
+							.catalog-one__item-text Используются для транспортировки стволов деревьев, сортиментов и хлыстов.
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

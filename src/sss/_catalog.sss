@@ -1,0 +1,274 @@
+.sort
+	display: flex
+	align-items: center
+
+	&__filter
+		display: none
+
+	&__view
+		margin-left: 30px
+
+	&__select
+		position: relative
+
+		&--count
+			margin-left: auto
+
+		&--category
+			margin-right: 30px
+
+			select
+				height: 40px
+				padding: 0 40px 0 25px
+				border: 1px solid var(--border-color)
+				border-radius: 3px
+				background-image: url('../img/ico-select-black.svg')
+				background-repeat: no-repeat
+				background-position: right 25px center
+
+		&-label
+			color: #A5AEB9
+			font-size: em(14)
+
+		&-select
+			background-image: url('../img/ico-select-gray.svg')
+			background-repeat: no-repeat
+			background-position: right 10px center
+			border: 0
+			font-size: em(14)
+			padding-right: 30px
+
+.catalog-sort
+	margin-bottom: 30px
+
+
+.view
+	display: flex
+	align-items: center
+
+	&-item
+		cursor: pointer
+
+		&:not(:last-child)
+			margin-right: 15px
+
+	&-list, &-plates
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: contain
+
+	&-plates
+		size: 19px
+		background-image: url('../img/ico-plate.svg')
+
+		&.active
+			background-image: url('../img/ico-plate-active.svg')
+
+	&-list
+		size: 25px 20px
+		background-image: url('../img/ico-list.svg')
+
+		&.active
+			background-image: url('../img/ico-list-active.svg')
+
+
+.catalog-one
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -40px -40px
+
+	&__item
+		width: calc((100% - 40px * 3) / 3)
+		margin: 0 0 40px 40px
+		background-color: var(--background-color)
+		padding: 60px 30px
+
+		&:hover
+			.catalog-one__item-title
+				color: var(--second-color)
+
+		&-img
+			max-height: 165px
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 15px
+
+		&-title
+			font-size: em(20)
+			line-height: calc(26 / 20)
+			font-weight: 500
+			margin-bottom: 30px
+			transition: color .3s ease
+
+		&-text
+			color: #A5AEB9
+			line-height: calc(20 / 16)
+
+.catalog
+
+	&__item
+		&:hover
+			.catalog__item-title
+				color: var(--second-color)
+
+		&-img
+			margin-bottom: 30px
+
+			img
+				display: block
+
+		&-title
+			line-height: calc(24 /16)
+			letter-spacing: 0.02em
+			margin-bottom: 25px
+			font-weight: 500
+			transition: color .3s ease
+
+		&-price
+			font-size: em(14)
+
+			span
+				font-size: em(16)
+				font-weight: 500
+				margin-left: 5px
+				display: inline-block
+
+		&-btn
+			margin-top: 25px
+
+			.btn
+				font-weight: 500
+
+		&-info
+			margin-top: 30px
+			color: #A5AEB9
+			font-size: em(13)
+			letter-spacing: 0.02em
+			line-height: calc(20 / 13)
+
+		&-row
+			span
+				font-weight: 500
+				margin-right: 5px
+				display: inline-block
+
+		&-status
+			position: relative
+			font-size: em(13)
+			padding-left: 25px
+
+.catalog
+	&__list
+		display: flex
+		flex-wrap: wrap
+
+		&.js__view-plates
+			margin: 0 0 -60px -40px
+
+			.catalog
+
+				&__item
+					width: calc((100% - 40px * 4) / 4)
+					margin: 0 0 60px 40px
+
+					&-btn
+						.btn
+							width: 100%
+							padding: 16px 25px
+
+					
+		&:not(.js__view-plates)
+			flex-direction: column
+
+			.catalog
+
+				&__item
+					position: relative
+					display: grid
+					grid-template-areas: 'img title' 'img price' 'img status-1' 'img status-2'  'img info'
+					// grid-template-rows: auto 1fr
+					grid-template-columns: 355px 1fr
+					column-gap: 50px
+
+					&:not(:last-child)
+						margin-bottom: 60px
+
+					&-img
+						position: relative
+						max-width: 355px
+						width: 100%
+						grid-area: img
+						margin: 0
+
+						img
+							width: 100%
+
+					&-title
+						grid-area: title
+						font-size: em(16)
+						margin: 0
+
+					.status-1
+						grid-area: status-1
+
+					.status-2
+						grid-area: status-2
+
+					&-price
+						grid-area: price
+
+					&-info
+						grid-area: info
+						max-width: 600px
+						margin: 20px 0 0 0
+
+						span
+							display: none
+
+					&-row
+						display: inline
+
+						&:not(:last-child)
+							&:after
+								content: '/'
+
+					&-btn
+						display: flex
+						margin: 0
+
+
+
+
+
+
+
+
+
+.status
+	&-1
+		color: #2EB134
+
+		&:before
+			content: ''
+			size: 16px
+			background-image: url('../img/ico-status-1.svg')
+			background-repeat: no-repeat
+			position: absolute
+			left: 0
+			top: 2px
+			display: block
+	&-2
+		
+		&:before
+			content: ''
+			size: 16px
+			background-image: url('../img/ico-status-2.svg')
+			background-repeat: no-repeat
+			position: absolute
+			left: 0
+			top: 2px
+			display: block
+

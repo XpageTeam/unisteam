@@ -68,7 +68,10 @@ body
 	font-size: var(--base-font-size)
 	color: var(--body-text-color)
 	background: var(--body-bg-color)
-	overflow-x: hidden
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	
 	
 
 
@@ -98,6 +101,10 @@ select
 	&::-ms-expand 
 		display: none
 
+
+.footer
+	margin-top: auto
+	
 .head, .footer
 	flex: none
 
@@ -109,6 +116,7 @@ select
 
 #content
 	flex: 1 1 auto
+	margin-bottom: 100px
 
 
 a

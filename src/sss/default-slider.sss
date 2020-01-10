@@ -1,26 +1,20 @@
 .default-slider
 	position: relative
-	// margin: -15px
 
 
 	&-cont
 		padding: 85px 0 95px
 		border-top: 1px solid var(--border-color)
 
-		.swiper-scrollbar
-			margin-top: -80px
-
 
 	&__title
-		font-weight: 600
-		font-size: em(20)
-		text-align: center
-		margin-bottom: 80px
+		font-weight: 500
+		font-size: em(28)
+		margin-bottom: 60px
 
 	.swiper-button
 		position: absolute
 		top: calc(50% - 25px)
-		background-color: var(--thrid-color) !important
 
 		&-prev
 			left: -100px
@@ -28,6 +22,21 @@
 		&-next
 			right: -100px
 
+
+	.item
+		&__img
+			margin-bottom: 30px
+			display: block
+
+		&__title
+			font-weight: 500
+			margin-bottom: 30px
+
+		&__status
+			position: relative
+			padding-left: 25px
+			line-height: 1.2
+			margin-bottom: 5px
 
 
 	.item__btns

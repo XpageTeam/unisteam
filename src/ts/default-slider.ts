@@ -18,10 +18,10 @@ window.defaultSlideInit = async (slider: HTMLElement) => {
     Swiper.use([Navigation, Keyboard, Pagination, Scrollbar])
 
     new Swiper(slider.querySelector(".swiper-list") as HTMLElement, {
-        slidesPerView: 5,
+        slidesPerView: 4,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        spaceBetween: 26,
+        spaceBetween: 40,
         keyboard: {
             enabled: true,
             onlyInViewport: true

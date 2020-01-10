@@ -18,8 +18,46 @@
 		margin-left: 55px
 		padding: 50px
 
+		&:not(.active)
+			display: none
+
 		&-title
 			font-size: em(24)
 			font-weight: 500
 			color: var(--main-color)
 			margin-bottom: 30px
+	
+	&__text
+		text-align: center
+
+
+foreignObject.stage__text
+	text-align: center
+	overflow: visible
+	font-family: inherit
+
+g.circle
+	cursor: pointer
+
+	circle
+		fill: #4C87FF
+		transition: fill .3s ease
+
+	text
+		pointer-events: none
+
+circle
+	&:hover
+		fill: #E32D33 !important
+
+.active
+	circle
+		fill: #E32D33 !important
+
+		
+			
+
+#stage
+	&-4, &-5, &-6
+		foreignObject.stage__text
+			text-align: left

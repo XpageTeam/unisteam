@@ -1,9 +1,11 @@
 import $ from "jquery"
 import is from "is_js"
+import Cookies from "js-cookie"
 
 // import "./filter.js"
 // import "./mobile-menu.js"
 import "./main-cat.js"
+import "./stage.js"
 
 
 window.$ = $;
@@ -136,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			    delay: 300,
 			 },
       		spaceBetween: 40,
+      		roundLengths: true,
 			loop: true,
 			navigation: {
 		        nextEl: '.news .swiper-button-next',
@@ -190,8 +193,87 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
+	const cardSliderInit = () => {
+		const mainCardSlider = document.querySelector('.card__media-top .swiper-list:not(.swiper-container-initialized)');
+		
+		if (!mainCardSlider)
+			return
+
+		import("swiper/dist/js/swiper.esm.js").then(function(Module){	
+
+			const {Swiper, Navigation, EffectFade, Thumbs} = Module;
+
+			Swiper.use([Navigation, EffectFade, Thumbs]);
+
+			let thumbsSlider = document.querySelector('.card__media-bot .swiper-list'),
+				cardSliderThumbs;
+
+			if (thumbsSlider)
+				cardSliderThumbs = new Swiper(thumbsSlider, {
+					slidesPerView: 3,
+					// freeMode: true,
+					spaceBetween: 20,
+					watchSlidesVisibility: true,
+					watchSlidesProgress: true,
+					// centeredSlides: true,
+				});
+		
+		
+		
+			new Swiper(mainCardSlider, {
+				effect: "fade",
+				navigation: {
+					nextEl: '.card__media-top .swiper-button-next',
+					prevEl: '.card__media-top .swiper-button-prev',
+				},
+				thumbs: {
+					swiper: cardSliderThumbs
+				}
+			});
+		});
+	}
+
+	
 document.addEventListener("DOMContentLoaded", function(){
 
+
+	cardSliderInit();
+
+	$('.view-item').click(function(){
+		let $this = $(this);
+
+		if($this.hasClass('active'))
+			return
+
+		let id = $this.attr("data-id"),
+			$parent = $this.closest(".catalog");
+
+		Cookies.remove('view-list');
+		Cookies.remove('view-plates');
+		Cookies.set(""+id+"", 1, { expires: 1 });
+
+
+
+
+
+		$parent.find(".view-item.active").removeClass("active");
+		$parent.find(".catalog__list.js__view-list").removeClass("js__view-list");
+		$parent.find(".catalog__list.js__view-plates").removeClass("js__view-plates");
+
+		$this.addClass("active");
+		$parent.find(".catalog__list").addClass("js__"+id+"");
+
+	})
+
+
+
+	if(Cookies.get('view-list')){
+		$(".catalog__list").addClass("js__view-list");
+		$('.view-item').removeClass('active');
+		$('.view-list').addClass('active');
+	} else {
+		$(".catalog__list").addClass("js__view-plates");
+	}
 
 
 });

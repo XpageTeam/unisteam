@@ -1,27 +1,8 @@
 .tabs
 	position: relative
-	// overflow: hidden
-
 	&__top
-		.default-btn
-			position: relative
-			margin-left: auto
-			font-weight: bold
-			font-size: em(12)
-			text-transform: uppercase
-
-			&:after
-				content: ''
-				display: inline-block
-				size: 10px 8px
-				background-image: url('../img/ico-arrow-white.svg')
-				background-position: 50%
-				background-repeat: no-repeat
-				margin-left: 18px
-				background-size: contain
-
-
-
+		margin-bottom: 45px
+		
 
 	&__content
 		transition: transform .3s ease
@@ -47,27 +28,29 @@
 
 	&__tab
 		padding: 13px 24px
-		
-		border-radius: 5px
 		transition: background-color .3s ease, color .3s ease
 		cursor: pointer
-		font-weight: bold
+		font-weight: 500
 		user-select: none
 		background-color: var(--thrid-color)
-
-		span
-			color: var(--second-color)
-			transition: color .3s ease
+		background-color: #A5AEB9
+		text-transform: uppercase
+		font-size: em(11)
+		flex: 1 1
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
 
 		&.active, &:hover
-			background-color: var(--second-color)
+			background-color: var(--main-color)
 			color: #fff
 
 			span
 				color: #fff
 
 		&:not(:last-child)
-			margin-right: 15px
+			margin-right: 1px
 
 @media (max-width: 1200px)
 	

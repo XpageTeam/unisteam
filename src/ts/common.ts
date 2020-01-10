@@ -12,7 +12,7 @@ import "./forms";
 
 // import "./top-menu";
 // import "./left-menu";
-// import "./tabs";
+import "./tabs";
 // import "./workshop";
 
 // import "./compare";

@@ -1,28 +1,26 @@
 .title-block
 	position: relative
-	padding: 20px 0 0
+	padding: 65px 0 60px
 
 	&__crumbs
 		display: flex
 		justify-content: space-between
-		padding-bottom: 17px
-		border-bottom: 1px solid var(--border-color)
+		padding-bottom: 10px
 
 	&__title
-		display: flex
-		justify-content: center
-		align-items: center
-		padding: 12px 0
 
 		h1
-			font-weight: 600
-			font-size: em(30)
-			letter-spacing: 0.02em
+			font-weight: 500
+			font-size: em(28)
 
 
 .bread-crumbs
-	a, &__this
-		color: #999
+	a
+		color: #A5AEB9
+
+	&__this
+		color: #000
+		font-size: em(14)
 
 	li
 		&:nth-last-child(1)
@@ -67,39 +65,22 @@
 	li
 		display: inline
 		position: relative
-		padding-right: 40px
 
 		a
 			line-height: 1.2
+			font-size: em(14)
 
 		&:after
-			content: ''
-			display: block
-			position: absolute
-			top: 5px
-			right: 19px
-			size: 6px
-			border-top: 1px solid #999
-			border-right: 1px solid #999
-			transform: rotate(45deg)
+			content: '|'
+			display: inline-block
+			color: #A5AEB9
+			margin: 0 15px
+		
 
 
 
 
-		&:first-child
-
-			a
-				display: inline-block
-
-				&:before
-					content: ''
-					size: 10px 10px
-					display: inline-block
-					background-image: url('../img/ico-breadcrambs.svg')
-					background-repeat: no-repeat
-					background-size: contain
-					background-position: center
-					margin-right: 15px
+		
 
 @media (max-width: 667px)
 
