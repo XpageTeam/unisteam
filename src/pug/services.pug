@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Ремонт и сервис
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["Главная",  "Сервис и ремонт"])
+		main#content
+			.services-cont
+				.wrapper
+					.services
+						.services__list
+							a(href="#").services__item
+								figure
+									img(src="img/serv-1.svg", alt="")
+								.services__item-text Диагностика
+							a(href="#").services__item
+								figure
+									img(src="img/serv-2.svg", alt="")
+								.services__item-text Доработка автотехники
+							a(href="#").services__item
+								figure
+									img(src="img/serv-3.svg", alt="")
+								.services__item-text Ремонт
+							a(href="#").services__item
+								figure
+									img(src="img/serv-4.svg", alt="")
+								.services__item-text Гарантийное обслуживание
+					.text-page
+						p Автосервис UNISTEAMTM осуществляет полный цикл пред- и послепродажной подготовки техники и предлагает сервисное и гарантийное обслуживание грузовых автомобилей и спецтехники по следующим направлениям:
+
+						ol
+							li Диагностика неисправностей;
+							li Техническое обслуживание;
+							li Доработка автотехники;
+							li Установка автомобильных отопителей. 
+						p Сотрудники Автосервис UNISTEAMTM имеют высокую квалификацию и выполняют ремонты любой сложности.Современное оборудование сервисного центра позволяет выявить скрытые неисправности.
+				.slider-row
+					.wrapper
+						.swiper-button.swiper-button-prev
+						.swiper-button.swiper-button-next
+						.swiper-pagination
+
+					.swiper-list
+						.swiper-wrapper
+							.swiper-slide
+								a(href="img/photos/serv-1.jpg").slider__slide.fancybox
+									img(src="img/photos/serv-1.jpg", alt="")
+							.swiper-slide
+								a(href="img/photos/serv-2.jpg").slider__slide.fancybox
+									img(src="img/photos/serv-2.jpg", alt="")
+							.swiper-slide
+								a(href="img/photos/serv-3.jpg").slider__slide.fancybox
+									img(src="img/photos/serv-3.jpg", alt="")
+							.swiper-slide
+								a(href="img/photos/serv-4.jpg").slider__slide.fancybox
+									img(src="img/photos/serv-4.jpg", alt="")
+							.swiper-slide
+								a(href="img/photos/serv-5.jpg").slider__slide.fancybox
+									img(src="img/photos/serv-5.jpg", alt="")
+							.swiper-slide
+								a(href="img/photos/serv-6.jpg").slider__slide.fancybox
+									img(src="img/photos/serv-6.jpg", alt="")
+
+
+				.wrapper
+					.text-page
+						h4 H4. Дополнительная колонка может быть снабжена заголовками и может быть длинной
+						p Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности. 
+						p Например, видео:
+				.video-cont
+					a(href="https://www.youtube.com/embed/EQGnekOX0Is" data-width="700px").video.fancybox
+						img(src="img/photos/video.jpg", alt="")
+				.wrapper
+					.text-page
+						p Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности.
+
+
+
+
+
+
+
+
+
+
+
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

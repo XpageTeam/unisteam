@@ -1,7 +1,7 @@
 strong
 	font-weight: bold
 
-p
+p, ul, ol
 	margin-top: em(27)
 
 h2, h3, h4, h5, h6, p, img, table, .table-wrap, ul, ol
@@ -72,16 +72,23 @@ img[height]
 		thead
 
 			th, td
-				background: var(--thrid-color)
+				background-color: #A5AEB9
 				text-align: left
-				padding-top: em(22)
-				padding-bottom: em(22)
-				font-size: em(16)
+				padding-top: em(35)
+				padding-bottom: em(35)
+				font-size: em(20)
+				line-height: calc(24 / 20)
+				font-weight: 500
+				letter-spacing: 0.04em
+				color: #fff
+		td
+			line-height: calc(28 / 20)
 
 		td, th
 			padding: em(16) em(60)
 			font-weight: inherit
-			font-size: em(14)
+			font-size: em(20)
+
 
 			&:not([valign]), &[valign="middle"]
 				vertical-align: middle
@@ -95,7 +102,10 @@ img[height]
 		td
 			transition background .3s ease
 
-		&[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"])
+		tbody
+			tr
+				&:nth-child(even)
+					background-color: var(--background-color)
 
 table[border="1"]:not([class])
 	min-width: 100%

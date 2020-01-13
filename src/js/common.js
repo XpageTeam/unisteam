@@ -117,6 +117,42 @@ document.addEventListener("DOMContentLoaded", function(){
 	})
 })
 
+
+
+document.addEventListener("DOMContentLoaded", function(){
+
+	const sliderSlider = document.querySelector('.slider-row .swiper-list');
+	
+	if (!sliderSlider)
+		return
+
+
+	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
+
+		const {Swiper, Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay} = Module;
+
+		Swiper.use([Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay]);
+
+		
+		var slider = new Swiper(sliderSlider, {
+			slidesPerView: 6,
+      		spaceBetween: 3,
+			loop: true,
+			navigation: {
+		        nextEl: '.slider-row .swiper-button-next',
+		        prevEl: '.slider-row .swiper-button-prev',
+		    },
+		    pagination: {
+		        el: '.slider-row .swiper-pagination',
+		        type: 'bullets',
+		        clickable: true,
+		    },
+		});
+
+	})
+})
+
+
 document.addEventListener("DOMContentLoaded", function(){
 
 	const newsSlider = document.querySelector('.news .swiper-list');
