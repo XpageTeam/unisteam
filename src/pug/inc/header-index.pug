@@ -1,0 +1,59 @@
+//- include ../inc/mobile-menu.pug
+header.head
+	.head-top-cont
+		.wrapper
+			.head-top
+				.head-cities
+					a(href="#").city__label Наши адреса и график работы
+				.head-email
+					a(href="mailto: info@unisteam.com").mail info@unisteam.com
+				.head-soc
+					.soc__label Свяжитесь с нами:
+					.soc
+						a(href="").soc__link
+							img(src="img/ico-viber.svg", alt="")
+						a(href="").soc__link
+							img(src="img/ico-skype.svg", alt="")
+						a(href="").soc__link
+							img(src="img/ico-viber.svg", alt="")
+						a(href="").soc__link
+							img(src="img/ico-tg.svg", alt="")
+				.head-callback
+					a(href="#" class="fancybox") Напишите нам
+
+				
+				.head-phone
+					a(href="tel:8 800-555-49-07").phone 8 800-555-49-07
+				
+
+	.head-bot-cont
+		.wrapper
+			.head-bot
+				.head-logo
+					a(href="")
+						include ../../img/index-logo.svg
+				.city 
+					select.my-select
+						option(value="1") Челябинск
+						option(value="2") Москва
+						option(value="3") Cанкт-Петербург
+				nav.main-nav
+					ul.main-nav__list
+						li.main-nav__item
+							a(href="").main-nav__link О группе компанийи
+						li.main-nav__item
+							a(href="").main-nav__link Карьера в компании
+						li.main-nav__item
+							a(href="").main-nav__link Новости
+							
+						li.main-nav__item
+							a(href="").main-nav__link Блог
+						li.main-nav__item
+							a(href="").main-nav__link Контакты
+				.head-lang
+					select.my-select
+						option(value="1") En
+						option(value="2") Ru
+				
+				.burger
+					span

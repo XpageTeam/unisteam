@@ -107,71 +107,74 @@ img[height]
 				&:nth-child(even)
 					background-color: var(--background-color)
 
-table[border="1"]:not([class])
-	min-width: 100%
+	table[border="1"]:not([class])
+		min-width: 100%
 
-	td, th
-		border: 1px solid var(--border-color)
+		td, th
+			border: 1px solid var(--border-color)
 
 
-ul, ol
+	ul, ol
 
-	&:not([class]) li
-
-		&:not(:first-child)
-			margin: 3px 0 0
-
-		&:before
-			display: inline-block
-
-		ul, ol
-			margin-bottom: em(20)
-			margin-top: 0
-
-		li
-
-			&:before
-				margin-right: 10px !important
+		&:not([class]) li
 
 			&:not(:first-child)
-				margin-top: 5px
-
-ul
-
-	&:not([class])
-
-		> li
-			padding-left: 20px
+				margin: 3px 0 0
 
 			&:before
-				content: ""
-				margin: 0 16px 2px -20px
 				display: inline-block
-				border-radius: 50%
-				background-color: #000
-				size: 14px 1px
-				text-indent: 0
+
+			ul, ol
+				margin-bottom: em(20)
+				margin-top: 0
 
 			li
-				text-indent: 16px
 
-		ul
+				&:before
+					margin-right: 10px !important
+
+				&:not(:first-child)
+					margin-top: 5px
+
+	ul
+
+		&:not([class])
+			border-left: 1px solid #cfcfcf
 
 			> li
+				position: relative
+				padding-left: 20px
+
 
 				&:before
 					content: ""
+					display: block
+					background-color: #A5AEB9
+					position: absolute
+					left: -5px
+					top: 7px
+					size: 10px
 
-ol:not([class])
+				li
+					text-indent: 16px
+
+			ul
+
+				> li
+
+					&:before
+						content: ""
+
+	ol:not([class])
 
 
-	> li
-		list-style-type: decimal
-		list-style-position: inside
+		> li
+			list-style-type: decimal
+			list-style-position: inside
 
-		li
-			font-weight: 300
-			margin: em(22) 0 0 !important
+			li
+				font-weight: 300
+				margin: em(22) 0 0 !important
 
 @media (max-width: 1000px)
 	[align="right"]

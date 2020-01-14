@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Промышленные парогенераторы
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		main#content
+			
+			.category
+				.category__list
+					a(href="#").category__item
+						figure
+							img(src="img/photos/category-1.jpg", alt="")
+						.category__item-info
+							.category__item-top
+								.category__item-subtitle Промышленный парогенератор
+								.category__item-title Unisteam-e
+							.category__item-text
+								.category__item-row Сухой пар (5 - 10 % влажности)
+								.category__item-row 2 режима: 1500 кг/час и 750 кг/час
+
+
+					a(href="#").category__item
+						figure
+							img(src="img/photos/category-2.jpg", alt="")
+						.category__item-info
+							.category__item-top
+								.category__item-subtitle Промышленный парогенератор
+								.category__item-title Unisteam-x
+							.category__item-text
+								.category__item-row Сухой пар (5 - 10 % влажности)
+								.category__item-row 2 режима: 1500 кг/час и 750 кг/час
+					a(href="#").category__item
+						figure
+							img(src="img/photos/category-3.jpg", alt="")
+						.category__item-info
+							.category__item-top
+								.category__item-subtitle Промышленный парогенератор
+								.category__item-title Unisteam-s
+							.category__item-text
+								.category__item-row Сухой пар (5 - 10 % влажности)
+								.category__item-row 2 режима: 1500 кг/час и 750 кг/час
+		
+			.news-cont
+				.wrapper
+					.news
+						.news__title.title Новости
+						.news__list
+							.swiper-list
+								.swiper-wrapper
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-1.jpg", alt="")
+											.news__item-info
+												.news__item-text 15-летний Юбилей у группы компаний Юнистим™  
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-2.jpg", alt="")
+											.news__item-info
+												.news__item-text Завод Юнистим™ внесен в список аккредитованных поставщиков Роснефти
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-3.jpg", alt="")
+											.news__item-info
+												.news__item-text Результаты розыгрыша сертификата Ozon
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-1.jpg", alt="")
+											.news__item-info
+												.news__item-text 15-летний Юбилей у группы компаний Юнистим™  
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-2.jpg", alt="")
+											.news__item-info
+												.news__item-text Завод Юнистим™ внесен в список аккредитованных поставщиков Роснефти
+												.news__item-date 4 ноября 2019
+									.swiper-slide
+										a(href="#").news__item
+											.news__item-img
+												img(src="img/photos/news-3.jpg", alt="")
+											.news__item-info
+												.news__item-text Результаты розыгрыша сертификата Ozon
+												.news__item-date 4 ноября 2019
+								.swiper-pagination
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+			.stage-cont
+				.wrapper
+					.stage
+						.stage__title.title Этапы работы в юНИСТИМ™
+						.stage__interactive.tabs
+							.stage__img
+								include ../img/stage.svg
+							.stage__info.tabs-content.active(data-id="1")
+								.stage__info-title Обращение в Юнистим
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="2")
+								.stage__info-title Выставление коммерческого предложения
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="3")
+								.stage__info-title Согласование и подписание договора
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="4")
+								.stage__info-title Оплата
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="5")
+								.stage__info-title Производство
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="6")
+								.stage__info-title Готовность
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="7")
+								.stage__info-title Доплата
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="8")
+								.stage__info-title Отгрузка
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="9")
+								.stage__info-title Послепродажная поддержка
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+							.stage__info.tabs-content(data-id="10")
+								.stage__info-title Отгрузка
+								.stage__info-text Вы направляете нам ваше технического задание, либо просто озвучиваете ваш запрос на приобретение техники, по которому наш менеджер формируют для вас коммерческое предложение и направляет по указанному контакту.
+			.review-cont
+				.wrapper
+					.review
+						.review__title.title Отзывы
+						.review__list
+							.swiper-list
+								.swiper-wrapper
+									.swiper-slide
+										.review__item
+											.review__item-img
+												img(src="img/photos/review-1.jpg", alt="")
+											.review__item-info
+												.review__item-text Компания ООО «Рубикон-СТ» благодарит ООО «Завод паровых установок Юнистим» за многолетнее и плодотворное сотрудничество и отмечает как стабильного и надежного партнера. Желаем Процветания вашей компании и надеемся на дальнейшее развитие наших отношений!
+												.review__item-name Э.Р. Загидулин
+												.review__item-post Директор ООО «Рубикон-СТ»
+									.swiper-slide
+										.review__item
+											.review__item-img
+												img(src="img/photos/review-1.jpg", alt="")
+											.review__item-info
+												.review__item-text Компания ООО «Рубикон-СТ» благодарит ООО «Завод паровых установок Юнистим» за многолетнее и плодотворное сотрудничество и отмечает как стабильного и надежного партнера. Желаем Процветания вашей компании и надеемся на дальнейшее развитие наших отношений!
+												.review__item-name Э.Р. Загидулин
+												.review__item-post Директор ООО «Рубикон-СТ»
+								.swiper-pagination
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+
+
+
+
+
+
+
+
+
+
+
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

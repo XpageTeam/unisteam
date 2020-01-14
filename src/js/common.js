@@ -118,6 +118,42 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
+document.addEventListener("DOMContentLoaded", function(){
+
+	const spSliderSlider = document.querySelector('.slider-banner .swiper-list');
+	
+	if (!spSliderSlider)
+		return
+
+	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
+
+		const {Swiper, Navigation, EffectFade, Thumbs, Pagination, Lazy} = Module;
+
+		Swiper.use([Navigation, EffectFade, Thumbs, Pagination, Lazy]);
+
+		
+		var slider = new Swiper(spSliderSlider, {
+			slidesPerView: 1,
+			autoplay: {
+			    delay: 3000,
+			},
+      		// spaceBetween: 30,
+			loop: true,
+			navigation: {
+		        nextEl: '.slider-banner .swiper-button-next',
+		        prevEl: '.slider-banner .swiper-button-prev',
+		    },
+		    pagination: {
+		        el: '.slider-banner .swiper-pagination',
+		        type: 'bullets',
+		        clickable: true,
+		    },
+		});
+
+	})
+})
+
+
 
 document.addEventListener("DOMContentLoaded", function(){
 
