@@ -52,6 +52,9 @@
 			right: 0
 			z-index: 10
 
+		&-lang
+			position: relative
+
 
 	#content
 		position: relative
@@ -125,6 +128,10 @@
 			// 		opacity: 1
 			// 		transform: scale(1)
 
+			&:hover
+				.index__info-cont
+					opacity: 1
+
 			&:hover, &.active
 				color: #fff
 				border-color: #fff
@@ -132,3 +139,53 @@
 				&:before
 					transform: scale(1)
 					opacity: 1
+
+	&__info
+		background-color: #fff
+		padding: 50px
+		color: #000
+
+
+
+		&-cont
+			position: absolute
+			left: 100%
+			top: 50%
+			transform: translate3d(0,-50%,0)
+			width: 550px
+			padding-left: 30px
+			opacity: 0
+			pointer-events: none
+
+		&-item
+
+			&:not(:first-child)
+				border-top: 1px solid var(--border-color)
+				padding-top: 30px
+				margin-top: 30px
+
+		&-title
+			font-size: em(14, 16)
+			font-size: 14px
+			font-weight: 500
+			margin-bottom: 20px
+
+		&-row
+			display: flex
+
+			&:not(:first-child)
+				margin-top: 10px
+
+			.label
+				color: #4C87FF
+				font-size: em(11, 16)
+				font-size: 11px
+				text-transform: uppercase
+				max-width: 110px
+				width: 100%
+				margin-right: 20px
+
+			.text
+				font-size: em(14, 16)
+				font-size: 14px
+				text-transform: none

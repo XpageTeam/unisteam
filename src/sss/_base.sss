@@ -113,10 +113,13 @@ select
 	.wrapper
 		.wrapper
 			padding: 0
+			
+	#content
+		margin-bottom: 100px
 
 #content
 	flex: 1 1 auto
-	margin-bottom: 100px
+
 
 
 a
@@ -241,6 +244,11 @@ li
 	&-next
 		left: calc(100% + 60px)
 
+.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+	width: auto !important
+	transform: none !important
+
+
 
 input.default-btn
 	height: 50px
@@ -352,6 +360,39 @@ input.default-btn
 
 
 
+
+@media (max-width: 1500px)
+	
+	.swiper-button
+		&-prev
+			right: auto
+			left: -50px
+
+		&-next
+			left: auto
+			right: -50px
+
+@media (max-width: 1400px)
+	
+	.swiper-button
+		width: 30px
+
+		&-prev
+			left: -30px
+
+		&-next
+			right: -30px
+
+@media (max-width: 1400px)
+	
+	.swiper-button
+		display: none
+		
+		&-prev
+			left: -20px
+
+		&-next
+			right: -20px
 
 @media (max-width: 370px)
 	

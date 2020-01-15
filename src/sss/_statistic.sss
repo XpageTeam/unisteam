@@ -44,3 +44,42 @@
 			text-align: center
 			color: #A5AEB9
 			margin-top: 10px
+
+
+@media (max-width: 1500px)
+	
+	.statistic-cont
+		margin: 50px 0
+
+		.title
+			margin-bottom: 50px
+
+@media (max-width: 1200px)
+	
+	.statistic
+
+		&__list
+			margin: 0 0 -30px -100px
+
+		&__item
+			width: calc((100% - 100px * 4) / 4)
+			margin: 0 0 30px 100px
+
+
+			&-num
+				font-size: em(30)
+
+
+@media (max-width: 1000px)
+	
+	.statistic
+
+		&__list
+			margin: 0 0 -30px -20px
+
+		&__item
+			width: calc((100% - 20px * 4) / 4)
+			margin: 0 0 30px 20px
+
+			&-num
+				font-size: em(20)

@@ -1,5 +1,5 @@
 module.exports = {
-	formats: 'local woff',
+	formats: 'local woff woff2',
 	display: "swap",
 	custom: {
 		"Europe": {
@@ -7,26 +7,32 @@ module.exports = {
 				normal: {
 					300: {
 						url: {
-							woff: "../fonts/EuropeExt.woff",
-							// woff2: "../fonts/EuropeExt.woff2"
+							woff: "../fonts/EurofontC.woff",
+							woff2: "../fonts/EurofontC.woff2"
 						}
 					},
 					400: {
 						url: {
 							woff: "../fonts/Europe.woff",
-							// woff2: "../fonts/Europe.woff2"
+							woff2: "../fonts/Europe.woff2"
 						}
 					},
 					500: {
 						url: {
-							woff: "../fonts/EuropeDemi.woff",
-							// woff2: "../fonts/EuropeDemi.woff2"
+							woff: "../fonts/EuropeDemiNormal.woff",
+							woff2: "../fonts/EuropeDemiNormal.woff2"
+						}
+					},
+					600: {
+						url: {
+							woff: "../fonts/EuropeDemiNormal.woff",
+							woff2: "../fonts/EuropeDemiNormal.woff2"
 						}
 					},
 					700: {
 						url: {
 							woff: "../fonts/Europe-Bold.woff",
-							// woff2: "../fonts/Europe-Bold.woff2"
+							woff2: "../fonts/Europe-Bold.woff2"
 						}
 					}
 				}

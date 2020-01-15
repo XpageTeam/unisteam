@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			slidesPerView: 6,
 			autoplay: {
 			    delay: 3000,
-			 },
+			},
       		spaceBetween: 30,
 			loop: true,
 			navigation: {
@@ -112,6 +112,22 @@ document.addEventListener("DOMContentLoaded", function(){
 		        type: 'bullets',
 		        clickable: true,
 		    },
+		   breakpoints: {
+		    // when window width is >= 320px
+		    320: {
+		      slidesPerView: 1,
+		      spaceBetween: 20
+		    },
+		    // when window width is >= 480px
+		    480: {
+		      slidesPerView: 3,
+		      spaceBetween: 30
+		    },
+		    1200: {
+		      slidesPerView: 4,
+		      spaceBetween: 40
+		    }
+		  }
 		});
 
 	})
@@ -199,19 +215,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, Pagination} = Module;
+		const {Swiper, Navigation, Pagination, Autoplay} = Module;
 
-		Swiper.use([Navigation, Pagination]);
+		Swiper.use([Navigation, Pagination, Autoplay]);
 
 		
 		var slider = new Swiper(newsSlider, {
 			slidesPerView: 3,
 			autoplay: {
-			    delay: 300,
-			 },
+			    delay: 3000,
+			},
       		spaceBetween: 40,
       		roundLengths: true,
-			loop: true,
+			// loop: true,
 			navigation: {
 		        nextEl: '.news .swiper-button-next',
 		        prevEl: '.news .swiper-button-prev',
@@ -220,7 +236,25 @@ document.addEventListener("DOMContentLoaded", function(){
 		        el: '.news .swiper-pagination',
 		        type: 'bullets',
 		        clickable: true,
+		        dynamicBullets: true,
+		        dynamicMainBullets: 2,
 		    },
+		    breakpoints: {
+			    // when window width is >= 320px
+			    1000: {
+			      slidesPerView: 2,
+			      spaceBetween: 20
+			    },
+			    670: {
+			      slidesPerView: 2,
+			      spaceBetween: 20
+			    },
+			    320: {
+			      slidesPerView: 1,
+			      spaceBetween: 20
+			    },
+			    // when window width is >= 480px
+		  	}
 		});
 
 	})
@@ -245,8 +279,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		var slider = new Swiper(reviewSlider, {
 			slidesPerView: 1,
 			autoplay: {
-			    delay: 300,
-			 },
+			    delay: 3000,
+			},
       		spaceBetween: 40,
 			loop: true,
 			navigation: {

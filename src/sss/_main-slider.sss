@@ -37,6 +37,10 @@
 	&__btn
 		margin-top: 30px
 
+	&__img
+		img
+			width: 100%
+
 
 .sold-info
 	position: absolute
@@ -60,3 +64,69 @@
 	&__text
 		font-size: em(14, 16)
 		line-height: calc(17 / 14)
+
+
+@media (max-width: 1600px)
+	
+	.main-slider__info
+		padding: 70px 20px
+
+@media (max-width: 1500px)
+	
+	.main-slider
+		&__info
+			padding: 50px 20px
+
+			.swiper-pagination
+				margin-top: 35px
+
+		&__title
+			font-size: em(26, 16)
+
+@media (max-width: 1200px)
+	
+	.main-slider__title
+		max-width: 800px
+
+	.sold-info
+		padding: 20px 20px 20px 20px
+		width: 125px
+
+
+@media (min-width: 1000px)
+	.main-slider
+		
+		&__img
+			img
+				height: 50vh
+				object-fit: cover
+				object-position: center
+
+@media (max-width: 1000px)
+	
+	.main-slider
+		&__title
+			max-width: 500px
+			font-size: em(20, 16)
+
+		&__info
+			padding: 20px
+
+			.swiper-pagination
+				margin-top: 15px
+
+		&__btn
+			margin-top: 20px
+
+
+@media (max-width: 670px)
+
+	.main-slider
+		display: flex
+		flex-direction: column-reverse
+	
+	.sold-info
+		position: static
+		width: 100%
+		border-radius: 0
+

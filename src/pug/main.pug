@@ -29,7 +29,10 @@ html(lang="ru")
 											a(href="#").btn Смотреть в каталоге
 										.swiper-pagination
 							.main-slider__img
-								img(src="img/photos/banner.jpg", alt="")
+								picture.slider-img
+									source(srcset="img/photos/banner.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+									source(srcset="img/photos/banner-m.jpg" media="screen and (max-width: 700px)") 
+									img
 						.swiper-slide
 							.main-slider__info-cont
 								.wrapper
@@ -39,7 +42,10 @@ html(lang="ru")
 											a(href="#").btn Смотреть в каталоге
 										.swiper-pagination
 							.main-slider__img
-								img(src="img/photos/banner.jpg", alt="")
+								picture.slider-img
+									source(srcset="img/photos/banner.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+									source(srcset="img/photos/banner-m.jpg" media="screen and (max-width: 700px)") 
+									img
 						.swiper-slide
 							.main-slider__info-cont
 								.wrapper
@@ -49,7 +55,10 @@ html(lang="ru")
 											a(href="#").btn Смотреть в каталоге
 										.swiper-pagination
 							.main-slider__img
-								img(src="img/photos/banner.jpg", alt="")
+								picture.slider-img
+									source(srcset="img/photos/banner.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+									source(srcset="img/photos/banner-m.jpg" media="screen and (max-width: 700px)") 
+									img
 						
 						.swiper-button.swiper-button-prev
 						.swiper-button.swiper-button-next

@@ -5,7 +5,7 @@
 	.swiper
 		&-list
 			padding: 40px
-			margin: 0 -39px
+			margin: 0 -42px
 
 		&-slide
 			display: flex
@@ -70,3 +70,26 @@
 			margin-top: 40px
 			color: var(--main-color)
 
+@media (max-width: 1400px)
+	
+	.news .swiper-list
+		padding: 20px
+		margin: 0 -20px
+
+@media (max-width: 1200px)
+	
+	.news
+		&__item
+			padding: 20px
+
+			&-img
+				margin-bottom: 20px
+
+			&-date
+				margin-top: 20px
+
+			&-info:after
+				bottom: -6px
+
+		.swiper-pagination
+			margin-top: 45px
