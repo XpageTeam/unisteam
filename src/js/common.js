@@ -6,6 +6,7 @@ import Cookies from "js-cookie"
 // import "./mobile-menu.js"
 import "./main-cat.js"
 import "./stage.js"
+import "./upload.js"
 
 
 window.$ = $;
