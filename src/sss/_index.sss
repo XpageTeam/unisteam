@@ -189,3 +189,63 @@
 				font-size: em(14, 16)
 				font-size: 14px
 				text-transform: none
+
+
+@media (max-width: 1600px)
+	
+	.index__link
+		padding: 200px 0
+
+
+@media (max-width: 1200px)
+	
+	.index 
+		.head-bot-cont
+			top: 0
+			padding: 10px 0
+	
+		#content>.wrapper
+			box-sizing: border-box
+
+	.index__link
+		padding: 130px 0
+
+	.index__link-item:not(:last-child)
+		margin-bottom: 35px
+
+	.index__info
+		padding: 30px
+
+@media (max-width: 1000px)
+	
+	.index__info-cont
+		position: static
+		transform: none
+		width: auto
+		padding-left: 0
+		opacity: 1
+		margin: 20px 0
+
+
+@media (max-width: 670px)
+	
+	.index 
+		.head .city, .head-lang
+			display: none
+
+		.cookie
+			flex-direction: column
+
+			&-btn
+				margin: 20px 0 0 auto
+
+	.index__link-list
+		padding-left: 0
+		display: block
+
+		&:before
+			display: none
+
+	.index__link-item
+		display: inline-block
+		border: 0

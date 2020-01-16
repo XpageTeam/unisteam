@@ -64,7 +64,52 @@
 			flex-wrap: wrap
 
 
+@media (min-width: 670px)
+	
+	.tabs__title
+		display: none
+
 @media (max-width: 667px)
+
+
+
+	.tabs__top, .tabs__content-content
+		display: none
+
+	.tabs__title
+		color: #000
+		font-size: 16px
+		padding: 10px 0
+		position: relative
+
+		&.js__active
+			background-color: var(--background-color)
+
+			&:after
+				transform: rotate(225deg)
+
+		&:after
+			content: ''
+			display: block
+			size: 6px
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			position: absolute
+			right: 1px
+			top: calc(50% - 3px)
+			transform: rotate(45deg)
+			transition: transform .3s ease
+
+	.tabs__content-content
+		margin-top: 20px
+
+	.tabs__content
+		display: block !important
+		position: static !important
+		opacity: 1 !important
+		border-bottom: 1px solid var(--border-color)
+
+
 	
 	.tabs__tab
 		padding: 9px 15px

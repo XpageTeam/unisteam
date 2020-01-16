@@ -82,20 +82,41 @@
 
 		
 
-@media (max-width: 667px)
-
-	.title-block
-		padding-top: 0
-		
-		&__crumbs
-			display: none
+@media (max-width: 1500px)
 	
-	.bread-crumbs
-		display: none
+	.title-block
+		padding: 25px 0
 
-	.title-block__crumbs
-		justify-content: center
+		&__crumbs
+			padding-bottom: 0
+
+
+@media (max-width: 667px)
+	
+	.title-block
+		padding: 15px 0
 
 	.title-block__title h1
 		line-height: 1.4
 		font-size: em(20)
+
+	.bread-crumbs__this
+		display: none !important
+
+	.bread-crumbs__link
+		display: none !important
+
+		&:after
+			display: none !important
+
+		&:before
+			content: ''
+			size: 6px
+			border-top: 1px solid #a5aeb9
+			border-left: 1px solid #a5aeb9
+			transform: rotate(-45deg)
+			display: inline-block
+			margin-right: 10px
+
+		&:nth-last-child(2)
+			display: block !important

@@ -3,6 +3,7 @@ import { domReady, App, sameHeights, EventListener } from "./xpage/index";
 import "./default-slider";
 // import "./catalog";
 import "./forms";
+import "./textPage/text-page";
 
 // import "./catalog-side-menu";
 // import "./catalog-filter-search";

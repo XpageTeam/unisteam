@@ -389,3 +389,191 @@
 	&__text
 		font-size: em(14)
 
+@media (max-width: 1300px)
+	
+	.card-review__form .form__info
+		width: 330px
+		padding: 30px
+		margin-left: 35px
+
+
+@media (max-width: 1200px)
+	
+	.card__media
+		width: 465px
+
+	.card-review__form
+		flex-direction: column-reverse
+
+	.card-review__form .form__info
+		width: auto
+		padding: 30px
+		margin: 0 0 20px 0
+
+	.card-review__item
+		flex-direction: column
+
+	.card-review__list
+		padding: 25px
+
+	.card-review__item:not(:last-child)
+		padding-bottom: 25px
+		border-bottom: 1px solid var(--border-color)
+		margin-bottom: 25px
+
+	.card-review__item--left
+		width: auto
+		display: flex
+		flex-wrap: wrap
+
+		> *
+			width: calc(100% / 2)
+			margin: 0
+
+	.card-review__item
+		&-rating
+			order: 1
+			padding-right: 20px
+
+		&-user
+			order: 4
+
+		&-date
+			order: 2
+
+	.useful-life
+		order: 3
+		padding-right: 20px
+
+	.card-review__item-top
+		margin-bottom: 5px
+
+	.card-review__item-bot
+		margin-top: 30px
+
+@media (max-width: 1000px)
+	
+	.card__media
+		width: 340px
+		margin-right: 20px
+
+
+	.card__info-price
+		flex-direction: column
+		align-items: flex-end
+
+	.card__info-status
+		margin: 0 0 15px 0
+
+	.card__info-btn
+		flex-direction: column
+
+		a
+			&:not(:last-child)
+				margin-bottom: 20px
+
+	.card__info-count
+		line-height: 1.4
+
+	.td
+		padding: 10px 15px
+
+	.card-review__history
+		flex-direction: column-reverse
+
+	.card-review__interpretation
+		margin-top: 20px
+
+	.card-review .default-input__input--radio label
+		padding: 5px
+
+		&:not(:first-of-type)
+			margin-left: 10px
+
+
+
+@media (max-width: 667px)
+	
+	.card__media-cont
+		flex-direction: column
+
+	.card__media
+		width: 100%
+		margin: 0 0 20px 0
+
+	.card__info
+		align-items: flex-start
+
+		&-price
+			align-items: flex-start
+
+		&-btn .btn
+			margin-left: 0
+
+		&-rating
+			align-items: flex-start
+
+		&-file
+			align-items: flex-start
+
+	.tr
+		flex-direction: column
+
+	.td:first-child
+		max-width: 100%
+		border: 0
+
+	.card 
+		.tabs
+			margin: 0 -20px
+
+		.tabs__title
+			padding: 10px 20px
+
+			&:after
+				right: 20px
+
+		.tabs__content:not(.active)
+			transform: none
+		
+		.tabs__content-content
+			padding: 0 20px
+
+	.card__info-file
+		margin-top: 25px
+
+
+
+	.card-review__info
+		flex-direction: column
+		align-items: flex-start
+		padding: 15px 20px
+
+	.card-review__form
+		padding: 20px 0
+
+	.card-review__rating
+		padding-bottom: 20px
+
+	.card-review__sort
+		margin: 10px 0 0 0
+		display: flex
+		flex-wrap: wrap
+
+		label
+			margin-left: 10px
+			padding: 3px 8px
+
+	.card-review__item--left
+		flex-direction: column
+		margin-right: 0
+
+		> *
+			width: auto
+
+	.card-review__item-bot
+		a
+			width: 100%
+			margin: 20px 0 0 0
+			text-align: center
+

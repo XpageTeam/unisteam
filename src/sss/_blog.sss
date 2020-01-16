@@ -66,4 +66,47 @@
 					background-size: contain
 					size: 17px 8px
 
+@media (max-width: 1200px)
+	
+	.blog-title
+		margin-bottom: 40px
 
+	.blog__item
+		&-img
+			margin-right: 40px
+			max-width: 300px
+
+		&-title
+			margin-bottom: 15px
+
+		&-link
+			margin-top: 20px
+
+	.blog__item:nth-child(2n) .blog__item-img
+		margin: 0 0 0 40px
+
+@media (max-width: 667px)
+	
+	.blog__item
+		flex-direction: column
+		align-items: flex-start
+
+		&:nth-child(2n)
+			flex-direction: column
+
+	.blog__item-img
+		margin: 0 0 20px 0
+		width: 100%
+		max-width: 100%
+
+		img
+			width: 100%
+
+	.blog__item:nth-child(2n) .blog__item-img
+		margin: 0 0 20px 0
+
+	.blog__item:nth-child(2n) .blog__item-text, .blog__item:nth-child(2n) .blog__item-title
+		text-align: left
+
+	.blog__item:nth-child(2n) .blog__item-link
+		justify-content: flex-start

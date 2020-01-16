@@ -114,19 +114,23 @@ document.addEventListener("DOMContentLoaded", function(){
 		    },
 		   breakpoints: {
 		    // when window width is >= 320px
-		    320: {
-		      slidesPerView: 1,
-		      spaceBetween: 20
-		    },
-		    // when window width is >= 480px
-		    480: {
-		      slidesPerView: 3,
-		      spaceBetween: 30
-		    },
 		    1200: {
 		      slidesPerView: 4,
 		      spaceBetween: 40
-		    }
+		    },
+		    667: {
+		      slidesPerView: 2,
+		      spaceBetween: 30
+		    },
+		    480: {
+		      slidesPerView: 1,
+		      spaceBetween: 30
+		    },
+		    // 320: {
+		    //   slidesPerView: 1,
+		    //   spaceBetween: 20
+		    // },
+		    // when window width is >= 480px
 		  }
 		});
 
@@ -199,6 +203,19 @@ document.addEventListener("DOMContentLoaded", function(){
 		        type: 'bullets',
 		        clickable: true,
 		    },
+		    breakpoints: {
+			    // when window width is >= 320px
+			    1000: {
+			      slidesPerView: 4,
+			    },
+			    667: {
+			      slidesPerView: 2,
+			    },
+			    480: {
+			      slidesPerView: 1,
+			    },
+			   
+			  }
 		});
 
 	})
@@ -249,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			      slidesPerView: 2,
 			      spaceBetween: 20
 			    },
-			    320: {
+			    480: {
 			      slidesPerView: 1,
 			      spaceBetween: 20
 			    },
@@ -380,6 +397,14 @@ document.addEventListener("DOMContentLoaded", function(){
 	} else {
 		$(".catalog__list").addClass("js__view-plates");
 	}
+
+	$('.tabs__title').click(function(){
+		var $this = $(this);
+
+		$this.toggleClass('js__active');
+
+		$this.siblings('.tabs__content-content').slideToggle();
+	});
 
 
 });

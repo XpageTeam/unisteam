@@ -37,11 +37,12 @@ window.defaultSlideInit = async (slider: HTMLElement) => {
         breakpoints: {
             1000: {
               slidesPerView: 3,
+              spaceBetween: 20,
             },
             667: {
               slidesPerView: 2,
             },
-            370: {
+            480: {
               slidesPerView: 1,
             },
         },

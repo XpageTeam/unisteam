@@ -65,3 +65,46 @@
 	img
 		display: block
 		width: 100%
+
+@media (max-width: 1400px)
+	
+	.services
+		margin-bottom: 50px
+
+@media (max-width: 1200px)
+	
+	.services
+		&__list
+			margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 4)/4)
+			margin: 0 0 20px 20px
+			padding: 20px
+
+			figure
+				margin-bottom: 20px
+
+			&-text
+				font-size: 16px
+
+	.slider-row 
+		margin: 30px 0
+
+	.video-cont
+		margin: 30px 0
+
+@media (max-width: 667px)
+	
+	.services
+		&__list
+
+		&__item
+			width: 100%
+
+	.video:before
+		top: calc(50% - 20px)
+		left: calc(50% - 20px)
+		width: 40px
+		height: 40px
+		background-size: 10px

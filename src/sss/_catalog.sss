@@ -188,7 +188,7 @@
 				&__item
 					position: relative
 					display: grid
-					grid-template-areas: 'img title' 'img price' 'img status-1' 'img status-2'  'img info'
+					grid-template-areas: 'img title' 'img price' 'img btn' 'img status-1' 'img status-2'  'img info'
 					// grid-template-rows: auto 1fr
 					grid-template-columns: 355px 1fr
 					column-gap: 50px
@@ -238,6 +238,7 @@
 					&-btn
 						display: flex
 						margin: 0
+						grid-area: btn
 
 
 
@@ -272,16 +273,118 @@
 			top: 2px
 			display: block
 
-@media (max-width: 1500px)
+@media (max-width: 1200px)
 	
-	.catalog-main
-		margin: 50px 0
+	.catalog-one__item
+		width: calc((100% - 120px)/2)
 
-		&__title
-			margin-bottom: 25px
 
+@media (max-width: 1000px)
+	
+
+	.catalog-one
 		&__list
-			margin-bottom: 25px
+			margin: 0 0 -20px -20px
 
-		&-top-btn
-			margin-bottom: 25px
+		&__item
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 20px 20px
+			padding: 35px 25px
+
+	.catalog__list
+		&.js__view-plates 
+			margin: 0 0 -20px -20px
+			.catalog
+
+				&__item
+					width: calc((100% - 20px * 3) / 3)
+					margin: 0 0 20px 20px
+
+	.catalog__item
+		&-img
+			margin-bottom: 20px
+
+		&-title
+			margin-bottom: 15px
+
+	.sort
+		flex-wrap: wrap
+		
+		&__select
+			order: 3
+
+			&--category
+				order: 1
+			
+			&--count
+				order: 2
+
+				.sort__select-select
+					background-position: right 0px center
+					padding-right: 20px
+
+		&__view
+			order: 4
+			margin-left: auto
+
+	.catalog__list:not(.js__view-plates) 
+		.catalog__item
+			grid-template-columns: 220px 1fr auto
+			column-gap: 25px
+			grid-template-areas: 'img title title' 'img price price' 'img status-1 status-2'  'img info info'
+
+	.catalog__list:not(.js__view-plates) .catalog__item:not(:last-child)
+		margin-bottom: 35px
+
+
+@media (max-width: 667px)
+
+	.sort__select-label
+		display: none
+
+	.sort__select--category
+		width: 100%
+		margin: 0
+		padding-bottom: 20px
+		margin-bottom: 20px
+		border-bottom: 1px solid var(--border-color)
+
+		select
+			width: 100%
+
+	.sort__view
+		width: 100%
+		display: flex
+		justify-content: flex-end
+		padding-top: 20px
+		margin-top: 20px
+		border-top: 1px solid var(--border-color)
+
+	.sort__select--count
+		order: 3
+
+	.catalog__list.js__view-plates .catalog__item
+		margin: 0 0 40px 20px
+
+
+	
+	.catalog-one
+
+		&__item
+			width: 100%
+			padding: 35px 25px
+
+			&-title
+				margin-bottom: 15px
+
+	.catalog
+		&__item
+			&-img
+				img
+					width: 100%
+		&__list
+			&.js__view-plates 
+				.catalog
+
+					&__item
+						width: 100%
