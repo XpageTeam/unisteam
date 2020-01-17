@@ -122,8 +122,12 @@
 		&:hover
 			background-color: var(--thrid-color)
 
-.main-nav__submenu
-	display: none
+@media (min-width: 1200px)
+
+	.main-nav__submenu
+		opacity: 0
+		pointer-events: none
+		position: absolute
 
 
 @media (max-width: 1600px)
@@ -193,6 +197,9 @@
 @media (max-width: 670px)
 	
 	.head
+		position: sticky
+		top: 0
+		z-index: 1000000
 
 		&-bot-cont
 			padding: 10px 0

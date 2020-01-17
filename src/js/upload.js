@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
 
 
-		var list = document.querySelectorAll('.filial__list');
+		var list = document.querySelectorAll('.upload');
 
 		if(list.length){
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", e => {
 		}
 
 
-		if(!$('div').hasClass('lc-gallery')){
+		if(!$('div').hasClass('upload-gallery')){
 			$("body").on("change", ".forms__input--file", function(e){
 
 				var value = $(this)[0].files[0].name,
@@ -48,9 +48,10 @@ document.addEventListener("DOMContentLoaded", e => {
 
 
 
-		var time = +new Date();
+    
 
-		$("body").on("change", ".lc-gallery .forms__input--file", function(e){
+		$("body").on("change", ".upload-gallery .forms__input--file", function(e){
+			var time = +new Date();
 			var $this = $(this);
 			var getName = $(this).closest('.forms__input-cont--multiple').find('.default-input__img').siblings('.imagesFoto').attr("name");
 
@@ -59,23 +60,20 @@ document.addEventListener("DOMContentLoaded", e => {
 
 			if(inputHasFile.length){
 
-				$('.lc-gallery .forms__input-cont--multiple').prepend('<div class="forms__input-cont forms-input-cont--file" data-el-id="'+time+'">\
-						<input class="forms__input forms__input--file" name="'+getName+'" type="file" id="'+time+'" accept="image">\
+				$('.upload-gallery .forms__input-cont--multiple').prepend('<div class="forms__input-cont forms-input-cont--file" data-el-id="'+time+'">\
+						<input class="forms__input forms__input--file" name="'+getName+'" type="file" id="'+time+'" accept="image" data-el-id="'+time+'">\
 						<input class="forms__input forms__input--file-support" readonly="" type="text">\
 						<label class="forms__label--file default-input__label-img" for="'+time+'">Загрузить фото</label>\
-						<span class="js__input-del" title="Удалить"></span>\
 					</div>');
-
-
 			}
 		});
 
 
 
-		$('.save_edit_projects').click(function(){
-			$(this).closest('.lc-company__data').toggleClass('readonly');
+		// $('.save_edit_projects').click(function(){
+		// 	$(this).closest('.lc-company__data').toggleClass('readonly');
 
-		})
+		// })
 
 
 
@@ -83,16 +81,18 @@ document.addEventListener("DOMContentLoaded", e => {
 		window.InputFileChange = function () {
 		  if (this.files[0]) {
 
+		  	var dataId = this.closest('div').getAttribute("data-el-id");
+
 		    var fr = new FileReader(),
-		    	$shopBlock = $(this).closest("div[data-id]");
+		    	$shopBlock = $(this).closest(".upload-gallery");
 
 		    console.log($shopBlock)
 
 		    fr.addEventListener("load", e => {
-				let $photos = $shopBlock.find('.filial-load-photo');
+				let $photos = $shopBlock.find('.upload-load-photo');
 
-	    		$photos.prepend("<div class='img_block photo' data-el-id='"+time+"'>\
-	    			<div class='del_block photo-del'></div>\
+	    		$photos.append("<div class='photo' data-el-id='"+dataId+"'>\
+	    			<div class='photo-del'></div>\
 	    			<img src='"+fr.result+"' />\
 	    			</div>")
 		    }, false);
@@ -106,45 +106,45 @@ document.addEventListener("DOMContentLoaded", e => {
 			var $this = $(this);
 			var elId = $this.closest('.photo').attr("data-el-id");
 
-			$this.closest('.filial-load-photo').find('.forms-input-cont--file[data-el-id="'+elId+'"]').remove();
+			$this.closest('.upload-load-photo').find('.forms-input-cont--file[data-el-id="'+elId+'"]').remove();
 			
 
-			$(this).closest('.lc-company__img').find('.photo').remove();
+			$this.closest('.photo').remove();
 
 
 		})
 
 
 
-		if(!$(".filial__item-el--photo input[type='file']").length)
+		if(!$(".upload__item-el--photo input[type='file']").length)
 			return 
 
-			const fileInputs = document.querySelectorAll(".filial__item-el--photo input[type='file']");
+			const fileInputs = document.querySelectorAll(".upload__item-el--photo input[type='file']");
 
 			for (const fileInput of fileInputs)
 				fileInput.addEventListener("change", InputFileChange);
 
 
-			$("body").on("click", ".filial__item-el--photo .input-del", function(){
-				let $this = $(this).closest(".forms-input-cont--file"),
-					$cont = $(this).closest(".filial__item-el--photo"),
-					index = $this.index();
+			// $("body").on("click", ".upload__item-el--photo .input-del", function(){
+			// 	let $this = $(this).closest(".forms-input-cont--file"),
+			// 		$cont = $(this).closest(".upload__item-el--photo"),
+			// 		index = $this.index();
 
-				console.log(index, $this)
-				console.log($cont)
+			// 	console.log(index, $this)
+			// 	console.log($cont)
 
-				$cont.nextAll(".filial-load-photo").find("img:eq("+index+")").remove()
-			})
+			// 	$cont.nextAll(".upload-load-photo").find("img:eq("+index+")").remove()
+			// })
 
 
 
-		$("body").on("click", ".js__input-del, .input-del", function(){
+		// $("body").on("click", ".js__input-del, .input-del", function(){
 
-			var $this = $(this);
+		// 	var $this = $(this);
 
-			$this.closest('.forms__input-cont').remove();
+		// 	$this.closest('.forms__input-cont').remove();
 			
-		})
+		// })
 
 	
 

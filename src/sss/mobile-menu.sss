@@ -51,7 +51,13 @@
 
 
 .js__menu--open
-	overflow: hidden
+	// overflow: hidden
+
+	.head, #content, .footer
+		opacity: 0
+		// height: 0
+		max-height: 100vh
+		overflow: hidden
 
 	.burger 
 		> span
@@ -63,7 +69,6 @@
 				top: 0
 				transition: top .3s,transform .3s .5s
 				width: 24px
-				background: #000
 	.burger 
 		> span
 			&:after 
@@ -71,7 +76,6 @@
 				top: 0
 				transition: top .3s,transform .3s .5s
 				width: 24px
-				background: #000
 
 	.mobile-menu
 		transform: translate3d(0,0,0)
@@ -98,33 +102,123 @@
 					width: 24px
 					background: #000
 
+
 .mobile-menu
 	width: 100%
-	background-color: #fff
+	background-color: var(--main-color)
 	z-index: 10000
 	position: fixed
 	top: 0
-	bottom: 0
 	left: 0
+	min-height: calc(100vh - 70px)
 	display: flex
 	flex-direction: column
 	transform: translate3d(-100%,0,0)
 	transition: transform .3s ease-in-out
-
-	.main-nav__sub-submenu
-		display: block !important
-
+	overflow-y: auto
+	overflow-x: hidden
 
 
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 15px
 
-	&__submenu
-		overflow-x: hidden
-		overflow-y: auto
-		height: calc(100vh - 90px)
+	&__footer
+		display: flex
+		// justify-content: space-between
+		padding: 15px
+		order: 1
+		margin-top: auto
 
-		&-title
-			background-color: var(--thrid-color)
-			padding: 12px 25px 12px 75px
+	.phone
+		padding: 15px
+		color: #fff
+		font-size: 18px
+
+	.soc
+		padding: 15px
+
+	&__logo
+		display: flex
+
+		svg
+			width: 100px
+			height: 20px
+
+	
+
+	.main-nav
+
+		&__list
+			display: flex
+			flex-direction: column
+			margin-bottom: auto
+
+		&__item
+			&.has__submenu
+				> a
+					position: relative
+
+					&:after
+						content: ''
+						display: block
+						size: 6px
+						position: absolute
+						right: 15px
+						top: calc(50% - 3px)
+						border-right: 1px solid #fff
+						border-bottom: 1px solid #fff
+						transform: rotate(45deg)
+
+		&__link, &__submenu-link
+			color: #fff
+			padding: 15px
+			display: block
+			font-weight: 500
+			font-size: 14px
+			text-transform: uppercase
+			letter-spacing: .04em
+	
+
+
+		&__submenu
+			display: block
+			overflow-x: hidden
+			overflow-y: auto
+			height: calc(100vh - 90px)
+			position: static
+			opacity: 1
+			pointer-events: all
+			transform: translate3d(100%,0,0)
+			transition: transform .3s ease
+			z-index: 999
+			background-color: #fff
+			position: absolute
+			top: 0
+			width: 100%
+			left: 0
+			transform: translate3d(-100%,0,0)
+			transition: transform .3s ease-in-out
+
+			&:before
+				display: none !important
+
+			&-title
+				background-color: var(--thrid-color)
+				padding: 12px 25px 12px 75px
+
+	
+	.js__back
+		color: #fff
+		padding: 15px
+		display: block
+		font-weight: 500
+		font-size: 14px
+		text-transform: uppercase
+		letter-spacing: .04em
+		border-bottom: 1px solid rgba(255, 255, 255, 0.09)
 
 	&__header
 		padding: 25px
@@ -133,158 +227,7 @@
 		align-items: center
 		flex: none
 
-	&-scroll
-		position: relative
-		display: flex
-		flex-direction: column
-		height: calc(100vh - 84px)
-		overflow-x: hidden
-		overflow-y: auto
-		flex: 1 1 auto
 
-
-
-	// &__list
-
-	&__footer
-		border-top: 1px solid var(--border-color)
-		flex: none
-		z-index: 9999
-		position: relative
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
-		display: none
-
-
-
-		&-links
-			display: flex
-			flex-direction: column
-			padding: 10px 25px
-			flex: none
-
-			a
-				display: flex
-				align-items: center
-				line-height: 1
-
-				&:only-child
-					margin-bottom: 0
-
-		&-phone
-			background-color: var(--second-color)
-			padding: 10px 25px
-			display: flex
-			align-items: center
-
-			a
-				color: #fff
-				margin-left: auto
-
-	&__lang
-		display: flex
-		align-items: center
-
-		&:after
-			content: ''
-			display: block
-			size: 6px
-			background-image: url('../img/ico-arrow.svg')
-			background-position: right center
-			background-repeat: no-repeat
-			margin-left: 13px
-			filter: invert(1)
-
-
-		select
-			background-color: var(--second-color)
-			border: 0
-			color: #fff
-
-
-
-	&__enter
-		position: relative
-		margin-bottom: 15px
-
-		&:before
-			content: ''
-			display: block
-			size: 16px 17px
-			background-image: url('../img/ico-user.svg')
-			background-repeat: no-repeat
-			background-position: 50%
-			margin-right: 18px
-
-	&__reg
-		position: relative
-
-		&:before
-			content: ''
-			display: block
-			size: 23px
-			border-radius: 50%
-			background-color: var(--main-color)
-			background-image: url('../img/ico-cross.svg')
-			background-repeat: no-repeat
-			background-position: 50%
-			margin-right: 14px
-
-
-
-
-	&__logo
-		size: 97px 34px
-
-		svg
-			size: 97px 34px
-
-	&__city
-		margin: 0 auto
-		white-space: nowrap
-		display: flex
-		align-items: center
-
-		&:after
-			content: ''
-			display: block
-			size: 6px
-			background-image: url('../img/ico-arrow.svg')
-			background-repeat: no-repeat
-			background-position: right center
-			margin-left: 10px
-
-		select
-			border: 0
-			padding-right: 12px
-
-	.main-nav__sub-submenu
-		position: static
-		opacity: 1
-		pointer-events: all
-		display: none
-
-		&:before
-			display: none !important
-
-
-
-
-	&__submenu
-		z-index: 999
-		background-color: #fff
-		position: absolute
-		// overflow-y: auto
-		// overflow-x: hidden
-		top: 0
-		// bottom: calc(44px + 50px)
-		width: 100%
-		left: 0
-		transform: translate3d(-100%,0,0)
-		transition: transform .3s ease-in-out
-		// height: calc(100vh - 44px - 50px)
 
 
 
@@ -330,13 +273,24 @@
 		&:nth-child(1)
 			background-color: var(--thrid-color)
 
-.js__mobile-menu--open
-	.mobile-menu
-		&__cities
-			transform: translate3d(0,0,0)
+
+.js__parent-link.js__submenu--open
+	+ .main-nav__submenu
+		transform: translate3d(0,0,0)
+
+
 
 
 .mobile-menu
+
+	.main-nav__submenu
+		position: fixed
+		top: 0
+		right: 0
+		height: 100vh
+		width: 100%
+		background-color: var(--main-color)
+
 
 	&__back
 		position: relative
@@ -428,49 +382,5 @@
 
 
 @media (min-width: 1200px)
-
 	.burger
 		display: none
-
-	.mobile-menu
-		display: none
-
-@media (max-width: 667px)
-	
-	.cities__list-main
-		column-count: auto
-
-	.cities__search
-		&-label
-			display: none
-
-		.bx-sls .bx-ui-sls-container
-			min-height: 41px !important
-
-		.bx-sls .bx-ui-sls-fake, .bx-sls .bx-ui-sls-route
-			height: 41px !important
-
-		.bx-sls .dropdown-block
-			border: 1px solid var(--border-color) !important
-			border-radius: 100px !important
-			box-shadow: none !important
-
-		.bx-sls .dropdown-icon
-			top: 14px
-
-		.bx-sls .dropdown-fade2white
-			border-radius: 100px
-
-		.bx-sls .bx-ui-sls-clear
-			top: 3px
-
-		.bx-sls .bx-ui-sls-pane
-			border: 1px solid var(--border-color)
-			box-shadow: none
-			top: 41px
-
-
-@media (max-width: 370px)
-	
-	.burger
-		margin: -15px -15px -15px 0px
