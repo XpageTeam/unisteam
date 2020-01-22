@@ -22,6 +22,7 @@
 				&-top
 					&:after
 						background-color: #F44336
+						transform: translate3d(-10px,0,0)
 
 
 				&-text
@@ -37,15 +38,15 @@
 				display: block
 				size: 40px
 				border-radius: 50%
-				background-repeat: 50%
+				background-repeat: no-repeat
 				position: absolute
 				right: 0
 				bottom: 0
 				background-color: var(--second-color)
 				background-image: url('../img/ico-arrow.svg')
 				background-repeat: no-repeat
-				background-position: 55% 50%
-				transition: background-color .3s ease
+				background-position: 53% 50%
+				transition: background-color .3s ease, transform .3s ease
 
 		&-info
 			position: absolute

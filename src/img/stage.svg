@@ -2,7 +2,7 @@
 <g id="stage">
 <path id="Vector 1" d="M79 18.5H622M622 18.5V380.5H80L622 18.5Z" stroke="#193153" stroke-width="3"/>
 <g id="stage-1" data-id="1" class="tabs-tab active">
-	<foreignObject class="stage__text" id="text" fill="black" xml:space="preserve"  font-size="16" letter-spacing="0em" x="29.5391" y="55" width="100px" height="100px">Обращение в Юнистим</foreignObject>
+	<foreignObject class="stage__text" id="text" fill="black" xml:space="preserve"  font-size="16" letter-spacing="0em" x="29.5391" y="40" width="100px" height="100px">Обращение в Юнистим</foreignObject>
 
 	<g class="circle" id="circle">
 	<circle id="ellipse" cx="80" cy="20" r="20"/>
@@ -11,7 +11,7 @@
 </g>
 
 <g id="stage-2" data-id="2" class="tabs-tab">
-	<foreignObject class="stage__text" x="180" y="55" id="text_2" fill="#E32D33" xml:space="preserve"  font-size="16" letter-spacing="0em" width="150px" height="100px">Выставление коммерческого предложения
+	<foreignObject class="stage__text" x="180" y="40" id="text_2" fill="#E32D33" xml:space="preserve"  font-size="16" letter-spacing="0em" width="150px" height="100px">Выставление коммерческого предложения
 	</foreignObject>
 	<g class="circle" id="circle_2">
 	<circle id="ellipse_2" cx="260" cy="20" r="20"/>
@@ -20,7 +20,7 @@
 </g>
 
 <g id="stage-3" data-id="3" class="tabs-tab">
-	<foreignObject class="stage__text" x="360" y="55" id="text_3" fill="black" xml:space="preserve"  font-size="16" letter-spacing="0em" width="150px" height="100px">Согласование и подписание договора</foreignObject>
+	<foreignObject class="stage__text" x="360" y="40" id="text_3" fill="black" xml:space="preserve"  font-size="16" letter-spacing="0em" width="150px" height="100px">Согласование и подписание договора</foreignObject>
 	<g class="circle" id="circle_3">
 	<circle id="ellipse_3" cx="440" cy="20" r="20" />
 	<text id="num_3" fill="white" xml:space="preserve" style="white-space: pre"  font-size="18" letter-spacing="0.04em"><tspan x="434" y="26.525">3</tspan></text>

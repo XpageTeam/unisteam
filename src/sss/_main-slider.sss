@@ -1,8 +1,19 @@
 .main-slider
 	position: relative
 
-	.swiper-button
-		display: none
+	&__arrow
+		position: absolute
+		top: calc(50% - 25px)
+		left: 0
+		right: 0
+		width: 100%
+
+		.wrapper
+			display: flex
+			justify-content: space-between
+
+		.swiper-button
+			position: static
 
 	&__info
 		background: rgba(36, 36, 36, 0.6)
@@ -13,7 +24,7 @@
 		display: flex
 		align-items: center
 		flex-direction: column
-		padding: 70px 20px 190px
+		padding: 70px 20px 50px
 
 		&-cont
 			position: absolute 0
@@ -50,12 +61,12 @@
 
 
 .sold-info
-	position: absolute
+	position: fixed
 	left: 0
 	top: 50%
 	transform: translate3d(0,-50%,0)
 	background-color: var(--main-color)
-	z-index: 2
+	z-index: 100
 	color: #fff
 	padding: 30px 20px 30px 30px
 	width: 145px

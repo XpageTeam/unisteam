@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(sliderSlider, {
 			slidesPerView: 6,
-      		spaceBetween: 3,
+      		// spaceBetween: 3,
 			loop: true,
 			navigation: {
 		        nextEl: '.slider-row .swiper-button-next',
@@ -210,10 +210,10 @@ document.addEventListener("DOMContentLoaded", function(){
 			      slidesPerView: 4,
 			    },
 			    667: {
-			      slidesPerView: 2,
+			      slidesPerView: 4,
 			    },
 			    480: {
-			      slidesPerView: 1,
+			      slidesPerView: 3,
 			    },
 			   
 			  }
@@ -316,52 +316,105 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
+document.addEventListener("DOMContentLoaded", function(){
 
-	const cardSliderInit = () => {
-		const mainCardSlider = document.querySelector('.card__media-top .swiper-list:not(.swiper-container-initialized)');
-		
-		if (!mainCardSlider)
-			return
+	const mainCardSlider = document.querySelector('.card__media-top .swiper-list');
+	
+	if (!mainCardSlider)
+		return
 
-		import("swiper/dist/js/swiper.esm.js").then(function(Module){	
+	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-			const {Swiper, Navigation, EffectFade, Thumbs} = Module;
+		const {Swiper, Navigation, EffectFade, Thumbs} = Module;
 
-			Swiper.use([Navigation, EffectFade, Thumbs]);
+		Swiper.use([Navigation, EffectFade, Thumbs]);
 
-			let thumbsSlider = document.querySelector('.card__media-bot .swiper-list'),
-				cardSliderThumbs;
+		let thumbsSlider = document.querySelector('.card__media-bot .swiper-list'),
+			cardSliderThumbs;
 
-			if (thumbsSlider)
-				cardSliderThumbs = new Swiper(thumbsSlider, {
-					slidesPerView: 3,
-					// freeMode: true,
-					spaceBetween: 20,
-					watchSlidesVisibility: true,
-					watchSlidesProgress: true,
-					// centeredSlides: true,
-				});
-		
-		
-		
-			new Swiper(mainCardSlider, {
-				effect: "fade",
-				navigation: {
-					nextEl: '.card__media-top .swiper-button-next',
-					prevEl: '.card__media-top .swiper-button-prev',
-				},
-				thumbs: {
-					swiper: cardSliderThumbs
-				}
+		if (thumbsSlider)
+			cardSliderThumbs = new Swiper(thumbsSlider, {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
 			});
+	
+	
+	
+		new Swiper(mainCardSlider, {
+			effect: "fade",
+			navigation: {
+				nextEl: '.card__media-bot .swiper-button-next',
+				prevEl: '.card__media-bot .swiper-button-prev',
+			},
+			thumbs: {
+				swiper: cardSliderThumbs
+			}
 		});
-	}
+	});
+
+})
+
+
+// document.addEventListener("DOMContentLoaded", function(){
+
+
+// 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
+
+// 		const {Swiper, Navigation, Pagination} = Module;
+
+// 		Swiper.use([Navigation, Pagination]);
+
+		
+// 		// var slider = new Swiper(reviewSlider, {
+// 		// 	slidesPerView: 1,
+// 		// 	autoplay: {
+// 		// 	    delay: 3000,
+// 		// 	},
+//   //     		spaceBetween: 40,
+// 		// 	loop: true,
+// 		// 	navigation: {
+// 		//         nextEl: '.review .swiper-button-next',
+// 		//         prevEl: '.review .swiper-button-prev',
+// 		//     },
+// 		//     pagination: {
+// 		//         el: '.review .swiper-pagination',
+// 		//         type: 'bullets',
+// 		//         clickable: true,
+// 		//     },
+// 		// });
+
+// 	var galleryThumbs = new Swiper('.card__media-bot .swiper-list', {
+// 		slidesPerView: 3,
+// 		spaceBetween: 20,
+// 		watchSlidesVisibility: true,
+// 		watchSlidesProgress: true,
+// 	});
+
+// 	var galleryTop = new Swiper('.card__media-top .swiper-list', {
+// 	  effect: "fade",
+// 	  navigation: {
+// 	    nextEl: '.card__media-bot .swiper-button-next',
+// 	    prevEl: '.card__media-bot .swiper-button-prev',
+// 	  },
+// 	  thumbs: {
+// 	    swiper: galleryThumbs
+// 	  }
+// 	});
+
+
+// 	})
+// })
+
+
+
+
 
 	
 document.addEventListener("DOMContentLoaded", function(){
 
 
-	cardSliderInit();
 
 	$('.view-item').click(function(){
 		let $this = $(this);
