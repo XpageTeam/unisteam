@@ -2,12 +2,13 @@ import $ from "jquery"
 import is from "is_js"
 import Cookies from "js-cookie"
 
-// import "./filter.js"
 import "./mobile-menu.js"
 import "./main-cat.js"
 import "./stage.js"
 import "./upload.js"
 
+if (is.ie())
+	require("./promise-polyfill.js");
 
 window.$ = $;
 window.jQuery = $;

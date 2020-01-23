@@ -116,13 +116,17 @@
 	align-items: center
 
 	&__link
-		size: 30px
+		size: 40px
 		border-radius: 50%
 		background-color: var(--thrid-color)
 		display: flex
 		flex-direction: column
 		align-items: center
 		justify-content: center
+		transition: background .3s ease
+
+		&:hover
+			background-color: #25468a
 
 		&:not(:last-child)
 			margin-right: 10px

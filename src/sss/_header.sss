@@ -2,6 +2,7 @@
 	background-color: var(--main-color)
 	color: #fff
 
+
 	.wrapper
 		max-width: 1800px
 
@@ -46,6 +47,10 @@
 			position: relative
 			color: inherit
 			font-size: em(14)
+			transition: color .3s ease
+
+			&:hover
+				color: var(--thrid-color)
 			
 			&:before
 				content: ''
@@ -62,6 +67,10 @@
 			position: relative
 			color: inherit
 			font-size: em(14)
+			transition: color .3s ease
+
+			&:hover
+				color: var(--thrid-color)
 			
 			&:before
 				content: ''
@@ -84,6 +93,11 @@
 			display: block
 			border-radius: 3px
 
+			transition: background .3s ease
+
+			&:hover
+				background: #25468a
+
 	&-lang
 		margin-left: 40px
 		position: relative
@@ -105,6 +119,10 @@
 	&__label
 		margin-right: 40px
 		color: #fff
+		transition: color .3s ease
+
+		&:hover
+			color: var(--thrid-color)
 
 .main-nav
 	&__list
