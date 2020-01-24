@@ -169,6 +169,7 @@
 
 .tr
 	display: flex
+	transition: background .3s ease
 
 	&:nth-child(odd)
 		background-color: #F0F0F0
@@ -176,6 +177,11 @@
 	&:not(:last-child)
 
 		border-bottom: 1px solid var(--border-color)
+
+
+	&:hover
+		background-color: #c5c5c5
+
 
 .td
 	padding: 20px 25px
