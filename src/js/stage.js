@@ -57,8 +57,6 @@ $(_ => {
     function switchTabs() {
         if (t > 8) t = 0;
 
-        console.log(t, $(item[t]))
-
           $(item[t]).trigger("click");
         t++;
     }

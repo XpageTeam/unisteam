@@ -470,29 +470,15 @@ $(window).on('scroll load', function(){
 		if ($(".statistic__item-num").offset().top + 50 <=
 			$(window).scrollTop() + $(window).height()){
 				$(".statistic__item-num:not(.countered)").each((i, el) => {
-					let $this = $(el),
-						speed = 0;
-
-					switch (i){
-						case 0:
-							speed = 4000;
-						break;
-						case 1:
-							speed = 2000;
-						break;
-
-						default:
-							speed = 3000;
-					}
+					let $this = $(el)
 
 					$this.width($this.width())
 
 					$this.countTo({
-						speed: speed,
-						onComplete(){
-							$this.width("auto")
-						}
+						speed: 3000
 					});
+
+					console.log($this);
 
 					$this.addClass("countered");
 				});
