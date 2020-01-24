@@ -38,7 +38,7 @@ $(_ => {
     var sw_tabs_timer1; 
     
     const startTimer = () => {
-        sw_tabs_timer1 = window.setInterval(switchTabs, 1000);
+        sw_tabs_timer1 = window.setInterval(switchTabs, 2000);
     }       
 
     const stopTimer = () => {
@@ -55,7 +55,7 @@ $(_ => {
     startTimer();
     
     function switchTabs() {
-        if (t > 9) t = 0;
+        if (t > 8) t = 0;
 
         console.log(t, $(item[t]))
 
