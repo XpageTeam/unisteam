@@ -52,6 +52,9 @@
 	&__img
 		img
 			width: 100%
+			height: calc(100vh - 165px)
+			object-fit: cover
+			object-position: center
 
 .slider-img
 	display: block
@@ -87,8 +90,13 @@
 
 @media (max-width: 1600px)
 	
-	.main-slider__info
-		padding: 70px 20px
+	.main-slider
+		&__info
+			padding: 70px 20px
+
+		&__img
+			img
+				height: calc(100vh - 145px)
 
 @media (max-width: 1500px)
 	
@@ -102,19 +110,28 @@
 		&__title
 			font-size: em(26, 16)
 
+@media (max-width: 1300px)
+	
+	.main-slider
+		&__img
+			img
+				width: 100%
+				height: calc(100vh - 141px)
+
 @media (max-width: 1200px)
 	
-	.main-slider__title
-		max-width: 800px
+	.main-slider
+		&__title
+			max-width: 800px
+
+		&__img
+			img
+				width: 100%
+				height: calc(100vh - 48px)
 
 	.sold-info
 		padding: 20px 20px 20px 20px
 		width: 125px
-
-@media (min-width: 1000px)
-	.slider-img
-		img
-			height: calc(100vh - 165px)
 
 @media (min-width: 670px) and (max-width: 1000px)
 	.main-slider
