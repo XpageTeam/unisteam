@@ -1,0 +1,302 @@
+.contacts
+	
+	&__map
+		position: relative
+
+		&-cont
+
+	&__right
+		position: absolute
+		top: 0
+		right: 0
+
+		&-cont
+			position: absolute
+			top: 56px
+			right: 0
+			left: 0
+			width: 1200px
+			max-width: 100%
+			margin: 0 auto
+			display: flex
+			justify-content: flex-end
+
+.contacts-block
+	background: #fff
+	padding: 45px
+
+	&__title
+		line-height: rem(25)
+		text-transform: uppercase
+		font-weight: 400
+		width: 100%
+
+.contacts-block
+	max-width: 615px
+	
+	&__one
+		display: flex
+		flex-wrap: wrap
+		margin-top: 26px
+
+		+ .contacts-block__title
+			margin-top: 20px
+
+		&-title
+			color: #989ca2
+
+		&-address
+			width: 49%
+			line-height: rem(25)
+			margin-bottom: 11px
+
+			&:nth-child(even)
+				margin-left: 2%
+
+			a
+				color: #000
+				text-decoration: none
+
+.contacts-list
+	border: 1px solid #dadee5
+	padding: 51px 46px 0 46px
+	display: flex
+	flex-wrap: wrap
+	
+	&__cont
+		margin-top: 50px
+
+	&__one
+		width: persent(450, 1074)
+		display: flex
+		margin-bottom: 51px
+
+		&:nth-child(even)
+			margin-left: persent(101, 1074)
+
+		&:last-child
+			margin-bottom: 0
+
+		&:nth-child(odd):nth-last-child(2)
+			margin-bottom: 0
+
+		&-img
+
+			&-cont
+				margin-right: persent(60, 450)
+				flex: none
+
+		&-desc
+			margin-top: 10px
+
+		&-name
+			font-weight: 400
+			font-size: rem(20)
+			line-height: rem(25)
+			text-transform: uppercase
+
+		&-pos
+			margin-bottom: 25px
+
+.contact-label, .contacts-list__one-pos
+	color: #989ca2
+	line-height: rem(25)
+
+.contact-label
+	
+	span, a
+		color: #000
+		text-decoration: none
+
+.details
+	
+	&__cont
+		margin-top: 40px
+
+	&__title
+		text-align: center
+		font-size: rem(30)
+		line-height: rem(34)
+		text-transform: uppercase
+		font-weight: 400
+		margin-bottom: 43px
+
+.details
+	border: 1px solid #dadee5
+
+	&__one
+
+		&.active
+
+			.details__one
+
+				&-text
+					display: flex !important
+
+				&-label
+					border-bottom: 1px solid #dadee5
+
+					&:after
+						transform: rotate(180deg)
+
+		&-text, &-label
+			padding: 25px 45px
+
+		&-label
+			text-transform: uppercase
+			line-height: 25px
+			position: relative
+			background: #e3e7ef
+			cursor: pointer
+			font-weight: 400
+
+			&:after
+				position: absolute
+				content: ""
+				transition: transform .5s ease
+				size: 18px 9px
+				background: url("../img/ico-arrow-bot.png") no-repeat
+				top: calc(50% - 4px)
+				right: 35px
+
+		&-text
+			display: none
+
+.details__one
+	
+	&:not(:first-child)
+		border-top: 1px solid #dadee5
+	
+	&-text
+		flex-wrap: wrap
+		max-width: 950px
+		margin-bottom: -30px
+		justify-content: space-between
+	
+	&-desc
+		margin-bottom: 30px
+
+		&-text
+			line-height: rem(25)
+
+		&:nth-child(odd)
+			width: persent(280, 902)
+
+		&:nth-child(even)
+			width: persent(545, 902)
+
+	&-title
+		color: #989ca2
+		margin-bottom: 7px
+		min-height: 20px
+
+@media (max-width: 1200px)
+	
+	.contacts
+
+		&-list
+			padding: 40px 35px
+
+			&__one
+
+				&-img
+
+					&-cont
+						margin-right: 8.33333%
+
+
+@media (max-width: 1000px)
+	
+	.contacts
+
+		&-list
+
+			&__one
+				width: 100%
+				margin-bottom: 25px
+
+				&:nth-child(even)
+					margin-left: 0
+
+	.details
+
+		&__one
+
+			&-text, &-label
+				padding: 15px 20px
+
+			&-desc
+
+				&-text
+					word-break: break-word
+
+	.contacts
+
+		&-block
+			max-width: 100%
+
+		&__right
+			position: relative
+			top: auto
+			top: initial
+			left: auto
+			left: initial
+			right: auto
+			right: initial
+
+			&-cont
+				position: relative
+				top: auto
+				top: initial
+				left: auto
+				left: initial
+				right: auto
+				right: initial
+
+
+@media (max-width: 667px)
+
+	.contacts-list
+		padding: 20px
+
+	.contacts-list__one-img-cont
+		width: 100px
+
+	.contacts-block
+		padding: 25px
+
+	.contacts__map-cont
+		#map
+			height: 250px !important
+	
+	.contacts
+
+		&-block
+			padding-bottom: 0
+
+			&__one
+				flex-direction: column
+
+	.contacts-block__one-address
+		width: 100%
+		
+		&:nth-child(even)
+			margin-left: 0
+
+	.contact
+
+		&__phones
+			display: flex
+			flex-direction: column
+
+			a
+				&:not(:first-child)
+					margin: 8px 0 0
+
+	.contact
+		justify-content: space-between
+
+	.details__one-desc:nth-child(odd)
+		width: 100%
+	.details__one-desc:nth-child(2n)
+		width: 100%
