@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, EffectFade, Thumbs, Pagination, Lazy} = Module;
+		const {Swiper, Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay} = Module;
 
-		Swiper.use([Navigation, EffectFade, Thumbs, Pagination, Lazy]);
+		Swiper.use([Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay]);
 
 		
 		var slider = new Swiper(partnersSlider, {
