@@ -415,43 +415,46 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 document.addEventListener("DOMContentLoaded", function(){
 
+	$('.js__view-plates .catalog__item-title').height(Math.max.apply(null, $('.js__view-plates .catalog__item-title').map(function(){
+		return $(this).height();
+	})))
 
 
-	$('.view-item').click(function(){
-		let $this = $(this);
+	// $('.view-item').click(function(){
+	// 	let $this = $(this);
 
-		if($this.hasClass('active'))
-			return
+	// 	if($this.hasClass('active'))
+	// 		return
 
-		let id = $this.attr("data-id"),
-			$parent = $this.closest(".catalog");
+	// 	let id = $this.attr("data-id"),
+	// 		$parent = $this.closest(".catalog");
 
-		Cookies.remove('view-list');
-		Cookies.remove('view-plates');
-		Cookies.set(""+id+"", 1, { expires: 1 });
-
-
-
-
-
-		$parent.find(".view-item.active").removeClass("active");
-		$parent.find(".catalog__list.js__view-list").removeClass("js__view-list");
-		$parent.find(".catalog__list.js__view-plates").removeClass("js__view-plates");
-
-		$this.addClass("active");
-		$parent.find(".catalog__list").addClass("js__"+id+"");
-
-	})
+	// 	Cookies.remove('view-list');
+	// 	Cookies.remove('view-plates');
+	// 	Cookies.set(""+id+"", 1, { expires: 1 });
 
 
 
-	if(Cookies.get('view-list')){
-		$(".catalog__list").addClass("js__view-list");
-		$('.view-item').removeClass('active');
-		$('.view-list').addClass('active');
-	} else {
-		$(".catalog__list").addClass("js__view-plates");
-	}
+
+
+	// 	$parent.find(".view-item.active").removeClass("active");
+	// 	$parent.find(".catalog__list.js__view-list").removeClass("js__view-list");
+	// 	$parent.find(".catalog__list.js__view-plates").removeClass("js__view-plates");
+
+	// 	$this.addClass("active");
+	// 	$parent.find(".catalog__list").addClass("js__"+id+"");
+
+	// })
+
+
+
+	// if(Cookies.get('view-list')){
+	// 	$(".catalog__list").addClass("js__view-list");
+	// 	$('.view-item').removeClass('active');
+	// 	$('.view-list').addClass('active');
+	// } else {
+	// 	$(".catalog__list").addClass("js__view-plates");
+	// }
 
 	$('.tabs__title').click(function(){
 		var $this = $(this);
