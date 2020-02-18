@@ -1,7 +1,36 @@
+@media (min-width: 667px)
+	.mobile
+		display: none
+
+
+.mobile
+	.card__info-btn
+		flex-direction: row
+		justify-content: flex-start
+
+		.btn
+			margin: 0
+			padding: 8px 13px
+
+			&:not(:last-child)
+				margin-right: 10px
+	
+	.btn--cart:before
+		margin-right: 11px
+
+	.card-price
+		margin: 20px 0
+
+
+
 .card__media
 	position: relative
 	width: 560px
 	margin-right: auto
+
+	.swiper-slide
+		display: flex
+		justify-content: center
 
 	img
 		display: block
@@ -192,7 +221,10 @@
 		flex: none
 		border-right: 1px solid var(--border-color)
 
-
+.bx-ie11
+	.card-review
+		.form__info
+			display: block
 
 .card-review
 	&__info
@@ -391,6 +423,21 @@
 		font-weight: 500
 		margin-left: 10px
 
+
+.bx-ie
+	.interpretation
+
+		&__star
+			img
+				height: 23px
+
+	.upload-gallery
+		min-height: 120px
+
+	.default-input:not(.default-input--checkbox)
+		justify-content: flex-end !important
+
+
 .interpretation
 	&__top
 		font-size: em(18)
@@ -410,6 +457,7 @@
 	&__star
 		display: flex
 		margin-right: 10px
+		flex: none
 
 		&-row
 			display: flex
@@ -537,6 +585,15 @@
 		margin: 0 0 20px 0
 
 	.card__info
+		&-price
+			display: none
+
+		.card__info-btn
+			display: none
+
+
+
+	.card__info
 		align-items: flex-start
 
 		&-price
@@ -550,6 +607,9 @@
 
 		&-file
 			align-items: flex-start
+			margin-bottom: 20px
+
+
 
 	.tr
 		flex-direction: column

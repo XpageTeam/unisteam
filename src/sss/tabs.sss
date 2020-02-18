@@ -71,7 +71,14 @@
 
 @media (max-width: 667px)
 
+	.tabs__content
+		pointer-events: all !important
 
+		&:empty
+			display: none !important
+
+	.tabs__content-content
+		padding: 20px
 
 	.tabs__top, .tabs__content-content
 		display: none

@@ -13,23 +13,26 @@ domReady(async () => {
 window.defaultSlideInit = async (slider: HTMLElement) => {
     if (!slider) return;
     
-    const {Swiper, Navigation, Pagination, Keyboard, Scrollbar} = await import("swiper/dist/js/swiper.esm");
+    const {Swiper, Navigation, Pagination, Keyboard, Scrollbar, Autoplay} = await import("swiper/dist/js/swiper.esm");
 
-    Swiper.use([Navigation, Keyboard, Pagination, Scrollbar])
+    Swiper.use([Navigation, Keyboard, Pagination, Scrollbar, Autoplay])
 
     new Swiper(slider.querySelector(".swiper-list") as HTMLElement, {
         slidesPerView: 4,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         spaceBetween: 40,
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true
+        autoplay: {
+            delay: 5000,
         },
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,
-        },
+        // keyboard: {
+        //     enabled: true,
+        //     onlyInViewport: true
+        // },
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        //     draggable: true,
+        // },
         navigation: {
             nextEl: slider.querySelector('.swiper-button-next') as HTMLElement,
             prevEl: slider.querySelector('.swiper-button-prev') as HTMLElement,
@@ -44,6 +47,7 @@ window.defaultSlideInit = async (slider: HTMLElement) => {
             },
             480: {
               slidesPerView: 1,
+              autoHeight: true,
             },
         },
         on: {

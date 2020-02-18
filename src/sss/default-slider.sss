@@ -81,6 +81,9 @@
 
 
 @media (max-width: 667px)
+
+	.default-slider__title
+		line-height: 1
 	
 	.default-slider
 		.item-cont
@@ -89,6 +92,16 @@
 		&-cont 
 			.swiper-scrollbar
 				display: none
+
+			.item__img
+				height: auto !important
+				margin-bottom: 15px
+
+				img
+					display: block
+
+		.swiper-list
+			padding-bottom: 0 !important
 
 	.item__img
 		img

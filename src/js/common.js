@@ -339,19 +339,31 @@ document.addEventListener("DOMContentLoaded", function(){
 				spaceBetween: 20,
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
+				
 			});
 	
 	
 	
 		new Swiper(mainCardSlider, {
 			effect: "fade",
+			fadeEffect: {
+				    crossFade: true
+				},
 			navigation: {
 				nextEl: '.card__media-bot .swiper-button-next',
 				prevEl: '.card__media-bot .swiper-button-prev',
 			},
 			thumbs: {
 				swiper: cardSliderThumbs
+			},
+			breakpoints: {
+
+			    670: {
+					autoHeight: true,
+			    	
+			    },
 			}
+			  
 		});
 	});
 
@@ -418,6 +430,9 @@ document.addEventListener("DOMContentLoaded", function(){
 	$('.js__view-plates .catalog__item-title').height(Math.max.apply(null, $('.js__view-plates .catalog__item-title').map(function(){
 		return $(this).height();
 	})))
+
+
+	$('.p-404').closest('body').addClass('page-404');
 
 
 	// $('.view-item').click(function(){
