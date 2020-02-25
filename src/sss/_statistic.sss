@@ -12,30 +12,73 @@
 		margin: 0 0 -30px -100px
 
 	&__item
+		position: relative
 		width: calc((100% - 100px * 4) / 4)
 		margin: 0 0 30px 100px
 		display: flex
 		flex-direction: column
 		align-items: center
 
+		&:before
+			content: ''
+			display: block
+			size: 70px
+			border-radius: 50%
+			flex: none
+			margin-bottom: 15px
+
+		&:nth-child(1)
+			&:before
+				background: url('../img/ico-st-1.svg') no-repeat center, #E5E5E5
+		&:nth-child(2)
+			&:before
+				background: url('../img/ico-st-2.svg') no-repeat center, #E5E5E5
+		&:nth-child(3)
+			&:before
+				background: url('../img/ico-st-3.svg') no-repeat center, #E5E5E5
+		&:nth-child(4)
+			&:before
+				background: url('../img/ico-st-4.svg') no-repeat center, #E5E5E5
+		&:nth-child(5)
+			&:before
+				background: url('../img/ico-st-5.svg') no-repeat center, #E5E5E5
+		&:nth-child(6)
+			&:before
+				background: url('../img/ico-st-6.svg') no-repeat center, #E5E5E5
+		&:nth-child(7)
+			&:before
+				background: url('../img/ico-st-7.svg') no-repeat center, #E5E5E5
+		&:nth-child(8)
+			&:before
+				background: url('../img/ico-st-8.svg') no-repeat center, #E5E5E5
+
+
+		&-top
+			display: flex
+			align-items: center
+
 
 		&-num
-			font-weight: 500
-			font-size: em(40)
-			line-height: calc(48 / 40)
-			text-transform: uppercase
+			font-size: em(20)
 			white-space: nowrap
-			text-align: center
 			width: auto !important
+			margin-right: 5px
+			line-height: calc(22 / 20)
 			color: var(--main-color)
+			font-weight: 500
+		// 	font-size: em(40)
+		// 	line-height: calc(48 / 40)
+		// 	text-transform: uppercase
+		// 	text-align: center
 
 		&-text
-			font-weight: bold
-			font-size: em(18)
-			line-height: calc(22 / 18)
+			// font-weight: bold
+			font-size: em(20)
+			line-height: calc(22 / 20)
 			text-align: center
-			margin-top: 5px
+			// margin-top: 5px
 			color: var(--main-color)
+			white-space: nowrap
 
 		&-info
 			text-align: center
@@ -78,11 +121,11 @@
 			margin: 0 0 -30px -20px
 
 		&__item
-			width: calc((100% - 20px * 4) / 4)
+			width: calc((100% - 20px * 3) / 3)
 			margin: 0 0 30px 20px
 
 			&-num
-				font-size: em(20)
+				font-size: em(18)
 
 @media (max-width: 667px)
 	

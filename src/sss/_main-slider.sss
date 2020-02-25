@@ -52,7 +52,8 @@
 	&__img
 		img
 			width: 100%
-			height: calc(100vh - 165px)
+			height: 100vh
+			display: block
 			object-fit: cover
 			object-position: center
 
@@ -69,9 +70,11 @@
 	left: 0
 	top: 50%
 	transform: translate3d(0,-50%,0)
-	background-color: var(--main-color)
+	// background-color: var(--main-color)
+	background: rgba(255, 255, 255, 0.88)
+	border: 2px solid #193153
 	z-index: 100
-	color: #fff
+	color: #193153
 	padding: 30px 20px 30px 30px
 	width: 145px
 	border-radius: 0px 6px 6px 0px
@@ -94,9 +97,6 @@
 		&__info
 			padding: 70px 20px
 
-		&__img
-			img
-				height: calc(100vh - 145px)
 
 @media (max-width: 1500px)
 	
@@ -116,7 +116,6 @@
 		&__img
 			img
 				width: 100%
-				height: calc(100vh - 141px)
 
 @media (max-width: 1200px)
 	
@@ -124,10 +123,7 @@
 		&__title
 			max-width: 800px
 
-		&__img
-			img
-				width: 100%
-				height: calc(100vh - 48px)
+
 
 	.sold-info
 		padding: 20px 20px 20px 20px
@@ -162,6 +158,12 @@
 @media (max-width: 670px)
 
 	.main-slider
+		
+		&__img
+			img
+				height: calc(100vh - 80px)
+
+	.main-slider
 		display: flex
 		flex-direction: column-reverse
 	
@@ -170,4 +172,5 @@
 		width: 100%
 		border-radius: 0
 		transform: none
+		border: 0
 

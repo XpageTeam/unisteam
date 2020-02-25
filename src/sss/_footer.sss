@@ -1,15 +1,49 @@
+.index
+	.footer
+		&:before
+			content: ''
+			position: absolute * 0 0 0
+			height: 1230px
+			display: block
+			background: linear-gradient(360deg, rgba(26, 49, 87, 0) 55.57%, rgba(0, 33, 92, 0) 55.58%, #202020 77.05%)
+			transform: rotate(-180deg)
+			z-index: 2
+			pointer-events: none
+
+.main, .inner
+	.footer
+		&:before
+			content: ''
+			position: absolute * 0 0 0
+			height: 850px
+			display: block
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25.44%, #1E1E1E 85.7%)
+			z-index: 2
+			pointer-events: none
+
+// .main
+// 	.footer
+// 		position: absolute * 0 0 0
+
+
+
 .footer
-	background-color: var(--main-color)
+	position: relative
+	background-color: var(--main-color-new)
+
 
 	&-top
 		position: relative
 		display: flex
 		padding: 65px 0
 		justify-content: space-between
+	
 
 
 		&-cont
 			border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+			z-index: 3
+			position: relative
 
 
 	&-bot
@@ -17,6 +51,10 @@
 		align-items: center
 		padding: 34px 0
 		justify-content: space-between
+
+		&-cont
+			z-index: 3
+			position: relative
 
 	&-soc
 		display: flex
@@ -88,6 +126,11 @@
 .footer-lang--mobile
 	display: none
 
+.main, .inner
+	.footer
+		overflow: hidden
+		background-color: transparent
+
 @media (max-width: 1500px)
 	
 	.footer
@@ -110,4 +153,8 @@
 	.footer-top-cont
 		display: none
 			
+@media (max-width: 667px)
+	
+	.footer-bot
+		align-items: flex-start
 

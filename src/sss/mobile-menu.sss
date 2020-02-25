@@ -51,8 +51,12 @@
 
 
 .js__menu--open
+
 	// overflow: hidden
 	background-color: var(--main-color)
+
+	.head
+		pointer-events: none
 
 	.head, #content, .footer
 		opacity: 0
@@ -80,6 +84,7 @@
 
 	.mobile-menu
 		transform: translate3d(0,0,0)
+		z-index: 10
 
 .js__open-filter
 	.aside

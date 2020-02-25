@@ -16,6 +16,7 @@
 			background: rgba(36, 36, 36, 0.5)
 			color: #fff
 			padding: 20px 0
+			z-index: 15
 
 		&-btn
 			margin-left: 140px
@@ -77,6 +78,7 @@
 		flex-direction: column
 		flex: 1 1 auto
 		justify-content: center
+		z-index: 10
 
 		&-list
 			position: relative
@@ -242,6 +244,9 @@
 			&-btn
 				margin: 20px 0 0 auto
 
+		.head:before
+			display: none
+
 	.index__link-list
 		padding-left: 0
 		display: block
@@ -252,3 +257,6 @@
 	.index__link-item
 		display: inline-block
 		border: 0
+
+	.index .footer:before
+		display: none

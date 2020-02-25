@@ -1,16 +1,30 @@
 .head
-	background-color: var(--main-color)
+	background-color: var(--main-color-new)
 	color: #fff
+
+	&:before
+		content: ''
+		position: absolute 0 0 * 0
+		height: 960px
+		display: block
+		background: linear-gradient(0.13deg, rgba(26, 49, 87, 0) 67.2%, rgba(14, 64, 147, 0) 67.2%, #202020 90.85%)
+		z-index: 2
+		pointer-events: none
 
 
 	.wrapper
 		max-width: 1800px
 
 	&-top-cont
+		position: relative
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+		z-index: 4
 
 	&-top-cont
 		padding: 20px 0
+
+	&-bot-cont
+		z-index: 3
 
 	&-top, &-cities, &-soc, &-bot
 		display: flex
@@ -159,12 +173,72 @@
 		&:hover
 			background-color: var(--thrid-color)
 
+.inner
+	.head
+		position: relative
+
+.main
+	.head
+		position: absolute 0 0 * 0
+
+.main, .inner
+	
+	.head
+		background-color: transparent
+		// overflow: hidden
+		background: url('../img/header-bg.png') no-repeat center
+		background-size: cover
+		z-index: 2
+
+		&:before
+			display: none
+			// background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 22.44%, rgba(255, 255, 255, 0) 94.74%)
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 22.44%, rgba(255, 255, 255, 0) 94.74%)
+			height: 380px
+
+	.head-bot-cont
+		position: relative
+
+.js__back
+	&:not(:first-child)
+		display: none !important
+
 @media (min-width: 1200px)
+
+	.js__back
+		display: none !important
+
+	.main-nav__submenu-list
+		.js__parent-link
+			display: none !important
 
 	.main-nav__submenu
 		opacity: 0
 		pointer-events: none
-		position: absolute
+		position: absolute 100% * * 50%
+		transform: translate3d(-50%,0,0)
+
+	.main-nav__item
+		position: relative
+
+		&:hover
+			> .main-nav__submenu
+				opacity: 1
+				pointer-events: all
+
+	.main-nav__submenu
+		background-color: var(--main-color)
+
+		&-link
+			display: block
+			text-align: center
+			color: #fff
+			padding: 10px 20px
+
+			&:hover
+				background-color: var(--thrid-color)
+
+
 
 
 @media (max-width: 1600px)
