@@ -43,10 +43,27 @@
 		text-align: center
 		color: #fff
 
-		&.active, &:hover
+		&:after
+			content: ''
+			display: block
+			size: 6px
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+			transform: rotate(45deg)
+			margin-left: 5px
+
+		&.active
 			background-color: var(--main-color)
 			color: #fff
 
+
+			span
+				color: #fff
+
+		&:hover
+			background-color: var(--second-color)
+			color: #fff
+			
 			span
 				color: #fff
 

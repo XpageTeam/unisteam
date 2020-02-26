@@ -118,10 +118,6 @@
 		.btn
 			margin-left: 30px
 
-	&-file
-		display: flex
-		flex-direction: column
-		align-items: flex-end
 
 	&-status
 		position: relative
@@ -142,15 +138,22 @@
 	&-count
 		color: var(--main-color)
 		font-size: em(18, 16)
-		padding-left: 45px
+		padding-right: 45px
 		background-image: url('../img/ico-yegs.svg')
 		background-repeat: no-repeat
-		background-position: left center
+		background-position: right center
 		margin-top: 30px
-		line-height: 1
+		line-height: 30px
+		max-width: 300px
+		text-align: right
 
 	&-file
 		margin-top: 60px
+		display: flex
+
+		a
+			&:not(:first-child)
+				margin-left: 40px
 
 .ico
 	&-pdf, &-print, &-tz
@@ -187,39 +190,47 @@
 	.tabs
 		margin-top: 45px
 
-		.td
-			&:nth-child(1)
-				font-weight: 500
-
 
 
 .tbody
-	border: 1px solid var(--border-color)
+	// border: 1px solid var(--border-color)
 
 .tr
 	display: flex
 	transition: background .3s ease
-
-	&:nth-child(odd)
-		background-color: #F0F0F0
-
-	&:not(:last-child)
-
-		border-bottom: 1px solid var(--border-color)
-
+	border: 1px solid #F8F8F8
+	background-color: #FAFAFA
+	margin-bottom: 5px
+	cursor: pointer
+	transition: box-shadow .3s ease
 
 	&:hover
-		background-color: #c5c5c5
+		box-shadow: 2px 6px 36px rgba(0, 0, 0, 0.08)
 
 
 .td
+	position: relative
 	padding: 20px 25px
 
 	&:nth-child(1)
 		max-width: 260px
 		width: 100%
 		flex: none
-		border-right: 1px solid var(--border-color)
+		font-weight: bold
+		// border-right: 1px solid var(--border-color)
+
+		&:after
+			content: ''
+			display: block
+			width: 1px
+			height: 90%
+			position: absolute 50% 0 * *
+			transform: translate3d(0, -50%,0)
+			background: #F2F2F2
+
+
+
+
 
 .bx-ie11
 	.card-review
@@ -599,8 +610,11 @@
 		&-price
 			align-items: flex-start
 
-		&-btn .btn
-			margin-left: 0
+		&-btn 
+			margin: 15px 0
+
+			.btn
+				margin-left: 0
 
 		&-rating
 			align-items: flex-start
@@ -608,6 +622,20 @@
 		&-file
 			align-items: flex-start
 			margin-bottom: 20px
+			flex-direction: column
+
+			a
+				margin: 0 !important
+		
+	.card__info
+		&-count
+			max-width: 100%
+			padding-left: 0
+			padding-right: 0
+			text-align: left
+			background: none
+
+
 
 
 
