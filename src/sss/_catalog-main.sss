@@ -29,10 +29,15 @@
 	&__title
 		text-transform: uppercase
 		text-align: center
-		font-weight: 400
 		color: #000
-		font-size: em(30)
 		margin-bottom: 60px
+
+		&:not(&--small)
+			font-weight: bold
+			font-size: em(30)
+
+		&--small
+			font-size: em(28)
 
 		a
 			font-weight: inherit
