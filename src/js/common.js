@@ -434,6 +434,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	$('.p-404').closest('body').addClass('page-404');
 
+	// $('.details__one').removeClass('active');
+	$('.details__one-label').click(function(){
+		// $(this).siblings('.details__one-text').slideToggle();
+		$(this).toggleClass('js__open');
+
+	});
+
 
 	// $('.view-item').click(function(){
 	// 	let $this = $(this);

@@ -87,6 +87,36 @@
 			margin-top: 40px
 			color: var(--main-color)
 
+.inner-news
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -30px -30px
+
+	&__one
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+
+		&:hover
+			.news-slider__slide
+				&-title
+					color: var(--second-color)
+
+		.news-slider__slide
+			&-date
+				color: #a8a8a8
+				margin-bottom: 12px
+
+			&-title
+				font-weight: 400
+				font-size: 1.125rem
+				text-transform: uppercase
+				margin-bottom: 20px
+				display: block
+				transition: color .3s ease
+
+
+
+
 @media (max-width: 1500px)
 	.news-cont
 		padding: 50px 0
@@ -115,6 +145,13 @@
 		.swiper-pagination
 			margin-top: 45px
 
+@media (max-width: 1000px)
+	
+	.inner-news
+
+		&__one
+			width: calc((100% - 30px * 2) / 2)
+
 @media (max-width: 667px)
 	
 	.news 
@@ -124,3 +161,8 @@
 
 		.title
 			margin-bottom: 20px
+
+	.inner-news
+
+		&__one
+			width: 100%

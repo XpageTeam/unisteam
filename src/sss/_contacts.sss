@@ -122,68 +122,68 @@
 		margin-bottom: 43px
 
 .details
-	border: 1px solid #dadee5
 
 	&__one
-
-		&.active
-
-			.details__one
-
-				&-text
-					display: flex !important
-
-				&-label
-					border-bottom: 1px solid #dadee5
-
-					&:after
-						transform: rotate(180deg)
 
 		&-text, &-label
 			padding: 25px 45px
 
 		&-label
+			position: relative
 			text-transform: uppercase
 			line-height: 25px
-			position: relative
 			background: #e3e7ef
 			cursor: pointer
 			font-weight: 400
 
 			&:after
-				position: absolute
 				content: ""
-				transition: transform .5s ease
-				size: 18px 9px
-				background: url("../img/ico-arrow-bot.png") no-repeat
-				top: calc(50% - 4px)
-				right: 35px
+				position: absolute calc(50% - 4px) 30px * *
+				size: 8px
+				border-right: 1px solid #000
+				border-bottom: 1px solid #000
+				transform: rotate(45deg) 
+				transition: transform .3s ease
 
+			&:not(.js__open)
+				+ .details__one-text
+					display: none
+
+			&.js__open
+				&:after
+					transform: rotate(225deg)
+
+
+	
+			
 		&-text
 			display: none
+			border: 1px solid #dadee5
 
 .details__one
 	
 	&:not(:first-child)
-		border-top: 1px solid #dadee5
+		margin-top: 30px
+
+	> br
+		display: none !important
 	
 	&-text
-		flex-wrap: wrap
-		max-width: 950px
-		margin-bottom: -30px
-		justify-content: space-between
+		column-count: 2
+		column-gap: 30px
+		display: block
+
+		> br
+			display: none !important
 	
 	&-desc
-		margin-bottom: 30px
+		padding-bottom: 30px
+		break-inside: avoid
+		transition: opacity .1s ease
 
 		&-text
 			line-height: rem(25)
 
-		&:nth-child(odd)
-			width: persent(280, 902)
-
-		&:nth-child(even)
-			width: persent(545, 902)
 
 	&-title
 		color: #989ca2
@@ -255,6 +255,20 @@
 
 
 @media (max-width: 667px)
+
+	.details__title
+		margin-bottom: 20px
+	
+	.details__one-label
+		padding-right: 35px
+	.details__one
+		
+		&-text
+			column-count: 1
+			column-gap: 0
+
+	.details__one-label:after
+		right: 15px
 
 	.contacts-list
 		padding: 20px
