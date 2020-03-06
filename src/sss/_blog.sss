@@ -1,119 +1,154 @@
 .blog
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -30px -30px
+
+	&__one
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+
+	&-date
+		color: #a8a8a8
+		margin-bottom: 12px
 
 	&-title
-		margin-bottom: 80px
-
-	&__item
-		display: flex
-		align-items: center
-
-		&:not(:last-child)
-			margin-bottom: 60px
-
-		&:nth-child(even)
-			flex-direction: row-reverse
-
-			.blog__item
-
-				&-img
-					margin: 0 0 0 80px
-
-				&-text, &-title
-					text-align: right
-
-				&-link
-					justify-content: flex-end
-
-		&-img
-			flex: none
-			margin-right: 80px
-			max-width: 300px
-
-			img
-				display: block
-
-		&-title
-			font-size: em(24)
-			line-height: calc(34 / 24)
-			font-weight: 500
-			margin-bottom: 30px
-
-		&-text
-			line-height: calc(26 / 16)
-
-		&-link
-			margin-top: 40px
-			display: flex
-
-			a
-				position: relative
-				color: var(--second-color)
-				font-weight: 500
-				font-size: em(24)
-				letter-spacing: 0.04em
-				display: flex
-				align-items: center
-				border: 0
-
-				&:hover
-					text-decoration: none
-					color: #e32d33
-
-					&:after
-						transform: translate3d(-15px,0,0)
+		font-weight: 400
+		font-size: 1.125rem
+		text-transform: uppercase
+		margin-bottom: 20px
+		display: block
+		transition: color .3s ease
 
 
-				&:after
-					content: ''
-					display: inline-block
-					margin-left: 25px
-					background-image: url('../img/ico-right.svg')
-					background-repeat: no-repeat
-					background-size: contain
-					size: 17px 8px
-					transition: transform .3s ease
+@media (max-width: 1000px)
+	.blog
+		margin: 0 0 -30px -30px
 
-@media (max-width: 1200px)
-	
-	.blog-title
-		margin-bottom: 40px
-
-	.blog__item
-		&-img
-			margin-right: 40px
-			max-width: 300px
-
-		&-title
-			margin-bottom: 15px
-
-		&-link
-			margin-top: 20px
-
-	.blog__item:nth-child(2n) .blog__item-img
-		margin: 0 0 0 40px
+		&__one
+			width: calc((100% - 30px * 2) / 2)
 
 @media (max-width: 667px)
-	
-	.blog__item
-		flex-direction: column
-		align-items: flex-start
+	.blog
 
-		&:nth-child(2n)
-			flex-direction: column
-
-	.blog__item-img
-		margin: 0 0 20px 0
-		width: 100%
-		max-width: 100%
-
-		img
+		&__one
 			width: 100%
+// .blog
 
-	.blog__item:nth-child(2n) .blog__item-img
-		margin: 0 0 20px 0
+// 	&-title
+// 		margin-bottom: 80px
 
-	.blog__item:nth-child(2n) .blog__item-text, .blog__item:nth-child(2n) .blog__item-title
-		text-align: left
+// 	&__item
+// 		display: flex
+// 		align-items: center
 
-	.blog__item:nth-child(2n) .blog__item-link
-		justify-content: flex-start
+// 		&:not(:last-child)
+// 			margin-bottom: 60px
+
+// 		&:nth-child(even)
+// 			flex-direction: row-reverse
+
+// 			.blog__item
+
+// 				&-img
+// 					margin: 0 0 0 80px
+
+// 				&-text, &-title
+// 					text-align: right
+
+// 				&-link
+// 					justify-content: flex-end
+
+// 		&-img
+// 			flex: none
+// 			margin-right: 80px
+// 			max-width: 300px
+
+// 			img
+// 				display: block
+
+// 		&-title
+// 			font-size: em(24)
+// 			line-height: calc(34 / 24)
+// 			font-weight: 500
+// 			margin-bottom: 30px
+
+// 		&-text
+// 			line-height: calc(26 / 16)
+
+// 		&-link
+// 			margin-top: 40px
+// 			display: flex
+
+// 			a
+// 				position: relative
+// 				color: var(--second-color)
+// 				font-weight: 500
+// 				font-size: em(24)
+// 				letter-spacing: 0.04em
+// 				display: flex
+// 				align-items: center
+// 				border: 0
+
+// 				&:hover
+// 					text-decoration: none
+// 					color: #e32d33
+
+// 					&:after
+// 						transform: translate3d(-15px,0,0)
+
+
+// 				&:after
+// 					content: ''
+// 					display: inline-block
+// 					margin-left: 25px
+// 					background-image: url('../img/ico-right.svg')
+// 					background-repeat: no-repeat
+// 					background-size: contain
+// 					size: 17px 8px
+// 					transition: transform .3s ease
+
+// .blog
+// @media (max-width: 1200px)
+	
+// 	.blog-title
+// 		margin-bottom: 40px
+
+// 	.blog__item
+// 		&-img
+// 			margin-right: 40px
+// 			max-width: 300px
+
+// 		&-title
+// 			margin-bottom: 15px
+
+// 		&-link
+// 			margin-top: 20px
+
+// 	.blog__item:nth-child(2n) .blog__item-img
+// 		margin: 0 0 0 40px
+
+// @media (max-width: 667px)
+	
+// 	.blog__item
+// 		flex-direction: column
+// 		align-items: flex-start
+
+// 		&:nth-child(2n)
+// 			flex-direction: column
+
+// 	.blog__item-img
+// 		margin: 0 0 20px 0
+// 		width: 100%
+// 		max-width: 100%
+
+// 		img
+// 			width: 100%
+
+// 	.blog__item:nth-child(2n) .blog__item-img
+// 		margin: 0 0 20px 0
+
+// 	.blog__item:nth-child(2n) .blog__item-text, .blog__item:nth-child(2n) .blog__item-title
+// 		text-align: left
+
+// 	.blog__item:nth-child(2n) .blog__item-link
+// 		justify-content: flex-start

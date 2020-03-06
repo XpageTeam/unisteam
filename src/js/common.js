@@ -346,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 		new Swiper(mainCardSlider, {
 			effect: "fade",
+			
 			fadeEffect: {
 				    crossFade: true
 				},
@@ -426,6 +427,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	
 document.addEventListener("DOMContentLoaded", function(){
+
+
+	$('body.index').removeClass('main');
 
 	$('.js__view-plates .catalog__item-title').height(Math.max.apply(null, $('.js__view-plates .catalog__item-title').map(function(){
 		return $(this).height();

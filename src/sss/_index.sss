@@ -1,3 +1,22 @@
+.inner.index
+	.head
+		// margin-bottom: 65px
+
+		&-bot-cont
+			position: static
+
+	.footer
+		margin-top: 100px
+
+		&:before 
+			height: 1230px
+			background: linear-gradient(1turn,rgba(26,49,87,0) 55.57%,rgba(0,33,92,0) 55.58%,#202020 77.05%)
+			transform: rotate(-180deg)
+
+.index.page-404
+	#content:before
+		display: none
+			
 .index
 
 	.video-index
@@ -311,8 +330,9 @@
 		display: inline-block
 		border: 0
 
-	.index .footer:before
-		display: none
+	.index:not(.inner) 
+		.footer:before
+			display: none
 
 	.index
 		#content

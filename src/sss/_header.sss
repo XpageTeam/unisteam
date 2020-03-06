@@ -194,7 +194,7 @@ body[class*="/promyshlennye-parogeneratory-yunistim/"]
 		// overflow: hidden
 		background: url('../img/header-bg.png') no-repeat center
 		background-size: cover
-		z-index: 2
+		z-index: 10
 
 		&:before
 			display: none
@@ -229,7 +229,7 @@ body[class*="/promyshlennye-parogeneratory-yunistim/"]
 		position: relative
 
 		&:hover
-			> .main-nav__submenu
+			.main-nav__submenu
 				opacity: 1
 				pointer-events: all
 
@@ -257,6 +257,9 @@ body[class*="/promyshlennye-parogeneratory-yunistim/"]
 		padding: 15px 0
 
 
+@media (max-width: 1550px)
+	.head .soc__label
+		display: none
 @media (max-width: 1500px)
 
 	.head
@@ -284,9 +287,6 @@ body[class*="/promyshlennye-parogeneratory-yunistim/"]
 	.head-soc
 		margin-left: 15px
 
-@media (max-width: 1400px)
-	.head .soc__label
-		display: none
 
 @media (max-width: 1300px)
 	

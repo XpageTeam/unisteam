@@ -1,0 +1,42 @@
+.serts
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -30px -30px
+
+	&__one
+		width: calc((100% - 30px * 5) / 5)
+		margin: 0 0 30px 30px
+
+		img
+			display: block
+			width: 100%
+
+		&-title
+			font-weight: 400
+			font-size: rem(16)
+			text-transform: uppercase
+			margin-top: 10px
+			display: block
+			transition: color .3s ease
+
+
+@media (max-width: 1400px)
+	
+	.serts
+
+		&__one
+			width: calc((100% - 30px * 4) / 4)
+
+@media (max-width: 1000px)
+	
+	.serts
+
+		&__one
+			width: calc((100% - 30px * 3) / 3)
+
+@media (max-width: 667px)
+	
+	.serts
+
+		&__one
+			width: 100%

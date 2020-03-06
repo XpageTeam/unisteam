@@ -20,22 +20,25 @@ document.addEventListener("DOMContentLoaded", function(){
 	$('.mobile-menu__footer').append(lang);
 
 	
-	$('.main-nav__item').each(function(i, el){
-		let $this = $(el);
+	if($(window).width() < 1200){
+		$('.main-nav__item').each(function(i, el){
+			let $this = $(el);
 
-		$this.find('.main-nav__submenu').siblings('a').addClass('js__parent-link');
-		var link = $this.find('.main-nav__link.js__parent-link').clone();
+			$this.find('.main-nav__submenu').siblings('a').addClass('js__parent-link');
+			var link = $this.find('.main-nav__link.js__parent-link').clone();
 
-		$this.find('.main-nav__submenu-list').prepend(link);
-		$this.find('.main-nav__submenu-list').prepend('<div class="js__back">Назад</div>');
+			$this.find('.main-nav__submenu-list').prepend(link);
+			$this.find('.main-nav__submenu-list').prepend('<div class="js__back">Назад</div>');
 
-	})
+		})
 
-	$('.main-nav__link.js__parent-link').click(function(){
-		var $this = $(this);
+		$('.main-nav__link.js__parent-link').click(function(){
+			var $this = $(this);
 
-		$this.toggleClass('js__submenu--open')
-	})
+			$this.toggleClass('js__submenu--open')
+		})
+		
+	}
 
 	$('.js__back').click(function(){
 		var $this = $(this);
