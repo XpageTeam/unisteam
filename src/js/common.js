@@ -45,43 +45,43 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-document.addEventListener("DOMContentLoaded", function(){
+// document.addEventListener("DOMContentLoaded", function(){
 
-	const sliderSlider = document.querySelector('.main-slider .swiper-list');
+// 	const sliderSlider = document.querySelector('.main-slider .swiper-list');
 	
-	if (!sliderSlider)
-		return
+// 	if (!sliderSlider)
+// 		return
 
 
-	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
+// 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay} = Module;
+// 		const {Swiper, Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay} = Module;
 
-		Swiper.use([Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay]);
+// 		Swiper.use([Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay]);
 
 		
-		var slider = new Swiper(sliderSlider, {
-			effect: "fade",
-			autoplay: {
-			    delay: 3000,
-			},
-			fadeEffect: {
-			    crossFade: true
-			},
-			loop: true,
-			navigation: {
-		        nextEl: '.main-slider .swiper-button-next',
-		        prevEl: '.main-slider .swiper-button-prev',
-		    },
-		    pagination: {
-		        el: '.main-slider .swiper-pagination',
-		        type: 'bullets',
-		        clickable: true,
-		    },
-		});
+// 		var slider = new Swiper(sliderSlider, {
+// 			effect: "fade",
+// 			autoplay: {
+// 			    delay: 3000,
+// 			},
+// 			fadeEffect: {
+// 			    crossFade: true
+// 			},
+// 			loop: true,
+// 			navigation: {
+// 		        nextEl: '.main-slider .swiper-button-next',
+// 		        prevEl: '.main-slider .swiper-button-prev',
+// 		    },
+// 		    pagination: {
+// 		        el: '.main-slider .swiper-pagination',
+// 		        type: 'bullets',
+// 		        clickable: true,
+// 		    },
+// 		});
 
-	})
-})
+// 	})
+// })
 
 
 

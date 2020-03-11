@@ -1,5 +1,25 @@
+.bx-ie
+	.main-slider
+		.swiper-button
+			background-image: url('../img/ico-arrow-button--w.svg')
+	
 .main-slider
 	position: relative
+
+	.swiper-slide
+		height: auto !important
+
+	&__slide
+		&-video
+			position: relative
+			z-index: -1
+
+	video
+		width: 100%
+		object-fit: cover
+		object-position: center
+		position: absolute 0 0 0 0
+
 
 	&__arrow
 		position: absolute
@@ -7,6 +27,7 @@
 		left: 0
 		right: 0
 		width: 100%
+		pointer-events: none
 
 		.wrapper
 			display: flex
@@ -15,6 +36,7 @@
 		.swiper-button
 			position: static
 			filter: invert(1)
+			pointer-events: auto
 
 	&__info
 		background: rgba(36, 36, 36, 0.6)

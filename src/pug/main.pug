@@ -28,6 +28,18 @@ html(lang="ru")
 										.main-slider__btn 
 											a(href="#").btn Смотреть в каталоге
 										.swiper-pagination
+							.main-slider__slide-video
+									<!-- Тут два видео, для компьютеров и телефонов. Для каждого видео свой постер. -->
+									video(data-desktop-src="files/video.mp4" playsinline data-mobile-src="files/video.mp4" data-desktop-poster="img/video-poster.jpg" data-mobile-poster="img/video-poster.jpg" muted="" preload="metadata")
+
+						.swiper-slide
+							.main-slider__info-cont
+								.wrapper
+									.main-slider__info
+										.main-slider__title Серия ППУА на газу. Использование пропана или метана экономит на топливе до 263 тыс. в месяц
+										.main-slider__btn 
+											a(href="#").btn Смотреть в каталоге
+										.swiper-pagination
 							.main-slider__img
 								picture.slider-img
 									source(srcset="img/photos/banner.jpg" media="screen and (min-width: 700px)" data-main="data-main")

@@ -1,5 +1,5 @@
 import { domReady, App, sameHeights, EventListener } from "./xpage/index";
-
+import "./main-slider/main-top-slider";
 import "./default-slider";
 // import "./catalog";
 import "./forms";

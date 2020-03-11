@@ -1,0 +1,50 @@
+@media print
+	header, 
+	footer, 
+	.card__media-video,
+	.card__info-count,
+	.card__info-file,
+	.swiper-button,
+	.card__media-bot,
+	.swiper-slide:not(:first-child),
+	.tabs__top,
+	.default-slider-cont,
+	.title-block__crumbs,
+	.card__info-btn
+		display: none
+
+	.swiper-wrapper
+		height: auto !important
+
+	.tabs__content
+		display: block !important
+		position: static !important
+		opacity: 1 !important
+
+	.tabs__title
+		display: block !important
+
+	.tabs__content-content
+		display: block !important
+		margin-top: 20px
+
+		&:empty
+			display: none !important
+
+	.tr
+		background-color: transparent
+
+	.td
+		padding: 5px 15px
+
+	.tabs__title
+		font-size: 20px
+
+	.title-block
+		padding: 0 0 20px
+
+	.card .tabs
+		margin-top: 0
+
+	.wrapper
+		padding: 0
