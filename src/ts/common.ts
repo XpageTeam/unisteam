@@ -1,30 +1,11 @@
 import { domReady, App, sameHeights, EventListener } from "./xpage/index";
 import "./main-slider/main-top-slider";
 import "./default-slider";
-// import "./catalog";
 import "./forms";
 import "./textPage/text-page";
 
-// import "./catalog-side-menu";
-// import "./catalog-filter-search";
-// import "./catalog-filter-more"
-
-// import "./notificator.ts";
-
-// import "./top-menu";
-// import "./left-menu";
 import "./tabs";
-// import "./workshop";
 
-// import "./compare";
-
-// import "./card";
-
-// import "./lc";
-
-// import "./mobile-menu"
-// import "./mobile-head-menu-scrolling"
-// import "./main-menu-scrolling"
 
 declare global {
 	interface Window {

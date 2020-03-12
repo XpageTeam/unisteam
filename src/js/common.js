@@ -3,7 +3,6 @@ import is from "is_js"
 import Cookies from "js-cookie"
 
 import "./mobile-menu.js"
-// import "./main-cat.js"
 import "./stage.js"
 import "./upload.js"
 
@@ -14,7 +13,6 @@ window.$ = $;
 window.jQuery = $;
 window.is = is;
 
-require("./jquery.menu-aim.js");
 require("./countTo.js");
 
 window.get$ = (element) => {
@@ -45,43 +43,6 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-// document.addEventListener("DOMContentLoaded", function(){
-
-// 	const sliderSlider = document.querySelector('.main-slider .swiper-list');
-	
-// 	if (!sliderSlider)
-// 		return
-
-
-// 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
-
-// 		const {Swiper, Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay} = Module;
-
-// 		Swiper.use([Navigation, EffectFade, Thumbs, Pagination, Lazy, Autoplay]);
-
-		
-// 		var slider = new Swiper(sliderSlider, {
-// 			effect: "fade",
-// 			autoplay: {
-// 			    delay: 3000,
-// 			},
-// 			fadeEffect: {
-// 			    crossFade: true
-// 			},
-// 			loop: true,
-// 			navigation: {
-// 		        nextEl: '.main-slider .swiper-button-next',
-// 		        prevEl: '.main-slider .swiper-button-prev',
-// 		    },
-// 		    pagination: {
-// 		        el: '.main-slider .swiper-pagination',
-// 		        type: 'bullets',
-// 		        clickable: true,
-// 		    },
-// 		});
-
-// 	})
-// })
 
 
 
@@ -103,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(partnersSlider, {
 			slidesPerView: 6,
+			lazy: true,
 			autoplay: {
 			    delay: 3000,
 			},
@@ -131,11 +93,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		      slidesPerView: 1,
 		      spaceBetween: 30
 		    },
-		    // 320: {
-		    //   slidesPerView: 1,
-		    //   spaceBetween: 20
-		    // },
-		    // when window width is >= 480px
+		    
 		  }
 		});
 
@@ -159,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(spSliderSlider, {
 			slidesPerView: 1,
+			lazy: true,
 			autoplay: {
 			    delay: 3000,
 			},
@@ -197,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(sliderSlider, {
 			slidesPerView: 6,
+			lazy: true,
       		// spaceBetween: 3,
 			loop: true,
 			navigation: {
@@ -237,13 +197,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, Pagination, Autoplay} = Module;
+		const {Swiper, Navigation, Pagination, Autoplay, Lazy} = Module;
 
-		Swiper.use([Navigation, Pagination, Autoplay]);
+		Swiper.use([Navigation, Pagination, Autoplay, Lazy]);
 
 		
 		var slider = new Swiper(newsSlider, {
 			slidesPerView: 3,
+			lazy: true,
 			autoplay: {
 			    delay: 3000,
 			},
@@ -293,15 +254,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, Pagination} = Module;
+		const {Swiper, Navigation, Pagination, Lazy} = Module;
 
-		Swiper.use([Navigation, Pagination]);
+		Swiper.use([Navigation, Pagination, Lazy]);
 
 		
 		var slider = new Swiper(reviewSlider, {
 			slidesPerView: 1,
+			lazy: true,
 			autoplay: {
-			    delay: 3000,
+			    delay: 4000,
 			},
       		spaceBetween: 40,
 			loop: true,
@@ -374,63 +336,13 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
-// document.addEventListener("DOMContentLoaded", function(){
-
-
-// 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
-
-// 		const {Swiper, Navigation, Pagination} = Module;
-
-// 		Swiper.use([Navigation, Pagination]);
-
-		
-// 		// var slider = new Swiper(reviewSlider, {
-// 		// 	slidesPerView: 1,
-// 		// 	autoplay: {
-// 		// 	    delay: 3000,
-// 		// 	},
-//   //     		spaceBetween: 40,
-// 		// 	loop: true,
-// 		// 	navigation: {
-// 		//         nextEl: '.review .swiper-button-next',
-// 		//         prevEl: '.review .swiper-button-prev',
-// 		//     },
-// 		//     pagination: {
-// 		//         el: '.review .swiper-pagination',
-// 		//         type: 'bullets',
-// 		//         clickable: true,
-// 		//     },
-// 		// });
-
-// 	var galleryThumbs = new Swiper('.card__media-bot .swiper-list', {
-// 		slidesPerView: 3,
-// 		spaceBetween: 20,
-// 		watchSlidesVisibility: true,
-// 		watchSlidesProgress: true,
-// 	});
-
-// 	var galleryTop = new Swiper('.card__media-top .swiper-list', {
-// 	  effect: "fade",
-// 	  navigation: {
-// 	    nextEl: '.card__media-bot .swiper-button-next',
-// 	    prevEl: '.card__media-bot .swiper-button-prev',
-// 	  },
-// 	  thumbs: {
-// 	    swiper: galleryThumbs
-// 	  }
-// 	});
-
-
-// 	})
-// })
-
-
-
-
-
 	
 document.addEventListener("DOMContentLoaded", function(){
 
+	setTimeout(function(){
+		$('body').removeClass('loading');
+		$('body').addClass('loaded');
+	},2000)
 
 	$('body.index').removeClass('main');
 
@@ -448,50 +360,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	});
 
-
-	// $('.view-item').click(function(){
-	// 	let $this = $(this);
-
-	// 	if($this.hasClass('active'))
-	// 		return
-
-	// 	let id = $this.attr("data-id"),
-	// 		$parent = $this.closest(".catalog");
-
-	// 	Cookies.remove('view-list');
-	// 	Cookies.remove('view-plates');
-	// 	Cookies.set(""+id+"", 1, { expires: 1 });
-
-
-
-
-
-	// 	$parent.find(".view-item.active").removeClass("active");
-	// 	$parent.find(".catalog__list.js__view-list").removeClass("js__view-list");
-	// 	$parent.find(".catalog__list.js__view-plates").removeClass("js__view-plates");
-
-	// 	$this.addClass("active");
-	// 	$parent.find(".catalog__list").addClass("js__"+id+"");
-
-	// })
-
-
-
-	// if(Cookies.get('view-list')){
-	// 	$(".catalog__list").addClass("js__view-list");
-	// 	$('.view-item').removeClass('active');
-	// 	$('.view-list').addClass('active');
-	// } else {
-	// 	$(".catalog__list").addClass("js__view-plates");
-	// }
-
 	$('.tabs__title').click(function(){
+
 		var $this = $(this);
 
-		$this.toggleClass('js__active');
+		$('.tabs__title').removeClass('js__active');
 
-		$this.siblings('.tabs__content-content').slideToggle();
-	});
+		if ($this.next('.tabs__content-content').hasClass("js__open")){
+			$('.tabs__content-content').slideUp(300).removeClass('js__open');
+		}else{
+			$('.tabs__content-content').slideUp(300).removeClass('js__open');
+			$this.next('.tabs__content-content').slideDown(300).addClass('js__open');
+			$this.addClass('js__active');
+		}
+
+	})
 
 
 });

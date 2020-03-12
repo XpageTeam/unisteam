@@ -1,3 +1,4 @@
+
 .sort
 	display: flex
 	align-items: center
@@ -166,6 +167,8 @@
 			font-size: em(13)
 			padding-left: 25px
 
+
+
 .catalog
 	&__list
 		display: flex
@@ -193,43 +196,31 @@
 
 				&__item
 					position: relative
-					display: grid
-					grid-template-areas: 'img title title' 'img price price' 'img status-1 status-2' 'img btn btn'  'img info info'
-					// grid-template-rows: auto 1fr
-					grid-template-columns: 355px 1fr 1fr
-					grid-gap: 20px 50px
+					display: flex
+					flex-wrap: wrap
 
 					&:not(:last-child)
 						margin-bottom: 60px
 
 					&-img
 						position: relative
-						max-width: 355px
 						width: 100%
-						grid-area: img
-						margin: 0
+						max-width: 295px
+						margin-right: 30px
+						flex: none
 
 						img
 							width: 100%
 
 					&-title
-						grid-area: title
 						font-size: em(16)
 						margin: 0
 
-					.status-1
-						grid-area: status-1
-
-					.status-2
-						grid-area: status-2
-
-					&-price
-						grid-area: price
 
 					&-info
-						grid-area: info
 						max-width: 600px
 						margin: 20px 0 0 0
+
 
 						span
 							display: none
@@ -244,10 +235,99 @@
 					&-btn
 						display: flex
 						margin: 0
-						grid-area: btn
 
 
 
+// new razdel
+.catalog-main__title.catalog-main__title--small.auto-title
+	text-align: left
+	
+.bx-ie
+	.catalog__list
+		&:not(.js__view-plates)
+			.catalog__item
+				display: block !important
+
+				&-img
+					float: left !important
+
+				&-title
+					width: calc(100% - 325px)
+					margin-bottom: 15px
+					display: inline-block
+
+				&-status
+					width: calc(100% - 325px)
+					margin-left: 325px
+					margin-bottom: 15px
+
+				&-btn
+					width: calc(100% - 325px)
+
+@supports (display: grid)
+	
+	.catalog
+		&__list
+
+			&:not(.js__view-plates)
+				flex-direction: column
+
+				.catalog
+
+					&__item
+						position: relative
+						display: grid
+						grid-template-areas: 'img title title' 'img price price' 'img status-1 status-2' 'img btn btn'  'img info info'
+						// grid-template-rows: auto 1fr
+						grid-template-columns: 295px 1fr 1fr
+						grid-gap: 20px 50px
+
+						&:not(:last-child)
+							margin-bottom: 60px
+
+						&-img
+							position: relative
+							max-width: 100%
+							width: 100%
+							grid-area: img
+							margin: 0
+
+							img
+								width: 100%
+
+						&-title
+							grid-area: title
+							font-size: em(16)
+							margin: 0
+
+						.status-1
+							grid-area: status-1
+
+						.status-2
+							grid-area: status-2
+
+						&-price
+							grid-area: price
+
+						&-info
+							grid-area: info
+							max-width: 600px
+							margin: 20px 0 0 0
+
+							span
+								display: none
+
+						&-row
+							display: inline
+
+							&:not(:last-child)
+								&:after
+									content: '/'
+
+						&-btn
+							display: flex
+							margin: 0
+							grid-area: btn
 
 
 

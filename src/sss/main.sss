@@ -64,6 +64,53 @@
 // @import "shops-one.sss"
 // @import "slider-bot.sss"
 
+.loading
+	overflow: hidden
+	
+.loaded
+	.preloader
+		opacity: 0
+
+
+.preloader
+	position: fixed
+	left: 0px
+	top: 0px
+	width: 100vw
+	height: 100vh
+	background: #1e1e1e
+	z-index: 100500
+	pointer-events: none
+	transition: opacity .3s ease
+
+.loader
+	width: 64px
+	height: 64px
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	overflow: hidden
+	z-index: 1
+	background: url('../img/preloader.svg') center no-repeat
+	background-size: 100%
+	animation: animPreload 1.5s infinite linear
+
+@keyframes animPreload
+	0%
+		width: 64px
+		height: 64px
+
+	50%
+		width: 86px
+		height: 86px
+
+	100%
+		width: 64px
+		height: 64px
+
+
+
 .bx-ie
 	overflow-x: hidden
 	overflow-y: auto
