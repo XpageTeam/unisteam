@@ -64,7 +64,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(partnersSlider, {
 			slidesPerView: 6,
-			lazy: true,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
 			autoplay: {
 			    delay: 3000,
 			},
@@ -117,7 +120,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(spSliderSlider, {
 			slidesPerView: 1,
-			lazy: true,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
 			autoplay: {
 			    delay: 3000,
 			},
@@ -156,7 +162,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(sliderSlider, {
 			slidesPerView: 6,
-			lazy: true,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
       		// spaceBetween: 3,
 			loop: true,
 			navigation: {
@@ -204,7 +213,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(newsSlider, {
 			slidesPerView: 3,
-			lazy: true,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
 			autoplay: {
 			    delay: 3000,
 			},
@@ -261,7 +273,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 		var slider = new Swiper(reviewSlider, {
 			slidesPerView: 1,
-			lazy: true,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
 			autoplay: {
 			    delay: 4000,
 			},
@@ -347,6 +362,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	$('body.index').removeClass('main');
 
 	$('.js__view-plates .catalog__item-title').height(Math.max.apply(null, $('.js__view-plates .catalog__item-title').map(function(){
+		return $(this).height();
+	})))
+
+	$('.category__item-text').height(Math.max.apply(null, $('.category__item-text').map(function(){
 		return $(this).height();
 	})))
 
