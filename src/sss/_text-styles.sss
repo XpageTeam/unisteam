@@ -69,25 +69,7 @@ img[height]
 	table:not([class])
 		margin: em(52) 0 em(20)
 
-		thead
-
-			th, td
-				background-color: #A5AEB9
-				text-align: left
-				padding-top: em(35)
-				padding-bottom: em(35)
-				font-size: em(20)
-				line-height: calc(24 / 20)
-				font-weight: 500
-				letter-spacing: 0.04em
-				color: #fff
-		td
-			line-height: calc(28 / 20)
-
 		td, th
-			padding: em(16) em(60)
-			font-weight: inherit
-			font-size: em(20)
 
 
 			&:not([valign]), &[valign="middle"]
@@ -101,25 +83,24 @@ img[height]
 
 		td
 			transition: background .3s ease
+			border-bottom: 5px solid #fff
+			padding: 20px 25px
+
+			&:nth-child(1)
+				max-width: 260px
+				font-weight: 700
+				border-right: 1px solid #f2f2f2
 
 
 
 		tbody
+
 			tr
 				transition: background .3s ease 
-
-				&:nth-child(even)
-					background-color: var(--background-color)
-
-				&:hover
-					background-color: #c5c5c5
+				background-color: #fafafa
 
 	table[border="1"]:not([class])
 		min-width: 100%
-
-		td, th
-			border: 1px solid var(--border-color)
-
 
 	ul, ol
 
@@ -221,3 +202,18 @@ img[height]
 
 	#content table:not([class]) td, #content table:not([class]) th
 		padding: 10px
+
+	h2
+		font-size: em(20)
+
+	h3
+		font-size: em(18)
+
+	h4
+		font-size: em(16)
+
+	h5
+		font-size: em(14)
+
+	h6
+		font-size: em(14)
