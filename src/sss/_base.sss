@@ -156,26 +156,7 @@ img, svg
 li
 	list-style: none
 
-.table-wrap
-	position: relative
 
-	&__track
-		overflow-x: auto
-		-webkit-overflow-scrolling: touch
-
-	&__shadow
-		width: 12px
-		position: absolute 0 *
-		pointer-events: none
-		background: linear-gradient(to right, rgba(#fff, .0001), rgba(#000, .1))
-		opacity: 0
-
-		&--left
-			left: 0	
-			transform: rotateZ(180deg)
-
-		&--right
-			right: 0	
 
 .f-soc
 	display: flex
@@ -408,6 +389,27 @@ input.default-btn
 
 		&-next
 			right: 0
+
+	.table-wrap
+		position: relative
+
+		&__track
+			overflow-x: auto
+			-webkit-overflow-scrolling: touch
+
+		&__shadow
+			width: 12px
+			position: absolute 0 *
+			pointer-events: none
+			background: linear-gradient(to right, rgba(#fff, .0001), rgba(#000, .1))
+			opacity: 0
+
+			&--left
+				left: 0	
+				transform: rotateZ(180deg)
+
+			&--right
+				right: 0	
 
 @media (max-width: 370px)
 	

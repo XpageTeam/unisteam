@@ -96,7 +96,7 @@ img[height]
 		tbody
 
 			tr
-				transition: background .3s ease 
+				transition: background .3s ease, box-shadow .3s ease
 				background-color: #fafafa
 
 	table[border="1"]:not([class])
@@ -173,7 +173,14 @@ img[height]
 		padding-top: 1.19em
 		padding-bottom: 1.19em
 
+@media (min-width: 1000px)
+	.table-wrap
+		tr
 
+			&:hover
+				box-shadow: 2px 6px 36px rgba(0,0,0,.08)
+
+				
 @media (max-width: 1000px)
 	[align="right"]
 		margin-left: em(30)
