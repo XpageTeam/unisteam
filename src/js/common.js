@@ -393,6 +393,11 @@ document.addEventListener("DOMContentLoaded", function(){
 			$this.addClass('js__active');
 		}
 
+		setTimeout(function(){
+			$('html,body').animate({
+				scrollTop: $('.tabs__title.js__active').offset().top}, 1000);
+		}, 300)
+
 	})
 
 
