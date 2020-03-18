@@ -16,8 +16,7 @@
 	.swiper-wrapper
 		height: auto !important
 
-	.tabs
-		display: none !important
+
 		
 	.tabs__content
 		display: block !important
@@ -51,3 +50,7 @@
 
 	.wrapper
 		padding: 0
+
+	.tabs__content
+		&:not([data-id="1"], [data-id="3"], [data-id="5"], [data-id="6"])
+			display: none !important
