@@ -42,123 +42,126 @@
 
 		&__one
 			flex-direction: column
-// .blog
-
-// 	&-title
-// 		margin-bottom: 80px
-
-// 	&__item
-// 		display: flex
-// 		align-items: center
-
-// 		&:not(:last-child)
-// 			margin-bottom: 60px
-
-// 		&:nth-child(even)
-// 			flex-direction: row-reverse
-
-// 			.blog__item
-
-// 				&-img
-// 					margin: 0 0 0 80px
-
-// 				&-text, &-title
-// 					text-align: right
-
-// 				&-link
-// 					justify-content: flex-end
-
-// 		&-img
-// 			flex: none
-// 			margin-right: 80px
-// 			max-width: 300px
-
-// 			img
-// 				display: block
-
-// 		&-title
-// 			font-size: em(24)
-// 			line-height: calc(34 / 24)
-// 			font-weight: 500
-// 			margin-bottom: 30px
-
-// 		&-text
-// 			line-height: calc(26 / 16)
-
-// 		&-link
-// 			margin-top: 40px
-// 			display: flex
-
-// 			a
-// 				position: relative
-// 				color: var(--second-color)
-// 				font-weight: 500
-// 				font-size: em(24)
-// 				letter-spacing: 0.04em
-// 				display: flex
-// 				align-items: center
-// 				border: 0
-
-// 				&:hover
-// 					text-decoration: none
-// 					color: #e32d33
-
-// 					&:after
-// 						transform: translate3d(-15px,0,0)
 
 
-// 				&:after
-// 					content: ''
-// 					display: inline-block
-// 					margin-left: 25px
-// 					background-image: url('../img/ico-right.svg')
-// 					background-repeat: no-repeat
-// 					background-size: contain
-// 					size: 17px 8px
-// 					transition: transform .3s ease
+.blog
 
-// .blog
-// @media (max-width: 1200px)
+	&-title
+		margin-bottom: 80px
+		width: 100%
+
+	&__item
+		display: flex
+		align-items: center
+
+		&:not(:last-child)
+			margin-bottom: 60px
+
+		&:nth-child(even)
+			flex-direction: row-reverse
+
+			.blog__item
+
+				&-img
+					margin: 0 0 0 80px
+
+				&-text, &-title
+					text-align: right
+
+				&-link
+					justify-content: flex-end
+
+		&-img
+			flex: none
+			margin-right: 80px
+			max-width: 300px
+
+			img
+				display: block
+
+		&-title
+			font-size: em(24)
+			line-height: calc(34 / 24)
+			font-weight: 500
+			margin-bottom: 30px
+
+		&-text
+			line-height: calc(26 / 16)
+
+		&-link
+			margin-top: 40px
+			display: flex
+
+			a
+				position: relative
+				color: var(--second-color)
+				font-weight: 500
+				font-size: em(24)
+				letter-spacing: 0.04em
+				display: flex
+				align-items: center
+				border: 0
+
+				&:hover
+					text-decoration: none
+					color: #e32d33
+
+					&:after
+						transform: translate3d(-15px,0,0)
+
+
+				&:after
+					content: ''
+					display: inline-block
+					margin-left: 25px
+					background-image: url('../img/ico-right.svg')
+					background-repeat: no-repeat
+					background-size: contain
+					size: 17px 8px
+					transition: transform .3s ease
+
+
+@media (max-width: 1200px)
 	
-// 	.blog-title
-// 		margin-bottom: 40px
+	.blog-title
+		margin-bottom: 40px
 
-// 	.blog__item
-// 		&-img
-// 			margin-right: 40px
-// 			max-width: 300px
+	.blog__item
+		&-img
+			margin-right: 40px
+			max-width: 300px
 
-// 		&-title
-// 			margin-bottom: 15px
+		&-title
+			margin-bottom: 15px
 
-// 		&-link
-// 			margin-top: 20px
+		&-link
+			margin-top: 20px
 
-// 	.blog__item:nth-child(2n) .blog__item-img
-// 		margin: 0 0 0 40px
+	.blog__item:nth-child(2n) .blog__item-img
+		margin: 0 0 0 40px
 
-// @media (max-width: 667px)
+@media (max-width: 667px)
 	
-// 	.blog__item
-// 		flex-direction: column
-// 		align-items: flex-start
+	.blog__item
+		flex-direction: column
+		align-items: flex-start
 
-// 		&:nth-child(2n)
-// 			flex-direction: column
+		&:nth-child(2n)
+			flex-direction: column
 
-// 	.blog__item-img
-// 		margin: 0 0 20px 0
-// 		width: 100%
-// 		max-width: 100%
+	.blog__item-img
+		margin: 0 0 20px 0
+		width: 100%
+		max-width: 100%
 
-// 		img
-// 			width: 100%
+		img
+			width: 100%
 
-// 	.blog__item:nth-child(2n) .blog__item-img
-// 		margin: 0 0 20px 0
+	.blog__item:nth-child(2n) .blog__item-img
+		margin: 0 0 20px 0
 
-// 	.blog__item:nth-child(2n) .blog__item-text, .blog__item:nth-child(2n) .blog__item-title
-// 		text-align: left
+	.blog__item:nth-child(2n) .blog__item-text, .blog__item:nth-child(2n) .blog__item-title
+		text-align: left
 
-// 	.blog__item:nth-child(2n) .blog__item-link
-// 		justify-content: flex-start
+	.blog__item:nth-child(2n) .blog__item-link
+		justify-content: flex-start
