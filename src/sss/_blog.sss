@@ -81,6 +81,13 @@
 		margin: 0 0 30px 30px
 		background-color: #fff
 
+		&:hover
+			.blog__item-link 
+				span
+					background-color: var(--thrid-color)
+					transform: translate3d(-10px,0,0)
+
+
 	
 		&-img
 			flex: none
@@ -111,7 +118,7 @@
 			justify-content: flex-end
 			margin-top: auto
 
-			a
+			span
 				position: relative
 				color: var(--second-color)
 				font-weight: 500
@@ -124,6 +131,7 @@
 				size: 40px
 				background-color: var(--main-color)
 				border-radius: 50%
+				transition: transform .3s ease, box-shadow .3s ease
 
 				&:before
 					content: ''
