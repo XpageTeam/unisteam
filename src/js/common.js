@@ -354,6 +354,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 document.addEventListener("DOMContentLoaded", function(){
 
+	$('.standart-page .banner').closest('body').addClass('js__head-absolute');
+
 	setTimeout(function(){
 		$('body').removeClass('loading');
 		$('body').addClass('loaded');

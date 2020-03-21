@@ -94,6 +94,10 @@
 	align-items: flex-end
 	margin-right: auto
 
+	&-status
+		&:last-child
+			margin-right: 0
+
 	&-price
 		display: flex
 		justify-content: flex-end
@@ -132,12 +136,16 @@
 
 		span
 			font-weight: 500
-			font-size: em(28)
+			font-size: rem(28)
 			margin-left: 5px
+
+			span
+				font-weight: 500
+				font-size: rem(28)
 
 	&-count
 		color: var(--main-color)
-		font-size: em(18, 16)
+		// font-size: em(18, 16)
 		padding-right: 45px
 		background-image: url('../img/ico-yegs.svg')
 		background-repeat: no-repeat

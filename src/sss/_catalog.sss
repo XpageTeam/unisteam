@@ -298,16 +298,28 @@
 
 @supports (display: grid)
 
+
+	
 	.catalog
 		display: grid
 		grid-template-columns: 300px 1fr
+		grid-template-areas: "filter sort" "filter cataloglist" "filter paginator"
+
+		.paginator__cont
+			grid-area: paginator
 
 		&-filter
-			grid-row: 1/4
+			// grid-row: 1/4
+			grid-area: filter
+
+		&-sort
+			grid-area: sort
+
 
 	.catalog__list
 		max-width: 100% !important
 		margin: 0 !important
+		grid-area: cataloglist
 
 		&.js__view-plates
 			display: grid
@@ -329,10 +341,10 @@
 					&__item
 						position: relative
 						display: grid
-						grid-template-areas: 'img title title' 'img price price' 'img status-1 status-2' 'img btn btn'  'img info info'
+						grid-template-areas: 'img title title' 'img status-1 status-2' 'img price price' 'img btn btn'  'img info info'
 						// grid-template-rows: auto 1fr
 						grid-template-columns: 295px 1fr 1fr
-						grid-gap: 20px 50px
+						grid-gap: 10px 50px
 
 						&:not(:last-child)
 							margin-bottom: 60px
@@ -383,7 +395,14 @@
 
 
 
+	// .catalog__item-title 
+	// 	+ .catalog__item-status
+	// 		grid-row: span 2 !important
 
+	// .catalog__item-title 
+	// 	+ .catalog__item-status
+	// 		+ .catalog__item-status 
+	// 			grid-row: span 2 !important
 
 
 .status
@@ -533,11 +552,13 @@
 						grid-gap: 10px 20px
 
 	@supports (display: grid)
+
 		.catalog
 			grid-template-columns: 1fr
+			grid-template-areas: "filter" "sort" "cataloglist" "paginator"
 
-		.catalog-filter
-			grid-row: none
+		// .catalog-filter
+		// 	grid-row: none
 
 @media (max-width: 667px)
 

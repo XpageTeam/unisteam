@@ -1,6 +1,23 @@
-body[class*="spectekhnika-oplata-i-dostavka"], .spectekhnika-about-factory_today, body[class*="spectekhnika-about-"]
-	.standart-page
-		margin-top: -82px
+// body[class*="spectekhnika-oplata-i-dostavka"], 
+// .spectekhnika-about-factory_today, 
+// body[class*="spectekhnika-about-"],
+// body[class*="promyshlennye-parogeneratory-"],
+// body[class*="spectekhnika-oplata-"]
+
+body:not(.js__head-absolute):not(.main)
+	.head
+		background: var(--main-color-new) !important
+
+.js__head-absolute
+
+	.head
+		position: absolute 0 0 * 0 !important
+	// .standart-page
+	// 	margin-top: -82px
+
+.promyshlennye-parogeneratory-yunistim.js__main-slider-has
+	.head
+		position: static
 
 
 	
@@ -38,7 +55,8 @@ body[class*="spectekhnika-oplata-i-dostavka"], .spectekhnika-about-factory_today
 		img
 			display: block
 			width: 100%
-			height: calc(100vh - 85px)
+			height: 100vh
+			// height: calc(100vh - 85px)
 			object-fit: cover
 			object-position: center
 
@@ -128,14 +146,18 @@ body[class*="spectekhnika-oplata-i-dostavka"], .spectekhnika-about-factory_today
 		.swiper-pagination
 			margin-bottom: 80px
 
-@media (max-width: 1600px)
+// @media (max-width: 1600px)
 	
-	body[class*="spectekhnika-oplata-i-dostavka"], .spectekhnika-about-factory_today, body[class*="spectekhnika-about-"]
-		.standart-page
-			margin-top: -72px
+// 	body[class*="spectekhnika-oplata-i-dostavka"], 
+// 	.spectekhnika-about-factory_today, 
+// 	body[class*="spectekhnika-about-"],
+// 	body[class*="promyshlennye-parogeneratory-"],
+// 	body[class*="spectekhnika-oplata-"]
+// 		.standart-page
+// 			margin-top: -72px
 
-	.banner__img img
-		height: calc(100vh - 75px)
+// 	.banner__img img
+// 		height: calc(100vh - 75px)
 
 
 @media (max-width: 1500px)	
@@ -185,17 +207,25 @@ body[class*="spectekhnika-oplata-i-dostavka"], .spectekhnika-about-factory_today
 			right: 30px
 			bottom: 40px
 
-@media (max-width: 1300px)
+// @media (max-width: 1300px)
 	
-	body[class*="spectekhnika-oplata-i-dostavka"], .spectekhnika-about-factory_today, body[class*="spectekhnika-about-"]
-		.standart-page
-			margin-top: -68px
+// 	body[class*="spectekhnika-oplata-i-dostavka"], 
+// 	.spectekhnika-about-factory_today, 
+// 	body[class*="spectekhnika-about-"],
+// 	body[class*="promyshlennye-parogeneratory-"],
+// 	body[class*="spectekhnika-oplata-"]
+// 		.standart-page
+// 			margin-top: -68px
 
 @media (max-width: 1279px)
 	
-	body[class*="spectekhnika-oplata-i-dostavka"], .spectekhnika-about-factory_today, body[class*="spectekhnika-about-"]
-		.standart-page
-			margin-top: -48px
+	// body[class*="spectekhnika-oplata-i-dostavka"], 
+	// .spectekhnika-about-factory_today, 
+	// body[class*="spectekhnika-about-"],
+	// body[class*="promyshlennye-parogeneratory-"],
+	// body[class*="spectekhnika-oplata-"]
+	// 	.standart-page
+	// 		margin-top: -48px
 
 	.slider-banner__arrow .swiper-pagination
 		margin-bottom: 10px
