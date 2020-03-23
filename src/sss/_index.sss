@@ -27,6 +27,7 @@
 			width: 100%
 			object-fit: cover
 			object-position: center
+			min-height: 100vh
 
 
 	#content
@@ -304,9 +305,12 @@
 
 
 @media (max-width: 670px)
-	.index #content:before
-		background: var(--main-color)
-		opacity: .7
+	.index 
+		#content
+			&:before
+				background: var(--main-color)
+				opacity: .9
+				z-index: 10
 	
 	.index 
 		.head .city, .head-lang
