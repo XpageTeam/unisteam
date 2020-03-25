@@ -256,6 +256,67 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
+
+document.addEventListener("DOMContentLoaded", function(){
+
+	const blogListSlider = document.querySelector('.blog__list .swiper-list');
+	
+	if (!blogListSlider)
+		return
+
+
+	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
+
+		const {Swiper, Navigation, Pagination, Autoplay, Lazy} = Module;
+
+		Swiper.use([Navigation, Pagination, Autoplay, Lazy]);
+
+		
+		var slider = new Swiper(blogListSlider, {
+			slidesPerView: 3,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
+			autoplay: {
+			    delay: 3000,
+			},
+      		spaceBetween: 40,
+      		roundLengths: true,
+			// loop: true,
+			navigation: {
+		        nextEl: '.blog__list .swiper-button-next',
+		        prevEl: '.blog__list .swiper-button-prev',
+		    },
+		    pagination: {
+		        el: '.blog__list .swiper-pagination',
+		        type: 'bullets',
+		        clickable: true,
+		        dynamicBullets: true,
+		        dynamicMainBullets: 2,
+		    },
+		    breakpoints: {
+			    // when window width is >= 320px
+			    1000: {
+			      slidesPerView: 2,
+			      spaceBetween: 20
+			    },
+			    670: {
+			      slidesPerView: 2,
+			      spaceBetween: 20
+			    },
+			    480: {
+			      slidesPerView: 1,
+			      spaceBetween: 20
+			    },
+			    // when window width is >= 480px
+		  	}
+		});
+
+	})
+})
+
+
 document.addEventListener("DOMContentLoaded", function(){
 
 	const reviewSlider = document.querySelector('.review .swiper-list');

@@ -43,7 +43,38 @@
 		&:last-child
 			margin-bottom: -100px
 
+.bx-ie
+	.blog
+		.swiper-button
+			background-image: url('../img/ico-arrow-button--w.svg')
 .blog
+
+	&--slider
+		max-width: 100% !important
+
+	.swiper-button
+		filter: invert(1)
+
+	.swiper
+		&-list
+			padding: 40px
+			margin: 0 -42px
+
+		&-slide
+			display: flex
+			height: auto
+
+	.swiper-pagination
+		position: static
+		display: flex
+		justify-content: center
+		margin-top: 75px
+
+		&-bullet
+			border-color: #fff
+
+			&-active
+				background-color: #fff
 
 	&-cont
 		padding: 100px 0
@@ -71,15 +102,17 @@
 
 
 	&__list
-		display: flex
-		margin: 0 0 -30px -30px
+		position: relative
+		// display: flex
+		// margin: 0 0 -30px -30px
 
 	&__item
 		display: flex
 		flex-direction: column
-		width: calc((100% - 30px * 3) / 3)
-		margin: 0 0 30px 30px
+		// width: calc((100% - 30px * 3) / 3)
+		// margin: 0 0 30px 30px
 		background-color: #fff
+		width: 100%
 
 		&:hover
 			.blog__item-link 
