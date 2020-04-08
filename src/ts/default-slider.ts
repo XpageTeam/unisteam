@@ -53,7 +53,7 @@ window.defaultSlideInit = async (slider: HTMLElement) => {
         on: {
             init(){
                 sameHeights(slider, ".item__title")
-                sameHeights(slider, ".item__img")
+                // sameHeights(slider, ".item__img")
             }
         }
     });
