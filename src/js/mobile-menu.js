@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			var link = $this.find('.main-nav__link.js__parent-link').clone();
 
 			$this.find('.main-nav__submenu-list').prepend(link);
-			$this.find('.main-nav__submenu-list').prepend('<div class="js__back">Назад</div>');
+			$this.find('.main-nav__submenu-list').prepend('<li class="js__back">Назад</li>');
 
 		})
 
