@@ -1,6 +1,6 @@
 import $ from "jquery"
 import is from "is_js"
-import Cookies from "js-cookie"
+// import Cookies from "js-cookie"
 
 import "./mobile-menu.js"
 import "./stage.js"
@@ -44,9 +44,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", function(){
 
 	const partnersSlider = document.querySelector('.partners .swiper-list');
@@ -83,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		        clickable: true,
 		    },
 		   breakpoints: {
-		    // when window width is >= 320px
 		    1200: {
 		      slidesPerView: 4,
 		      spaceBetween: 40

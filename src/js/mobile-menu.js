@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		$('.main-nav__item').each(function(i, el){
 			let $this = $(el);
 
+			$this.addClass('1');
+			
 			$this.find('.main-nav__submenu').siblings('a').addClass('js__parent-link');
 			var link = $this.find('.main-nav__link.js__parent-link').clone();
 
@@ -42,9 +44,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	$('.js__back').click(function(){
 		var $this = $(this);
-
 		$this.closest('.has__submenu').find('.js__submenu--open').removeClass('js__submenu--open');
-
 	})
 
 	$('.mobile-menu .main-nav__item.has__submenu > a').removeAttr("href");
