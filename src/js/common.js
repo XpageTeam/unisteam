@@ -367,9 +367,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, EffectFade, Thumbs} = Module;
+		const {Swiper, Navigation, EffectFade, Thumbs, Lazy} = Module;
 
-		Swiper.use([Navigation, EffectFade, Thumbs]);
+		Swiper.use([Navigation, EffectFade, Thumbs, Lazy]);
 
 		let thumbsSlider = document.querySelector('.card__media-bot .swiper-list'),
 			cardSliderThumbs;
@@ -380,6 +380,7 @@ document.addEventListener("DOMContentLoaded", function(){
 				spaceBetween: 20,
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
+				lazy: true,
 				
 			});
 	
@@ -398,6 +399,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			thumbs: {
 				swiper: cardSliderThumbs
 			},
+			lazy: true,
 			breakpoints: {
 
 			    670: {
