@@ -388,6 +388,8 @@
 						.status-2
 							grid-area: status-2
 
+						
+
 						&-price
 							grid-area: price
 
@@ -421,6 +423,24 @@
 	// 		+ .catalog__item-status 
 	// 			grid-row: span 2 !important
 
+.strong
+	text-align: center
+	margin-bottom: 5px
+	color: var(--second-color)
+
+	&:before
+		content: '!'
+		size: 16px
+		left: 0
+		top: 2px
+		display: inline-block
+		border: 1px solid var(--second-color)
+		border-radius: 50%
+		line-height: 15px
+		text-align: center
+		margin-right: 10px
+		font-size: rem(12)
+		color: var(--second-color)
 
 .status
 	&-1
@@ -578,6 +598,9 @@
 		// 	grid-row: none
 
 @media (max-width: 667px)
+
+	.strong
+		text-align: left
 
 	.catalog-sort
 		margin-bottom: 0
