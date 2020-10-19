@@ -77,36 +77,155 @@ html(lang="ru")
 						.tabs__content.active(data-id="1")
 							.tabs__title Характеристики
 							.tabs__content-content
-								.table
-									.tbody
-										.tr
-											.td Модификация товара
-											.td Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73
-										.tr
-											.td Шасси
-											.td Камаз
-										.tr
-											.td Двигатель
-											.td Камаз 740.53-400
-										.tr
-											.td Мощность двигателя, л.с.
-											.td 400
-										.tr
-											.td КПП
-											.td ZF16
-										.tr
-											.td Колесная формула
-											.td 8х4
-										.tr
-											.td Класс экологичности
-											.td Евро-4
+								.accordion
+									.accordion__item
+										.accordion__title.active Технические характеристики / комплектация ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
+										.accordion__body
+											.table
+												.tbody
+													.tr
+														.td
+															.tr
+																.td Нагреваемая среда
+																.td вода
+														.td
+															.tr
+																.td Давление топлива, Мпа, не более
+																.td 1,47
 
-										.tr
-											.td Объем миксера, куб.м.
-											.td 10
-										.tr
-											.td Привод
-											.td Привод от автономного двигателя
+													.tr
+														.td
+															.tr
+																.td Насос (водяной?)
+																.td HIKARIMAI EFG2821 / 1,1 ПТ25Д1М2 / 2,3 ПТ25Д1М2 / MAZONNI
+														.td
+															.tr
+																.td Время, необходимое для получения пара с момента запуска установки, мин, не более
+																.td 10
+
+													.tr
+														.td
+															.tr
+																.td Топливный насос
+																.td НШ-10
+														.td
+															.tr
+																.td Привод механизмов спецоборудования
+																.td от силовой установки шасси
+
+													.tr
+														.td
+															.tr
+																.td Вентилятор
+																.td ВД-4
+														.td
+															.tr
+																.td Уровень звука в кабине водителя во время работы установки, Дба, не более
+																.td 80
+
+													.tr
+														.td
+															.tr
+																.td Привод воздушной заслонки
+																.td электропривод
+														.td
+															.tr
+																.td Форсунка розжига 1,0 гал/ч, шт
+																.td 1
+
+									.accordion__item
+										.accordion__title Характеристики котла
+										.accordion__body
+											table
+												thead
+													tr
+														td Производительность с учетом работы установки в соответствии с выбранным режимом
+														td Режим 1
+														td Режим 2
+												tbody
+													tr
+														td Производительность котла, кг/ч
+														td 1600 +/- 10%
+														td 1600 +/- 10%
+													tr
+														td Давление пара, Мпа (кгс/см²), не более
+														td 0,59
+														td 9,81
+													tr
+														td Температура пара, ⁰С, не более
+														td 165
+														td 310
+													tr
+														td Расход топлива паровым котлом кг/ч, не более
+														td 35
+														td 110
+
+									.accordion__item
+										.accordion__title Сравнительные характеристики насосов
+										.accordion__body
+											.compare-block
+												.compare-block__parameters
+													.compare-block__parameter Производительность, м³/ч
+													.compare-block__parameter Давление, Мпа
+													.compare-block__parameter Температура питательной воды, max, ⁰С
+													.compare-block__parameter Потребляемая мощность, кВт
+													.compare-block__parameter Обороты вала насоса, max, об/мин
+													.compare-block__parameter Оъем заливаемого масла, л.
+													.compare-block__parameter Размер<br> (длина*ширина*высота), см
+													.compare-block__parameter Вес, кг
+												.compare-block__list
+													- for (var x = 0; x < 4; x++)
+														.compare-block__item
+															.compare-card
+																.compare-card__img
+																	a.fancybox(href="img/photos/compare.jpg")
+																		img(src="img/photos/compare.jpg" loading="lazy")
+																.compare-card__name 1,1 ПТ25Д1М2
+																.compare-card__parameters
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Производительность, м³/ч
+																		|2,2
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Давление, Мпа
+																		|11
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Температура питательной воды, max, ⁰С
+																		|до 100
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Потребляемая мощность, кВт
+																		|не более 10
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Обороты вала насоса, max, об/мин
+																		|730
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Оъем заливаемого масла, л.
+																		|2
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Размер (длина*ширина*высота), см
+																		|617х392х320
+																	.compare-card__parameter 
+																		.compare-card__parameter-label Вес, кг
+																		|87
+
+									.accordion__item
+										.accordion__title Пакет предоставляемой документации
+										.accordion__body
+											p
+												|Паспорт на котел паровой
+											p
+												|Сертификат соответствия техническому регламенту Таможенного союза ТР ТС 032/2013 «О безопасности оборудования, работающего под избыточным давлением» 
+											p
+												|Сертификат соответствия техническому регламенту Таможенного союза ТР ТС 010/2011 «О безопасности машин и оборудования»,  ТР ТС 004/2011 "О безопасности низковольтного оборудования", ТР ТС 020/2011 "Электромагнитная совместимость технических средств" утвержденному Решением Комиссии Таможенного союза от 01.03.2016г. №0365925
+											p
+												|Руководство по эксплуатации на парогенераторную установку											
+											p
+												|Паспорт передвижной парогенераторной установки
+											p
+												|Прочностной расчет котловой трубы
+											p
+												|Прочностной расчет паровика
+											p
+												|Расчет пропускной способности клапанов предохранительных
 
 						.tabs__content(data-id="2")
 							.tabs__title Схема
