@@ -7,8 +7,23 @@ html(lang="ru")
 		include inc/css.pug
 	body.inner.loading
 		include inc/header.pug
-		include mixins/title-block.pug
-		+titleBLock(["Главная",  "Каталог продукции", "Каталог автомобилей", "Дорожно-строительная техника", "Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73"])
+		.title-block
+			.wrapper
+				.title-block__crumbs
+					ul.bread-crumbs
+						li.bread-crumbs__link
+							a(href="#" title="Главная")
+								span Главная
+						li.bread-crumbs__link
+							a(href="#" title="Каталог продукции")
+								span Каталог продукции
+						li.bread-crumbs__link
+							a(href="#" title="Каталог автомобилей")
+								span Каталог автомобилей
+						li.bread-crumbs__link
+							a(href="#" title="Дорожно-строительная техника")
+								span Дорожно-строительная техника
+						li.bread-crumbs__this ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
 		main#content
 			.wrapper
 				.card
@@ -27,7 +42,11 @@ html(lang="ru")
 											img(src="img/photos/card-1.jpg", alt="")
 										.swiper-slide
 											img(src="img/photos/card-1.jpg", alt="")
-								.swiper-pagination
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+								.swiper-counter
 							.card__media-bot
 								.swiper-button.swiper-button-prev
 								.swiper-button.swiper-button-next
@@ -41,28 +60,55 @@ html(lang="ru")
 											img(src="img/photos/card-1.jpg", alt="")
 										.swiper-slide
 											img(src="img/photos/card-1.jpg", alt="")
-								.swiper-pagination
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+
 							.card__media-video
 								a(href="#") Смотреть видеообзор
 
 						.card__info
-							.card__info-price
-								.card__info-status.status-1 Доступно к заказу
-								.card-price Цена:
-									span 4 810 000 руб.
-							.card__info-rating
-								.rating
-									span Оценка 4 из 5
-									include inc/rating.pug
-								.rating__info Проголосовало 27 человек
-							.card__info-btn
-								a(href="#").btn.btn--cart Купить
-								a(href="#").btn.btn--lizing Купить в лизинг
-							.card__info-count Этот товар сейчас просматривают 17 человек
-							.card__info-file
-								a(href="#").ico-pdf Скачать PDF
-								a(href="#").ico-print Распечатать
-								a(href="#").ico-tz Скачать ТЗ
+							.title-block__title
+								h1 ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
+							.card__info-top
+								.card__info-info
+									.card-price 
+										span 4 810 000 руб.
+									.card-sticker
+										.sticker.sticker-sale Акция
+									.card__info-rating
+										.rating
+											span Оценка 4 из 5
+											.rating
+												.rating__list
+													input(type="radio" value="" id="90" name="star").rating__radio
+													label(for="90").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="91" name="star").rating__radio
+													label(for="91").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="92" name="star").rating__radio
+													label(for="92").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="93" name="star").rating__radio
+													label(for="93").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="94" name="star").rating__radio
+													label(for="94").rating__label
+														include ../img/ico-rating.svg
+										.rating__info Проголосовало 27 человек
+									.card__info-status.status-1 Доступно к заказу
+								.card__info-btn
+									a(href="#").btn.btn--cart Купить
+									a(href="#").btn.btn--lizing Купить в лизинг
+							.card__info-bottom
+								.card__info-count Этот товар сейчас просматривают 17 человек
+								.card__info-file
+									a(href="#").ico-print Распечатать
+									a(href="#").ico-pdf Скачать PDF
+									a(href="#").ico-tz Скачать руководство по эксплуатации
+									a(href="#").ico-share Поделиться
 
 					.card__tabs.tabs
 						.tabs__top
@@ -81,7 +127,7 @@ html(lang="ru")
 									.accordion__item
 										.accordion__title.active Технические характеристики / комплектация ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
 										.accordion__body
-											.table
+											.table-new
 												.tbody
 													.tr
 														.td
@@ -251,14 +297,7 @@ html(lang="ru")
 
 					include inc/default-slider.pug
 
-
-
-
-
-
-
-
-
+					include inc/default-slider-2.pug
 
 
 

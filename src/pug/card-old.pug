@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Старая карточка товара
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["Главная",  "Каталог продукции", "Каталог автомобилей", "Дорожно-строительная техника", "Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73"])
+		main#content
+			.wrapper
+				.card
+					.card__media-cont
+						.card__media
+							.card__media-top
+								.swiper-button.swiper-button-prev
+								.swiper-button.swiper-button-next
+								.swiper-list
+									.swiper-wrapper
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+								.swiper-pagination
+							.card__media-bot
+								.swiper-button.swiper-button-prev
+								.swiper-button.swiper-button-next
+								.swiper-list
+									.swiper-wrapper
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+										.swiper-slide
+											img(src="img/photos/card-1.jpg", alt="")
+								.swiper-pagination
+							.card__media-video
+								a(href="#") Смотреть видеообзор
+
+						.card__info
+							.card__info-price
+								.card__info-status.status-1 Доступно к заказу
+								.card-price Цена:
+									span 4 810 000 руб.
+							.card__info-rating
+								.rating
+									span Оценка 4 из 5
+									include inc/rating.pug
+								.rating__info Проголосовало 27 человек
+							.card__info-btn
+								a(href="#").btn.btn--cart Купить
+								a(href="#").btn.btn--lizing Купить в лизинг
+							.card__info-count Этот товар сейчас просматривают 17 человек
+							.card__info-file
+								a(href="#").ico-pdf Скачать PDF
+								a(href="#").ico-print Распечатать
+								a(href="#").ico-tz Скачать ТЗ
+
+					.card__tabs.tabs
+						.tabs__top
+							.tabs__tab.active(data-id="1") Характеристики
+							.tabs__tab(data-id="2") Схема
+							.tabs__tab(data-id="3") Доработки
+							.tabs__tab(data-id="4") Отзывы
+							.tabs__tab(data-id="5") Видео
+							.tabs__tab(data-id="6") Вопрос-ответ
+							.tabs__tab(data-id="7") Руководство по эксплуатации
+							.tabs__tab(data-id="8") Доставка
+						.tabs__content.active(data-id="1")
+							.tabs__title Характеристики
+							.tabs__content-content
+								.table
+									.tbody
+										.tr
+											.td Модификация товара
+											.td Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73
+										.tr
+											.td Шасси
+											.td Камаз
+										.tr
+											.td Двигатель
+											.td Камаз 740.53-400
+										.tr
+											.td Мощность двигателя, л.с.
+											.td 400
+										.tr
+											.td КПП
+											.td ZF16
+										.tr
+											.td Колесная формула
+											.td 8х4
+										.tr
+											.td Класс экологичности
+											.td Евро-4
+
+										.tr
+											.td Объем миксера, куб.м.
+											.td 10
+										.tr
+											.td Привод
+											.td Привод от автономного двигателя
+
+						.tabs__content(data-id="2")
+							.tabs__title Схема
+							.tabs__content-content
+						.tabs__content(data-id="3")
+							.tabs__title Доработки
+							.tabs__content-content
+						.tabs__content(data-id="4")
+							.tabs__title Отзывы
+							.tabs__content-content
+						.tabs__content(data-id="5")
+							.tabs__title Видео
+							.tabs__content-content
+						.tabs__content(data-id="6")
+							.tabs__title Вопрос-ответ
+							.tabs__content-content
+						.tabs__content(data-id="7")
+							.tabs__title Руководство по эксплуатации
+							.tabs__content-content
+						.tabs__content(data-id="8")
+							.tabs__title Доставка
+							.tabs__content-content
+
+					include inc/default-slider.pug
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

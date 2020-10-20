@@ -363,26 +363,25 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, EffectFade, Thumbs, Lazy} = Module;
+		const {Swiper, Navigation, EffectFade, Pagination, Thumbs, Lazy} = Module;
 
-		Swiper.use([Navigation, EffectFade, Thumbs, Lazy]);
+		Swiper.use([Navigation, EffectFade, Pagination, Thumbs, Lazy]);
 
 		let thumbsSlider = document.querySelector('.card__media-bot .swiper-list'),
+			mainCardSliderSwiper,
 			cardSliderThumbs;
 
 		if (thumbsSlider)
 			cardSliderThumbs = new Swiper(thumbsSlider, {
-				slidesPerView: 3,
+				slidesPerView: 4,
 				spaceBetween: 20,
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
 				lazy: true,
-				
+	
 			});
 	
-	
-	
-		new Swiper(mainCardSlider, {
+			mainCardSliderSwiper = new Swiper(mainCardSlider, {
 			effect: "fade",
 			
 			fadeEffect: {
@@ -402,13 +401,57 @@ document.addEventListener("DOMContentLoaded", function(){
 					autoHeight: true,
 			    	
 			    },
-			}
+			},
 			  
 		});
+
+
 	});
+
+	document.querySelectorAll('.accordion__title').forEach((docsTop, docsIndex) => {
+		
+
+		if(document.querySelector('.accordion__title'))
+			if(docsIndex === 0) {
+				docsTop.classList.add('active');
+				showText(docsTop.nextElementSibling)
+				docsTop.nextElementSibling.style.height="auto"
+
+			
+			}
+
+		docsTop.addEventListener("click", () => {
+		
+			if(docsTop.classList.contains('active')){
+				docsTop.classList.remove('active');
+				hideAll();
+			} else {
+				hideAll();
+				docsTop.classList.add('active');
+				showText(docsTop.nextElementSibling)
+			}
+
+		})
+	})
 
 })
 
+function hideAll() {
+	let docsElTop = document.querySelectorAll('.accordion__title'),
+		docsElBot = document.querySelectorAll('.accordion__body');
+
+	for (var i = 0; i < docsElTop.length; i++) {
+		docsElTop[i].classList.remove('active');
+	}
+
+	for (var i = 0; i < docsElBot.length; i++) {
+		docsElBot[i].style.height = '0';
+	}
+}
+
+function showText(textEl) {
+	textEl.style.height = textEl.scrollHeight + 'px';
+}
 
 	
 document.addEventListener("DOMContentLoaded", function(){
