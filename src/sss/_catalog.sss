@@ -163,7 +163,6 @@
 
 
 	&__item
-	
 
 		&:hover
 			.catalog__item-title
@@ -316,12 +315,18 @@
 
 @supports (display: grid)
 
-
-	
 	.catalog
 		display: grid
 		grid-template-columns: 300px 1fr
 		grid-template-areas: "filter sort" "filter cataloglist" "filter paginator"
+
+		&-width100
+			display: block
+
+			.catalog__list.js__view-plates
+				grid-template-columns: repeat(4,1fr)
+				grid-gap: 40px
+				gap: 40px
 
 		.paginator__cont
 			grid-area: paginator

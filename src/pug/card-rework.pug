@@ -2,7 +2,7 @@
 html(lang="ru")
 	head
 		meta(charset="utf-8")
-		title Карточка товара
+		title Карточка товара - доработки
 		include inc/head.pug
 		include inc/css.pug
 	body.inner.loading
@@ -29,40 +29,6 @@ html(lang="ru")
 				.card
 					.card__media-cont
 						.card__media
-							.mobile
-								.title-block__title
-									h1 ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
-								.card__info-top
-									.card__info-info
-										.card-price 
-											span 4 810 000 руб.
-										.card-sticker
-											.sticker.sticker-sale Акция
-										.card__info-rating
-											.rating
-												span Оценка 4 из 5
-												.rating
-													.rating__list
-														input(type="radio" value="" id="90" name="star").rating__radio
-														label(for="90").rating__label
-															include ../img/ico-rating.svg
-														input(type="radio" value="" id="91" name="star").rating__radio
-														label(for="91").rating__label
-															include ../img/ico-rating.svg
-														input(type="radio" value="" id="92" name="star").rating__radio
-														label(for="92").rating__label
-															include ../img/ico-rating.svg
-														input(type="radio" value="" id="93" name="star").rating__radio
-														label(for="93").rating__label
-															include ../img/ico-rating.svg
-														input(type="radio" value="" id="94" name="star").rating__radio
-														label(for="94").rating__label
-															include ../img/ico-rating.svg
-											.rating__info Проголосовало 27 человек
-										.card__info-status.status-1 Доступно к заказу
-									.card__info-btn
-										a(href="#").btn.btn--cart Купить
-										a(href="#").btn.btn--lizing Купить в лизинг
 							.card__media-top
 								.swiper-button.swiper-button-prev
 								.swiper-button.swiper-button-next
@@ -146,15 +112,15 @@ html(lang="ru")
 
 					.card__tabs.tabs
 						.tabs__top
-							.tabs__tab.active(data-id="1") Характеристики
+							.tabs__tab(data-id="1") Характеристики
 							.tabs__tab(data-id="2") Схема
-							.tabs__tab(data-id="3") Доработки
+							.tabs__tab.active(data-id="3") Доработки
 							.tabs__tab(data-id="4") Отзывы
 							.tabs__tab(data-id="5") Видео
 							.tabs__tab(data-id="6") Вопрос-ответ
 							.tabs__tab(data-id="7") Руководство по эксплуатации
 							.tabs__tab(data-id="8") Доставка
-						.tabs__content.active(data-id="1")
+						.tabs__content(data-id="1")
 							.tabs__title Характеристики
 							.tabs__content-content
 								.accordion
@@ -233,6 +199,7 @@ html(lang="ru")
 															.tr
 																.td Расположение котла
 																.td заднее
+
 														.td
 															.tr
 																.td 
@@ -241,12 +208,8 @@ html(lang="ru")
 												thead
 													tr
 														td Производительность с учетом работы установки в соответствии с выбранным режимом
-														td 
-															.info Режим 1
-																.tooltip Производительность с учетом работы установки в соответствии с выбранным режимом 1
-														td 
-															.info Режим 2
-																.tooltip Производительность с учетом работы установки в соответствии с выбранным режимом 2
+														td Режим 1
+														td Режим 2
 												tbody
 													tr
 														td Производительность котла, кг/ч
@@ -335,9 +298,33 @@ html(lang="ru")
 						.tabs__content(data-id="2")
 							.tabs__title Схема
 							.tabs__content-content
-						.tabs__content(data-id="3")
+						.tabs__content.active(data-id="3")
 							.tabs__title Доработки
 							.tabs__content-content
+								.accordion
+									.accordion__item
+										.accordion__title Установка дополнительного оборудования
+										.accordion__body
+											.rework__list
+												each rework, i in ['Гидроборты', 'Коробки отбора мощности (КОМ)', 'Лебедки от КОМ', 'Станки и другое необходимое оборудование', 'Дополнительные двери и окна', 'Установка дополнительного топливного бака', 'Кондиционер кабины шасси', 'Освещение и сигнализация', 'Информационно-навигационное оборудование', 'Видеорегистраторы, рации, магнитолы', 'Оборудование кабины шасси спальным местом', 'Третий режим работы ППУА с функцией мойки высокого давления']
+													.rework__item=rework
+
+									.accordion__item
+										.accordion__title Подготовка к работе на севере
+										.accordion__body
+											.rework__list
+												each rework, i in ['Утепление кабины и фургона', 'Установка автономного отопителя предпускового подогрева в кабину и фургон', 'Утепление топливопроводов', 'Установка обогрева АКБ', 'Электроподогрев двигателя от внешнего источника', 'Утеплитель капотного отсека', 'Установка подогреваемого топливозаборника', 'Установка подогреваемого топливозаборника', 'Подогрев аккумуляторного отсека от системы охлаждения двигателя', 'Подогрев ФГОТ и ФТОТ', 'Зеркала с электроподогревом']
+													.rework__item=rework
+
+									.accordion__item
+										.accordion__title Оформление фургона (кунга)
+										.accordion__body
+											.rework__list
+												each rework, i in ['Изменение цветов полимерного покрытия', 'Брендирование', 'Изменение наружной / внутренней обшивки, напольного покрытия', 'Окрас фургона (кунга) и кабины в любой цвет по таблице цветов RA']
+													.rework__item=rework
+
+								a.btn.btn-2(href="#") Полный список доработок
+
 						.tabs__content(data-id="4")
 							.tabs__title Отзывы
 							.tabs__content-content
@@ -357,33 +344,6 @@ html(lang="ru")
 					include inc/default-slider.pug
 
 					include inc/default-slider-2.pug
-
-					.card__sticky
-						.advantages__list
-							.advantages__item
-								a.advantages-card(href="#")
-									.advantages-card__title 
-										span Преимущества ППУА UNISTEAM
-									.advantages-card__img
-										img(src="img/photos/advantages-1.jpg" loading="lazy")
-							.advantages__item
-								a.advantages-card(href="#")
-									.advantages-card__title 
-										span Купить навеску отдельно
-									.advantages-card__img
-										img(src="img/photos/advantages-2.jpg" loading="lazy")
-							.advantages__item
-								a.advantages-card(href="#")
-									.advantages-card__title 
-										span Преимущества заднего расположения котла
-									.advantages-card__img
-										img(src="img/photos/advantages-3.jpg" loading="lazy")
-							.advantages__item
-								a.advantages-card(href="#")
-									.advantages-card__title 
-										span Отдельный отсек
-									.advantages-card__img
-										img(src="img/photos/advantages-4.jpg" loading="lazy")
 
 
 

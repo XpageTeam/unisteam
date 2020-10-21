@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог 6
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["Главная",  "Каталог продукции", "Каталог автомобилей", "Дорожно-строительная техника", "Автобетоносмесители"])
+		main#content
+			.wrapper
+				.catalog.catalog-width100
+					.catalog-sort
+						.sort
+							.sort__select.sort__select--category
+								select.sort__select-select
+									option(value="1") Автотопливозаправщики атз
+									option(value="12") Автоцистерны для нефтепродуктов ац
+									option(value="13") Автоцистерны для питьевой воды ацпт
+
+							.sort__select
+								label.sort__select-label Сортировать:
+								select.sort__select-select
+									option(value="1") по возростанию цены
+									option(value="12") популярности
+									option(value="13") популярности
+									option популярности
+
+							.sort__select.sort__select--count
+								label.sort__select-label Выводить по: 
+								select.sort__select-select
+									option(value="2") 12
+									option(value="22") 20
+									option(value="23") 30
+									option(value="24") 40
+									option(value="25") 50
+							.sort__view
+								.mobile-filter
+									.smart-filter
+								.view
+									.view-item.view-list(data-id="view-list")
+									.view-item.view-plates.active(data-id="view-plates")
+							.sort__filter
+								.filter-btn Фильтр
+
+					.catalog__list.js__view-plates
+						.catalog__item
+							a(href="#").catalog__item-img
+								img(src="img/photos/catalog-2-1.jpg", alt="")
+							a(href="#").catalog__item-title Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73
+							
+							.catalog__item-status.status-2 Цену уточняйте у менеджера
+							.catalog__item-status.status-1 Доступно к заказу
+							.catalog__item-status.status-sale Акция
+							.catalog__item-btn
+								.btn.btn--cart Купить
+							.catalog__item-info-wrap
+								.catalog__item-info
+									.catalog__item-row
+										span Номенклатурный номер: 
+										| 10_03_02 
+									.catalog__item-row
+										span Шасси: 
+										| Камаз 
+									.catalog__item-row
+										span Двигатель: 
+										| Камаз 740.53-400 
+									.catalog__item-row
+										span Мощность двигателя, л.с.: 
+										| 400 
+
+								.catalog__item-more 
+									span Подробнее
+
+						- for (var i = 1; i < 10; i++)
+
+							.catalog__item
+								a(href="#").catalog__item-img
+									img(src="img/photos/catalog-2-1.jpg", alt="")
+								a(href="#").catalog__item-title Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73
+								.catalog__item-price 
+									span 4 810 000 руб.
+								.catalog__item-status.status-1 Доступно к заказу
+								.catalog__item-status.status-sale Акция
+								.catalog__item-btn
+									.btn.btn--cart Купить
+								.catalog__item-info-wrap
+									.catalog__item-info
+										.catalog__item-row
+											span Номенклатурный номер: 
+											| 10_03_02 
+										.catalog__item-row
+											span Шасси: 
+											| Камаз 
+										.catalog__item-row
+											span Двигатель: 
+											| Камаз 740.53-400 
+										.catalog__item-row
+											span Мощность двигателя, л.с.: 
+											| 400 
+										.catalog__item-row
+											span КПП: 
+											| ZF16
+										.catalog__item-row
+											span Колесная формула: 
+											| 8х4 
+										.catalog__item-row
+											span Класс экологичности: 
+											| Евро-4 
+										.catalog__item-row
+											span Спальное место: 
+											| возможна дополнительная комплектация 
+										.catalog__item-row
+											span Объем миксера, куб.м.: 
+											| 10 
+										.catalog__item-row
+											span Привод: 
+											| Привод от автномного двигателя
+										.catalog__item-row
+											span Номенклатурный номер: 
+											| 10_03_02 
+										.catalog__item-row
+											span Шасси: 
+											| Камаз 
+										.catalog__item-row
+											span Двигатель: 
+											| Камаз 740.53-400 
+										.catalog__item-row
+											span Мощность двигателя, л.с.: 
+											| 400 
+										.catalog__item-row
+											span КПП: 
+											| ZF16
+										.catalog__item-row
+											span Колесная формула: 
+											| 8х4 
+										.catalog__item-row
+											span Класс экологичности: 
+											| Евро-4 
+										.catalog__item-row
+											span Спальное место: 
+											| возможна дополнительная комплектация 
+										.catalog__item-row
+											span Объем миксера, куб.м.: 
+											| 10 
+										.catalog__item-row
+											span Привод: 
+											| Привод от автномного двигателя
+										.catalog__item-row
+											span Номенклатурный номер: 
+											| 10_03_02 
+										.catalog__item-row
+											span Шасси: 
+											| Камаз 
+										.catalog__item-row
+											span Двигатель: 
+											| Камаз 740.53-400 
+										.catalog__item-row
+											span Мощность двигателя, л.с.: 
+											| 400 
+										.catalog__item-row
+											span КПП: 
+											| ZF16
+										.catalog__item-row
+											span Колесная формула: 
+											| 8х4 
+										.catalog__item-row
+											span Класс экологичности: 
+											| Евро-4 
+										.catalog__item-row
+											span Спальное место: 
+											| возможна дополнительная комплектация 
+										.catalog__item-row
+											span Объем миксера, куб.м.: 
+											| 10 
+										.catalog__item-row
+											span Привод: 
+											| Привод от автномного двигателя
+
+									.catalog__item-more 
+										span Подробнее
+
+
+
+					include inc/paginator.pug
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

@@ -1,0 +1,204 @@
+.catalog
+	&__item
+		padding: 20px 20px 160px
+		position: relative
+		border-radius: 5px
+		background: #fff
+		border: 1px solid var(--border-color)
+		transition: border-color .3s ease, box-shadow .3s ease
+		display: flex
+		flex-direction: column
+
+		&:hover
+			border-color: #fff
+			box-shadow: 2px 6px 36px rgba(0, 0, 0, 0.08)
+
+			.catalog__item-title
+				color: var(--body-text-color)
+	
+		&-img
+			border-radius: 5px
+			overflow: hidden
+
+		&-title
+			line-height: 1.4
+			font-weight: 600
+			margin-bottom: 0
+
+			& + .catalog__item-status
+				margin-top: 10px
+
+		&-status
+			margin-bottom: 10px
+
+			& + .catalog__item-status
+				margin-top: -10px
+
+		&-price
+			padding: 20px
+			line-height: 1
+			margin-left: -20px
+			margin-right: -20px
+			background: #fafafa
+			margin-top: 5px
+			margin-bottom: 5px
+
+			span
+				color: var(--thrid-color)
+				font-size: 20px
+				font-weight: 600
+				white-space: nowrap
+
+		&-btn
+			margin-top: auto
+
+		&-info
+			margin-top: 25px
+
+		&-info-wrap
+			position: absolute
+			top: calc(100% - 160px)
+			left: -1px
+			right: -1px
+			z-index: 5
+			background: #fff
+			padding: 0 20px 20px
+			border-radius: 0 0 5px 5px
+			border: 1px solid var(--border-color)
+			border-top: 0
+			transition: border-color .3s ease
+			overflow: hidden
+
+			&.js__fade
+				height: 161px
+				overflow: hidden
+
+			&:not(.js__fade)
+				.catalog__item-info
+					max-height: 300px
+					overflow: auto
+					scrollbar-color: var(--thrid-color) #fafafa
+					scrollbar-width: thin
+					margin-bottom: 40px
+
+					&::-webkit-scrollbar
+						width: 3px
+						height: 3px
+						background-color: #fafafa
+
+					&::-webkit-scrollbar-thumb
+						background-color: var(--thrid-color) 
+						border-radius: 3px
+						box-shadow: none
+
+				.catalog__item-more
+					span
+						&::after
+							transform: rotate(180deg)
+							top: -2px
+
+		&-more
+			position: absolute
+			left: 20px
+			right: 20px
+			bottom: 20px
+			padding: 20px 0 0
+			font-weight: 600
+			color: var(--thrid-color)
+
+			span
+				cursor: pointer
+				position: relative
+				z-index: 1
+
+				&::after
+					content: ''
+					display: inline-block
+					position: relative
+					top: -1px
+					margin-left: 10px
+					width: 8px
+					height: 5px
+					background: url('../img/ico-select-blue.svg') no-repeat center
+					background-size: contain
+
+			&::before
+				content: ''
+				position: absolute
+				top: -40px
+				left: -20px
+				right: -20px
+				bottom: -20px
+				display: block
+				background: linear-gradient(0deg, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%)
+
+.catalog
+	&__item:hover
+		.catalog__item-info-wrap
+			border-color: #fff
+
+.catalog__list:not(.js__view-plates) 
+	.catalog__item-info-wrap
+		grid-area: info
+		max-width: 600px
+		margin: 0
+		position: relative
+		border: 0
+		padding: 0
+		top: 0
+		left: 0
+		right: 0
+
+		.catalog__item-info
+			margin-top: 10px
+			margin-bottom: 0
+
+		&.js__fade
+			height: auto
+		
+		&:not(.js__fade) 
+			.catalog__item-info
+				max-height: inherit
+
+		.catalog__item-more
+			display: none
+
+	.catalog__item
+		max-width: 1000px
+		width: 100%
+		padding-bottom: 20px
+		grid-gap: 10px 30px
+
+		&:not(:last-child)
+			margin-bottom: 40px
+
+		.status-1,
+		.status-2
+			grid-area: auto
+
+		.catalog__item-status
+			margin-bottom: 0
+
+		.catalog__item-title+.catalog__item-status,
+		.catalog__item-status+.catalog__item-status
+			margin-top: 0
+		
+	.catalog__item-price
+		margin: 10px 0 10px
+		padding: 0
+		background: transparent
+
+
+.status-sale
+	color: #2eb134
+
+	&::before
+		content: ""
+		width: 16px
+		height: 16px
+		background-repeat: no-repeat
+		position: absolute
+		left: 0
+		top: 2px
+		display: block
+		background: url('../img/sale.svg') no-repeat center

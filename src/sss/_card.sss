@@ -33,6 +33,12 @@
 		border-radius: 5px
 		overflow: hidden
 
+	.swiper-button-prev
+		right: calc(100% + 20px)
+
+	.swiper-button-next
+		left: calc(100% + 20px)
+
 	img
 		display: block
 
@@ -46,8 +52,6 @@
 		position: relative
 		margin-bottom: 20px
 
-		.swiper-button
-			display: none
 
 	&-bot
 
@@ -62,6 +66,9 @@
 
 		.swiper-slide-thumb-active
 			border-color: var(--second-color)
+
+		.swiper-button
+			display: none
 
 	&-video
 		display: flex
@@ -300,11 +307,15 @@
 	.tabs
 		margin-top: 45px
 
-	.swiper-button-prev
-		right: calc(100% + 10px)
+	.default-slider
 
-	.swiper-button-next
-		left: calc(100% + 10px)
+		.swiper-button-prev
+			right: calc(100% + 10px)
+			left: auto
+
+		.swiper-button-next
+			left: calc(100% + 10px)
+			right: auto
 
 .table
 	.tbody
@@ -634,6 +645,9 @@
 		max-width: 200px
 		text-align: center
 
+	.accordion + .btn
+		margin-top: 30px
+
 .accordion
 	&__item:not(:last-child)
 		margin-bottom: 10px
@@ -675,6 +689,14 @@
 		height: 0
 		overflow: hidden
 		transition: height .3s ease
+
+		> 
+			p, ul, ol
+				margin-left: 25px
+
+				&:first-child
+					margin-top: 15px
+
 
 #content
 	.accordion
@@ -817,6 +839,210 @@
 				font-size: 12px
 				display: none
 
+.rework
+	&__item
+		display: block
+		padding: 14px 25px
+		font-weight: 600
+		font-size: 14px
+		line-height: 1.2
+		border: 1px solid #f2f2f2
+
+		&:not(:last-child)
+			margin-bottom: 6px
+
+.info
+	position: relative
+	padding-right: 40px
+	display: inline-block
+
+	&::after
+		content: '?'
+		position: absolute
+		top: -7px
+		right: 0
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #A5AEB9
+		border: 1px solid
+		border-radius: 50%
+
+	&:hover
+		.tooltip
+			opacity: 1
+			pointer-events: all
+
+	.tooltip
+		position: absolute
+		opacity: 0
+		pointer-events: none
+		z-index: 2
+		bottom: calc(100% + 20px)
+		left: 45px
+		width: 240px
+		background: #fff
+		border-radius: 5px
+		padding: 15px
+		font-size: 12px
+		line-height: 1.2
+		font-weight: normal
+		color: var(--main-color)
+		filter: drop-shadow(2px 6px 36px rgba(0,0,0,.08))
+
+		&::after
+			content: ''
+			position: absolute
+			top: 100%
+			margin-top: -10px
+			width: 15px
+			height: 15px
+			background: #fff
+			left: 30px
+			transform: rotate(45deg)
+
+.card__sticky
+	position: sticky
+	bottom: 0
+	z-index: 10
+
+.advantages
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin-left: -10px
+		margin-right: -10px
+		margin-bottom: -20px
+
+	&__item
+		padding: 0 10px
+		margin-bottom: 20px
+		width: 25%
+
+	&-card
+		position: relative
+		background: #000
+		display: block
+		height: 100%
+
+		&:hover
+			.advantages-card__img
+				padding-top: 65%
+
+		&__img
+			overflow: hidden
+			position: absolute
+			bottom: 0
+			width: 100%
+			transition: all .4s ease
+
+			img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: center
+
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 0
+				right: 0
+				height: 100px
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+
+		&:hover
+			.advantages-card__title
+				background: transparent
+
+		&__title
+			z-index: 1
+			padding-left: 80px
+			position: relative
+			background: #000
+			color: #fff
+			font-size: 12px
+			font-weight: 500
+			line-height: 1.4
+			transition: background .4s ease
+			border-top: 1px solid rgba(255,255,255,.3)
+
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				width: 80px
+				background: url('../img/preloader.svg') no-repeat left 25px center
+				background-size: 30px auto
+
+			span
+				min-height: 55px
+				padding: 10px 25px
+				text-transform: uppercase
+				border-left: 1px solid rgba(255,255,255,.3)
+				display: flex
+				align-items: center
+
+@media (max-width: 1440px)
+	.card
+		.default-slider
+			.swiper-button-prev
+				width: 40px
+				height: 40px
+				background-color: #fafafa
+				border: 1px solid var(--border-color)
+				right: calc(100% - 25px)
+
+			.swiper-button-next
+				width: 40px
+				height: 40px
+				background-color: #fafafa
+				border: 1px solid var(--border-color)
+				left: calc(100% - 25px)
+
+	.card__media
+		.swiper-button-prev
+			left: auto
+			width: 40px
+			height: 40px
+			background-color: #fafafa
+			border: 1px solid var(--border-color)
+			right: calc(100% - 25px)
+
+		.swiper-button-next
+			right: auto
+			width: 40px
+			height: 40px
+			background-color: #fafafa
+			border: 1px solid var(--border-color)
+			left: calc(100% - 25px)
+
+@media (max-width: 1360px)
+	.card__info
+		padding-left: 50px
+
+	.card__info-top .card__info-btn
+		padding-right: 0
+
+	.advantages-card__title
+		padding-left: 50px
+		font-size: 10px
+
+		&::before
+			width: 50px
+			background-position: left 15px center
+			background-size: 20px auto
+
+		span
+			padding: 10px 15px
+
 
 @media (max-width: 1300px)
 	
@@ -880,12 +1106,56 @@
 	.card-review__item-bot
 		margin-top: 30px
 
+@media (max-width: 1152px)
+	.card__info-top
+		flex-wrap: wrap
+
+		> div
+			width: 100%
+
+		.card__info-btn
+			padding-left: 0
+
+			.btn
+				margin-left: 0
+				margin-top: 20px
+				margin-bottom: 0
+				max-width: 200px
+
+	.compare-block
+		margin-left: -20px
+
+	.compare-block__parameters
+		display: none
+
+	.compare-block__list
+		width: 100%
+		flex-wrap: nowrap
+		overflow: auto
+
+	.compare-block__item
+		flex: none
+		min-width: 220px
+
+	.compare-card__parameter-label
+		display: block
+		margin-bottom: 5px
+		color: #a5aeb9
+
+	.compare-card__parameter
+		height: inherit
+
+	.compare-card
+		padding: 10px
+
 @media (max-width: 1000px)
 	
 	.card__media
 		width: 340px
-		margin-right: 20px
 
+	.card__info
+		width: auto
+		flex: 1 1 auto
 
 	.card__info-price
 		flex-direction: column
@@ -919,7 +1189,16 @@
 		&:not(:first-of-type)
 			margin-left: 10px
 
+@media (max-width: 960px)
+	.card__sticky
+		position: relative
 
+	.advantages__item
+		width: 50%
+
+	.advantages-card:hover
+		.advantages-card__img
+			padding-top: 0
 
 @media (max-width: 667px)
 
@@ -950,8 +1229,6 @@
 		.card__info-btn
 			display: none
 
-
-
 	.card__info
 		align-items: flex-start
 
@@ -981,11 +1258,6 @@
 			padding-left: 0
 			padding-right: 0
 			text-align: left
-			background: none
-
-
-
-
 
 	.tr
 		flex-direction: column
@@ -1050,6 +1322,41 @@
 			width: 100%
 			margin: 20px 0 0 0
 			text-align: center
+
+	.card__info
+		padding-left: 0
+		width: 100%
+
+	.card__info-count,
+	.card__info-bottom .card__info-file
+		margin-top: 10px
+
+	.card__info-top .card__info-rating
+		margin-bottom: 20px
+
+	.card__info
+		.title-block__title
+			display: none
+
+		.card__info-top
+			display: none
+
+	.card__info-top .card-sticker
+		margin-bottom: 20px
+
+	.card__info-top .card-price
+		font-size: 20px
+
+	.card__info-status
+		margin-bottom: 0
+
+	.card__media-video a
+		padding: 10px 20px 
+		font-size: 14px
+
+@media (max-width: 520px)
+	.advantages__item
+		width: 100%
 
 @media (max-width: 370px)
 	

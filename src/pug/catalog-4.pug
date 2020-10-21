@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог 4
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["Главная",  "Каталог продукции", "Каталог автомобилей", "Дорожно-строительная техника", "Автобетоносмесители"])
+		main#content
+			.wrapper
+				.catalog
+					.catalog-filter
+						form.smartfilter(name="_form" action="/spectekhnika/katalog-avtomobiley/neftepromyslovaya-tehnika-na-propane-i-metane/?view_mod=tile" method="get")
+							input#view_mod(type="hidden" name="view_mod" value="tile")
+							.sort__select.sort__select--category
+								label.sort__select-label Шасси:
+								select#select.sort__select-select(name="arCatalogFilters_194" onchange="smartFilter.clickSelect(this)")
+									option(value="") Все
+									option#arCatalogFilters_194_896945056(value="896945056") Камаз
+									option#arCatalogFilters_194_1132066572(value="1132066572") Урал
+							.sort__select.sort__select--category
+								label.sort__select-label Марка шасси:
+								select#select.sort__select-select(name="arCatalogFilters_374" onchange="smartFilter.clickSelect(this)")
+									option(value="") Все
+									option#arCatalogFilters_374_3152776863(value="3152776863") 43118
+									option#arCatalogFilters_374_3885350365(value="3885350365") 43118-37
+									option#arCatalogFilters_374_1346780423(value="1346780423") 4320-14 / 4320-16
+									option#arCatalogFilters_374_4058422884(value="4058422884") 4320-1912
+									option#arCatalogFilters_374_851115400(value="851115400") NEXT
+							.sort__select.sort__select--category
+								label.sort__select-label Насос:
+								select#select.sort__select-select(name="arCatalogFilters_379" onchange="smartFilter.clickSelect(this)")
+									option(value="") Все
+									option#arCatalogFilters_379_2742718047(value="2742718047") 1,1 ПТ25Д1М2
+									option#arCatalogFilters_379_244106474(value="244106474") 1,3 ПТ
+									option#arCatalogFilters_379_1809645056(value="1809645056") 2,3 ПТ25Д1М2
+									option#arCatalogFilters_379_225807874(value="225807874") HIKARIMAI EFG 2821
+									option#arCatalogFilters_379_1700005308(value="1700005308") HIKARIMAI EFG PL 160
+									option#arCatalogFilters_379_2356266961(value="2356266961") Interpump T1750
+									option#arCatalogFilters_379_3215294567(value="3215294567") НЦ-320
+							.sort__select.sort__select--category
+								label.sort__select-label Водопадающий блок:
+								select#select.sort__select-select(name="arCatalogFilters_270")
+									option(value="0") Все
+									option(value="1") С ВПБ
+									option(value="2") Без ВПБ
+							.sort__select.sort__select--category
+								label.sort__select-label Производительность парового котла:
+								select#select.sort__select-select(name="arCatalogFilters_380" onchange="smartFilter.clickSelect(this)")
+									option(value="") Все
+									option#arCatalogFilters_380_595022058(value="595022058") 100
+									option#arCatalogFilters_380_2963988389(value="2963988389") 1600
+									option#arCatalogFilters_380_1051297039(value="1051297039") 1600 100
+									option#arCatalogFilters_380_3556161494(value="3556161494") 2000 100
+									option#arCatalogFilters_380_3616817143(value="3616817143") 2500 160
+							.sort__select.sort__select--category
+								label.sort__select-label Топливо для работы шасси:
+								select#select.sort__select-select(name="arCatalogFilters_377" onchange="smartFilter.clickSelect(this)")
+									option(value="") Все
+									option#arCatalogFilters_377_3727825930(value="3727825930") дизель
+									option#arCatalogFilters_377_2738725746(value="2738725746") метан
+
+					.catalog-sort
+						.sort
+							.sort__select.sort__select--category
+								select.sort__select-select
+									option(value="1") Автотопливозаправщики атз
+									option(value="12") Автоцистерны для нефтепродуктов ац
+									option(value="13") Автоцистерны для питьевой воды ацпт
+
+							.sort__select
+								label.sort__select-label Сортировать:
+								select.sort__select-select
+									option(value="1") по возростанию цены
+									option(value="12") популярности
+									option(value="13") популярности
+									option популярности
+
+							.sort__select.sort__select--count
+								label.sort__select-label Выводить по: 
+								select.sort__select-select
+									option(value="2") 12
+									option(value="22") 20
+									option(value="23") 30
+									option(value="24") 40
+									option(value="25") 50
+							.sort__view
+								.mobile-filter
+									.smart-filter
+								.view
+									.view-item.view-list(data-id="view-list")
+									.view-item.view-plates.active(data-id="view-plates")
+							.sort__filter
+								.filter-btn Фильтр
+
+					.catalog__list.js__view-plates
+						.catalog__item
+							a(href="#").catalog__item-img
+								img(src="img/photos/catalog-2-1.jpg", alt="")
+							a(href="#").catalog__item-title Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73
+							
+							.catalog__item-status.status-2 Цену уточняйте у менеджера
+							.catalog__item-status.status-1 Доступно к заказу
+							.catalog__item-status.status-sale Акция
+							.catalog__item-btn
+								.btn.btn--cart Купить
+							.catalog__item-info-wrap
+								.catalog__item-info
+									.catalog__item-row
+										span Номенклатурный номер: 
+										| 10_03_02 
+									.catalog__item-row
+										span Шасси: 
+										| Камаз 
+									.catalog__item-row
+										span Двигатель: 
+										| Камаз 740.53-400 
+									.catalog__item-row
+										span Мощность двигателя, л.с.: 
+										| 400 
+
+								.catalog__item-more 
+									span Подробнее
+
+						- for (var i = 1; i < 10; i++)
+
+							.catalog__item
+								a(href="#").catalog__item-img
+									img(src="img/photos/catalog-2-1.jpg", alt="")
+								a(href="#").catalog__item-title Автобетоносмеситель 58140Z на шасси Камаз 65201-23010-73
+								.catalog__item-price 
+									span 4 810 000 руб.
+								.catalog__item-status.status-1 Доступно к заказу
+								.catalog__item-status.status-sale Акция
+								.catalog__item-btn
+									.btn.btn--cart Купить
+								.catalog__item-info-wrap
+									.catalog__item-info
+										.catalog__item-row
+											span Номенклатурный номер: 
+											| 10_03_02 
+										.catalog__item-row
+											span Шасси: 
+											| Камаз 
+										.catalog__item-row
+											span Двигатель: 
+											| Камаз 740.53-400 
+										.catalog__item-row
+											span Мощность двигателя, л.с.: 
+											| 400 
+										.catalog__item-row
+											span КПП: 
+											| ZF16
+										.catalog__item-row
+											span Колесная формула: 
+											| 8х4 
+										.catalog__item-row
+											span Класс экологичности: 
+											| Евро-4 
+										.catalog__item-row
+											span Спальное место: 
+											| возможна дополнительная комплектация 
+										.catalog__item-row
+											span Объем миксера, куб.м.: 
+											| 10 
+										.catalog__item-row
+											span Привод: 
+											| Привод от автномного двигателя
+										.catalog__item-row
+											span Номенклатурный номер: 
+											| 10_03_02 
+										.catalog__item-row
+											span Шасси: 
+											| Камаз 
+										.catalog__item-row
+											span Двигатель: 
+											| Камаз 740.53-400 
+										.catalog__item-row
+											span Мощность двигателя, л.с.: 
+											| 400 
+										.catalog__item-row
+											span КПП: 
+											| ZF16
+										.catalog__item-row
+											span Колесная формула: 
+											| 8х4 
+										.catalog__item-row
+											span Класс экологичности: 
+											| Евро-4 
+										.catalog__item-row
+											span Спальное место: 
+											| возможна дополнительная комплектация 
+										.catalog__item-row
+											span Объем миксера, куб.м.: 
+											| 10 
+										.catalog__item-row
+											span Привод: 
+											| Привод от автномного двигателя
+										.catalog__item-row
+											span Номенклатурный номер: 
+											| 10_03_02 
+										.catalog__item-row
+											span Шасси: 
+											| Камаз 
+										.catalog__item-row
+											span Двигатель: 
+											| Камаз 740.53-400 
+										.catalog__item-row
+											span Мощность двигателя, л.с.: 
+											| 400 
+										.catalog__item-row
+											span КПП: 
+											| ZF16
+										.catalog__item-row
+											span Колесная формула: 
+											| 8х4 
+										.catalog__item-row
+											span Класс экологичности: 
+											| Евро-4 
+										.catalog__item-row
+											span Спальное место: 
+											| возможна дополнительная комплектация 
+										.catalog__item-row
+											span Объем миксера, куб.м.: 
+											| 10 
+										.catalog__item-row
+											span Привод: 
+											| Привод от автномного двигателя
+
+									.catalog__item-more 
+										span Подробнее
+
+						
+
+
+					include inc/paginator.pug
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

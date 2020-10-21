@@ -43,6 +43,19 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
+// oneHeight
+function oneHeightElements(element) {
+	var maxheight = 0;
+	element.height('auto');
+	element.each(function () {
+		var height = $(this).height();
+		if (height > maxheight) {
+			maxheight = height;
+		}
+	});
+	element.height(maxheight);
+}
+
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -412,13 +425,13 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 
 		if(document.querySelector('.accordion__title'))
-			if(docsIndex === 0) {
-				docsTop.classList.add('active');
-				showText(docsTop.nextElementSibling)
-				docsTop.nextElementSibling.style.height="auto"
+			// if(docsIndex === 0) {
+			// 	docsTop.classList.add('active');
+			// 	showText(docsTop.nextElementSibling)
+			// 	docsTop.nextElementSibling.style.height="auto"
 
 			
-			}
+			// }
 
 		docsTop.addEventListener("click", () => {
 		
@@ -433,6 +446,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		})
 	})
+
+	oneHeightElements($('.advantages-card__title span'));
 
 })
 
@@ -453,6 +468,49 @@ function showText(textEl) {
 	textEl.style.height = textEl.scrollHeight + 'px';
 }
 
+const catalogHiddenText = () => {
+
+	let catalogItems = document.querySelectorAll(`.catalog__item`);
+	catalogItems.forEach(function(catalogItem) {
+		let heightCont = catalogItem.querySelector('.catalog__item-info-wrap').clientHeight;
+
+		if(heightCont >= 167){
+			catalogItem.querySelector('.catalog__item-info-wrap').classList.add('js__fade');
+			
+		} else {
+			catalogItem.querySelector('.catalog__item-more').remove();
+
+		}
+
+		let moreBtn = catalogItem.querySelector('.catalog__item-more span');
+		if(!moreBtn)
+			return;
+
+		moreBtn.addEventListener('click', function() {
+
+			// bodyPosition = window.scrollY;
+			// window.scrollTo(0, bodyPosition);
+
+			// console.log(window.scrollTo(0, bodyPosition));
+
+			catalogItem.querySelector('.catalog__item-info-wrap').classList.toggle('js__fade');
+
+			if(moreBtn.innerHTML == 'Подробнее'){
+				moreBtn.innerHTML = 'Скрыть';
+			} else {
+				moreBtn.innerHTML = 'Подробнее';
+			}
+
+		});
+
+	});
+	
+
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+	catalogHiddenText()
+});
 	
 document.addEventListener("DOMContentLoaded", function(){
 
