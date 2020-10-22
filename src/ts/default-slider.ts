@@ -38,16 +38,21 @@ window.defaultSlideInit = async (slider: HTMLElement) => {
             prevEl: slider.querySelector('.swiper-button-prev') as HTMLElement,
         },
         breakpoints: {
+            1200: {
+                spaceBetween: 40,
+            },
             1000: {
               slidesPerView: 3,
               spaceBetween: 20,
             },
             667: {
               slidesPerView: 2,
+              spaceBetween: 20
             },
             480: {
               slidesPerView: 1,
               autoHeight: true,
+              spaceBetween: 20
             },
         },
         on: {

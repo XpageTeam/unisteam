@@ -12,7 +12,9 @@ html(lang="ru")
 		main#content
 			.wrapper
 				.catalog
+					.filter-btn
 					.catalog-filter
+						.catalog-filter__btn
 						form.smartfilter(name="_form" action="/spectekhnika/katalog-avtomobiley/neftepromyslovaya-tehnika-na-propane-i-metane/?view_mod=tile" method="get")
 							input#view_mod(type="hidden" name="view_mod" value="tile")
 							.sort__select.sort__select--category
@@ -64,11 +66,11 @@ html(lang="ru")
 									option#arCatalogFilters_377_2738725746(value="2738725746") метан
 					.catalog-sort
 						.sort
-							.sort__select.sort__select--category
-								select.sort__select-select
-									option(value="1") Автотопливозаправщики атз
-									option(value="12") Автоцистерны для нефтепродуктов ац
-									option(value="13") Автоцистерны для питьевой воды ацпт
+							//- .sort__select.sort__select--category
+							//- 	select.sort__select-select
+							//- 		option(value="1") Автотопливозаправщики атз
+							//- 		option(value="12") Автоцистерны для нефтепродуктов ац
+							//- 		option(value="13") Автоцистерны для питьевой воды ацпт
 
 							.sort__select
 								label.sort__select-label Сортировать:

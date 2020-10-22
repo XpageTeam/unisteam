@@ -258,8 +258,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			      spaceBetween: 20
 			    },
 			    // when window width is >= 480px
-		  	}
+			  }
 		});
+		
 
 	})
 })
@@ -319,8 +320,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			      spaceBetween: 20
 			    },
 			    // when window width is >= 480px
-		  	}
+			}
 		});
+
 
 	})
 })
@@ -367,7 +369,14 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
+
+	let sliderLength = document.querySelectorAll('.card__media-top .swiper-slide').length;
+	let counter = $('.swiper-counter .counter');
+	counter.text(sliderLength - 4);
 
 	const mainCardSlider = document.querySelector('.card__media-top .swiper-list');
 	
@@ -376,9 +385,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	import("swiper/dist/js/swiper.esm.js").then(function(Module){	
 
-		const {Swiper, Navigation, EffectFade, Pagination, Thumbs, Lazy} = Module;
+		const {Swiper, Navigation, EffectFade, Pagination, Thumbs, Lazy, History, Controller, A11y, HashNavigation} = Module;
 
-		Swiper.use([Navigation, EffectFade, Pagination, Thumbs, Lazy]);
+		Swiper.use([Navigation, EffectFade, Pagination, Thumbs, Lazy, History, Controller, A11y, HashNavigation]);
 
 		let thumbsSlider = document.querySelector('.card__media-bot .swiper-list'),
 			mainCardSliderSwiper,
@@ -391,18 +400,18 @@ document.addEventListener("DOMContentLoaded", function(){
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
 				lazy: true,
-	
 			});
 	
-			mainCardSliderSwiper = new Swiper(mainCardSlider, {
+		mainCardSliderSwiper = new Swiper(mainCardSlider, {
 			effect: "fade",
-			
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
 			fadeEffect: {
-				    crossFade: true
+					crossFade: true
 				},
 			navigation: {
-				nextEl: '.card__media-bot .swiper-button-next',
-				prevEl: '.card__media-bot .swiper-button-prev',
+				nextEl: '.card__media-top .swiper-button-next',
+				prevEl: '.card__media-top .swiper-button-prev',
 			},
 			thumbs: {
 				swiper: cardSliderThumbs
@@ -410,16 +419,39 @@ document.addEventListener("DOMContentLoaded", function(){
 			lazy: true,
 			breakpoints: {
 
-			    670: {
+				670: {
 					autoHeight: true,
-			    	
-			    },
+					
+				},
 			},
-			  
+			on: {
+				slideNextTransitionStart() {
+					slideCounter()
+				},
+			} 
+		
 		});
+
+		function slideCounter() {
+			let clideIndex = mainCardSliderSwiper.activeIndex + 1
+			if (clideIndex <= 4) {
+				counter.text(sliderLength - 4)
+			} else {
+				counter.text(sliderLength - clideIndex)
+			}
+
+			if (counter.text() <= 0) {
+				$('.swiper-counter').addClass('hide');
+			} else {
+				$('.swiper-counter').removeClass('hide');
+			}
+		}
 
 
 	});
+
+
+
 
 	document.querySelectorAll('.accordion__title').forEach((docsTop, docsIndex) => {
 		
@@ -509,7 +541,17 @@ const catalogHiddenText = () => {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-	catalogHiddenText()
+	catalogHiddenText();
+
+	$('.filter-btn').on('click', function(){
+		$('.catalog-filter').addClass('active');
+	});
+
+	$('.catalog-filter__btn').on('click', function(){
+		$('.catalog-filter').removeClass('active');
+	});
+
+
 });
 	
 document.addEventListener("DOMContentLoaded", function(){

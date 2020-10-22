@@ -202,3 +202,120 @@
 		top: 2px
 		display: block
 		background: url('../img/sale.svg') no-repeat center
+
+.catalog-sort 
+	.sort__select
+		display: flex
+		align-items: center
+
+	.sort__select-label
+		margin-right: 10px
+
+@media screen and ( max-width: 1300px )
+	.catalog__item-price 
+		padding-top: 15px
+		padding-bottom: 15px
+		margin-top: 10px
+		margin-bottom: 10px
+
+		span
+			font-size: 16px
+
+@media screen and ( max-width: 1040px )
+	.catalog 
+		position: relative
+		display: block
+	
+	.catalog__list.js__view-plates
+		grid-template-columns: repeat(3,1fr)
+
+	.filter-btn
+		position: absolute
+		top: 0
+		left: 0
+		width: 40px
+		height: 40px
+		background: url('../img/filter.svg') no-repeat center
+		border-radius: 5px
+		border: 1px solid var(--border-color)
+
+	.catalog:not(.catalog-width100)
+
+		.catalog-sort
+			padding-left: 50px
+
+	.catalog-filter
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding: 40px
+		background: #fff
+		z-index: 10
+		opacity: 0
+		pointer-events: none
+
+		&.active
+			opacity: 1
+			pointer-events: all
+
+		&__btn
+			position: absolute
+			top: 10px
+			right: 10px
+			width: 40px
+			height: 40px
+			background: url('../img/ico-del.svg') no-repeat center
+
+		.smartfilter
+			max-height: calc(100vh - 80px)
+			overflow: auto
+
+		.sort__select--category
+			width: 100%
+			margin-left: 0
+
+	.sort__select
+		margin-right: 20px
+		margin-left: 0
+
+	.sort__view
+		margin-left: auto
+
+	.sort
+		min-height: 40px
+
+@media screen and ( max-width: 960px )
+	.catalog__item-title
+		font-size: 14px
+
+	.catalog__list .catalog__item-btn 
+		.btn
+			font-size: 14px
+			padding: 12px 20px !important
+
+		.btn--cart:before
+			width: 18px
+			height: 18px
+			margin-right: 15px
+			background-size: contain
+
+@media screen and ( max-width: 720px )
+	.catalog__list.js__view-plates
+		grid-template-columns: repeat(2,1fr)
+
+@media screen and ( max-width: 667px )
+	.catalog-sort
+		margin-bottom: 20px
+
+	.sort__select:first-child
+		margin-bottom: 0
+
+	.catalog
+		.paginator
+			display: flex
+
+@media screen and ( max-width: 520px )
+	.catalog__list.js__view-plates
+		grid-template-columns: 1fr
