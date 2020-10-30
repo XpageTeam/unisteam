@@ -2,7 +2,6 @@
 	.mobile
 		display: none
 
-
 .mobile
 	.card__info-btn
 		flex-direction: row
@@ -21,7 +20,8 @@
 	.card-price
 		margin: 20px 0
 
-
+.card
+	font-family: "EuropeDemi", Arial, sans-serif
 
 .card__media
 	position: relative
@@ -196,6 +196,11 @@
 					color: #2EB134
 					padding-left: 36px
 					background: url('../img/sale.svg') no-repeat 15px center
+					transition: background-color .3s ease, color .3s ease
+
+					&:hover
+						background: url('../img/sale-2.svg') no-repeat 15px center #2EB134
+						color: #fff
 
 		.rating__radio:checked~label svg path
 			fill: var(--main-color)
@@ -954,6 +959,8 @@
 		background: #000
 		display: block
 		height: 100%
+		border-radius: 3px
+		
 
 		&:hover
 			.advantages-card__img
@@ -965,6 +972,7 @@
 			bottom: 0
 			width: 100%
 			transition: all .4s ease
+			border-radius: 3px
 
 			img
 				position: absolute
@@ -1241,6 +1249,28 @@
 		.advantages-card__img
 			padding-top: 0
 
+	.card 
+		.tabs
+			margin: 0 -20px
+
+		.tabs__title
+			padding: 10px 20px
+
+			&:after
+				right: 20px
+
+		.tabs__content:not(.active)
+			transform: none
+		
+		.tabs__content-content
+			padding: 0 20px
+
+	.tabs__content-content
+		margin: 20px 0
+
+	.card__media-cont
+		margin-bottom: 40px
+
 @media (max-width: 820px)
 	.table-new .tbody>.tr
 		flex-wrap: wrap
@@ -1286,6 +1316,7 @@
 	
 	.card__media-cont
 		flex-direction: column
+		margin-bottom: 20px
 
 	.card__media
 		width: 100%
@@ -1335,29 +1366,9 @@
 		max-width: 100%
 		border: 0
 
-	.card 
-		.tabs
-			margin: 0 -20px
-
-		.tabs__title
-			padding: 10px 20px
-
-			&:after
-				right: 20px
-
-		.tabs__content:not(.active)
-			transform: none
-		
-		.tabs__content-content
-			padding: 0 20px
-
-	.tabs__content-content
-		margin: 20px 0
 
 	.card__info-file
 		margin-top: 25px
-
-
 
 	.card-review__info
 		flex-direction: column

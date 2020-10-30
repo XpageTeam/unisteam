@@ -21,6 +21,20 @@ module.exports = {
 				}
 			}
 		},
+		"EuropeDemi": {
+			variants: {
+				normal: {
+				
+					400: {
+						url: {
+							woff: "../fonts/EuropeDemi.woff",
+							woff2: "../fonts/EuropeDemi.woff2"
+						}
+					},
+					
+				}
+			}
+		},
 
 	}
 }

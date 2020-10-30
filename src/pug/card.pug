@@ -37,7 +37,7 @@ html(lang="ru")
 										.card-price 
 											span 4 810 000 руб.
 										.card-sticker
-											.sticker.sticker-sale Акция
+											a.sticker.sticker-sale(href="#") Акция
 										.card__info-rating
 											.rating
 												span Оценка 4 из 5
@@ -68,84 +68,21 @@ html(lang="ru")
 								.swiper-button.swiper-button-next
 								.swiper-list
 									.swiper-wrapper
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
+										- for (var x = 0; x < 16; x++)
+											.swiper-slide
+												a.fancybox(href="img/photos/card-1.jpg" data-fancybox="images")
+													img(src="img/photos/card-1.jpg", alt="")
+
 									.swiper-pagination
 							.card__media-bot
 								.swiper-button.swiper-button-prev
 								.swiper-button.swiper-button-next
 								.swiper-list
 									.swiper-wrapper
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
+										- for (var x = 0; x < 16; x++)
+											.swiper-slide
+												img(src="img/photos/card-1.jpg", alt="")
+
 
 									.swiper-counter 
 										.swiper-counter__text еще<br>
@@ -163,7 +100,7 @@ html(lang="ru")
 									.card-price 
 										span 4 810 000 руб.
 									.card-sticker
-										.sticker.sticker-sale Акция
+										a.sticker.sticker-sale(href="#") Акция
 									.card__info-rating
 										.rating
 											span Оценка 4 из 5
@@ -229,7 +166,7 @@ html(lang="ru")
 													.tr
 														.td
 															.tr
-																.td Насос (водяной?)
+																.td Водяной насос
 																.td HIKARIMAI EFG2821 / 1,1 ПТ25Д1М2 / 2,3 ПТ25Д1М2 / MAZONNI
 														.td
 															.tr
