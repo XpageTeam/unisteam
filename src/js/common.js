@@ -447,6 +447,22 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 
+		$(window).scroll(function(){
+
+			const cardSticky = document.querySelector(".card__sticky");
+			console.log(cardSticky.getBoundingClientRect().bottom);
+	
+			if (!cardSticky)
+				return;
+	
+			if (cardSticky.getBoundingClientRect().bottom <= 50) {
+				$(".card__sticky").addClass("js__sticked");
+			} else {
+				console.log('saf');
+				$(".card__sticky").removeClass("js__sticked");
+			}
+		});
+
 
 	});
 
