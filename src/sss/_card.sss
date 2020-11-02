@@ -54,6 +54,8 @@
 
 
 	&-bot
+		max-height: 115px
+		overflow: hidden
 
 		.swiper-list
 			padding: 2px
@@ -243,6 +245,9 @@
 
 	.rating
 		display: flex
+
+		span 
+			white-space: nowrap
 
 	&-rating
 		display: flex
@@ -940,6 +945,10 @@
 	bottom: 0
 	z-index: 10
 
+	&.js__open
+		.advantages-card__img
+			padding-top: 65%
+
 .advantages
 	&__list
 		display: flex
@@ -1270,6 +1279,12 @@
 	.card__media-cont
 		margin-bottom: 40px
 
+	.card__sticky
+		margin-top: 0
+
+		&.js__open .advantages-card__img
+			padding-top: 0
+
 @media (max-width: 820px)
 	.table-new .tbody>.tr
 		flex-wrap: wrap
@@ -1465,12 +1480,16 @@
 	.advantages__item
 		width: 100%
 
+	.table-new .tbody>.tr
+		margin-right: 0
+
 	.table-new .tbody>.tr>.td .tr
 		flex-direction: column
 		align-items: flex-start
 
 	.table-new .tbody>.tr>.td
 		padding: 0
+		margin-right: 0
 
 @media (max-width: 480px)
 	.card__info-top>div

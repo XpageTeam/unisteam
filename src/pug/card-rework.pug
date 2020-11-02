@@ -29,41 +29,59 @@ html(lang="ru")
 				.card
 					.card__media-cont
 						.card__media
+							.mobile
+								.title-block__title
+									h1 ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
+								.card__info-top
+									.card__info-info
+										.card-price 
+											span 4 810 000 руб.
+										.card-sticker
+											a.sticker.sticker-sale(href="#") Акция
+										.card__info-rating
+											.rating
+												span Оценка 4 из 5
+												.rating__list
+													input(type="radio" value="" id="90" name="star").rating__radio
+													label(for="90").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="91" name="star").rating__radio
+													label(for="91").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="92" name="star").rating__radio
+													label(for="92").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="93" name="star").rating__radio
+													label(for="93").rating__label
+														include ../img/ico-rating.svg
+													input(type="radio" value="" id="94" name="star").rating__radio
+													label(for="94").rating__label
+														include ../img/ico-rating.svg
+											.rating__info Проголосовало 27 человек
+										.card__info-status.status-1 Доступно к заказу
+									.card__info-btn
+										a(href="#").btn.btn--cart Купить
+										a(href="#").btn.btn--lizing Купить в лизинг
 							.card__media-top
 								.swiper-button.swiper-button-prev
 								.swiper-button.swiper-button-next
 								.swiper-list
 									.swiper-wrapper
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
+										- for (var x = 0; x < 16; x++)
+											.swiper-slide
+												a.fancybox(href="img/photos/card-1.jpg" data-fancybox="images")
+													img(src="img/photos/card-1.jpg", alt="")
+
 									.swiper-pagination
 							.card__media-bot
 								.swiper-button.swiper-button-prev
 								.swiper-button.swiper-button-next
 								.swiper-list
 									.swiper-wrapper
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
-										.swiper-slide
-											img(src="img/photos/card-1.jpg", alt="")
+										- for (var x = 0; x < 16; x++)
+											.swiper-slide
+												img(src="img/photos/card-1.jpg", alt="")
+
 
 									.swiper-counter 
 										.swiper-counter__text еще<br>
@@ -81,27 +99,26 @@ html(lang="ru")
 									.card-price 
 										span 4 810 000 руб.
 									.card-sticker
-										.sticker.sticker-sale Акция
+										a.sticker.sticker-sale(href="#") Акция
 									.card__info-rating
 										.rating
 											span Оценка 4 из 5
-											.rating
-												.rating__list
-													input(type="radio" value="" id="90" name="star").rating__radio
-													label(for="90").rating__label
-														include ../img/ico-rating.svg
-													input(type="radio" value="" id="91" name="star").rating__radio
-													label(for="91").rating__label
-														include ../img/ico-rating.svg
-													input(type="radio" value="" id="92" name="star").rating__radio
-													label(for="92").rating__label
-														include ../img/ico-rating.svg
-													input(type="radio" value="" id="93" name="star").rating__radio
-													label(for="93").rating__label
-														include ../img/ico-rating.svg
-													input(type="radio" value="" id="94" name="star").rating__radio
-													label(for="94").rating__label
-														include ../img/ico-rating.svg
+											.rating__list
+												input(type="radio" value="" id="90" name="star").rating__radio
+												label(for="90").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="91" name="star").rating__radio
+												label(for="91").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="92" name="star").rating__radio
+												label(for="92").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="93" name="star").rating__radio
+												label(for="93").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="94" name="star").rating__radio
+												label(for="94").rating__label
+													include ../img/ico-rating.svg
 										.rating__info Проголосовало 27 человек
 									.card__info-status.status-1 Доступно к заказу
 								.card__info-btn
@@ -303,7 +320,7 @@ html(lang="ru")
 											p
 												|Сертификат соответствия техническому регламенту Таможенного союза ТР ТС 010/2011 «О безопасности машин и оборудования»,  ТР ТС 004/2011 "О безопасности низковольтного оборудования", ТР ТС 020/2011 "Электромагнитная совместимость технических средств" утвержденному Решением Комиссии Таможенного союза от 01.03.2016г. №0365925
 											p
-												|Руководство по эксплуатации на парогенераторную установку											
+												|Руководство по эксплуатации на парогенераторную установку
 											p
 												|Паспорт передвижной парогенераторной установки
 											p

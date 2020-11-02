@@ -447,19 +447,19 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 
+		let documentHeight = document.documentElement.clientHeight;
+
 		$(window).scroll(function(){
 
-			const cardSticky = document.querySelector(".card__sticky");
-			console.log(cardSticky.getBoundingClientRect().bottom);
+			const card = document.querySelector(".card");
 	
-			if (!cardSticky)
+			if (!card)
 				return;
 	
-			if (cardSticky.getBoundingClientRect().bottom <= 50) {
-				$(".card__sticky").addClass("js__sticked");
+			if (card.getBoundingClientRect().bottom <= documentHeight) {
+				$(".card__sticky").addClass("js__open");
 			} else {
-				console.log('saf');
-				$(".card__sticky").removeClass("js__sticked");
+				$(".card__sticky").removeClass("js__open");
 			}
 		});
 
