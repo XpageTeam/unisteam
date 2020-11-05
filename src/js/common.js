@@ -376,7 +376,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	let sliderLength = document.querySelectorAll('.card__media-top .swiper-slide').length;
 	let counter = $('.swiper-counter .counter');
-	counter.text(sliderLength - 4);
+	if (sliderLength > 4) {
+		counter.text(sliderLength - 4);
+	} else {
+		$('.swiper-counter').addClass('hide');
+	}
+	
 
 	const mainCardSlider = document.querySelector('.card__media-top .swiper-list');
 	
@@ -433,6 +438,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		});
 
 		function slideCounter() {
+			
 			let clideIndex = mainCardSliderSwiper.activeIndex + 1
 			if (clideIndex <= 4) {
 				counter.text(sliderLength - 4)
