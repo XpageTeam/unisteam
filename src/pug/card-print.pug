@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Карточка товара
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.card-print
+		include inc/header-print.pug
+		main#content
+			.wrapper
+				.card
+					.card__media-cont
+						.card__media
+							.card__media-top
+								img(src="img/photos/card-1.jpg", alt="")
+
+						.card__info
+							.title-block__title
+								h1 ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
+							.card__info-top
+								.card__info-info
+									.card-price 
+										span 4 810 000 руб.
+									.card-sticker
+										a.sticker.sticker-sale(href="#") Акция
+									.card__info-rating
+										.rating
+											span Оценка 4 из 5
+											.rating__list
+												input(type="radio" value="" id="90" name="star").rating__radio
+												label(for="90").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="91" name="star" checked).rating__radio
+												label(for="91").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="92" name="star").rating__radio
+												label(for="92").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="93" name="star").rating__radio
+												label(for="93").rating__label
+													include ../img/ico-rating.svg
+												input(type="radio" value="" id="94" name="star").rating__radio
+												label(for="94").rating__label
+													include ../img/ico-rating.svg
+										.rating__info Проголосовало 27 человек
+									.card__info-status.status-1 Доступно к заказу
+						.clear-both
+
+					.card__tabs.tabs
+						.tabs__content
+							.tabs__title Характеристики
+							.tabs__content-content
+								.accordion
+									.accordion__item
+										.accordion__title Технические характеристики / комплектация ППУА 1600/100 серии Unisteam-M1 на базе шасси КАМАЗ 43118
+										.accordion__body
+											table
+												tbody
+													tr
+														td Нагреваемая среда
+														td вода
+													tr
+														td Давление топлива, Мпа, не более
+														td 1,47
+
+													tr
+														td Водяной насос
+														td HIKARIMAI EFG2821 / 1,1 ПТ25Д1М2 / 2,3 ПТ25Д1М2 / MAZONNI
+													tr
+														td Время, необходимое для получения пара с момента запуска установки, мин, не более
+														td 10
+
+													tr
+														td Топливный насос
+														td НШ-10
+													tr
+														td Привод механизмов спецоборудования
+														td от силовой установки шасси
+
+													tr
+														td Вентилятор
+														td ВД-4
+													tr
+														td Уровень звука в кабине водителя во время работы установки, Дба, не более
+														td 80
+
+													tr
+														td Привод воздушной заслонки
+														td электропривод
+													tr
+														td Форсунка розжига 1,0 гал/ч, шт
+														td 1
+
+									.accordion__item
+										.accordion__title Характеристики котла
+										.accordion__body
+											table
+												tbody
+													tr
+														td Марка котла
+														td НШ-10
+													tr
+														td Производительность котла, кг/ч
+														td 1000 100 / 1600 100 / 2000 100 / 2500 160
+													tr
+														td Расположение котла
+														td заднее
+											table
+												thead
+													tr
+														td Производительность с учетом работы установки в соответствии с выбранным режимом
+														td 
+															.info Режим 1
+																.tooltip Производительность с учетом работы установки в соответствии с выбранным режимом 1
+														td 
+															.info Режим 2
+																.tooltip Производительность с учетом работы установки в соответствии с выбранным режимом 2
+												tbody
+													tr
+														td Производительность котла, кг/ч
+														td 1600 +/- 10%
+														td 1600 +/- 10%
+													tr
+														td Давление пара, Мпа (кгс/см²), не более
+														td 0,59
+														td 9,81
+													tr
+														td Температура пара, ⁰С, не более
+														td 165
+														td 310
+													tr
+														td Расход топлива паровым котлом кг/ч, не более
+														td 35
+														td 110
+
+									.accordion__item
+										.accordion__title Сравнительные характеристики насосов
+										.accordion__body
+											table
+												tbody
+													tr 
+														td
+														td 
+															img(src="img/photos/compare.jpg" loading="lazy")
+														td 
+															img(src="img/photos/compare.jpg" loading="lazy")
+														td
+															img(src="img/photos/compare.jpg" loading="lazy")
+														td
+															img(src="img/photos/compare.jpg" loading="lazy")
+													tr
+														td
+														td 1,1 ПТ25Д1М2
+														td 1,1 ПТ25Д1М2
+														td 1,1 ПТ25Д1М2
+														td 1,1 ПТ25Д1М2
+													tr
+														td Производительность, м³/ч
+														td 2,2
+														td 2,2
+														td 2,2
+														td 2,2
+													tr
+														td Давление, Мпа
+														td 11
+														td 11
+														td 11
+														td 11
+													tr
+														td Температура питательной воды, max, ⁰С
+														td до 100
+														td до 100
+														td до 100
+														td до 100
+													tr
+														td Потребляемая мощность, кВт
+														td не более 10
+														td не более 10
+														td не более 10
+														td не более 10
+													tr
+														td Обороты вала насоса, max, об/мин
+														td 730
+														td 730
+														td 730
+														td 730
+													tr
+														td Оъем заливаемого масла, л.
+														td 2
+														td 2
+														td 2
+														td 2
+													tr
+														td Размер (длина*ширина*высота), см
+														td 617х392х320
+														td 617х392х320
+														td 617х392х320
+														td 617х392х320
+													tr
+														td Вес, кг
+														td 87
+														td 87
+														td 87
+														td 87
+
+									.accordion__item
+										.accordion__title Пакет предоставляемой документации
+										.accordion__body
+											p
+												|Паспорт на котел паровой
+											p
+												|Сертификат соответствия техническому регламенту Таможенного союза ТР ТС 032/2013 «О безопасности оборудования, работающего под избыточным давлением» 
+											p
+												|Сертификат соответствия техническому регламенту Таможенного союза ТР ТС 010/2011 «О безопасности машин и оборудования»,  ТР ТС 004/2011 "О безопасности низковольтного оборудования", ТР ТС 020/2011 "Электромагнитная совместимость технических средств" утвержденному Решением Комиссии Таможенного союза от 01.03.2016г. №0365925
+											p
+												|Руководство по эксплуатации на парогенераторную установку
+											p
+												|Паспорт передвижной парогенераторной установки
+											p
+												|Прочностной расчет котловой трубы
+											p
+												|Прочностной расчет паровика
+											p
+												|Расчет пропускной способности клапанов предохранительных
+
+						.tabs__content
+							.tabs__title Схема
+							.tabs__content-content
+						.tabs__content
+							.tabs__title Доработки
+							.tabs__content-content
+								.accordion
+									.accordion__item
+										.accordion__title Установка дополнительного оборудования
+										.accordion__body
+											table
+												tbody
+													tr
+														td Гидроборты
+													tr
+														td Коробки отбора мощности (КОМ)
+															
+													tr
+														td Лебедки от КОМ
+													tr
+														td Станки и другое необходимое оборудование
+
+													tr
+														td Дополнительные двери и окна
+													tr
+														td Установка дополнительного топливного бака
+
+													tr
+														td Кондиционер кабины шасси
+													tr
+														td Освещение и сигнализация
+
+													tr
+														td Информационно-навигационное оборудование
+													tr
+														td Видеорегистраторы, рации, магнитолы
+
+													tr
+														td Оборудование кабины шасси спальным местом
+													tr
+														td Третий режим работы ППУА с функцией мойки высокого давления
+
+
+									.accordion__item
+										.accordion__title Подготовка к работе на севере
+										.accordion__body
+											table
+												tbody
+													tr
+														td Утепление кабины и фургона
+													tr
+														td Установка автономного отопителя предпускового подогрева в кабину и фургон
+
+													tr
+														td Утепление топливопроводов
+	
+													tr
+														td Установка обогрева АКБ
+
+													tr
+														td Электроподогрев двигателя от внешнего источника
+	
+													tr 
+														td Утеплитель капотного отсека
+
+													tr
+														td Установка подогреваемого топливозаборника
+	
+													tr
+														td Подогрев аккумуляторного отсека от системы охлаждения двигателя
+
+													tr
+														td Подогрев ФГОТ и ФТОТ
+	
+													tr
+														td Зеркала с электроподогревом
+
+									.accordion__item
+										.accordion__title Оформление фургона (кунга)
+										.accordion__body
+											table
+												tbody
+													tr
+														td Изменение цветов полимерного покрытия
+	
+													tr
+														td Брендирование
+
+													tr
+														td Изменение наружной / внутренней обшивки, напольного покрытия
+	
+													tr
+														td Окрас фургона (кунга) и кабины в любой цвет по таблице цветов RA
+
+						.tabs__content
+							.tabs__title Руководство по эксплуатации
+							.tabs__content-content
+
+		include inc/scripts.pug

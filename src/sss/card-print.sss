@@ -1,0 +1,190 @@
+body:not(.js__head-absolute):not(.main) .head-print
+	background: #fff !important
+	border-bottom: 1px solid var(--main-color)
+
+.head-print
+	margin-bottom: 40px
+
+	.head-top-cont
+		padding: 10px 0
+
+	.wrapper
+		max-width: var(--base-width)
+
+	.head-top
+		display: block
+
+	.head-logo
+		float: left
+		width: 150px
+		filter: invert(1)
+
+		svg
+			height: 25px
+
+		a
+			display: block
+			line-height: 1
+
+	.head-email,
+	.head-phone
+		float: right
+		margin-left: 25px
+		position: relative
+		margin-top: 8px
+
+		a
+			display: block
+			padding-left: 25px
+			line-height: 1
+			color: #000
+
+			&::before
+				display: none
+
+.clear-both
+	float: none
+	width: 100%
+	clear: both
+
+.card-print
+	.card__media-cont
+		display: block
+
+	.card__media
+		float: left
+		width: 350px
+
+	.card__info
+		display: block 
+		float: left
+		width: auto
+		padding-left: 60px
+
+	.title-block__title h1
+		font-size: 1.25rem
+
+	.card__info-top .card-price
+		font-size: 20px
+
+	.card__info-top .card-sticker,
+	.card__info-top .card__info-rating
+		margin-bottom: 15px
+
+	.card__info-top .card-sticker .sticker-sale
+		padding: 0
+		border: 0
+		background: none
+
+	.card__info-status
+		padding-left: 0
+
+		&::before
+			display: none
+
+	.tabs__title
+		display: block
+		font-weight: bold
+		margin-bottom: 10px
+		padding-top: 0
+		padding-bottom: 0
+		pointer-events: none
+
+	.tabs__content-content
+		display: block
+
+	.tabs__content
+		border: 0
+
+	.tabs__content:not(:first-child)
+		margin-top: 10px
+
+	.tabs__content:not(.active)
+		position: relative
+		top: 0
+		opacity: 1
+		transform: none
+		display: block
+		pointer-events: all
+
+	.accordion__body
+		height: auto
+		padding-bottom: 10px
+
+	.accordion__title
+		padding: 0
+		background: transparent
+		border: 0
+		font-size: 12px
+		font-weight: bold
+		text-align: center
+		color: var(--thrid-color)
+		pointer-events: none
+
+		&::after
+			display: none
+
+	.table-new .tbody>.tr>.td .td,
+	#content table:not([class]) td
+		padding: 10px
+
+	.info:after
+		display: none
+
+	#content .accordion table:not([class]) td
+		border: 1px solid #e5e5e5
+
+	.accordion__body table
+		min-width: 100%
+		width: 100%
+
+	.accordion__body>ol, .accordion__body>p, .accordion__body>ul
+		margin-left: 0
+		margin-top: 10px
+
+	.card__info .title-block__title
+		padding-bottom: 15px
+		margin-bottom: 20px
+
+	.card__info-top .card-price
+		margin-bottom: 15px
+
+	.card__tabs
+		counter-reset: tabs
+
+	.tabs__title
+		&::before
+			content: counter(tabs) '.'
+			counter-increment: tabs
+			display: inline-block
+			margin-right: 10px
+
+
+@media (max-width: 1279px)
+	.head-print
+		.head-top-cont
+			display: block
+
+@media (max-width: 667px)
+	.head-print .head-logo svg
+		width: 150px
+		height: auto
+
+	.card-print
+		.card__info .card__info-top, 
+		.card__info .title-block__title
+			display: block
+
+		.card__media,
+		.card__info
+			width: 100%
+
+		.card__info
+			padding-left: 0
+
+		.card__media
+			margin-bottom: 0
+
+@media print
+	header.head-print
+		display: block
