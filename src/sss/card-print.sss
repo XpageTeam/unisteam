@@ -3,7 +3,7 @@ body:not(.js__head-absolute):not(.main) .head-print
 	border-bottom: 1px solid var(--main-color)
 
 .head-print
-	margin-bottom: 40px
+	margin-bottom: 30px
 
 	.head-top-cont
 		padding: 10px 0
@@ -48,6 +48,13 @@ body:not(.js__head-absolute):not(.main) .head-print
 	clear: both
 
 .card-print
+	.print-btn
+		position: sticky
+		top: 20px
+		margin-bottom: 20px
+		z-index: 20
+
+
 	.card__media-cont
 		display: block
 
@@ -188,3 +195,7 @@ body:not(.js__head-absolute):not(.main) .head-print
 @media print
 	header.head-print
 		display: block
+
+	.card-print
+		.print-btn
+			display: none

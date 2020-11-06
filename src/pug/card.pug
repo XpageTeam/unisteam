@@ -127,7 +127,7 @@ html(lang="ru")
 							.card__info-bottom
 								.card__info-count Этот товар сейчас просматривают 17 человек
 								.card__info-file
-									a(href="#").ico-print Распечатать
+									a(data-fancybox data-type="iframe" data-src="card-print.html" href="javascript:;").ico-print Распечатать
 									a(href="#").ico-pdf Скачать PDF
 									a(href="#").ico-tz Скачать руководство по эксплуатации
 									a(href="#").ico-share Поделиться
@@ -385,8 +385,6 @@ html(lang="ru")
 										span Отдельный отсек
 									.advantages-card__img
 										img(src="img/photos/advantages-4.jpg" loading="lazy")
-
-
 
 		include inc/footer.pug
 		include inc/scripts.pug
