@@ -95,7 +95,6 @@
 			right: 3px
 			bottom: 3px
 			width: calc(25% - 19px)
-			pointer-events: none
 			z-index: 2
 			border-radius: 5px
 			background: rgba(25,49,83,.6)
@@ -605,9 +604,21 @@
 
 			.card-review__item-top
 				background-image: url('../img/ico-advantages.svg')
+				background-position: left center
+
 		&-disadvantage
 			.card-review__item-top
 				background-image: url('../img/ico-disadvantage.svg')
+				background-position: left center
+
+			+ .card-review__item-comment
+				margin-top: 30px
+
+		&-comment
+			.card-review__item-top
+				background-image: url('../img/ico-status-2.svg')
+				background-position: left center
+				background-size: 20px
 
 		&-info
 			margin-top: 20px
@@ -1055,6 +1066,29 @@
 .sharing .ya-share2
 	margin-left: auto
 	margin-right: auto
+
+.card-video
+	position: relative
+	display: block
+	width: max-content
+	max-width: 100%
+
+	&:hover
+		&::after
+			opacity: 0.85
+
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100px
+		height: 100px
+		border-radius: 50%
+		margin-top: -50px
+		margin-left: -50px
+		background: url('../img/ico-treangle-blue.svg') no-repeat 42px center #fff
+		transition: opacity .3s ease
 
 @media (max-width: 1500px)
 	.card__sticky
@@ -1506,6 +1540,15 @@
 	.card__media-bot .swiper-counter
 		font-size: 12px
 		line-height: 1.2
+
+	.card-video
+		&::after
+			width: 60px
+			height: 60px
+			margin-top: -30px
+			margin-left: -30px
+			background-position: 25px center
+			background-size: 15px
 
 
 @media (max-width: 520px)
