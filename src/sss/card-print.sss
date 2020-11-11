@@ -48,6 +48,11 @@ body:not(.js__head-absolute):not(.main) .head-print
 	clear: both
 
 .card-print
+	font-family: Arial, sans-serif
+	max-width: 700px
+	width: 100%
+	margin-left: auto
+	margin-right: auto
 
 	.print-btn
 		position: sticky
@@ -67,7 +72,8 @@ body:not(.js__head-absolute):not(.main) .head-print
 		display: block 
 		float: left
 		width: auto
-		padding-left: 60px
+		padding-left: 0
+		width: 100%
 
 	.title-block__title h1
 		font-size: 1.25rem
@@ -86,6 +92,7 @@ body:not(.js__head-absolute):not(.main) .head-print
 
 	.card__info-status
 		padding-left: 0
+		margin-bottom: 15px
 
 		&::before
 			display: none
@@ -135,6 +142,7 @@ body:not(.js__head-absolute):not(.main) .head-print
 	.table-new .tbody>.tr>.td .td,
 	#content table:not([class]) td
 		padding: 10px
+		font-size: 12px
 
 	.info:after
 		display: none
@@ -142,9 +150,13 @@ body:not(.js__head-absolute):not(.main) .head-print
 	#content .accordion table:not([class]) td
 		border: 1px solid #e5e5e5
 
+		img
+			width: 100px
+
 	.accordion__body table
 		min-width: 100%
 		width: 100%
+		font-size: 12px
 
 	.accordion__body>ol, .accordion__body>p, .accordion__body>ul
 		margin-left: 0
@@ -200,3 +212,6 @@ body:not(.js__head-absolute):not(.main) .head-print
 	.card-print
 		.print-btn
 			display: none
+
+	table td
+		page-break-inside: avoid
