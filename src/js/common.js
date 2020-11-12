@@ -473,19 +473,16 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 
 
-
-
 	document.querySelectorAll('.accordion__title').forEach((docsTop, docsIndex) => {
 		
 
-		if(document.querySelector('.accordion__title'))
-			// if(docsIndex === 0) {
-			// 	docsTop.classList.add('active');
-			// 	showText(docsTop.nextElementSibling)
-			// 	docsTop.nextElementSibling.style.height="auto"
+		// if(document.querySelector('.accordion__title'))
+		// 	if(docsIndex === 0) {
+		// 		docsTop.classList.add('active');
+		// 		showText(docsTop.nextElementSibling)
+		// 		docsTop.nextElementSibling.style.height="auto"
 
-			
-			// }
+		// 	}
 
 		docsTop.addEventListener("click", () => {
 		
@@ -497,6 +494,11 @@ document.addEventListener("DOMContentLoaded", function(){
 				docsTop.classList.add('active');
 				showText(docsTop.nextElementSibling)
 			}
+
+			setTimeout(function(){
+				$('html,body').animate({
+					scrollTop: $('.accordion__title.active').offset().top - 70}, 1000);
+			}, 300)
 
 		})
 	})
