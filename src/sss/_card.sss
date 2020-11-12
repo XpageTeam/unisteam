@@ -508,38 +508,48 @@
 				font-weight: 500
 				margin-bottom: 10px
 
-	.default-input__input--radio
-		background-color: transparent
-		border: 0
-		padding: 0
-		display: flex
-		justify-content: space-between
+		.default-input__input--radio
+			background-color: transparent
+			border: 0
+			padding: 0
+			display: flex
+			justify-content: space-between
 
-		input
-			opacity: 0
-			position: absolute
-			left: 0
-			pointer-events: none
+			input
+				opacity: 0
+				position: absolute
+				left: 0
+				pointer-events: none
 
-			&:checked
-				+ label
-					background-color: var(--second-color)
-					border-color: var(--second-color)
-					color: #fff
+				&:checked
+					+ label
+						background-color: var(--second-color)
+						border-color: var(--second-color)
+						color: #fff
 
 
 
-		label
-			border: 1px solid var(--main-color)
-			border-radius: 3px
-			padding: 10px
-			cursor: pointer
-			display: inline-block
-			flex: 1 1 
-			text-align: center
+			label
+				border: 1px solid var(--main-color)
+				border-radius: 3px
+				padding: 10px
+				cursor: pointer
+				display: inline-block
+				flex: 1 1 
+				text-align: center
 
-			&:not(:nth-of-type(1))
-				margin-left: 20px
+				&:not(:nth-of-type(1))
+					margin-left: 20px
+
+		.form__submit
+			margin-top: auto
+			display: block
+
+			input
+				background-color: var(--main-color)
+				width: 100%
+				border: 0
+				border-radius: 3px
 
 	&__sort
 		margin-left: 80px
@@ -634,15 +644,6 @@
 
 		&-bot
 			margin-top: 50px
-	.form__submit
-		margin-top: auto
-		display: block
-
-		input
-			background-color: var(--main-color)
-			width: 100%
-			border: 0
-			border-radius: 3px
 
 	.default-input__label
 		display: flex
@@ -652,6 +653,14 @@
 			font-size: 14px
 			color: #A5AEB9
 			font-weight: 300
+
+	.card__info-btn
+		justify-content: flex-start
+		margin-bottom: 25px
+
+		.btn
+			margin-left: 0
+			width: max-content
 
 .useful-life
 	font-size: em(14)
@@ -1102,6 +1111,34 @@
 		background: url('../img/ico-treangle-blue.svg') no-repeat 42px center #fff
 		transition: opacity .3s ease
 
+.popup 
+	.card-review__form
+		flex-wrap: wrap
+		padding: 20px 0 0
+
+		.form__info
+			width: 100%
+			margin-left: 0
+			padding: 15px
+			margin-bottom: 20px
+			font-size: 12px
+			order: -1
+
+			&-title
+				margin-bottom: 3px
+				font-weight: bold
+
+		.form__inputs
+			grid-gap: 20px 30px
+
+	.card-review__rating 
+		padding-bottom: 20px
+
+		svg
+			width: 25px !important
+			height: 25px !important
+
+
 @media (max-width: 1500px)
 	.card__sticky
 		margin-top: 150px
@@ -1224,6 +1261,17 @@
 
 	.card-review__item-bot
 		margin-top: 30px
+
+	.popup 
+		.card-review__form 
+			.form__info
+				order: 0
+
+		.default-input__input--radio label
+			font-size: 12px
+
+		.form__submit:not(.form__submit--reverse) .form__submit-btn
+			margin-right: 0
 
 @media (max-width: 1152px)
 	.card__info-top
@@ -1562,6 +1610,8 @@
 			background-position: 25px center
 			background-size: 15px
 
+	.popup .card-review__form .upload
+		margin-top: -40px !important
 
 @media (max-width: 520px)
 	.advantages__item
