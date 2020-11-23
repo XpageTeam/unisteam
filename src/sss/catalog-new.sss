@@ -63,15 +63,17 @@
 			z-index: 5
 			background: #fff
 			padding: 0 20px 20px
-			border-radius: 0 0 5px 5px
-			border: 1px solid var(--border-color)
 			border-top: 0
+			border-left: 1px solid var(--border-color)
+			border-right: 1px solid var(--border-color)
 			transition: border-color .3s ease
 			overflow: hidden
 
 			&.js__fade
 				height: 161px
 				overflow: hidden
+				border-bottom: 1px solid var(--border-color)
+				border-radius: 0 0 5px 5px
 
 			&:not(.js__fade)
 				.catalog__item-info
